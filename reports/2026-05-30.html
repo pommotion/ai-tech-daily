@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI TECH DAILY · 2026-05-30</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+  background: #f5f0e6;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  background: #f5f0e6;
+  box-shadow: 0 0 40px rgba(0,0,0,0.06);
+}
+
+/* Masthead */
+.masthead {
+  text-align: center;
+  padding: 28px 0 16px;
+  border-bottom: 4px double #2a2a2a;
+  margin-bottom: 12px;
+}
+
+.masthead-topline {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #6b6358;
+  margin-bottom: 6px;
+}
+
+.masthead-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: #1a1a1a;
+  letter-spacing: 18px;
+  text-indent: 18px;
+  line-height: 1.05;
+}
+
+.masthead-subtitle {
+  font-size: 13px;
+  color: #6b6358;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.masthead-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #c4b99a;
+  font-size: 11px;
+  color: #6b6358;
+  letter-spacing: 1px;
+}
+
+.masthead-info .vol {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.masthead-info .count {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+}
+
+/* Lead */
+.lead-section {
+  padding: 18px 0;
+  border-bottom: 2px solid #2a2a2a;
+  margin-bottom: 24px;
+}
+
+.lead-label {
+  display: inline-block;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background: #8b1a1a;
+  color: #f5f0e6;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+
+.lead-text {
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.55;
+  color: #1a1a1a;
+}
+
+/* Article */
+.article {
+  margin-bottom: 0;
+}
+
+.article-category {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8b1a1a;
+  margin-bottom: 4px;
+}
+
+.article-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+
+.article-source {
+  font-size: 11px;
+  font-style: italic;
+  color: #6b6358;
+  margin-bottom: 8px;
+}
+
+.article-source a {
+  color: #6b6358;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article-source a:hover {
+  color: #8b1a1a;
+}
+
+.article-body {
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: justify;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.article-commentary {
+  font-size: 13.5px;
+  font-style: italic;
+  color: #6b6358;
+  border-top: 1px dashed #c4b99a;
+  padding-top: 8px;
+  line-height: 1.5;
+}
+
+.article-commentary .bullet {
+  color: #8b1a1a;
+  font-style: normal;
+}
+
+/* Feature (full width) */
+.article-feature {
+  margin-bottom: 28px;
+}
+
+.article-feature .article-headline {
+  font-size: 30px;
+}
+
+.article-feature .article-body {
+  font-size: 16px;
+}
+
+.drop-cap {
+  float: left;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 52px;
+  font-weight: 900;
+  color: #8b1a1a;
+  line-height: 0.8;
+  padding: 6px 8px 0 0;
+}
+
+/* Two Column */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 28px;
+  margin-bottom: 28px;
+}
+
+.two-col .article:first-child {
+  border-right: 1px solid #c4b99a;
+  padding-right: 14px;
+}
+
+.two-col .article:last-child {
+  padding-left: 14px;
+}
+
+.two-col .article-headline {
+  font-size: 19px;
+}
+
+.two-col .article-body {
+  font-size: 14px;
+}
+
+/* Full width */
+.article-full {
+  margin-bottom: 28px;
+}
+
+.article-full .article-headline {
+  font-size: 22px;
+}
+
+/* Separator */
+.sep {
+  text-align: center;
+  margin: 20px 0 24px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 14px;
+  color: #6b6358;
+  letter-spacing: 4px;
+}
+
+/* Takeaways */
+.takeaways {
+  border-top: 2px solid #2a2a2a;
+  padding-top: 20px;
+  margin-top: 8px;
+}
+
+.takeaways-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #c4b99a;
+}
+
+.takeaways ul {
+  list-style: none;
+  padding: 0;
+}
+
+.takeaways li {
+  font-size: 14.5px;
+  line-height: 1.6;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(196,185,154,0.3);
+  padding-left: 18px;
+  position: relative;
+}
+
+.takeaways li::before {
+  content: '\25B8';
+  position: absolute;
+  left: 0;
+  color: #8b1a1a;
+  font-size: 10px;
+  top: 8px;
+}
+
+.takeaways li:last-child {
+  border-bottom: none;
+}
+
+/* Colophon */
+.colophon {
+  margin-top: 28px;
+  border-top: 4px double #2a2a2a;
+  background: #eae3d4;
+  padding: 14px 20px;
+  text-align: center;
+  font-size: 10px;
+  color: #6b6358;
+  letter-spacing: 2px;
+}
+
+.colophon em {
+  font-style: normal;
+  color: #8b1a1a;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+  .two-col { grid-template-columns: 1fr; gap: 20px 0; }
+  .two-col .article:first-child { border-right: none; border-bottom: 1px solid #c4b99a; padding-right: 0; padding-bottom: 20px; }
+  .two-col .article:last-child { padding-left: 0; }
+  .article-feature .article-headline { font-size: 24px; }
+  .lead-text { font-size: 17px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- Masthead -->
+<div class="masthead">
+  <div class="masthead-topline">An Independent Tech Publication · Est. 2026</div>
+  <div class="masthead-title">AI TECH DAILY</div>
+  <div class="masthead-subtitle">AI × 科技 · 每日精选</div>
+  <div class="masthead-info">
+    <span class="vol">Vol. 8</span>
+    <span>May 30, 2026</span>
+    <span class="count">今日 8 条精选</span>
+  </div>
+</div>
+
+<!-- Lead -->
+<div class="lead-section">
+  <div class="lead-label">LEAD</div>
+  <div class="lead-text">五月将尽，AI 行业迎来「资本+政策+落地」的三重震荡：Anthropic 以 9650 亿美元估值超越 OpenAI 成为全球最有价值的私人 AI 公司，Nvidia 豪掷 65 亿美元押注硅光技术突破算力瓶颈，而全球科技行业近 3 万岗位在五月因 AI 被裁撤——AI 不再只是技术叙事，它正在重塑商业版图和劳动力结构。</div>
+</div>
+
+<!-- Article 1: Feature (Full Width) -->
+<div class="article article-feature">
+  <div class="article-category">Major Launch</div>
+  <h2 class="article-headline">Anthropic 发布 Claude Opus 4.8：编码与 Agent 能力全面升级</h2>
+  <div class="article-source">来源：Anthropic Blog / TechCrunch · 2026-05-28 &nbsp;·&nbsp; <a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank">原文链接</a></div>
+  <div class="article-body">
+    <span class="drop-cap">A</span>nthropic 正式发布 Claude Opus 4.8，在编码、Agent 任务和专业工作领域全面超越 Opus 4.7。新模型引入了「动态工作流」功能，可处理超大规模问题；Fast Mode 速度提升 2.5 倍且成本降低至三分之一。在 Super-Agent 基准测试中，Opus 4.8 是唯一全部完成端到端测试的模型，在法律 Agent 基准上首次突破 10% 全通过率。早期测试者反馈，Opus 4.8 在长时间自主运行中的可靠性和判断力显著提升，工具调用更加精准，减少了 Opus 4.7 中存在的冗余输出问题。模型即日起以相同价格向所有用户开放。
+  </div>
+  <div class="article-commentary"><span class="bullet">✦</span> Opus 4.8 不是在跑分上刷数字，而是真正在「长时间自主运行」这个企业最在乎的维度上取得了突破。</div>
+</div>
+
+<!-- Separator -->
+<div class="sep">— ✦ —</div>
+
+<!-- Articles 2-3: Two Column -->
+<div class="two-col">
+  <div class="article">
+    <div class="article-category">INDUSTRY</div>
+    <h3 class="article-headline">Anthropic 融资 650 亿美元，估值 9650 亿美元超越 OpenAI</h3>
+    <div class="article-source">CNBC / Anthropic · 2026-05-28 · <a href="https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html" target="_blank">链接</a></div>
+    <div class="article-body">Anthropic 完成 650 亿美元 H 轮融资，由 Altimeter、Dragoneer、Greenoaks、Sequoia 联合领投，估值达 9650 亿美元。距其 2 月份 3800 亿美元估值不到三个月，几乎翻三倍。年化营收已突破 470 亿美元。</div>
+    <div class="article-commentary"><span class="bullet">✦</span> 三个月估值翻三倍不是泡沫叙事，是企业在用真金白银投票——Claude 在企业端的渗透速度超出了所有人的预期。</div>
+  </div>
+  <div class="article">
+    <div class="article-category">INDUSTRY</div>
+    <h3 class="article-headline">OpenAI 秘密提交 S-1，目标 9 月 IPO 估值 1 万亿美元</h3>
+    <div class="article-source">CNBC / Bloomberg · 2026-05-26 · <a href="https://aitoolsrecap.com/Blog/ai-news-may-26-2026" target="_blank">链接</a></div>
+    <div class="article-body">OpenAI 已于 5 月 22 日秘密向 SEC 提交 S-1 招股书，由高盛和摩根士丹利承销，目标 9 月上市。此前完成 1220 亿美元融资，估值 8520 亿美元。SpaceX IPO 文件披露 Anthropic 每月支付 12.5 亿美元使用 Colossus 算力。</div>
+    <div class="article-commentary"><span class="bullet">✦</span> OpenAI 和 Anthropic 正在赛跑上市，但这场 IPO 竞争的真正裁判是华尔街对「AI 企业盈利能力」的耐心。</div>
+  </div>
+</div>
+
+<!-- Article 4: Full Width -->
+<div class="article article-full">
+  <div class="article-category">INDUSTRY</div>
+  <h2 class="article-headline">Nvidia 三个月内 65 亿美元押注硅光技术，突破 AI 算力能耗瓶颈</h2>
+  <div class="article-source">CNBC · 2026-05-29 &nbsp;·&nbsp; <a href="https://www.cnbc.com/2026/05/29/nvidia-photonics-investment-ai.html" target="_blank">原文链接</a></div>
+  <div class="article-body">Nvidia 在过去三个月累计向硅光技术领域投入至少 65 亿美元，投资对象包括 Lumentum（20 亿）、Coherent（20 亿）、Marvell（20 亿）、Corning（5 亿）以及 Ayar Labs（5000 万 E 轮）。硅光技术用光传输数据替代电信号，被视为解决 AI 数据中心能耗瓶颈的关键路径。受投资消息推动，Lumentum 股价年内涨 134%，Coherent 涨 96%，Marvell 涨 122%。不过分析师指出，硅光技术的量产良率仍是挑战，大规模商用预计要到 2028 年。</div>
+  <div class="article-commentary"><span class="bullet">✦</span> 这不是一笔财务投资，而是 Nvidia 在买未来三年的「结构性护城河」——谁控制光的路径，谁就控制算力的天花板。</div>
+</div>
+
+<!-- Articles 5-6: Two Column -->
+<div class="two-col">
+  <div class="article">
+    <div class="article-category">Major Launch</div>
+    <h3 class="article-headline">Google I/O 2026：Gemini 3.5 系列 + 24/7 个人 Agent Spark</h3>
+    <div class="article-source">Google Blog / ExplainX · 2026-05-19 · <a href="https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/" target="_blank">链接</a></div>
+    <div class="article-body">Google 发布 Gemini 3.5 Flash（输出速度 4 倍于竞品）和 Gemini Omni（多模态视频生成）。最重磅的是 Gemini Spark——24/7 运行的个人 AI Agent，可跨 Gmail、Docs 主动执行任务。Gemini App 月活达 9 亿，AI Mode 搜索突破 10 亿月活。</div>
+    <div class="article-commentary"><span class="bullet">✦</span> Google 的野心不是做一个更好的聊天机器人，而是让 AI 成为操作系统的替代品——3 亿 Android 设备是它的起跑器。</div>
+  </div>
+  <div class="article">
+    <div class="article-category">INDUSTRY</div>
+    <h3 class="article-headline">Q1 全球 AI 融资创纪录：3000 亿美元涌入，四巨头拿走六成</h3>
+    <div class="article-source">Crunchbase / Intellizence · 2026-04-01 · <a href="https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/" target="_blank">链接</a></div>
+    <div class="article-body">2026 年 Q1 全球风投达 3000 亿美元，同比增 150%。AI 公司拿走 1880 亿，近三分之二流向四家：OpenAI（1220 亿）、Anthropic（300 亿）、xAI（200 亿）、Waymo。仅 OpenAI 一轮就超过此前全球任何季度风投总额。</div>
+    <div class="article-commentary"><span class="bullet">✦</span> 资本正在以前所未有的集中度押注 AI 赛道，这不是百花齐放，是赢家通吃的序幕。</div>
+  </div>
+</div>
+
+<!-- Separator -->
+<div class="sep">— ✦ —</div>
+
+<!-- Articles 7-8: Two Column -->
+<div class="two-col">
+  <div class="article">
+    <div class="article-category">POLICY</div>
+    <h3 class="article-headline">美国 AI 监管转向：Trump 撤回行政令，企业自愿预审成主流</h3>
+    <div class="article-source">Bloomberg / AIToolsRecap · 2026-05-26 · <a href="https://aitoolsrecap.com/Blog/ai-news-may-26-2026" target="_blank">链接</a></div>
+    <div class="article-body">Trump 于 5 月 21 日撤回签署 AI 行政令的计划，表示「不想削弱美国对中国的领先优势」。该行政令原要求前沿模型进行 90 天政府预审。Microsoft 和 xAI 等企业已同意向监管机构提供模型早期访问权，AI 监管正从强制框架向企业自愿合作转变。</div>
+    <div class="article-commentary"><span class="bullet">✦</span> 监管退一步，企业进一步——「自愿预审」模式本质上是科技巨头在用自己的节奏定义规则。</div>
+  </div>
+  <div class="article">
+    <div class="article-category">TOOLS</div>
+    <h3 class="article-headline">AI 冲击就业：五月全球科技行业近 3 万人被裁</h3>
+    <div class="article-source">Business Today · 2026-05-28 · <a href="https://www.businesstoday.in/technology/news/story/may-mayhem-2026-nearly-30000-tech-jobs-were-wiped-out-533404-2026-05-28" target="_blank">链接</a></div>
+    <div class="article-body">2026 年五月，全球科技行业近 3 万人因 AI 自动化被裁。Meta、Cloudflare、LinkedIn、Intuit（3000 人）、Cisco（4000 人）、Wix（2000 人）均在五月宣布裁员。PayPal 计划未来 2-3 年再裁 20% 员工。Anthropic 联合创始人 Chris Olah 公开警告 AI 将大规模替代人类劳动力。</div>
+    <div class="article-commentary"><span class="bullet">✦</span> 当裁员数字大到无法忽视时，AI 就不再是一个技术话题，而是一个社会契约问题。</div>
+  </div>
+</div>
+
+<!-- Takeaways -->
+<div class="takeaways">
+  <div class="takeaways-title">Today's Takeaways</div>
+  <ul>
+    <li>Anthropic 以 9650 亿美元估值超越 OpenAI，三个月内估值翻三倍，年化营收突破 470 亿美元</li>
+    <li>Nvidia 三个月 65 亿美元押注硅光技术，为下一代 AI 数据中心突破能耗瓶颈提前布局</li>
+    <li>Google I/O 发布 Gemini 3.5 系列和 24/7 个人 Agent Spark，Gemini App 月活达 9 亿</li>
+    <li>OpenAI 秘密提交 S-1，目标 9 月 IPO 估值 1 万亿美元</li>
+    <li>Q1 全球 AI 融资 1880 亿美元创纪录，资本向头部四巨头高度集中</li>
+    <li>五月全球科技行业近 3 万人因 AI 被裁，就业结构冲击加速</li>
+  </ul>
+</div>
+
+<!-- Colophon -->
+<div class="colophon">
+  今日精选 <em>8</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · <em>2026-05-30</em>
+</div>
+
+</div>
+</body>
+</html>
