@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-05-31</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+SC:wght@400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --paper-bg: #f5f0e6;
+            --paper-dark: #eae3d4;
+            --ink: #1a1a1a;
+            --red: #8b1a1a;
+            --brown: #6b6358;
+            --rule: #2a2a2a;
+            --rule-light: #c4b99a;
+        }
+
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', 'Source Serif 4', Georgia, 'Times New Roman', serif;
+            background: var(--paper-bg);
+            color: var(--ink);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .newspaper {
+            max-width: 860px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem 3rem;
+        }
+
+        /* ── Masthead ── */
+        .masthead {
+            text-align: center;
+            padding-bottom: 1.2rem;
+            border-bottom: 4px double var(--rule);
+        }
+        .masthead-topline {
+            font-size: 9.5px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--brown);
+            margin-bottom: 6px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px;
+            font-weight: 900;
+            color: var(--ink);
+            letter-spacing: 18px;
+            text-indent: 18px;
+            line-height: 1.1;
+        }
+        .masthead-subtitle {
+            font-size: 11px;
+            color: var(--brown);
+            letter-spacing: 6px;
+            margin-top: 4px;
+        }
+        .masthead-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 0.7rem;
+            font-size: 10.5px;
+            color: var(--brown);
+            letter-spacing: 1.5px;
+        }
+
+        /* ── Lead ── */
+        .lead-section {
+            padding: 1.4rem 0 1.2rem;
+            border-bottom: 2px solid var(--rule);
+        }
+        .lead-label {
+            display: inline-block;
+            border: 1.5px solid var(--red);
+            color: var(--red);
+            font-size: 8.5px;
+            letter-spacing: 4px;
+            padding: 2px 8px;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+            font-family: 'EB Garamond', Georgia, serif;
+        }
+        .lead-text {
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.55;
+            color: var(--ink);
+        }
+
+        /* ── Article Layout ── */
+        .articles-area {
+            padding-top: 1.4rem;
+        }
+
+        .full-width {
+            margin-bottom: 1.8rem;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            margin-bottom: 1.8rem;
+        }
+        .two-col .col {
+            padding: 0 1.2rem;
+        }
+        .two-col .col:first-child {
+            border-right: 1px solid var(--rule-light);
+            padding-left: 0;
+        }
+        .two-col .col:last-child {
+            padding-right: 0;
+        }
+
+        .separator {
+            text-align: center;
+            color: var(--brown);
+            font-size: 13px;
+            letter-spacing: 6px;
+            margin: 1.2rem 0;
+        }
+
+        /* ── Article Components ── */
+        .article-categories {
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+
+        .article-headline {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-weight: 900;
+            color: var(--ink);
+            margin-bottom: 0.35rem;
+            line-height: 1.25;
+        }
+        .full-width .article-headline {
+            font-size: 30px;
+        }
+        .col .article-headline {
+            font-size: 19px;
+        }
+
+        .article-source {
+            font-size: 11px;
+            font-style: italic;
+            color: var(--brown);
+            margin-bottom: 0.6rem;
+        }
+        .article-source a {
+            color: var(--brown);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--rule-light);
+        }
+        .article-source a:hover {
+            color: var(--red);
+        }
+
+        .article-body {
+            font-size: 15px;
+            text-align: justify;
+            line-height: 1.7;
+            margin-bottom: 0.8rem;
+        }
+        .article-body::first-letter {
+            /* only for feature */
+        }
+        .full-width.has-dropcap .article-body::first-letter {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px;
+            float: left;
+            line-height: 0.85;
+            margin-right: 6px;
+            margin-top: 4px;
+            color: var(--red);
+            font-weight: 900;
+        }
+
+        .article-commentary {
+            border-top: 1px dashed var(--rule-light);
+            padding-top: 0.5rem;
+            font-style: italic;
+            font-size: 13.5px;
+            color: var(--brown);
+            line-height: 1.55;
+        }
+        .article-commentary::before {
+            content: "✦ ";
+            color: var(--red);
+        }
+
+        /* ── Takeaways ── */
+        .takeaways-section {
+            margin-top: 1.6rem;
+            padding-top: 1.2rem;
+            border-top: 3px double var(--rule);
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--brown);
+            margin-bottom: 0.8rem;
+        }
+        .takeaways-list {
+            list-style: none;
+            padding: 0;
+        }
+        .takeaways-list li {
+            font-size: 14px;
+            line-height: 1.65;
+            padding: 0.35rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+        .takeaways-list li::before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: var(--red);
+        }
+
+        /* ── Colophon ── */
+        .colophon {
+            margin-top: 2rem;
+            padding: 0.9rem 1rem;
+            border-top: 4px double var(--rule);
+            background: var(--paper-dark);
+            text-align: center;
+            font-size: 10px;
+            color: var(--brown);
+            letter-spacing: 1.5px;
+            line-height: 1.7;
+        }
+        .colophon em {
+            color: var(--red);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            .newspaper { padding: 0 0.8rem 2rem; margin: 1rem auto; }
+            .masthead-title { font-size: 36px; letter-spacing: 10px; text-indent: 10px; }
+            .masthead-subtitle { font-size: 9px; letter-spacing: 3px; }
+            .masthead-info { flex-direction: column; gap: 2px; }
+            .lead-text { font-size: 17px; }
+            .full-width .article-headline { font-size: 24px; }
+            .col .article-headline { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .col { padding: 0; }
+            .two-col .col:first-child { border-right: none; padding-bottom: 1.2rem; border-bottom: 1px solid var(--rule-light); margin-bottom: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="newspaper">
+
+    <!-- Masthead -->
+    <header class="masthead">
+        <div class="masthead-topline">An Independent Tech Publication · Est. 2026</div>
+        <div class="masthead-title">AI TECH DAILY</div>
+        <div class="masthead-subtitle">AI × 科技 · 每日精选</div>
+        <div class="masthead-info">
+            <span>Vol. 9</span>
+            <span>Sunday, May 31, 2026</span>
+            <span>今日 <em style="color:#8b1a1a;font-style:normal;font-weight:600;">8</em> 条精选</span>
+        </div>
+    </header>
+
+    <!-- Lead -->
+    <section class="lead-section">
+        <div class="lead-label">Lead</div>
+        <p class="lead-text">模型升级按下快进键：Anthropic 41 天迭代 Opus 4.8，DeepMind 用几百美元破解 56 年数学悬案，AI 正从「聊天工具」蜕变为「自主工作者」。</p>
+    </section>
+
+    <!-- Articles -->
+    <div class="articles-area">
+
+        <!-- #1 Full Width Feature -->
+        <article class="full-width has-dropcap">
+            <div class="article-categories">Major Launch</div>
+            <h2 class="article-headline">Anthropic 发布 Claude Opus 4.8：41 天迭代、同价更强、Fast Mode 降至三分之一</h2>
+            <div class="article-source">TechCrunch · VentureBeat · 9to5Mac</div>
+            <div class="article-body">Anthropic 发布 Claude Opus 4.8，距上一代 Opus 4.7 仅 41 天——远短于正常迭代周期。新模型在 agentic 编码、工具调用一致性和诚实性方面显著提升，修复了 4.7 的注释冗余和工具调用缺陷。Bridgewater 等早期测试者反馈，Opus 4.8 更倾向主动标记输入输出中的问题，而非留给用户自行发现。同步推出 Fast Mode（价格降至标准模式的三分之一）和 Dynamic Workflows 研究 preview，支持数百个子代理并行处理代码库级迁移。Anthropic 在公告中暗示 Mythos 级模型「数周内」面向所有客户开放。</div>
+            <div class="article-commentary">41 天迭代说明 4.7 确实翻车了，但敢在五周内承认并修正，本身就是竞争力。</div>
+        </article>
+
+        <div class="separator">— ✦ —</div>
+
+        <!-- #2-3 Two Column -->
+        <div class="two-col">
+            <article class="col">
+                <div class="article-categories">Research</div>
+                <h2 class="article-headline">DeepMind AlphaProof Nexus：数百美元破解九道悬置数十年的埃尔德什难题</h2>
+                <div class="article-source">The Decoder · arXiv / GitHub</div>
+                <div class="article-body">Google DeepMind 发布 AlphaProof Nexus，由 Gemini 驱动、Lean 编译器逐行验证的自动证明框架。系统自主证明了 9 道开放埃尔德什问题（其中两道悬置 56 年）及 44 个 OEIS 猜想，每道推理成本仅数百美元。整体成功率 2.5%，所有形式化证明已在 GitHub 开源，可机器独立验证。</div>
+                <div class="article-commentary">百美元级成本解百年难题，数学研究的经济学已被彻底改写。</div>
+            </article>
+            <article class="col">
+                <div class="article-categories">Policy</div>
+                <h2 class="article-headline">YouTube 从自愿披露转向自动检测：AI 生成视频将强制标注</h2>
+                <div class="article-source">TechCrunch · Ars Technica</div>
+                <div class="article-body">YouTube 宣布从依赖创作者自愿披露转向自动检测机制，平台将在视频播放器中统一显示 AI 内容标签，适用于「显著使用逼真 AI 生成」的内容。标签覆盖 Shorts 和长视频，动画或仅轻微使用 AI 的内容可豁免。此举回应了生成式 AI 快速普及带来的虚假信息风险。</div>
+                <div class="article-commentary">自愿标注时代结束，平台必须亲自下场当裁判。</div>
+            </article>
+        </div>
+
+        <!-- #4 Full Width -->
+        <article class="full-width">
+            <div class="article-categories">Policy · Global</div>
+            <h2 class="article-headline">AI 劳动冲突全球爆发：维基百科罢工、亚马逊员工反制、中国法院裁定 AI 裁员违法</h2>
+            <div class="article-source">AI Weekly #497 · Fortune · The Guardian</div>
+            <div class="article-body">本周四个司法管辖区同时爆发 AI 与劳动冲突，且互无协调。维基百科编辑组织罢工抗议 Wikimedia 裁员；亚马逊员工将内部 AI 排名系统「玩坏」至失效；中国法院裁定企业不得以 AI 替代为由裁员，判赔逾 2.8 万英镑；英国 TUC 支持的智库呼吁员工对 AI 部署拥有实质发言权。这一同步爆发的背后，是 AI 替代焦虑已越过临界点。</div>
+            <div class="article-commentary">没有任何协调，却在同一周爆发——说明 AI 替代焦虑已越过临界点。</div>
+        </article>
+
+        <div class="separator">— ✦ —</div>
+
+        <!-- #5-6 Two Column -->
+        <div class="two-col">
+            <article class="col">
+                <div class="article-categories">Research</div>
+                <h2 class="article-headline">Subquadratic SubQ：1200 万 token 上下文窗口，挑战 Transformer 根本架构</h2>
+                <div class="article-source">The New Stack · DataCamp</div>
+                <div class="article-body">迈阿密初创公司 Subquadratic 发布 SubQ，首个采用 Subquadratic Selective Attention 架构的前沿 LLM，支持 1200 万 token 上下文窗口——现有最大模型的 10 倍。在 128K token 上实现 7.2 倍加速，1M token 上 52.2 倍加速，needle-in-haystack 92.1%。公司融资 2900 万美元，估值 5 亿，路线图指向 Q4 达 5000 万 token。独立第三方验证尚缺。</div>
+                <div class="article-commentary">上下文窗口的数量级跃迁比参数增长更实用，但独立验证还很缺。</div>
+            </article>
+            <article class="col">
+                <div class="article-categories">Industry</div>
+                <h2 class="article-headline">蚂蚁集团发布 Agent 信任协议 ACT，预言「1400 亿智能体」时代</h2>
+                <div class="article-source">量子位</div>
+                <div class="article-body">蚂蚁集团 CEO 韩歆毅在支付宝 AI 生态大会上提出，Agent 正在改写商业链路，「人的流量」让位于「智能体生态」。中国 14 亿人，但未来 Agent 可达 1400 亿个。支付宝联合千问、淘宝发布中国首个 ACT（Agent Commerce Trust）协议，对标 Google A2A 和 OpenAI ACP，建立 Agent 间信任与支付机制。</div>
+                <div class="article-commentary">协议标准之争才是真正的卡位战，流量逻辑确实在重写。</div>
+            </article>
+        </div>
+
+        <div class="separator">— ✦ —</div>
+
+        <!-- #7-8 Two Column -->
+        <div class="two-col">
+            <article class="col">
+                <div class="article-categories">Industry</div>
+                <h2 class="article-headline">Anthropic 暗示 Mythos 级模型「数周内」面向全部客户开放</h2>
+                <div class="article-source">TechCrunch</div>
+                <div class="article-body">Anthropic 在 Opus 4.8 公告中明确表示安全防护进展迅速，预计数周内将 Mythos 级模型带给所有客户。Mythos 在 USAMO 2026 上得分 97.6%（Opus 4.6 仅 42.3%），SWE-bench Verified 93.9%。目前仅约 50 家组织通过 Project Glasswing 获取，首月已发现逾万漏洞。</div>
+                <div class="article-commentary">如果 Mythos 公开，它将重置整个行业的能力天花板。</div>
+            </article>
+            <article class="col">
+                <div class="article-categories">Tools</div>
+                <h2 class="article-headline">DuckDuckGo 流量暴涨 28%：Google 的 AI Mode 反而把用户推向竞品</h2>
+                <div class="article-source">PC Gamer · Hacker News</div>
+                <div class="article-body">Google 公开宣称「用户热爱 AI Mode」后一周内，零追踪搜索引擎 DuckDuckGo 访问量上涨约 28%。分析师指出，Google 对 AI 搜索功能的强制推广反而促使注重隐私的用户转向替代品。一个声称用户满意的功能，却推动用户出走。</div>
+                <div class="article-commentary">用户用脚投票——不是不要搜索，是不要被「AI 化」的搜索。</div>
+            </article>
+        </div>
+
+    </div>
+
+    <!-- Takeaways -->
+    <section class="takeaways-section">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul class="takeaways-list">
+            <li>Anthropic 41 天迭代 Opus 4.8，发布速度反映竞争压力与修正决心，Mythos 公开倒计时启动</li>
+            <li>DeepMind 用 Lean + Gemini 自主证明数学难题，AI 科研的成本曲线已非线性的陡峭</li>
+            <li>YouTube 从自愿标注转向自动检测，AI 内容透明化进入强制执行阶段</li>
+            <li>全球多地同时爆发 AI-劳动冲突，中国法院率先划定 AI 裁员的法律红线</li>
+            <li>SubQ 的 1200 万 token 上下文窗口与 DuckDuckGo 的 28% 涨幅，分别从技术端和用户端发出信号：现有范式正在被挑战</li>
+        </ul>
+    </section>
+
+    <!-- Colophon -->
+    <footer class="colophon">
+        今日精选 <em>8</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · 2026-05-31
+    </footer>
+
+</div>
+</body>
+</html>
