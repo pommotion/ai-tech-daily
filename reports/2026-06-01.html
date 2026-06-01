@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI TECH DAILY · 2026-06-01</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Noto+Serif+SC:wght@400;700&display=swap");
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+  background: #f5f0e6;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  background: #f5f0e6;
+  box-shadow: 0 0 60px rgba(0,0,0,0.08);
+}
+
+/* === MASTHEAD === */
+.masthead {
+  text-align: center;
+  padding: 28px 0 18px;
+  border-bottom: 4px double #2a2a2a;
+}
+.masthead .topline {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #6b6358;
+  margin-bottom: 6px;
+}
+.masthead .title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: #1a1a1a;
+  letter-spacing: 18px;
+  text-indent: 18px;
+  line-height: 1;
+}
+.masthead .subtitle {
+  font-size: 13px;
+  color: #6b6358;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+.masthead .meta-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #c4b99a;
+  font-size: 11px;
+  color: #6b6358;
+  letter-spacing: 1px;
+}
+.masthead .meta-bar .vol {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 12px;
+}
+.masthead .meta-bar .count {
+  font-style: italic;
+}
+
+/* === LEAD === */
+.lead-section {
+  padding: 20px 0 18px;
+  border-bottom: 2px solid #2a2a2a;
+  margin-bottom: 24px;
+}
+.lead-label {
+  display: inline-block;
+  border: 1.5px solid #8b1a1a;
+  color: #8b1a1a;
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.lead-text {
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.55;
+  color: #1a1a1a;
+}
+
+/* === ARTICLE === */
+.article {
+  margin-bottom: 0;
+}
+.article-category {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8b1a1a;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.article-headline {
+  font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+.article-headline.full { font-size: 30px; }
+.article-headline.col { font-size: 19px; }
+.article-source {
+  font-size: 11px;
+  font-style: italic;
+  color: #6b6358;
+  margin-bottom: 8px;
+}
+.article-source a {
+  color: #6b6358;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.article-source a:hover { color: #8b1a1a; }
+.article-body {
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: justify;
+  color: #1a1a1a;
+}
+.article-commentary {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed #c4b99a;
+  font-size: 13.5px;
+  font-style: italic;
+  color: #6b6358;
+}
+.article-commentary .marker {
+  color: #8b1a1a;
+  font-style: normal;
+}
+
+/* === DROP CAP === */
+.drop-cap::first-letter {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 52px;
+  font-weight: 900;
+  color: #8b1a1a;
+  float: left;
+  line-height: 0.8;
+  padding-right: 6px;
+  padding-top: 4px;
+}
+
+/* === SEPARATOR === */
+.sep {
+  text-align: center;
+  padding: 18px 0;
+  font-size: 14px;
+  color: #c4b99a;
+  letter-spacing: 8px;
+}
+
+/* === TWO COLUMN === */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+  margin-bottom: 0;
+}
+.two-col .article:first-child {
+  padding-right: 20px;
+  border-right: 1px solid #c4b99a;
+}
+.two-col .article:last-child {
+  padding-left: 4px;
+}
+
+/* === FULL WIDTH === */
+.full-article {
+  padding: 20px 0;
+  border-bottom: 1px solid #c4b99a;
+}
+
+/* === TAKEAWAYS === */
+.takeaways {
+  margin-top: 28px;
+  padding: 20px 0 0;
+  border-top: 2px solid #2a2a2a;
+}
+.takeaways-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #8b1a1a;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+.takeaways ul {
+  list-style: none;
+  padding: 0;
+}
+.takeaways li {
+  font-size: 14.5px;
+  line-height: 1.6;
+  padding: 6px 0;
+  padding-left: 18px;
+  position: relative;
+  border-bottom: 1px solid #eae3d4;
+}
+.takeaways li:last-child { border-bottom: none; }
+.takeaways li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #8b1a1a;
+  font-weight: 600;
+}
+
+/* === COLOPHON === */
+.colophon {
+  margin-top: 30px;
+  padding: 14px 16px;
+  border-top: 4px double #2a2a2a;
+  background: #eae3d4;
+  font-size: 10px;
+  color: #6b6358;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.colophon em {
+  color: #8b1a1a;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 640px) {
+  .masthead .title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+  .article-headline.full { font-size: 24px; }
+  .two-col { grid-template-columns: 1fr; gap: 0; }
+  .two-col .article:first-child { border-right: none; padding-right: 0; border-bottom: 1px solid #c4b99a; padding-bottom: 16px; margin-bottom: 16px; }
+  .two-col .article:last-child { padding-left: 0; }
+  .lead-text { font-size: 17px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="topline">An Independent Tech Publication · Est. 2026</div>
+  <div class="title">AI TECH DAILY</div>
+  <div class="subtitle">AI × 科技 · 每日精选</div>
+  <div class="meta-bar">
+    <span class="vol">Vol. 9</span>
+    <span>June 1, 2026</span>
+    <span class="count">今日 10 条精选</span>
+  </div>
+</div>
+
+<!-- LEAD -->
+<div class="lead-section">
+  <div class="lead-label">LEAD</div>
+  <div class="lead-text">五月收官，AI 行业迎来历史性转折：Anthropic 以 650 亿美元融资和 Claude Opus 4.8 的双重炸弹估值逼近千亿，OpenAI 秘密递交万亿 IPO 申请，Google 在 I/O 大会上将 Gemini 从模型升级为「环境」，而 DeepSeek V4 以开源百万上下文正面硬刚闭源巨头——资本、技术、监管三线并进，行业从「谁更聪明」正式进入「谁能建生态」的帝国时代。</div>
+</div>
+
+<!-- ARTICLE 1: FULL WIDTH FEATURE -->
+<div class="article full-article">
+  <div class="article-category">Major Launch</div>
+  <div class="article-headline full">Anthropic 发布 Claude Opus 4.8：同价提速，代码诚实度提升 4 倍</div>
+  <div class="article-source"><a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener">Anthropic</a> · May 28, 2026</div>
+  <div class="article-body drop-cap">Anthropic 于 5 月 28 日发布 Claude Opus 4.8，距上一版仅 41 天，创其最快迭代纪录。价格不变（$5/$25 per M tokens），SWE-bench Pro 从 64.3% 升至 69.2%，GDPval-AA Elo 达 1890（超 GPT-5.5 121 分），数学推理 USAMO 从 69.3% 飙至 96.7%。最大亮点是「诚实度」——代码自查能力提升 4 倍，大幅减少自主编码循环中的漏报。同步推出 Dynamic Workflows，可并行调度 1,000 个子 agent 处理仓库级迁移任务，Bun 作者 Jarred Sumner 用其在 11 天内迁移了约 75 万行 Rust 代码。</div>
+  <div class="article-commentary"><span class="marker">✦</span> Anthropic 用「加量不加价」的策略精准打击了开发者最痛的点：不是模型更聪明，而是更值得信任。</div>
+</div>
+
+<div class="sep">— ✦ —</div>
+
+<!-- ARTICLES 2-3: TWO COLUMN -->
+<div class="two-col">
+  <div class="article">
+    <div class="article-category">Major Launch</div>
+    <div class="article-headline col">DeepSeek V4 正式发布：1.6T 参数 + 百万上下文 + 开源 MIT</div>
+    <div class="article-source"><a href="https://api-docs.deepseek.com/news/news260424" target="_blank" rel="noopener">DeepSeek</a> · Apr 24, 2026</div>
+    <div class="article-body">DeepSeek 发布 V4-Pro（1.6T 总参/49B 激活）和 V4-Flash（284B/13B 激活），均支持百万 token 上下文。架构三大创新：CSA+HCA 混合注意力（百万上下文下仅需 27% 推理 FLOPs）、流形约束超连接（mHC）、Muon 优化器。MIT 协议开源，API 定价远低于闭源竞品。V4.1 预计 6 月发布。</div>
+    <div class="article-commentary"><span class="marker">✦</span> 开源模型不是「便宜替代品」，而是架构创新的先锋。</div>
+  </div>
+  <div class="article">
+    <div class="article-category">Major Launch</div>
+    <div class="article-headline col">Google I/O 2026：Gemini Omni + Gemini 3.5 Flash，从模型到「环境」</div>
+    <div class="article-source"><a href="https://www.aicritique.org/us/2026/06/01/ai-developments-in-may-2026/" target="_blank" rel="noopener">AI Critique</a> · May 19, 2026</div>
+    <div class="article-body">Google 发布 Gemini Omni（首个全模态 Flash 模型，可用自然语言编辑视频）和 Gemini 3.5 Flash（前沿 agentic 模型，编码性能超 Gemini 3.1 Pro）。同步推出 Antigravity 代理平台、Info agents 智能搜索，并将 AI 深度整合进 Android 17 和 Android XR 智能眼镜。</div>
+    <div class="article-commentary"><span class="marker">✦</span> 当 AI 成为环境而非工具，迁移成本就是护城河。</div>
+  </div>
+</div>
+
+<div class="sep">— ✦ —</div>
+
+<!-- ARTICLE 4: FULL WIDTH -->
+<div class="article full-article">
+  <div class="article-category">Major Launch</div>
+  <div class="article-headline full">OpenAI 更新 GPT-5.5 Instant + 发布语音模型家族，IPO 前「去娱乐化」</div>
+  <div class="article-source"><a href="https://www.aicritique.org/us/2026/06/01/ai-developments-in-may-2026/" target="_blank" rel="noopener">AI Critique</a> · May 2026</div>
+  <div class="article-body">5 月 5 日，OpenAI 将 ChatGPT 引擎升级至 GPT-5.5 Instant，声称幻觉率比 GPT-5.3 降低 52.5%。5 月 7 日发布 GPT-Realtime-2/Translate/Whisper 三款语音模型，具备 GPT-5 级推理能力的实时语音理解、翻译和转录。5 月 29 日发布 Rosalind Biodefense，向生物技术和公共卫生合作伙伴开放 GPT-Rosalind 模型。这一系列动作显示 OpenAI 正在从「聊天玩具」转向「企业级基础设施」，为 IPO 讲一个更严肃的故事。</div>
+  <div class="article-commentary"><span class="marker">✦</span> IPO 前的每一步都在「去娱乐化」——语音、生物防御，都是讲给华尔街的企业故事。</div>
+</div>
+
+<div class="sep">— ✦ —</div>
+
+<!-- ARTICLES 5-6: TWO COLUMN -->
+<div class="two-col">
+  <div class="article">
+    <div class="article-category">Industry</div>
+    <div class="article-headline col">Anthropic 完成 650 亿美元 H 轮，估值 965 亿美元逼近千亿</div>
+    <div class="article-source"><a href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener">Anthropic</a> · May 28, 2026</div>
+    <div class="article-body">Anthropic 完成 650 亿美元 Series H 融资，由 Altimeter Capital、Dragoneer、Greenoaks、Sequoia 联合领投，估值 965 亿美元。年化营收突破 470 亿美元。与 Amazon 签 5GW、与 Google/Broadcom 签 5GW TPU 算力协议。Claude 成为首个在 AWS、Google Cloud、Azure 三大云平台均可用的前沿模型。</div>
+    <div class="article-commentary"><span class="marker">✦</span> 资本投票：Anthropic 不是 OpenAI 的替代品，而是 AI 时代的「第二极」。</div>
+  </div>
+  <div class="article">
+    <div class="article-category">Industry</div>
+    <div class="article-headline col">OpenAI 秘密递交 IPO 申请，目标估值超 1 万亿美元</div>
+    <div class="article-source"><a href="https://www.cnbc.com/2026/05/20/openai-ipo-filing.html" target="_blank" rel="noopener">CNBC</a> · May 22, 2026</div>
+    <div class="article-body">OpenAI 于 5 月 22 日向 SEC 秘密递交 S-1 文件，目标 9 月在纳斯达克上市，由 Goldman Sachs 和 Morgan Stanley 联席承销。此前 3 月刚完成 1220 亿美元私募融资（史上最大），估值 852 亿美元。一旦上市成功，将成为首家万亿市值 AI 公司。</div>
+    <div class="article-commentary"><span class="marker">✦</span> 从「非营利理想」到「万亿估值」，IPO 是 AI 行业的成人礼。</div>
+  </div>
+</div>
+
+<div class="sep">— ✦ —</div>
+
+<!-- ARTICLE 7: FULL WIDTH -->
+<div class="article full-article">
+  <div class="article-category">Industry</div>
+  <div class="article-headline full">微软自研 MAI 模型剑指 GitHub Copilot，Build 2026 即将揭晓</div>
+  <div class="article-source"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-may-31-2026" target="_blank" rel="noopener">BuildFastWithAI</a> · May 28, 2026</div>
+  <div class="article-body">路透社援引 The Information 报道，微软将在 6 月 2 日 Build 2026 上发布自研 MAI 系列模型，含多尺寸基础模型、专用编码模型、自研 agent 和推理模型。由 Mustafa Suleyman 领导的 MAI 团队此前受 OpenAI 合作协议限制，4 月重新谈判后获得独立训练权。微软股价当日涨 3%。GitHub Copilot 上 46% 的代码已由 AI 编写，但 Claude Code 已在企业开发者中反超 Copilot 成为首选——这是微软自研模型的直接导火索。</div>
+  <div class="article-commentary"><span class="marker">✦</span> 当合作伙伴变成竞争对手，「备胎计划」不是多疑，而是生存本能。</div>
+</div>
+
+<div class="sep">— ✦ —</div>
+
+<!-- ARTICLES 8-9: TWO COLUMN -->
+<div class="two-col">
+  <div class="article">
+    <div class="article-category">Research</div>
+    <div class="article-headline col">苹果发布 PICO 编解码器：从「数学优化」到「模拟人眼」</div>
+    <div class="article-source"><a href="https://www.neican.ai/morningnews/2026-05-31-ai-2026-05-31-/" target="_blank" rel="noopener">Ai内参</a> · May 31, 2026</div>
+    <div class="article-body">苹果发布 PICO 编解码器，通过深度学习与感知损失函数，将视频压缩从传统数学优化范式转向模拟人眼感知。同等画质下数据量降至三分之一。这标志着 AIGC 底层正在被「审美智能」重塑——未来压缩标准不再只看 PSNR，而是看「人眼觉得好不好看」。</div>
+    <div class="article-commentary"><span class="marker">✦</span> 苹果不卷大模型，但它在重新定义 AI 基础设施的底层规则。</div>
+  </div>
+  <div class="article">
+    <div class="article-category">Research</div>
+    <div class="article-headline col">AI 机器人形态「去人化」：从模仿人到定义形态</div>
+    <div class="article-source"><a href="https://www.neican.ai/morningnews/2026-05-31-ai-2026-05-31-/" target="_blank" rel="noopener">Ai内参</a> · May 31, 2026</div>
+    <div class="article-body">天津智博会显示，AI 机器人正在抛弃拟人化路线，转向场景定义形态：爬壁机器人、物流平板车、手术机械臂——形态服从功能而非审美。日本调查显示 34% 的企业正在使用或评估 AI 机器人，以汽车制造商领先。</div>
+    <div class="article-commentary"><span class="marker">✦</span> 当 AI 不再执着于「像人」，才开始真正「像工具」。</div>
+  </div>
+</div>
+
+<div class="sep">— ✦ —</div>
+
+<!-- ARTICLE 10: FULL WIDTH -->
+<div class="article full-article" style="border-bottom: none;">
+  <div class="article-category">Policy</div>
+  <div class="article-headline full">AI 巨头卷入美国中期选举：OpenAI vs Anthropic 的「钞能力」对决</div>
+  <div class="article-source"><a href="https://www.neican.ai/morningnews/2026-05-31-ai-2026-05-31-/" target="_blank" rel="noopener">Ai内参</a> · May 31, 2026</div>
+  <div class="article-body">OpenAI 与 Anthropic 通过超级 PAC 在中期选举中投入上亿美元争夺监管话语权。Anthropic 与梵蒂冈结盟构建 AI 伦理叙事。中国收紧 AI 人才出境管控，阿里和 DeepSeek 核心研究员出国需政府审批，7 月起实施 AI 聊天机器人治理新规。欧盟推进 Chips Act 2.0 芯片自主法案，沙特宣布 2026 为「AI 元年」。全球 AI 监管博弈已从技术讨论升级为地缘政治角力。</div>
+  <div class="article-commentary"><span class="marker">✦</span> 当 AI 公司开始玩政治，说明它们终于承认：规则制定权比模型参数更重要。</div>
+</div>
+
+<!-- TAKEAWAYS -->
+<div class="takeaways">
+  <div class="takeaways-title">Today's Takeaways</div>
+  <ul>
+    <li>Anthropic 同日发布 Opus 4.8 + 完成 650 亿美元融资，估值 965 亿，成为 AI 行业新「第二极」</li>
+    <li>OpenAI 秘密递交 IPO 申请，目标万亿市值，AI 行业最大 IPO 倒计时</li>
+    <li>DeepSeek V4 开源百万上下文架构，混合注意力机制让长文本推理成本降至 1/4</li>
+    <li>Google 在 I/O 将 Gemini 从模型升级为「操作系统级环境」，押注 20 亿用户的默认 AI</li>
+    <li>AI 监管博弈升级为政治战争，中美欧三方同步加码，规则制定权争夺白热化</li>
+  </ul>
+</div>
+
+<!-- COLOPHON -->
+<div class="colophon">
+  今日精选 <em>10</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · <em>2026-06-01</em>
+</div>
+
+</div>
+</body>
+</html>
