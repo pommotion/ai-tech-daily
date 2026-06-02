@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-06-02</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #f5f0e6;
+            color: #1a1a1a;
+            line-height: 1.65;
+        }
+
+        .newspaper {
+            max-width: 860px;
+            margin: 2rem auto;
+            padding: 2rem 3rem;
+            background: #f5f0e6;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08), 0 0 1px rgba(0,0,0,0.1);
+        }
+
+        /* Masthead */
+        .masthead { text-align: center; padding-bottom: 1rem; }
+        .masthead-topline {
+            font-size: 9px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #6b6358;
+            margin-bottom: 10px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px;
+            font-weight: 900;
+            letter-spacing: 18px;
+            text-indent: 18px;
+            color: #1a1a1a;
+            line-height: 1.1;
+        }
+        .masthead-subtitle {
+            font-size: 11px;
+            color: #6b6358;
+            letter-spacing: 6px;
+            margin-top: 6px;
+        }
+        .masthead-rule {
+            border: none;
+            border-top: 4px double #2a2a2a;
+            margin-top: 12px;
+        }
+        .masthead-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 10px;
+            color: #6b6358;
+            letter-spacing: 1px;
+            padding: 6px 0;
+            border-bottom: 1px solid #c4b99a;
+        }
+
+        /* Lead */
+        .lead { margin: 1.2rem 0 1rem; padding-bottom: 1rem; border-bottom: 2px solid #2a2a2a; }
+        .lead-tag {
+            display: inline-block;
+            border: 1.5px solid #8b1a1a;
+            color: #8b1a1a;
+            font-size: 9px;
+            letter-spacing: 4px;
+            padding: 2px 8px;
+            margin-bottom: 8px;
+        }
+        .lead-text {
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.55;
+            color: #1a1a1a;
+        }
+
+        /* Articles */
+        .articles { margin-top: 1.2rem; }
+
+        .article-categories {
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: #8b1a1a;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .article-headline {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 6px;
+        }
+        .feature-headline { font-size: 30px; }
+        .col-headline { font-size: 19px; }
+
+        .article-source {
+            font-size: 11px;
+            font-style: italic;
+            color: #6b6358;
+            margin-bottom: 8px;
+        }
+        .article-source a {
+            color: #6b6358;
+            text-decoration: none;
+            border-bottom: 1px solid #c4b99a;
+        }
+        .article-source a:hover { color: #8b1a1a; }
+
+        .article-body {
+            font-size: 15px;
+            text-align: justify;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px;
+            font-weight: 900;
+            float: left;
+            line-height: 0.8;
+            margin: 4px 8px 0 0;
+            color: #8b1a1a;
+        }
+
+        .article-commentary {
+            font-size: 13.5px;
+            font-style: italic;
+            color: #4a4540;
+            border-top: 1px dashed #c4b99a;
+            padding-top: 6px;
+            line-height: 1.55;
+        }
+        .article-commentary::before { content: "✦ "; color: #8b1a1a; }
+
+        /* Layouts */
+        .full-width { margin-bottom: 1.8rem; }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            margin-bottom: 1.8rem;
+        }
+        .two-col .col {
+            padding: 0 1.2rem;
+        }
+        .two-col .col:first-child {
+            border-right: 1px solid #c4b99a;
+            padding-left: 0;
+        }
+        .two-col .col:last-child {
+            padding-right: 0;
+        }
+
+        .section-divider {
+            text-align: center;
+            color: #6b6358;
+            font-size: 14px;
+            letter-spacing: 6px;
+            margin: 1.5rem 0;
+        }
+
+        /* Takeaways */
+        .takeaways {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #6b6358;
+            margin-bottom: 10px;
+        }
+        .takeaways ul {
+            list-style: none;
+            padding: 0;
+        }
+        .takeaways li {
+            font-size: 14px;
+            padding: 4px 0;
+            padding-left: 16px;
+            position: relative;
+            line-height: 1.6;
+        }
+        .takeaways li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #8b1a1a;
+        }
+
+        /* Colophon */
+        .colophon {
+            margin-top: 1.5rem;
+            padding: 10px 0;
+            border-top: 4px double #2a2a2a;
+            background: #eae3d4;
+            text-align: center;
+            font-size: 10px;
+            color: #6b6358;
+            letter-spacing: 1px;
+        }
+        .colophon em { color: #8b1a1a; font-style: normal; font-weight: 700; }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .newspaper { padding: 1rem 1.2rem; margin: 0.5rem auto; }
+            .masthead-title { font-size: 36px; letter-spacing: 8px; text-indent: 8px; }
+            .feature-headline { font-size: 22px; }
+            .col-headline { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .col { padding: 0; border: none !important; }
+            .two-col .col + .col { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid #c4b99a !important; }
+            .lead-text { font-size: 17px; }
+        }
+    </style>
+</head>
+<body>
+<div class="newspaper">
+
+    <!-- Masthead -->
+    <div class="masthead">
+        <div class="masthead-topline">An Independent Tech Publication · Est. 2026</div>
+        <div class="masthead-title">AI TECH DAILY</div>
+        <div class="masthead-subtitle">AI × 科技 · 每日精选</div>
+        <hr class="masthead-rule">
+        <div class="masthead-info">
+            <span>Vol. 11</span>
+            <span>June 2, 2026 · Monday</span>
+            <span>今日 <em style="color:#8b1a1a;font-style:normal;font-weight:700;">8</em> 条精选</span>
+        </div>
+    </div>
+
+    <!-- Lead -->
+    <div class="lead">
+        <div class="lead-tag">LEAD</div>
+        <div class="lead-text">AI 史上最大融资日：Anthropic 650 亿美元改写估值天际线，OpenAI 转身扑向机器人，英伟达开源物理 AI 大模型，具身智能一天三连发。</div>
+    </div>
+
+    <!-- Articles -->
+    <div class="articles">
+
+        <!-- Article 1: Full Width Feature -->
+        <div class="full-width">
+            <div class="article-categories">Major Launch · 重大发布</div>
+            <div class="article-headline feature-headline">Anthropic 完成 650 亿美元融资，估值 9650 亿超越 OpenAI</div>
+            <div class="article-source">Bloomberg / Reuters</div>
+            <div class="article-body drop-cap">Anthropic 完成 650 亿美元 Series H 融资，投后估值 9650 亿美元，首次超越 OpenAI（8520 亿美元）成为全球最有价值的私人 AI 公司。本轮融资由 Altimeter Capital、Dragoneer、Greenoaks、Sequoia Capital 联合领投，Microsoft、NVIDIA、Founders Fund 参投。Anthropic Q2 预计营收 109 亿美元，同比增长 130%，首次实现季度运营利润约 5.6 亿美元。同时发布 Claude Opus 4.8 旗舰模型，Mythos 级模型即将面向客户开放。Anthropic 同时申请 IPO，年化营收从 2025 年的 90 亿美元飙升至 2026 年 5 月的 470 亿美元。</div>
+            <div class="article-commentary">Anthropic 用一年时间从「负责任的小弟」变成万亿门口的老大，Claude 的代码能力是估值翻转的核武器。</div>
+        </div>
+
+        <!-- Articles 2-3: Two Column -->
+        <div class="two-col">
+            <div class="col">
+                <div class="article-categories">Industry · 行业动态</div>
+                <div class="article-headline col-headline">Apollo 与 Blackstone 360 亿美元为 Anthropic 采购 Google TPU</div>
+                <div class="article-source">Bloomberg</div>
+                <div class="article-body">Apollo Global Management 和 Blackstone 正在安排 360 亿美元私募信贷交易，为 Anthropic 购买 Google 定制 TPU 芯片。芯片通过特殊目的公司持有并租赁给 Anthropic，部署在纽约、德克萨斯等四地数据中心。Broadcom 为最大份额提供担保。这是历史上最大的芯片融资债务交易，AI 算力正式成为华尔街可打包出售的基建资产。</div>
+                <div class="article-commentary">当华尔街把 AI 算力当基建资产打包出售，说明这个行业的资本化已进入深水区。</div>
+            </div>
+            <div class="col">
+                <div class="article-categories">Major Launch · 重大发布</div>
+                <div class="article-headline col-headline">OpenAI 重启机器人业务，奥特曼宣布进军具身智能</div>
+                <div class="article-source">OpenAI Official</div>
+                <div class="article-body">OpenAI CEO Sam Altman 通过社交媒体正式宣布重启机器人业务，招募全栈硬件、运营、系统及 ML 工程师。短期聚焦辅助技术工人建设基础设施的专用机器人，长期愿景为通用个人机器人。此前 OpenAI 曾探索机器人方向但搁置，此次重启恰逢多模态大模型能力飞跃期与物理 AI 赛道升温。</div>
+                <div class="article-commentary">奥特曼不造人形机器人，先造会干活的——务实路线，但别忘了 OpenAI 上次放弃机器人就是因为太难。</div>
+            </div>
+        </div>
+
+        <!-- Article 4: Full Width -->
+        <div class="full-width">
+            <div class="article-categories">Major Launch · 重大发布</div>
+            <div class="article-headline feature-headline" style="font-size:24px;">英伟达发布 Cosmos3：全球首个全开源全模态物理 AI 大模型</div>
+            <div class="article-source">NVIDIA / aitop100</div>
+            <div class="article-body">英伟达发布 Cosmos3，采用混合 Transformer 架构，融合视觉推理、世界生成与动作预测三大能力。在多项评测中开源模型排名第一。同时发布 Cosmos3Super（机器人与自动驾驶）、Cosmos3Nano（秒级视频解析）、Cosmos3Edge（边缘端实时推理）三个版本。联合 Agile Robots、Runway、Skild AI 等发起「英伟达宇宙联盟」。</div>
+            <div class="article-commentary">黄仁勋把物理 AI 的围墙拆了——全开源意味着谁都能入场，但生态的终裁者还是英伟达。</div>
+        </div>
+
+        <div class="section-divider">— ✦ —</div>
+
+        <!-- Articles 5-6: Two Column -->
+        <div class="two-col">
+            <div class="col">
+                <div class="article-categories">Major Launch · 重大发布</div>
+                <div class="article-headline col-headline">MiniMax M3 开源发布，编程力压 GPT-5.5</div>
+                <div class="article-source">MiniMax / aitop100</div>
+                <div class="article-body">MiniMax 发布 M3，SWE-Bench Pro 编程评测 59.0%，超越 GPT-5.5 和 Gemini 3.1 Pro。支持 100 万超长上下文，原生多模态覆盖图片、视频输入及桌面自动化。采用稀疏注意力架构 MSA，处理 100 万长上下文时每 Token 计算量压缩至上一代 1/20。完整权重承诺 10 天内开源。</div>
+                <div class="article-commentary">MiniMax 用「发布即开源」赌生态信任，这是国内大模型公司最硬的一次表态。</div>
+            </div>
+            <div class="col">
+                <div class="article-categories">Industry · 行业动态</div>
+                <div class="article-headline col-headline">SoftBank 承诺 750 亿欧元在法国建设 AI 数据中心</div>
+                <div class="article-source">SoftBank / Choose France Summit</div>
+                <div class="article-body">SoftBank 在 Choose France 峰会宣布投资最高 750 亿欧元（约 875 亿美元），在法国建设 5GW AI 数据中心容量。首期 450 亿欧元在法国北部交付 3.1GW，目标 2031 年完成。法国拥有 70% 核电低碳电网、工业用地和工程人才储备。这是欧洲历史上最大的单一 AI 基础设施投资。</div>
+                <div class="article-commentary">孙正义的支票永远比他的资产负债表大——但法国核电加工业用地的组合确实有说服力。</div>
+            </div>
+        </div>
+
+        <!-- Articles 7-8: Two Column -->
+        <div class="two-col">
+            <div class="col">
+                <div class="article-categories">Tools · 工具应用</div>
+                <div class="article-headline col-headline">千问 APP 联手淘宝：AI 购物助手撬动电商决策链</div>
+                <div class="article-source">千问 / aitop100</div>
+                <div class="article-body">千问 APP 六一期间礼物选购问询量增长 260%。自 5 月 11 日与淘宝全面打通后，千问已能完成从需求理解、商品推荐到下单履约的完整购物流程。用户只需描述需求场景，AI 理解消费意图后完成筛选对比和推荐，实现从「人找货」到「对话式导购」的范式切换。</div>
+                <div class="article-commentary">对话式导购不是搜索升级，是入口替换——如果千问能持续缩短决策路径，淘宝搜索框的日子就不好过了。</div>
+            </div>
+            <div class="col">
+                <div class="article-categories">Policy · 政策监管</div>
+                <div class="article-headline col-headline">小红书治理 120 万 AI 托管账号，处置 18 万造假笔记</div>
+                <div class="article-source">小红书 / 上海网络视听创作者大会</div>
+                <div class="article-body">截至 2026 年 5 月，小红书累计处置 18 万篇 AI 造假笔记，治理超 120 万个 AI 托管矩阵账号。AI 托管账号指用自动化工具批量控制的账号矩阵，通过 AI 批量生成笔记制造虚假互动。同时上线 AI 搜索助手「点点」，一边推 AI 搜索一边严打 AI 造假。</div>
+                <div class="article-commentary">120 万个假账号——AI 内容泡沫的真相是，大部分 AI 生成内容不值一读，平台终于开始数尸体了。</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Takeaways -->
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>Anthropic 估值 9650 亿美元超越 OpenAI，AI 赛道进入双巨头时代</li>
+            <li>具身智能迎来爆发日：OpenAI 重启机器人、英伟达 Cosmos3 开源、三重信号叠加</li>
+            <li>MiniMax M3 开源即登顶编程榜单，国产大模型在代码赛道撕开口子</li>
+            <li>AI 基础设施进入华尔街产品化阶段：360 亿芯片债、750 亿欧数据中心</li>
+            <li>AI 内容泡沫开始被清算：小红书百万假账号、抖音 AI 短剧破亿率仅 0.6%</li>
+        </ul>
+    </div>
+
+    <!-- Colophon -->
+    <div class="colophon">
+        今日精选 <em>8</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · 2026-06-02
+    </div>
+
+</div>
+</body>
+</html>
