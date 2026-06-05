@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI TECH DAILY · 2026-06-05 · Vol. 14</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#e8e0cf}
+  body{
+    font-family:'EB Garamond','Noto Serif SC','Songti SC',Georgia,serif;
+    color:#1a1a1a;
+    line-height:1.55;
+    padding:24px 12px 60px;
+  }
+  .paper{
+    max-width:860px;
+    margin:0 auto;
+    background:#f5f0e6;
+    padding:48px 56px 40px;
+    box-shadow:0 2px 18px rgba(0,0,0,.12),0 0 0 1px #d6cdb6;
+  }
+  .topline{
+    text-align:center;
+    font-size:10.5px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#6b6358;
+    margin-bottom:10px;
+    font-family:'EB Garamond',serif;
+  }
+  .masthead{
+    text-align:center;
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:64px;
+    font-weight:900;
+    color:#1a1a1a;
+    letter-spacing:18px;
+    text-indent:18px;
+    line-height:1;
+    margin:6px 0 8px;
+  }
+  .subtitle{
+    text-align:center;
+    font-size:12px;
+    color:#6b6358;
+    letter-spacing:6px;
+    text-transform:uppercase;
+    font-style:italic;
+    font-family:'EB Garamond',serif;
+  }
+  .double-rule{
+    border-top:4px double #2a2a2a;
+    margin:18px 0 14px;
+  }
+  .info-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#6b6358;
+    border-bottom:1px solid #c4b99a;
+    padding-bottom:8px;
+    margin-bottom:26px;
+    font-family:'EB Garamond',serif;
+  }
+  .info-bar .center{font-style:italic;letter-spacing:3px;text-transform:none;font-size:12.5px}
+  .info-bar em{color:#8b1a1a;font-style:normal;font-weight:600}
+
+  /* Lead */
+  .lead{margin-bottom:34px}
+  .lead-tag{
+    display:inline-block;
+    background:#8b1a1a;
+    color:#f5f0e6;
+    font-size:10px;
+    letter-spacing:4px;
+    padding:3px 9px;
+    font-weight:700;
+    margin-bottom:10px;
+    font-family:'EB Garamond',serif;
+  }
+  .lead-body{
+    font-size:20px;
+    line-height:1.6;
+    font-style:italic;
+    color:#1a1a1a;
+    padding:0 4px;
+  }
+  .lead-rule{
+    height:2px;
+    background:#2a2a2a;
+    margin-top:18px;
+  }
+
+  /* Article base */
+  article{margin-top:34px}
+  .article-category{
+    font-size:10.5px;
+    letter-spacing:3.5px;
+    text-transform:uppercase;
+    color:#8b1a1a;
+    font-weight:700;
+    margin-bottom:6px;
+    font-family:'EB Garamond',serif;
+  }
+  .article-headline{
+    font-family:'Playfair Display',Georgia,serif;
+    font-weight:900;
+    color:#1a1a1a;
+    line-height:1.18;
+    margin-bottom:8px;
+  }
+  .full .article-headline{font-size:30px}
+  .col .article-headline{font-size:19px}
+  .article-source{
+    font-size:11px;
+    font-style:italic;
+    color:#6b6358;
+    margin-bottom:10px;
+  }
+  .article-source a{color:#6b6358;text-decoration:none;border-bottom:1px dotted #6b6358}
+  .article-body{
+    font-size:15px;
+    line-height:1.65;
+    text-align:justify;
+    color:#1a1a1a;
+    margin-bottom:10px;
+  }
+  .article-commentary{
+    font-size:13.5px;
+    line-height:1.55;
+    font-style:italic;
+    color:#5a3a1a;
+    border-top:1px dashed #c4b99a;
+    padding-top:8px;
+    margin-top:8px;
+  }
+  .article-commentary::before{content:'✦ ';color:#8b1a1a;font-style:normal}
+
+  /* Full-width article */
+  .full .article-body::first-letter{
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:52px;
+    font-weight:900;
+    color:#8b1a1a;
+    float:left;
+    line-height:0.9;
+    padding:4px 8px 0 0;
+  }
+
+  /* Grids */
+  .two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin-top:34px;
+    border-left:1px solid #c4b99a;
+  }
+  .two-col > article{
+    margin-top:0;
+    padding-left:30px;
+  }
+  .divider-ornament{
+    text-align:center;
+    color:#8b1a1a;
+    font-size:14px;
+    letter-spacing:10px;
+    margin:30px 0 4px;
+  }
+
+  /* Takeaways */
+  .takeaways{
+    margin-top:42px;
+    border-top:2px solid #2a2a2a;
+    padding-top:18px;
+  }
+  .takeaways-title{
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:11px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#6b6358;
+    margin-bottom:12px;
+  }
+  .takeaways ul{list-style:none;padding:0}
+  .takeaways li{
+    font-size:15px;
+    line-height:1.6;
+    padding:6px 0 6px 18px;
+    border-bottom:1px dotted #c4b99a;
+    position:relative;
+  }
+  .takeaways li::before{
+    content:'◆';
+    position:absolute;
+    left:0;
+    color:#8b1a1a;
+    font-size:10px;
+    top:11px;
+  }
+  .takeaways li:last-child{border-bottom:none}
+
+  /* Colophon */
+  .colophon{
+    margin-top:38px;
+    border-top:4px double #2a2a2a;
+    background:#eae3d4;
+    padding:12px 14px;
+    text-align:center;
+    font-size:11px;
+    letter-spacing:2px;
+    color:#6b6358;
+  }
+  .colophon em{color:#8b1a1a;font-style:normal;font-weight:600}
+
+  @media (max-width:720px){
+    .paper{padding:28px 22px}
+    .masthead{font-size:40px;letter-spacing:10px;text-indent:10px}
+    .two-col{grid-template-columns:1fr;gap:24px;border-left:none}
+    .two-col > article{padding-left:0;border-top:1px solid #c4b99a;padding-top:24px}
+    .two-col > article:first-child{border-top:none;padding-top:0}
+    .full .article-body::first-letter{font-size:42px}
+    .info-bar{flex-direction:column;gap:4px;align-items:center}
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+  <div class="topline">An Independent Tech Publication · Est. 2026</div>
+  <h1 class="masthead">AI TECH DAILY</h1>
+  <div class="subtitle">AI × 科技 · 每日精选</div>
+  <div class="double-rule"></div>
+  <div class="info-bar">
+    <span>Vol. <em>14</em></span>
+    <span class="center">Thursday, June 5, 2026</span>
+    <span>今日 <em>10</em> 条精选</span>
+  </div>
+
+  
+  <section class="lead">
+    <span class="lead-tag">LEAD</span>
+    <p class="lead-body">AI 行业今天最直白的信号是「钱来了」：Anthropic 估值冲到 9650 亿、SpaceX 锁定 750 亿美元 IPO、DeepSeek 国家队入场 74 亿美元、智谱与 MiniMax 国产双雄同日递交科创板招股书。算力、产品、监管、形式化科研四条战线齐头并进——AI 已经不再是「哪个产品的问题」，而是整个资本市场都在为它定价。</p>
+    <div class="lead-rule"></div>
+  </section>
+
+  
+    <article class="full">
+      <div class="article-category">Major Launch</div>
+      <h2 class="article-headline">OpenAI 把 Codex 重做成白领工作台</h2>
+      <div class="article-source"><a href="https://www.theneuron.ai/explainer-articles/everything-that-happened-in-ai-today-tuesday-june-2-2026/" target="_blank" rel="noopener">The Neuron · OpenAI Newsroom</a></div>
+      <p class="article-body">6 月 2 日，OpenAI 把 Codex 从「代码助手」正式推向通用知识工作平台。5M 周活用户中已有 20% 是非开发知识工作者，其增速是开发者的 3 倍。同步推出 6 个角色插件（数据分析师、销售、投行、创意等）、覆盖 62 款应用、110 项技能；新增 Sites 功能，让代理直接生成可分享的交互式工作空间。</p>
+      <div class="article-commentary">战场从「谁家模型更聪明」转向「谁家工作流先渗透」。</div>
+    </article><div class="divider-ornament">— ✦ —</div><div class="two-col">
+    <article class="col">
+      <div class="article-category">Industry</div>
+      <h2 class="article-headline">Anthropic 估值 9650 亿美元，超 OpenAI 成全球最贵 AI 公司</h2>
+      <div class="article-source"><a href="https://kersai.com/june-2026-ai-news-anthropic-spacex-google-business-impact/" target="_blank" rel="noopener">Bloomberg · 247WallSt</a></div>
+      <p class="article-body">5 月 28 日宣布的 650 亿美元 H 轮融资，把 Anthropic 推到 9650 亿美元 post-money 估值的历史新高，超过 OpenAI 的 8520 亿。Q2 营收预计 109 亿美元，首度实现约 5.59 亿的运营利润，年化运行率达 440 亿。22 倍 forward revenue 反映市场对增速可持续性的豪赌。</p>
+      <div class="article-commentary">估值不再「比谁更高」，而是「谁能撑住 22× 的倍数」。</div>
+    </article>
+    <article class="col">
+      <div class="article-category">Industry</div>
+      <h2 class="article-headline">SpaceX 锁定 6/12 Nasdaq 上市，750 亿美元募资加码 AI 算力</h2>
+      <div class="article-source"><a href="https://techstartups.com/2026/06/03/top-tech-news-today-june-3-2026/" target="_blank" rel="noopener">Reuters · TechStartups</a></div>
+      <p class="article-body">6 月 3 日路演启动，SpaceX 以每股 135 美元固定价发行 5.556 亿股，募资 750 亿美元，估值 1.75 万亿。所有募资直接用于 AI 算力基础设施与 Starlink 卫星扩张。30% 零售配售 + 双层股权结构，Musk 锁定 366 天。xAI 合并后内部估值已 1 万亿。Morningstar 公允价值仅估 7800 亿。</p>
+      <div class="article-commentary">「太空 + AI」第一次定价到 1.75 万亿，零售配售让散户直接接盘前沿。</div>
+    </article></div><div class="divider-ornament">— ✦ —</div>
+    <article class="full">
+      <div class="article-category">Major Launch</div>
+      <h2 class="article-headline">MiniMax M3 发布，国产大模型启动科创板 IPO</h2>
+      <div class="article-source"><a href="https://www.nbd.com.cn/articles/2026-06-01/4414397.html" target="_blank" rel="noopener">每日经济新闻 · 量子位</a></div>
+      <p class="article-body">6 月 1 日，国产大模型公司 MiniMax 正式发布新一代通用模型 M3，搭载自研 MSA 稀疏注意力架构，支持 100 万 token 上下文，编程能力官方称超越 GPT-5.5，训练成本降至前代 1/20。同日启动科创板 IPO，传言估值 3000 亿元。</p>
+      <div class="article-commentary">「长上下文 + 低成本」组合拳，国产开源第一次正面挑战 GPT-5 系。</div>
+    </article><div class="divider-ornament">— ✦ —</div><div class="two-col">
+    <article class="col">
+      <div class="article-category">Industry</div>
+      <h2 class="article-headline">DeepSeek 首轮 74 亿美元，估值飙至 590 亿</h2>
+      <div class="article-source"><a href="https://techstartups.com/2026/06/03/top-tech-news-today-june-3-2026/" target="_blank" rel="noopener">TechStartups · Reuters</a></div>
+      <p class="article-body">6 月 3 日，DeepSeek 启动首轮外部融资 74 亿美元，估值最高达 590 亿。腾讯、宁德时代在投资人名单中，国家队属性进一步强化。V4.1 模型定档 6 月发布，支持多模态与 MCP 协议。梁文锋个人出资据传达 200 亿占 40%。</p>
+      <div class="article-commentary">「资本效率」叙事终结，DeepSeek 正式进入重资源模式。</div>
+    </article>
+    <article class="col">
+      <div class="article-category">Industry</div>
+      <h2 class="article-headline">智谱拟募 150 亿冲刺科创板，80% 投基座模型</h2>
+      <div class="article-source"><a href="https://www.huxiu.com/article/4863969.html" target="_blank" rel="noopener">虎嗅 · 36氪</a></div>
+      <p class="article-body">6 月 1 日董事会通过议案，智谱启动 A 股科创板 IPO，拟募资 150 亿元，80% 用于通用基座大模型项目与 MaaS 平台建设。距 1 月港股上市仅 5 个月，折射国产大模型从「模型能力比拼」进入「资本 + 商业化」综合较量。</p>
+      <div class="article-commentary">港股 + A 股双资本平台，这是国产大模型的「新标配」。</div>
+    </article></div><div class="divider-ornament">— ✦ —</div><div class="two-col">
+    <article class="col">
+      <div class="article-category">Policy</div>
+      <h2 class="article-headline">白宫缩水版 AI 行政令：聚焦网络安全，放弃强制预审批</h2>
+      <div class="article-source"><a href="https://www.theneuron.ai/explainer-articles/everything-that-happened-in-ai-today-tuesday-june-2-2026/" target="_blank" rel="noopener">Politico · Wired</a></div>
+      <p class="article-body">6 月 2 日签署的新版 AI 行政令，聚焦前沿模型的网络安全协同。设立自愿的「前沿模型发布前访问」机制和 AI 网络安全信息共享中心，移除了 2023 旧令中颇有争议的强制许可与预审批条款。Anthropic 当日宣布 Project Glasswing 扩展到 150 家机构。</p>
+      <div class="article-commentary">监管思路从「先管死」转向「先合纵」——把安全研究拉到桌面上。</div>
+    </article>
+    <article class="col">
+      <div class="article-category">Tools</div>
+      <h2 class="article-headline">微软 Build 2026：MXC 把 AI 代理关进系统层沙箱</h2>
+      <div class="article-source"><a href="https://www.theneuron.ai/explainer-articles/everything-that-happened-in-ai-today-tuesday-june-2-2026/" target="_blank" rel="noopener">VentureBeat · Microsoft Blogs</a></div>
+      <p class="article-body">6 月 2 日 Build 大会上，微软发布 MXC——OS 级 AI 代理沙箱，OpenAI 与 NVIDIA 已首批接入；同步预热 Project Solara（Android 改的「代理优先」设备平台）、Edge 端侧模型与 Copilot 新版。Build 主旨是让 Windows 本身成为「代理的操作系统」。</p>
+      <div class="article-commentary">浏览器时代做「应用商店」，AI 时代开始做「代理监狱」。</div>
+    </article>
+    <article class="col">
+      <div class="article-category">Research</div>
+      <h2 class="article-headline">Axiom Math 用 Lean 形式化验证 50 年经济学定理，发现隐藏假设</h2>
+      <div class="article-source"><a href="https://www.theneuron.ai/explainer-articles/everything-that-happened-in-ai-today-tuesday-june-2-2026/" target="_blank" rel="noopener">Fortune · Axiom Math</a></div>
+      <p class="article-body">6 月 2 日，AI 数学公司 Axiom Math 宣布在 Lean 证明助手中形式化验证 Aumann 同意定理，并发现 50 年证明中存在一个隐式假设。同时开源 EconLib——计划中的机器可检验经济学理论库。这是大模型辅助形式化首次系统性触碰社科基础定理。</p>
+      <div class="article-commentary">「AI 帮写代码」的下一站是「AI 帮审数学」，可复现性革命开始渗透经济学。</div>
+    </article>
+    <article class="col">
+      <div class="article-category">Research</div>
+      <h2 class="article-headline">VAST 获 2 亿美元融资，披露世界模型 Project Eden</h2>
+      <div class="article-source"><a href="https://www.qbitai.com/2026/06/427516.html" target="_blank" rel="noopener">量子位 · VAST</a></div>
+      <p class="article-body">6 月 1 日，3D AI 公司 VAST 完成近 2 亿美元 A+ 及 A++ 轮融资，渶策资本、国寿长三角科创基金领投。同期披露世界模型 Project Eden，把「底层状态推演」与「视觉渲染」原生解耦，宣称首次实现「原生环境持久化 + 模块化 + 多玩家同步」，算力成本随人数线性可控。</p>
+      <div class="article-commentary">世界模型之争从「画面谁更真」升级到「状态谁更稳」，VAST 押注解耦架构。</div>
+    </article></div>
+
+  <section class="takeaways">
+    <div class="takeaways-title">Today's Takeaways · 今日要点</div>
+    <ul>
+      <li>资本端三连击：Anthropic 9650 亿、SpaceX 1.75 万亿、DeepSeek 590 亿——AI 资产正以前所未有速度证券化。</li>
+<li>模型战已变成工作流战：OpenAI Codex 角色插件 + Sites 抢的是「白领默认入口」。</li>
+<li>国产双雄同日递交：智谱科创板 + MiniMax 科创板，港 A 双平台成新标配。</li>
+<li>监管从「先管死」转向「先合纵」：白宫新版行政令用自愿机制换合作。</li>
+<li>形式化科研开始反向输出社科：Axiom Math 验证 Aumann 定理，可复现性革命外溢。</li>
+    </ul>
+  </section>
+
+  <div class="colophon">
+    今日精选 <em>10</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · <em>2026-06-05</em>
+  </div>
+</div>
+</body>
+</html>
