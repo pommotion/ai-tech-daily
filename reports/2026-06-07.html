@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI TECH DAILY · 2026-06-07</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { background: #d8cfb8; }
+    body {
+        font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+        color: #1a1a1a;
+        line-height: 1.65;
+        padding: 32px 16px 64px;
+    }
+    .paper {
+        max-width: 860px;
+        margin: 0 auto;
+        background: #f5f0e6;
+        box-shadow: 0 1px 0 #c4b99a, 0 6px 24px rgba(60, 40, 20, 0.18), 0 24px 60px rgba(60, 40, 20, 0.12);
+        padding: 48px 56px 56px;
+    }
+
+    /* ============ Masthead ============ */
+    .topline {
+        font-size: 10px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #6b6358;
+        text-align: center;
+        margin-bottom: 14px;
+    }
+    .masthead {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 64px;
+        font-weight: 900;
+        color: #1a1a1a;
+        letter-spacing: 18px;
+        text-align: center;
+        line-height: 1;
+        text-indent: 18px;
+    }
+    .subtitle {
+        font-family: 'EB Garamond', 'Noto Serif SC', serif;
+        font-size: 13px;
+        color: #6b6358;
+        letter-spacing: 6px;
+        text-align: center;
+        margin-top: 10px;
+        text-transform: none;
+    }
+    .masthead-rule {
+        border: 0;
+        border-top: 4px double #2a2a2a;
+        margin: 18px 0 8px;
+    }
+    .masthead-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 11px;
+        color: #6b6358;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 6px 0 14px;
+        border-bottom: 1px solid #2a2a2a;
+    }
+    .masthead-info .info-mid {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        text-transform: none;
+        letter-spacing: 1px;
+        font-size: 12px;
+        color: #1a1a1a;
+    }
+    .masthead-info em { color: #8b1a1a; font-style: normal; font-weight: 700; }
+
+    /* ============ Lead ============ */
+    .lead {
+        margin: 28px 0 8px;
+        position: relative;
+        padding: 6px 0 22px;
+        border-bottom: 2px solid #2a2a2a;
+    }
+    .lead-tag {
+        display: inline-block;
+        font-family: 'Playfair Display', serif;
+        font-size: 10px;
+        font-weight: 700;
+        color: #f5f0e6;
+        background: #8b1a1a;
+        padding: 3px 8px;
+        letter-spacing: 4px;
+        margin-bottom: 14px;
+    }
+    .lead-text {
+        font-family: 'EB Garamond', 'Noto Serif SC', serif;
+        font-style: italic;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #1a1a1a;
+        text-align: justify;
+    }
+    .lead-text::first-letter {
+        font-family: 'Playfair Display', serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 52px;
+        float: left;
+        line-height: 0.9;
+        margin: 6px 8px 0 0;
+        color: #8b1a1a;
+    }
+
+    /* ============ Articles ============ */
+    .article {
+        margin: 28px 0;
+    }
+    .article + .article { border-top: 1px dashed #c4b99a; padding-top: 26px; }
+    .article-category {
+        font-family: 'Playfair Display', serif;
+        font-size: 10px;
+        font-weight: 700;
+        color: #8b1a1a;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+    .article-headline {
+        font-family: 'Playfair Display', 'Noto Serif SC', serif;
+        color: #1a1a1a;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 6px;
+    }
+    .feature .article-headline { font-size: 30px; }
+    .column .article-headline { font-size: 19px; }
+    .article-source {
+        font-family: 'EB Garamond', serif;
+        font-style: italic;
+        font-size: 11px;
+        color: #6b6358;
+        margin-bottom: 12px;
+    }
+    .article-source a { color: #6b6358; text-decoration: none; border-bottom: 1px dotted #6b6358; }
+    .article-body {
+        font-family: 'EB Garamond', 'Noto Serif SC', serif;
+        font-size: 15px;
+        line-height: 1.7;
+        color: #1a1a1a;
+        text-align: justify;
+        margin-bottom: 14px;
+    }
+    .feature .article-body::first-letter {
+        font-family: 'Playfair Display', serif;
+        font-weight: 900;
+        font-size: 52px;
+        float: left;
+        line-height: 0.9;
+        margin: 6px 8px 0 0;
+        color: #8b1a1a;
+    }
+    .article-commentary {
+        font-family: 'EB Garamond', 'Noto Serif SC', serif;
+        font-style: italic;
+        font-size: 13.5px;
+        line-height: 1.55;
+        color: #4a4239;
+        padding-top: 10px;
+        border-top: 1px dashed #c4b99a;
+    }
+    .article-commentary::before {
+        content: "✦ ";
+        color: #8b1a1a;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    /* ============ Layout: full + 2col + full + 2col + 2col ============ */
+    .row-2col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        margin: 28px 0;
+        position: relative;
+    }
+    .row-2col::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: #c4b99a;
+    }
+    .row-2col .article { margin: 0; padding-top: 0; border-top: none; }
+    .row-2col .article + .article { border-top: none; padding-top: 0; }
+
+    .divider-ornament {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        color: #8b1a1a;
+        letter-spacing: 8px;
+        font-size: 14px;
+        margin: 18px 0 4px;
+    }
+
+    /* ============ Takeaways ============ */
+    .takeaways {
+        margin-top: 40px;
+        padding-top: 22px;
+        border-top: 4px double #2a2a2a;
+    }
+    .takeaways-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 4px;
+        color: #1a1a1a;
+        margin-bottom: 16px;
+    }
+    .takeaways ul {
+        list-style: none;
+        padding: 0;
+    }
+    .takeaways li {
+        font-family: 'EB Garamond', 'Noto Serif SC', serif;
+        font-size: 15px;
+        line-height: 1.7;
+        padding: 8px 0 8px 24px;
+        position: relative;
+        border-bottom: 1px dotted #c4b99a;
+    }
+    .takeaways li:last-child { border-bottom: none; }
+    .takeaways li::before {
+        content: "✦";
+        color: #8b1a1a;
+        position: absolute;
+        left: 0;
+        top: 8px;
+        font-size: 14px;
+    }
+    .takeaways li strong {
+        font-weight: 700;
+        color: #1a1a1a;
+    }
+
+    /* ============ Colophon ============ */
+    .colophon {
+        margin-top: 36px;
+        padding: 14px 16px;
+        background: #eae3d4;
+        border-top: 4px double #2a2a2a;
+        text-align: center;
+        font-size: 11px;
+        color: #4a4239;
+        letter-spacing: 2px;
+    }
+    .colophon em { color: #8b1a1a; font-style: normal; font-weight: 700; }
+
+    @media (max-width: 720px) {
+        body { padding: 16px 6px; }
+        .paper { padding: 28px 22px 36px; }
+        .masthead { font-size: 38px; letter-spacing: 10px; text-indent: 10px; }
+        .feature .article-headline { font-size: 24px; }
+        .row-2col { grid-template-columns: 1fr; gap: 0; }
+        .row-2col::before { display: none; }
+        .row-2col .article { padding-top: 22px; border-top: 1px dashed #c4b99a; }
+        .row-2col .article:first-child { padding-top: 0; border-top: none; }
+        .lead-text { font-size: 17px; }
+        .lead-text::first-letter { font-size: 42px; }
+    }
+</style>
+</head>
+<body>
+<div class="paper">
+
+    <!-- Masthead -->
+    <div class="topline">An Independent Tech Publication · Est. 2026</div>
+    <h1 class="masthead">AI TECH DAILY</h1>
+    <div class="subtitle">AI × 科技 · 每日精选</div>
+    <hr class="masthead-rule">
+    <div class="masthead-info">
+        <span class="info-left">Vol. <em>15</em></span>
+        <span class="info-mid">Sunday, June 7, 2026</span>
+        <span class="info-right">今日 <em>8</em> 条精选</span>
+    </div>
+
+    <!-- Lead -->
+    <div class="lead">
+        <span class="lead-tag">LEAD</span>
+        <p class="lead-text">今天的 AI 圈，闭源巨头的估值与算力豪赌正在同时狂飙，而监管钟摆也从行业自治悄然摆向政府介入。Anthropic 凭 Claude Opus 4.8 和 $965B 估值一举超越 OpenAI，Apollo 与 SpaceX 拿出 350 亿美元债务和每月 9.2 亿美元的真金白银为算力下注；但同一周，Trump 的两份行政令与 Anthropic 自己的"暂停呼吁"，让"AI 治理"成为与"AI 进展"同等分量的关键词。</p>
+    </div>
+
+    <!-- 1. Feature (Full Width) -->
+    <article class="article feature">
+        <div class="article-category">Major Launch</div>
+        <h2 class="article-headline">Anthropic 发布 Claude Opus 4.8，新增 Ultracode 模式让用户手控推理强度</h2>
+        <div class="article-source">Economic Times · Anthropic · <a href="https://economictimes.indiatimes.com/news/new-updates/claude-opus-4-8-vs-gpt-5-5-whats-anthropic-ais-new-ultracode-mode-pricing-honesty-claims-and-jailbreak-debate/articleshow/131521104.cms">2026-06-05</a></div>
+        <p class="article-body">Anthropic 6 月 5 日正式发布 Claude Opus 4.8，主打"Ultracode"模式——用户可手动控制模型在代码任务上的推理强度，按需调用更深算力换取更高准确率。模型在 SWE-bench Pro 等真实工程任务基准上继续提升，定位直指 OpenAI GPT-5.5。同步更新的还有"诚实度"声明和越狱攻防文档，Anthropic 称其在安全透明度上做了进一步加固。</p>
+        <p class="article-commentary">Ultracode 把"模型思考多久"开放给用户，是把推理成本做成一档可调旋钮，比单纯堆参数更实用。</p>
+    </article>
+
+    <div class="divider-ornament">— ✦ —</div>
+
+    <!-- 2-3. Two Column -->
+    <div class="row-2col">
+        <article class="article column">
+            <div class="article-category">Major Launch</div>
+            <h2 class="article-headline">Google Gemini 3.5 Pro 六月内 GA：2M 上下文 + Deep Think</h2>
+            <div class="article-source">Tech Times · Google · <a href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm">2026-06-06</a></div>
+            <p class="article-body">Google I/O 上亮相的 Gemini 3.5 Pro 已进入发布倒计时，传闻 6 月内开启 GA。规格包括 2M token 上下文窗口、"Deep Think" 深度推理模式，以及覆盖文本/图像的多模态原生架构。定价预计为 Flash 版本的 10 倍左右，约 15 美元/百万输入 token、60 美元/百万输出 token，先面向 $20 Pro 与 $250 Ultra 订阅用户。</p>
+            <p class="article-commentary">2M 上下文不是噱头——它让"整个代码库"或"整本技术手册"塞进单次提示成为可能，工程场景受益最大。</p>
+        </article>
+
+        <article class="article column">
+            <div class="article-category">Major Launch</div>
+            <h2 class="article-headline">阿里 Qwen-VLA + Qwen3.7-Plus + Kimi Work：国产大模型三连发</h2>
+            <div class="article-source">大黑 AI 速报 / 雪球 · 阿里 / 月之暗面 · 2026-06-03~06</div>
+            <p class="article-body">阿里通义本周连发两款重磅模型：Qwen-VLA 是统一视觉-语言-动作的端到端模型，主打具身智能和机器人；Qwen3.7-Plus 则是面向通用任务的能力增强版本。同月，月之暗面 Kimi Work 办公工具正式发布，可调度 300 个 Agent 并行协作，主打企业级复杂任务自动化。</p>
+            <p class="article-commentary">阿里押注 VLA 是看清了"具身智能"才是下一波 AGI 落地的真战场；Kimi Work 用 300 Agent 数字员工重新定义办公。</p>
+        </article>
+    </div>
+
+    <div class="divider-ornament">— ✦ —</div>
+
+    <!-- 4. Full Width -->
+    <article class="article feature">
+        <div class="article-category">Industry</div>
+        <h2 class="article-headline">Anthropic 估值 $965B 超越 OpenAI，6 月 1 日已秘密递交 IPO</h2>
+        <div class="article-source">TechStory / Economic Times · Anthropic · <a href="https://techstory.in/anthropics-965-billion-valuation-7-new-ai-billionaires-and-the-overtaking-of-openai/">2026-06-01~02</a></div>
+        <p class="article-body">5 月底 Anthropic 完成 650 亿美元 H 轮融资，投后估值 9650 亿美元，正式超过 OpenAI 3 月 8520 亿美元的最新估值。6 月 1 日 Anthropic 秘密递交 IPO 文件，如顺利上市将冲击万亿门槛。同期 Goldman Sachs、Morgan Stanley、JPMorgan 已被指定为承销商，目标窗口 10 月。Anthropic 联合创始人 Dario 与 Daniela Amodei 因此跻身彭博亿万富翁榜。</p>
+        <p class="article-commentary">不到一年估值从 $380B 飙到 $965B，闭源模型公司的"稀缺溢价"已经被二级市场定价写进教科书。</p>
+    </article>
+
+    <div class="divider-ornament">— ✦ —</div>
+
+    <!-- 5-6. Two Column -->
+    <div class="row-2col">
+        <article class="article column">
+            <div class="article-category">Industry</div>
+            <h2 class="article-headline">Apollo $35B 债务融资：史上最大私募信贷交易之一</h2>
+            <div class="article-source">Economic Times · Apollo / Anthropic · <a href="https://economictimes.indiatimes.com/tech/artificial-intelligence/apollo-wraps-up-35-billion-debt-to-buy-ai-chips-for-anthropic/articleshow/131544047.cms">2026-06-06</a></div>
+            <p class="article-body">Apollo 牵头完成 350 亿美元私募债务，为 Anthropic 购买 AI 芯片和数据中心的资本支出融资——这是历史上最大规模的私人信贷交易之一。算力端的资金动员正以前所未见的速度推进，顶级金融机构正以工程化创新方式设计债务结构，跟上 AI 史无前例的资本需求。</p>
+            <p class="article-commentary">私募信贷进入 AI 时代——当传统银行融资跟不上芯片与电力的资本支出时，华尔街必须发明新工具。</p>
+        </article>
+
+        <article class="article column">
+            <div class="article-category">Industry</div>
+            <h2 class="article-headline">SpaceX-Google $920M/月 AI 算力长约，三年累计 $332 亿</h2>
+            <div class="article-source">Economic Times · SpaceX / Google · <a href="https://economictimes.indiatimes.com/tech/artificial-intelligence/spacex-lands-google-ai-compute-deal-after-anthropic-pact-ahead-of-ipo/articleshow/131543086.cms">2026-06-06</a></div>
+            <p class="article-body">同日 SpaceX 公告与 Google 的 AI 算力合同：自 10 月起至 2029 年 6 月，Google 每月向 SpaceX 支付 9.2 亿美元，三年累计约 332 亿美元，用于调用 Starlink + 数据中心算力。算力交易正在成为与石油、天然气同等级的大宗商品类合同。</p>
+            <p class="article-commentary">当"芯片+电力+轨道"被打包成金融产品，AI 竞赛的战场已经从模型层下沉到资产负债表。</p>
+        </article>
+    </div>
+
+    <div class="divider-ornament">— ✦ —</div>
+
+    <!-- 7-8. Two Column -->
+    <div class="row-2col">
+        <article class="article column">
+            <div class="article-category">Policy</div>
+            <h2 class="article-headline">Trump AI 行政令：国安多供应商 + 联邦或入股头部 AI 公司</h2>
+            <div class="article-source">Superex / Fortune · White House · 2026-06-05~06</div>
+            <p class="article-body">本周 Trump 政府连发两份 AI 政策信号：第一份要求联邦国家安全机构必须与多家 AI 供应商同时合作，避免被单家"卡脖子"——直接回应此前 Anthropic 与五角大楼的对峙；第二份则是 Fortune 披露的"政府可能直接持有 OpenAI、Anthropic、xAI 等头部 AI 公司股权"的表态。配套还有"Great American AI Act"国会提案要求前沿模型上市前 30 天接受联邦安全审查。OpenAI 已表态愿意配合。</p>
+            <p class="article-commentary">当美国政府从"监管者"升级为"股东+客户+裁判"三重身份，AI 公司离"准军工复合体"只剩一层窗户纸。</p>
+        </article>
+
+        <article class="article column">
+            <div class="article-category">Tools · China</div>
+            <h2 class="article-headline">无锡"太湖对话·Agentic AI"：清华系四大成果集中发布</h2>
+            <div class="article-source">同花顺财经 · 清华 / 无锡滨湖 · <a href="https://field.10jqka.com.cn/20260606/c677270334.shtml">2026-06-06</a></div>
+            <p class="article-body">6 月 6 日无锡滨湖"太湖对话"聚焦 Agentic AI，五位中外院士（张亚勤、张宏江、Rahim Tafazolli、芮勇等）领衔 200+ 嘉宾参会。现场集中发布四大全球领先成果：紫荆 AI 医院线上虚拟诊室、AIR ApolloFM 2.0 全域具身智能大脑、清华无锡院与首创生态/北控城市/中航技等 7 家企业的产业合作，以及首批人工智能基金投资项目落地。</p>
+            <p class="article-commentary">"院士站台+政府基金+企业签约"是中国式 AI 落地的标准三件套，这次最像样的成果反而是医疗 Agent。</p>
+        </article>
+    </div>
+
+    <div class="divider-ornament">— ✦ —</div>
+
+    <!-- 9. Full Width — Anthropic pause -->
+    <article class="article feature">
+        <div class="article-category">Policy</div>
+        <h2 class="article-headline">Anthropic 公开呼吁：建立全球协调的 AI 暂停机制</h2>
+        <div class="article-source">Business Recorder · Anthropic · <a href="https://www.brecorder.com/news/40424268/anthropic-urges-ai-labs-to-pause-development-warns-humans-risk-losing-control">2026-06-05</a></div>
+        <p class="article-body">Anthropic 6 月 5 日发布长文《When AI builds itself》，主张业界应建立"可验证、可协调"的 AI 开发暂停机制，理由是当 AI 具备递归自我改进能力时，人类可能逐步丧失对模型行为的控制。文章并未主张全面叫停，而是要求各实验室就"何时该暂停"达成协议并预留制度接口。</p>
+        <p class="article-commentary">这是一份"既做运动员又做裁判"的提案——Anthropic 估值飞涨时呼吁减速，本质是在为头部公司争取规则制定权。</p>
+    </article>
+
+    <!-- Takeaways -->
+    <section class="takeaways">
+        <h3 class="takeaways-title">TODAY'S TAKEAWAYS</h3>
+        <ul>
+            <li><strong>Anthropic 完成估值反超：</strong>$965B 估值 + 6 月 1 日秘密递交 IPO，闭源 AI 公司正式进入"万亿预备队"。</li>
+            <li><strong>算力正在被金融化：</strong>Apollo 350 亿美元债务、SpaceX 332 亿美元 Google 长约，AI 资本支出已超过多数主权国家国防预算。</li>
+            <li><strong>监管钟摆摆向政府：</strong>Trump 的"多供应商+政府持股"双行政令，与 Anthropic 的"暂停呼吁"形成镜像，治理节奏正同步加速。</li>
+            <li><strong>中国大模型押注具身智能：</strong>阿里 Qwen-VLA、Kimi Work 300 Agent、紫荆 AI 医院，应用层比参数层更先撞出商业回声。</li>
+            <li><strong>Google 旗舰终于要 GA：</strong>Gemini 3.5 Pro 若如期发布，2M 上下文将重新定义"长文档处理"的工程边界。</li>
+        </ul>
+    </section>
+
+    <!-- Colophon -->
+    <div class="colophon">
+        今日精选 <em>9</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · 2026-06-07 · <em>Vol. 15</em>
+    </div>
+
+</div>
+</body>
+</html>
