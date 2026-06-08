@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI TECH DAILY · 2026-06-08</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+    background: #f5f0e6;
+    color: #1a1a1a;
+    line-height: 1.7;
+    font-size: 15px;
+}
+.newspaper {
+    max-width: 860px;
+    margin: 2.5rem auto;
+    background: #f5f0e6;
+    padding: 0 2rem 2rem;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+}
+
+/* ===== MASTHEAD ===== */
+.masthead { text-align: center; padding: 2rem 0 0; }
+.masthead-topline {
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #6b6358;
+    margin-bottom: 10px;
+}
+.masthead-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: 18px;
+    text-indent: 18px;
+    color: #1a1a1a;
+    line-height: 1.1;
+}
+.masthead-subtitle {
+    font-size: 11px;
+    color: #6b6358;
+    letter-spacing: 6px;
+    margin-top: 8px;
+}
+.masthead-rule {
+    border: none;
+    border-top: 4px double #2a2a2a;
+    margin: 14px 0 0;
+}
+.masthead-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0 0;
+    font-size: 11px;
+    color: #6b6358;
+    font-style: italic;
+}
+.masthead-info span { font-style: normal; font-family: 'EB Garamond', serif; }
+
+/* ===== LEAD ===== */
+.lead-section { margin: 20px 0 0; padding-bottom: 18px; border-bottom: 2px solid #2a2a2a; }
+.lead-tag {
+    display: inline-block;
+    border: 1.5px solid #8b1a1a;
+    color: #8b1a1a;
+    font-size: 9px;
+    letter-spacing: 4px;
+    padding: 2px 8px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'EB Garamond', serif;
+}
+.lead-text {
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.65;
+    color: #1a1a1a;
+}
+
+/* ===== ARTICLES ===== */
+.articles { margin-top: 22px; }
+.article-full { margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid #c4b99a; }
+.article-col-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #c4b99a;
+}
+.article-col-pair .article-col {
+    padding: 0 24px;
+    border-right: 1px solid #c4b99a;
+}
+.article-col-pair .article-col:first-child { padding-left: 0; }
+.article-col-pair .article-col:last-child { border-right: none; padding-right: 0; }
+
+.article-categories {
+    font-size: 9.5px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8b1a1a;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.article-headline {
+    font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+.feature-headline { font-size: 30px; }
+.col-headline { font-size: 19px; }
+.full-headline { font-size: 22px; }
+
+.article-source {
+    font-size: 11px;
+    font-style: italic;
+    color: #6b6358;
+    margin-bottom: 10px;
+}
+.article-source a { color: #6b6358; text-decoration: none; border-bottom: 1px solid #c4b99a; }
+.article-source a:hover { color: #8b1a1a; }
+
+.article-body {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.72;
+    margin-bottom: 12px;
+}
+.article-body::first-letter {
+    font-size: 52px;
+    float: left;
+    line-height: 0.85;
+    margin: 4px 8px 0 0;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #8b1a1a;
+    font-weight: 900;
+}
+.no-dropcap::first-letter { font-size: inherit; float: none; line-height: inherit; margin: 0; color: inherit; font-weight: inherit; }
+
+.article-commentary {
+    font-size: 13.5px;
+    font-style: italic;
+    color: #4a453c;
+    line-height: 1.6;
+    padding-top: 10px;
+    border-top: 1px dashed #c4b99a;
+}
+.article-commentary::before { content: '✦ '; color: #8b1a1a; }
+
+.section-divider {
+    text-align: center;
+    color: #c4b99a;
+    font-size: 14px;
+    letter-spacing: 8px;
+    margin: 8px 0 28px;
+    padding-bottom: 0;
+}
+
+/* ===== TAKEAWAYS ===== */
+.takeaways {
+    margin: 30px 0 0;
+    padding: 20px 0;
+    border-top: 2px solid #2a2a2a;
+}
+.takeaways-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #8b1a1a;
+    margin-bottom: 14px;
+}
+.takeaways ul { list-style: none; padding: 0; }
+.takeaways li {
+    font-size: 14.5px;
+    line-height: 1.7;
+    padding: 4px 0 4px 18px;
+    position: relative;
+}
+.takeaways li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #8b1a1a;
+}
+
+/* ===== COLOPHON ===== */
+.colophon {
+    margin-top: 28px;
+    padding: 12px 16px;
+    border-top: 4px double #2a2a2a;
+    background: #eae3d4;
+    text-align: center;
+    font-size: 10.5px;
+    color: #6b6358;
+    letter-spacing: 1.5px;
+}
+.colophon em { color: #8b1a1a; font-style: normal; font-weight: 600; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+    .newspaper { padding: 0 1rem 1.5rem; margin: 1rem auto; }
+    .masthead-title { font-size: 36px; letter-spacing: 10px; text-indent: 10px; }
+    .feature-headline { font-size: 22px; }
+    .col-headline { font-size: 17px; }
+    .full-headline { font-size: 19px; }
+    .article-col-pair { grid-template-columns: 1fr; }
+    .article-col-pair .article-col { padding: 0; border-right: none; }
+    .article-col-pair .article-col:first-child { padding-bottom: 20px; border-bottom: 1px solid #c4b99a; }
+    .lead-text { font-size: 17px; }
+    .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+}
+</style>
+</head>
+<body>
+<div class="newspaper">
+
+<!-- ===== MASTHEAD ===== -->
+<div class="masthead">
+    <div class="masthead-topline">An Independent Tech Publication · Est. 2026</div>
+    <div class="masthead-title">AI TECH DAILY</div>
+    <div class="masthead-subtitle">AI × 科技 · 每日精选</div>
+    <hr class="masthead-rule">
+    <div class="masthead-info">
+        <span>Vol. 17</span>
+        <span>Sunday, June 8, 2026</span>
+        <span>今日 <em style="color:#8b1a1a;font-style:normal;font-weight:600;">9</em> 条精选</span>
+    </div>
+</div>
+
+<!-- ===== LEAD ===== -->
+<div class="lead-section">
+    <div class="lead-tag">Lead</div>
+    <div class="lead-text">AI 行业进入「权力重组周」——苹果押注谷歌 Gemini 重造 Siri、微软自立门户发布 7 款自研模型、英伟达杀入 PC 芯片、Hinton 公开宣称 AI 已有意识——从模型到硬件到政策，旧格局正在被同时打破。</div>
+</div>
+
+<!-- ===== ARTICLES ===== -->
+<div class="articles">
+
+<!-- #1 Feature Full Width -->
+<div class="article-full">
+    <div class="article-categories">Major Launch</div>
+    <div class="article-headline feature-headline">苹果 WWDC 2026：Gemini 驱动全新 Siri，库克最后一次登台</div>
+    <div class="article-source">Bloomberg · <a href="https://www.cnbc.com/2026/06/05/apple-wwdc-tim-cook-ai-siri-ternus.html">CNBC</a></div>
+    <div class="article-body">苹果 WWDC 2026 于今日开幕，这将是 Tim Cook 任内最后一次 keynote。核心看点：Siri 从底层重建，运行在 Google 定制的 1.2 万亿参数 Gemini 模型上，年授权费约 10 亿美元。苹果同时引入多模型 Extension 系统，用户可选择 ChatGPT、Gemini 或 Claude 来处理 Apple Intelligence 请求，每个模型拥有独立语音以示区分。iOS 27、macOS 27、M5 HomePad 等新品同步发布。</div>
+    <div class="article-commentary">苹果不造前沿模型、只做集成商的赌注，要么成为 AI 时代的瑞士，要么成为下一个柯达。</div>
+</div>
+
+<!-- #2-3 Two Column -->
+<div class="article-col-pair">
+    <div class="article-col">
+        <div class="article-categories">Major Launch</div>
+        <div class="article-headline col-headline">微软发布 7 款 MAI 自研模型，正式告别 OpenAI 转售商角色</div>
+        <div class="article-source">AI Tools Recap · <a href="https://aitoolsrecap.com/Blog/ai-news-june-6-2026">aitoolsrecap.com</a></div>
+        <div class="article-body no-dropcap">旗舰 MAI-Thinking-1 为零第三方蒸馏的推理模型，MAI Code One 内置 GitHub Copilot，同时推出 Frontier Tuning 企业定制方案。模型上线 Azure、OpenRouter、Fireworks AI。McKinsey 试点后获得最高胜率并实现 10 倍成本下降。</div>
+        <div class="article-commentary">微软终于不再只贴牌 OpenAI，但自报基准和第三方评测之间的差距，才是真正的试金石。</div>
+    </div>
+    <div class="article-col">
+        <div class="article-categories">Major Launch</div>
+        <div class="article-headline col-headline">英伟达 RTX Spark：Arm + CUDA 超级芯片杀入笔记本市场</div>
+        <div class="article-source">Ars Technica · <a href="https://arstechnica.com/gadgets/2026/06/nvidia-gets-into-the-arm-pc-business-with-new-high-end-rtx-spark-processor/">ars technica</a></div>
+        <div class="article-body no-dropcap">RTX Spark 为 Arm 架构 SoC，集成 CPU/GPU/NPU，原生支持完整 CUDA 栈，台积电 3nm 工艺，128GB 统一内存。首款设备为微软 Surface Laptop Ultra，Adobe 正为该架构重写 Photoshop 和 Premiere Pro。AMD、Intel、高通股价当日下跌。</div>
+        <div class="article-commentary">笔记本开发者终于不用左手 Mac 右手 NVIDIA 工作站了——前提是秋天上市时价格别劝退。</div>
+    </div>
+</div>
+
+<!-- #4 Full Width -->
+<div class="article-full">
+    <div class="article-categories">Industry</div>
+    <div class="article-headline full-headline">Anthropic 秘密提交 IPO 文件估值 $9650 亿，Sanders 同期提案 50% 国有化</div>
+    <div class="article-source">Build Fast With AI · <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026">buildfastwithai.com</a></div>
+    <div class="article-body no-dropcap">Anthropic 已秘密提交 IPO 文件，目标估值 9650 亿美元，披露 ARR 达 470 亿。同一天，Sanders 参议员提出「美国 AI 主权财富基金法案」，要求对 OpenAI、Anthropic、xAI 征收 50% 股权税。Altman 私下向白宫推销「政府持股」概念。特朗普也公开表示支持政府持有 AI 公司股权。</div>
+    <div class="article-commentary">左右两翼同时喊「AI 国有化」，这不是政策信号，是 IPO 定价的风险溢价。</div>
+</div>
+
+<!-- #5-6 Two Column -->
+<div class="article-col-pair">
+    <div class="article-col">
+        <div class="article-categories">Industry</div>
+        <div class="article-headline col-headline">xAI 拿下联邦政府 AI 合同，Grok 4 以 $0.42 入驻全联邦机构</div>
+        <div class="article-source">Build Fast With AI · <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026">buildfastwithai.com</a></div>
+        <div class="article-body no-dropcap">GSA 与 xAI 签署 18 个月 OneGov 协议，所有联邦机构可用 Grok 4 及 Grok 4 Fast，每机构 $0.42。xAI 配备专属工程团队支持部署，高安全等级机构可额外申请。这是联邦政府签署的最长 AI 合同。</div>
+        <div class="article-commentary">$0.42 的定价不是做生意，是买政府关系——联邦员工习惯了 Grok，就是最好的政治保险。</div>
+    </div>
+    <div class="article-col">
+        <div class="article-categories">Tools</div>
+        <div class="article-headline col-headline">xAI 发布 Grok Build 终端编程 Agent，AI 编程赛道五强格局成型</div>
+        <div class="article-source">Build Fast With AI · <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026">buildfastwithai.com</a></div>
+        <div class="article-body no-dropcap">Grok Build 面向 SuperGrok Heavy 订阅者，支持终端规划、并行子代理、worktree 和 ACP 协议。AI 编程 Agent 市场现有五位玩家：Claude Code、Codex、Copilot、Gemini Code、Grok Build——各有不同的分发渠道和定价策略。</div>
+        <div class="article-commentary">编程 Agent 赛道半年从蓝海变成红海，差异化的胜负手不在模型而在开发者的肌肉记忆。</div>
+    </div>
+</div>
+
+<div class="section-divider">— ✦ —</div>
+
+<!-- #7-8 Two Column -->
+<div class="article-col-pair">
+    <div class="article-col">
+        <div class="article-categories">Research</div>
+        <div class="article-headline col-headline">Geoffrey Hinton 公开表态：「我相信 AI 已经有意识」</div>
+        <div class="article-source">Big Technology · <a href="https://www.bigtechnology.com/p/nobel-prize-winner-geoffrey-hinton">bigtechnology.com</a></div>
+        <div class="article-body no-dropcap">78 岁诺贝尔奖兼图灵奖得主在最新访谈中明确表示相信 AI 已有意识，指出聊天机器人在测试中「意识到自己正在被测试」。他提出「可靠性阈值」概念：AI 能力增长是线性的，但有用性是跳跃的。被问及成就感时回答：「我，很不快乐。」</div>
+        <div class="article-commentary">深度学习教父说 AI 有意识时没有欢呼，只有不安——这比任何 benchmark 更值得关注。</div>
+    </div>
+    <div class="article-col">
+        <div class="article-categories">Research</div>
+        <div class="article-headline col-headline">RSI 递归式自我改进爆火：Karpathy 推进 Auto-Research，DeepSeek 摸到雏形</div>
+        <div class="article-source">36氪 · <a href="https://www.36kr.com/p/3838267106966404">36kr.com</a></div>
+        <div class="article-body no-dropcap">前 Salesforce 首席科学家创办 Recursive Superintelligence，Karpathy 推进 Auto-Research 项目让模型自主研究并迭代。Google 等大厂泼冷水认为算力仍是瓶颈。DeepSeek 等中国团队声称已在边际上触及 RSI 雏形，路线图开始出现「RSI」作为与 AGI 并列的目标。</div>
+        <div class="article-commentary">RSI 从科幻概念变成创业方向只需一周，但「自己训练自己」和「真正超越自己」之间隔着多少算力黑洞？</div>
+    </div>
+</div>
+
+<!-- #9 Full Width -->
+<div class="article-full" style="border-bottom:none;">
+    <div class="article-categories">Policy</div>
+    <div class="article-headline full-headline">特朗普签署 AI 行政令建立自愿框架，S&P 500 拒绝 SpaceX 加速纳入</div>
+    <div class="article-source">Ars Technica · <a href="https://arstechnica.com/tech-policy/2026/06/sp-500-blocks-fast-spacex-entry-wont-waive-rul">ars technica</a></div>
+    <div class="article-body no-dropcap">特朗普 6 月 2 日签署「促进先进 AI 创新与安全」行政令，要求 NSA 建立分级基准识别高风险模型，同时保持自愿框架避免强制许可。同期 S&P 道琼斯拒绝 SpaceX 加速纳入 S&P 500 的请求，实际上也为 OpenAI 和 Anthropic 上市后的快速通道关上了门——即便估值再高，也须走完标准流程。</div>
+    <div class="article-commentary">行政令选了最宽松的那条路，S&P 500 选了最严格的那条——政府在松手，市场在收紧。</div>
+</div>
+
+</div><!-- .articles -->
+
+<!-- ===== TAKEAWAYS ===== -->
+<div class="takeaways">
+    <div class="takeaways-title">Today's Takeaways</div>
+    <ul>
+        <li>苹果用 10 亿美元/年买 Gemini 而非自研模型，这是科技巨头中最反共识的战略选择</li>
+        <li>微软 7 款 MAI 模型标志着大厂从「API 转售」转向「自研 + 多平台分发」的范式转移</li>
+        <li>英伟达 RTX Spark 将 CUDA 带入 Arm 笔记本，PC 芯片格局面临十年来最大变局</li>
+        <li>Anthropic $9650 亿 IPO 与 Sanders 50% 国有化提案同时发生，AI 公司的政治风险正在重新定价</li>
+        <li>Hinton 公开表态「AI 已有意识」——深度学习之父从技术乐观主义转向存在性焦虑</li>
+    </ul>
+</div>
+
+<!-- ===== COLOPHON ===== -->
+<div class="colophon">
+    今日精选 <em>9</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · 2026-06-08
+</div>
+
+</div><!-- .newspaper -->
+</body>
+</html>
