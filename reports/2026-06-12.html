@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI TECH DAILY · 2026-06-12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, 'Times New Roman', serif;
+  background: #f5f0e6;
+  color: #1a1a1a;
+  line-height: 1.65;
+  font-size: 15px;
+}
+.newspaper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  background: #f5f0e6;
+}
+
+/* ===== MASTHEAD ===== */
+.masthead-topline {
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #6b6358;
+  padding-top: 28px;
+  margin-bottom: 6px;
+}
+.masthead-title {
+  text-align: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: #1a1a1a;
+  letter-spacing: 18px;
+  text-indent: 18px;
+  line-height: 1.1;
+  padding: 4px 0 6px;
+}
+.masthead-subtitle {
+  text-align: center;
+  font-size: 11px;
+  color: #6b6358;
+  letter-spacing: 6px;
+  margin-bottom: 10px;
+}
+.masthead-divider {
+  border: none;
+  border-top: 4px double #2a2a2a;
+  margin: 0;
+}
+.info-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4px;
+  font-size: 10px;
+  color: #6b6358;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #c4b99a;
+}
+.info-bar .vol { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
+.info-bar .date { font-style: italic; }
+.info-bar .count em { color: #8b1a1a; font-style: normal; font-weight: 600; }
+
+/* ===== LEAD ===== */
+.lead-section {
+  padding: 20px 0 16px;
+  position: relative;
+}
+.lead-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #fff;
+  background: #8b1a1a;
+  padding: 3px 10px 2px;
+  margin-bottom: 10px;
+}
+.lead-text {
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.55;
+  color: #1a1a1a;
+}
+.lead-divider {
+  border: none;
+  border-top: 2px solid #2a2a2a;
+  margin: 16px 0 0;
+}
+
+/* ===== ARTICLES ===== */
+.article-categories { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #8b1a1a; font-weight: 700; margin-bottom: 4px; }
+.article-headline { font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif; font-weight: 900; line-height: 1.2; margin-bottom: 6px; }
+.article-source { font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 8px; }
+.article-source a { color: #6b6358; text-decoration: none; border-bottom: 1px dotted #c4b99a; }
+.article-source a:hover { color: #8b1a1a; border-bottom-color: #8b1a1a; }
+.article-body { font-size: 15px; text-align: justify; line-height: 1.65; margin-bottom: 10px; }
+.article-commentary {
+  font-size: 13.5px;
+  font-style: italic;
+  color: #3a352e;
+  border-top: 1px dashed #c4b99a;
+  padding-top: 8px;
+  margin-top: 4px;
+  line-height: 1.55;
+}
+.article-commentary::before {
+  content: '✦ ';
+  color: #8b1a1a;
+  font-style: normal;
+}
+
+/* Full-width feature */
+.feature-article {
+  padding: 20px 0 24px;
+  border-bottom: 1px solid #c4b99a;
+}
+.feature-article .article-headline { font-size: 30px; }
+.feature-article .article-body::first-letter {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 52px;
+  float: left;
+  line-height: 0.85;
+  color: #8b1a1a;
+  font-weight: 900;
+  margin: 4px 8px 0 0;
+}
+
+/* Single-column full width */
+.single-article {
+  padding: 20px 0 24px;
+  border-bottom: 1px solid #c4b99a;
+}
+.single-article .article-headline { font-size: 22px; }
+
+/* Two-column grid */
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid #c4b99a;
+}
+.two-col-grid .col-article {
+  padding: 20px 20px 24px 0;
+}
+.two-col-grid .col-article:last-child {
+  padding: 20px 0 24px 20px;
+  border-left: 1px solid #c4b99a;
+}
+.two-col-grid .col-article .article-headline { font-size: 19px; }
+
+/* Separator */
+.section-sep {
+  text-align: center;
+  font-size: 14px;
+  color: #c4b99a;
+  padding: 18px 0;
+  letter-spacing: 6px;
+  border-bottom: 1px solid #c4b99a;
+}
+
+/* ===== TAKEAWAYS ===== */
+.takeaways {
+  padding: 24px 0 20px;
+}
+.takeaways-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #2a2a2a;
+  margin-bottom: 14px;
+}
+.takeaways ul {
+  list-style: none;
+  padding: 0;
+}
+.takeaways li {
+  font-size: 14.5px;
+  line-height: 1.6;
+  padding: 5px 0;
+  padding-left: 16px;
+  position: relative;
+  text-align: justify;
+}
+.takeaways li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #8b1a1a;
+  font-size: 12px;
+}
+
+/* ===== COLOPHON ===== */
+.colophon {
+  border-top: 4px double #2a2a2a;
+  background: #eae3d4;
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 10px;
+  color: #6b6358;
+  letter-spacing: 1.5px;
+  line-height: 1.7;
+}
+.colophon em { color: #8b1a1a; font-style: normal; font-weight: 600; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 680px) {
+  .masthead-title { font-size: 36px; letter-spacing: 10px; text-indent: 10px; }
+  .two-col-grid { grid-template-columns: 1fr; }
+  .two-col-grid .col-article { padding: 16px 0; }
+  .two-col-grid .col-article:last-child { padding: 0 0 16px; border-left: none; border-top: 1px solid #c4b99a; }
+  .feature-article .article-headline { font-size: 24px; }
+  .info-bar { flex-direction: column; gap: 4px; text-align: center; }
+}
+</style>
+</head>
+<body>
+<div class="newspaper">
+
+  <!-- MASTHEAD -->
+  <div class="masthead-topline">An Independent Tech Publication · Est. 2026</div>
+  <div class="masthead-title">AI TECH DAILY</div>
+  <div class="masthead-subtitle">AI × 科技 · 每日精选</div>
+  <hr class="masthead-divider">
+  <div class="info-bar">
+    <span class="vol">Vol. XXI</span>
+    <span class="date">Thursday, June 12, 2026</span>
+    <span class="count">今日 <em>8</em> 条精选</span>
+  </div>
+
+  <!-- LEAD -->
+  <div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <div class="lead-text">AI 产业进入资本军备竞赛与监管赛跑并行阶段：Anthropic 提交 IPO 申请、Alphabet 800 亿美元融资、Florida 起诉 OpenAI，巨头在钱与法之间同时加码。</div>
+    <hr class="lead-divider">
+  </div>
+
+  <!-- 1. FEATURE: Apple Siri AI -->
+  <div class="feature-article">
+    <div class="article-categories">MAJOR LAUNCH</div>
+    <div class="article-headline">Apple WWDC 2026：Siri AI 正式亮相，iOS 27 与 macOS Golden Gate 发布</div>
+    <div class="article-source">Apple Newsroom · <a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/">apple.com</a> · TechCrunch · <a href="https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/">techcrunch.com</a></div>
+    <div class="article-body">Apple 在 WWDC 2026 上发布全新 Siri AI，基于 Gemini 构建自研模型，推出独立 Siri App 和 Core AI 框架打通全生态能力。同步发布的 iOS 27 和 macOS Golden Gate 将 AI 深度融入系统层。这也是 Tim Cook 最后一次以 CEO 身份主持 WWDC 主题演讲。</div>
+    <div class="article-commentary">Apple 用两年时间把 Siri 从「智障」重塑为独立 AI 产品，但核心推理能力仍依赖 Gemini，自研模型之路刚刚开始。</div>
+  </div>
+
+  <!-- 2-3. TWO COL -->
+  <div class="two-col-grid">
+    <div class="col-article">
+      <div class="article-categories">MAJOR LAUNCH</div>
+      <div class="article-headline">Google 开源 DiffusionGemma：扩散语言模型，推理速度提升四倍</div>
+      <div class="article-source">Google DeepMind · <a href="https://deepmind.google/models/gemma/diffusiongemma/">deepmind.google</a> · Google Developers Blog</div>
+      <div class="article-body">Google 发布 DiffusionGemma（Apache 2.0），26B 参数 MoE 架构，首次将文本扩散范式带入大模型主流。放弃自回归逐 token 生成，改用并行去噪输出文本，专用 GPU 上实现最高 4 倍推理加速，仅 18GB VRAM 即可运行。</div>
+      <div class="article-commentary">扩散模型从图像跨界到文本，这是对 Transformer 自回归范式的正面挑战，但「实验性」标签意味着离生产级还有距离。</div>
+    </div>
+    <div class="col-article">
+      <div class="article-categories">INDUSTRY</div>
+      <div class="article-headline">Alphabet 完成史诗级 850 亿美元融资，巴菲特入局 AI 基建</div>
+      <div class="article-source">Google Blog · <a href="https://blog.google/alphabet/investor-presentation-june-2026/">blog.google</a> · SEC Filing</div>
+      <div class="article-body">Alphabet 完成约 850 亿美元股权融资，含 Berkshire Hathaway 100 亿战略投资，全部用于 AI 算力基础设施扩建。这是美国企业史上最大规模股权发行，认购超额。</div>
+      <div class="article-commentary">连巴菲特都下注 AI 基建，军备竞赛从科技圈共识变成主流资本共识，但基础设施过剩的风险也在累积。</div>
+    </div>
+  </div>
+
+  <!-- 4. SINGLE -->
+  <div class="single-article">
+    <div class="article-categories">INDUSTRY</div>
+    <div class="article-headline">Anthropic 提交保密 IPO 申请，估值近万亿美元，AI 万亿市值第一股即将诞生</div>
+    <div class="article-source">Anthropic · <a href="https://www.anthropic.com/news/confidential-draft-s1-sec">anthropic.com</a> · CNBC · <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html">cnbc.com</a></div>
+    <div class="article-body">Anthropic 于 6 月 1 日向 SEC 保密提交 S-1 注册声明，此前刚完成 650 亿美元 Series H 融资，估值达 9650 亿美元。年化收入从 1 月的 90 亿美元飙升至 5 月的 470 亿美元，预计 Q2 首次实现运营盈利，目标 10 月挂牌上市。</div>
+    <div class="article-commentary">Anthropic 抢在 OpenAI 之前率先冲刺 IPO，但 5 个月收入翻 5 倍的增速是否可持续，将决定万亿估值的成色。</div>
+  </div>
+
+  <!-- SEPARATOR -->
+  <div class="section-sep">— ✦ —</div>
+
+  <!-- 5-6. TWO COL -->
+  <div class="two-col-grid">
+    <div class="col-article">
+      <div class="article-categories">POLICY</div>
+      <div class="article-headline">Florida 起诉 OpenAI 及 Sam Altman，美国首例州级 AI 安全诉讼</div>
+      <div class="article-source">New York Times · <a href="https://www.nytimes.com/2026/06/01/technology/florida-sues-openai-chatgpt-safety.html">nytimes.com</a> · Florida AG</div>
+      <div class="article-body">Florida 州总检察长对 OpenAI 及 CEO Sam Altman 提起 83 页诉讼，指控 ChatGPT 对未成年人构成危害、导致成瘾行为，要求法院阻止 ChatGPT 对未成年人开放。这是美国首个州级 AI 安全诉讼。</div>
+      <div class="article-commentary">AI 行业的「烟草时刻」来了，一旦判例确立，整个行业的未成年人保护策略都将被重塑。</div>
+    </div>
+    <div class="col-article">
+      <div class="article-categories">RESEARCH</div>
+      <div class="article-headline">Anthropic Mythos 模型发现逾两万个安全漏洞，但公开版护栏引争议</div>
+      <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/">techcrunch.com</a></div>
+      <div class="article-body">Anthropic 网络安全模型 Mythos 扫描 1000 个开源仓库，发现 23,019 个安全漏洞，独立审查精度 90.6%。但其公开发布版本 Fable 的安全护栏过于严格，白帽安全研究者集体不满，80% 合法研究场景被拒答。</div>
+      <div class="article-commentary">护栏太严让安全研究几乎无法进行，「宁可错杀一千」的策略反而削弱了 Mythos 的实际价值。</div>
+    </div>
+  </div>
+
+  <!-- 7-8. TWO COL -->
+  <div class="two-col-grid">
+    <div class="col-article">
+      <div class="article-categories">RESEARCH</div>
+      <div class="article-headline">Stanford 2026 AI 指数：中美差距仅剩 2.7%，入门开发者岗位减少两成</div>
+      <div class="article-source">Stanford HAI</div>
+      <div class="article-body">Stanford 发布 2026 AI 指数报告：中美顶级模型性能差距仅剩 2.7%；入门级软件开发岗位减少近 20%；AI 私募投资达 5817 亿美元（同比增长 130%）；Grok 4 训练碳排放达 72,816 吨。</div>
+      <div class="article-commentary">入门开发者岗位蒸发、碳排放飙升，技术红利与社会成本的剪刀差越来越大。</div>
+    </div>
+    <div class="col-article">
+      <div class="article-categories">TOOLS</div>
+      <div class="article-headline">抖音启动「AI 视频英才」扶持计划，创作者端开启 AI 红利兑现通道</div>
+      <div class="article-source">量子位 · <a href="https://www.qbitai.com/2026/06/433832.html">qbitai.com</a></div>
+      <div class="article-body">抖音正式启动面向创作者的「AI 视频英才」扶持计划，将流量、变现工具与 AIGC 创作能力打包下放，降低 AI 视频工具使用门槛，把平台流量机制与 AIGC 内容打通。</div>
+      <div class="article-commentary">抖音把 AI 视频工具准入门槛降到最低，本质上是让创作者成为 AI 模型的免费测试员和推广员。</div>
+    </div>
+  </div>
+
+  <!-- TAKEAWAYS -->
+  <div class="takeaways">
+    <div class="takeaways-title">Today's Takeaways</div>
+    <ul>
+      <li>Apple Siri AI 正式发布，但核心推理仍依赖 Gemini，自研路漫漫</li>
+      <li>Google 开源 DiffusionGemma，扩散模型范式首次冲击文本生成主流</li>
+      <li>Alphabet 850 亿美元 + Anthropic 万亿 IPO，AI 资本竞赛进入史无前例的量级</li>
+      <li>Florida 起诉 OpenAI 拉开 AI 监管新篇章，行业「烟草时刻」或将到来</li>
+      <li>Stanford 报告揭示：入门开发者岗位减少 20%，AI 的就业冲击不再是预测而是数据</li>
+    </ul>
+  </div>
+
+  <!-- COLOPHON -->
+  <div class="colophon">
+    今日精选 <em>8</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · 2026-06-12
+  </div>
+
+</div>
+</body>
+</html>
