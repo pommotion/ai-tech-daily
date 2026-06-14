@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-06-14</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+SC:wght@400;600;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #d6cfc0;
+            color: #1a1a1a;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .newspaper {
+            max-width: 860px;
+            margin: 2rem auto;
+            background: #f5f0e6;
+            padding: 3rem 3.5rem 2rem;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15), 0 0 0 1px #c4b99a;
+        }
+
+        /* Masthead */
+        .masthead-top {
+            text-align: center;
+            font-size: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #6b6358;
+            margin-bottom: 0.5rem;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px;
+            font-weight: 900;
+            text-align: center;
+            letter-spacing: 18px;
+            text-indent: 18px;
+            color: #1a1a1a;
+            line-height: 1.1;
+            padding: 0.3rem 0;
+        }
+        .masthead-subtitle {
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 6px;
+            color: #6b6358;
+            margin-top: 0.3rem;
+            text-transform: uppercase;
+        }
+        .masthead-divider {
+            border-bottom: 4px double #2a2a2a;
+            margin: 1rem 0 0;
+        }
+        .masthead-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 0;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #6b6358;
+            text-transform: uppercase;
+            border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info-center { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; color: #1a1a1a; letter-spacing: 3px; }
+
+        /* Lead */
+        .lead-section { padding: 1.5rem 0 1.2rem; }
+        .lead-label {
+            display: inline-block;
+            background: #8b1a1a;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            padding: 3px 10px;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+        .lead-text {
+            font-style: italic;
+            font-size: 20px;
+            line-height: 1.6;
+            color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .lead-divider { border-bottom: 2px solid #2a2a2a; margin-top: 1.2rem; }
+
+        /* Articles */
+        .article { padding: 1.2rem 0; }
+        .article-categories {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #8b1a1a;
+            margin-bottom: 0.4rem;
+        }
+        .article-headline {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 0.4rem;
+        }
+        .article-headline.full { font-size: 30px; }
+        .article-headline.col { font-size: 19px; }
+        .article-source {
+            font-size: 11px;
+            font-style: italic;
+            color: #6b6358;
+            margin-bottom: 0.6rem;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px;
+            text-align: justify;
+            line-height: 1.75;
+            color: #2a2a2a;
+        }
+        .article-body .dropcap {
+            float: left;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px;
+            font-weight: 900;
+            color: #8b1a1a;
+            line-height: 0.85;
+            margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            font-size: 13.5px;
+            font-style: italic;
+            color: #6b6358;
+            line-height: 1.6;
+            margin-top: 0.8rem;
+            padding-top: 0.6rem;
+            border-top: 1px dashed #c4b99a;
+        }
+
+        /* Layout */
+        .full-width { width: 100%; }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        .two-col .article { padding: 1.2rem 1rem; }
+        .two-col .article:first-child { border-right: 1px solid #c4b99a; padding-left: 0; }
+        .two-col .article:last-child { padding-right: 0; }
+
+        .section-separator {
+            text-align: center;
+            color: #c4b99a;
+            font-size: 14px;
+            letter-spacing: 8px;
+            padding: 0.5rem 0;
+        }
+
+        /* Takeaways */
+        .takeaways {
+            margin-top: 1.5rem;
+            padding: 1.5rem 0;
+            border-top: 3px double #2a2a2a;
+            border-bottom: 3px double #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 14px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+        .takeaways-list { list-style: none; padding: 0; }
+        .takeaways-list li {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #2a2a2a;
+            padding: 0.3rem 0 0.3rem 1.2rem;
+            position: relative;
+        }
+        .takeaways-list li::before {
+            content: '■';
+            color: #8b1a1a;
+            position: absolute;
+            left: 0;
+            font-size: 8px;
+            top: 8px;
+        }
+
+        /* Colophon */
+        .colophon {
+            margin-top: 1.5rem;
+            padding: 1rem 0;
+            border-top: 4px double #2a2a2a;
+            background: #eae3d4;
+            text-align: center;
+            font-size: 11px;
+            color: #6b6358;
+            letter-spacing: 2px;
+        }
+        .colophon em { color: #8b1a1a; font-style: normal; font-weight: 700; }
+
+        @media (max-width: 640px) {
+            .newspaper { padding: 1.5rem 1.2rem; margin: 0; }
+            .masthead-title { font-size: 38px; letter-spacing: 8px; text-indent: 8px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child { border-right: none; border-bottom: 1px solid #c4b99a; padding: 1.2rem 0; }
+            .two-col .article:last-child { padding: 1.2rem 0; }
+            .article-headline.full { font-size: 24px; }
+            .lead-text { font-size: 17px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="newspaper">
+        <!-- Masthead -->
+        <div class="masthead-top">An Independent Tech Publication · Est. 2026</div>
+        <div class="masthead-title">AI TECH DAILY</div>
+        <div class="masthead-subtitle">AI × 科技 · 每日精选</div>
+        <div class="masthead-divider"></div>
+        <div class="masthead-info">
+            <span>Vol. 22</span>
+            <span class="masthead-info-center">Saturday, June 14, 2026</span>
+            <span>今日 7 条精选</span>
+        </div>
+
+        <!-- Lead -->
+        <div class="lead-section">
+            <div class="lead-label">Lead</div>
+            <div class="lead-text">AI 监管风暴与资本狂飙同日上演：Anthropic 史上最强模型发布三天即遭美国政府强制下架，而 AI 双巨头正排队冲击万亿美元 IPO。</div>
+            <div class="lead-divider"></div>
+        </div>
+
+        <!-- Article 1: Full Width Feature -->
+        <div class="article full-width">
+            <div class="article-categories">Major Launch · 重大发布</div>
+            <div class="article-headline full">Anthropic 发布 Claude Fable 5 与 Mythos 5：史上最强模型，发布三天即遭叫停</div>
+            <div class="article-source">Anthropic · <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">原文链接</a></div>
+            <div class="article-body">
+                <span class="dropcap">A</span>nthropic 于 6 月 9 日发布 Claude Fable 5 和 Mythos 5。Fable 5 是面向公众的安全版本，在几乎所有基准测试中达到 SOTA，涵盖软件工程、知识工作、视觉和科学研究。Stripe 报告称 Fable 5 将数月工程工作压缩到数天，在 5000 万行 Ruby 代码库中一天完成了原本需要两个月的全量迁移。Mythos 5 为限定网络安全防御者使用的无安全护栏版本，在药物设计中将部分流程加速约 10 倍。定价为 $10/M input tokens，不到前代一半。
+            </div>
+            <div class="article-commentary">✦ 发布三天就被叫停，Fable 5 创下了「史上最短命旗舰模型」的纪录。</div>
+        </div>
+
+        <div class="lead-divider"></div>
+
+        <!-- Article 2-3: Two Column -->
+        <div class="two-col">
+            <div class="article">
+                <div class="article-categories">Policy · 政策监管</div>
+                <div class="article-headline col">美国政府首次强制下架前沿 AI 模型，援引出口管制</div>
+                <div class="article-source">CNBC · <a href="https://www.cnbc.com/2026/06/12/anthropic-disables-access-to-fable-5-and-mythos-5-to-comply-with-government-directive.html">原文链接</a></div>
+                <div class="article-body">6 月 12 日，美国政府以国家安全为由发布出口管制指令，要求 Anthropic 暂停所有用户对 Fable 5 和 Mythos 5 的访问。原因是发现了一种绕过安全护栏的越狱方法。Anthropic 表示遵守但强烈反对，称该方法发现的漏洞其他公开模型也能发现，若此标准适用于全行业，将实质叫停所有前沿模型部署。</div>
+                <div class="article-commentary">✦ 政府第一次按下关闭键，但没有给出令人信服的理由。</div>
+            </div>
+            <div class="article">
+                <div class="article-categories">Policy · 政策监管</div>
+                <div class="article-headline col">Anthropic 发布前沿 AI 监管框架，呼吁政府拥有阻止部署权</div>
+                <div class="article-source">Anthropic · <a href="https://www.anthropic.com/policy-on-the-ai-exponential">原文链接</a></div>
+                <div class="article-body">Anthropic 于 6 月 10 日发布《AI 指数增长政策》框架，建议政府获得阻止危险 AI 部署的法律权力，并要求训练超过 10²⁵ FLOPs 的模型开发商接受透明度审查与安全审计。框架覆盖生物、网络、失控和自动化研发四类灾难性风险。讽刺的是，两天后政府就动用了类似权力叫停了他们自己的模型。</div>
+                <div class="article-commentary">✦ Anthropic 呼吁监管两天后，自己就成了被监管的第一个案例。</div>
+            </div>
+        </div>
+
+        <div class="lead-divider"></div>
+
+        <!-- Article 4: Full Width -->
+        <div class="article full-width">
+            <div class="article-categories">Industry · 行业动态</div>
+            <div class="article-headline full">OpenAI 紧跟 Anthropic 秘密提交 IPO 申请，合计估值近两万亿</div>
+            <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/06/08/following-anthropic-openai-files-confidentially-for-ipo/">原文链接</a></div>
+            <div class="article-body">OpenAI 于 6 月 8 日向 SEC 秘密提交 IPO 注册声明，距离 Anthropic 提交同类文件仅一周。OpenAI 最近一轮融资估值达 $852B，Anthropic 则接近 $1T。两家在 IPO 时间线上展开竞赛，OpenAI 曾告知投资者目标是 9 月上市。ChatGPT 周活跃用户已达约 9 亿。两家公司从模型能力竞争扩展到了公开市场估值竞争，谁先上市谁就能定义「AI 公司」在华尔街的定价锚点。</div>
+            <div class="article-commentary">✦ 两家死对头连上市都要抢第一，估值竞赛比模型竞赛还激烈。</div>
+        </div>
+
+        <div class="lead-divider"></div>
+
+        <!-- Article 5-6: Two Column -->
+        <div class="two-col">
+            <div class="article">
+                <div class="article-categories">Industry · 行业动态</div>
+                <div class="article-headline col">DeepSeek 敲定 70 亿美元融资，中国 AI 产业化标志性节点</div>
+                <div class="article-source">NAI 500 · <a href="https://nai500.com/zh-hans/blog/2026/06/deepseek-70-10-ai/">原文链接</a></div>
+                <div class="article-body">DeepSeek 正在筹集约 70 亿美元资金，被视为中国 AI 规模化与全球化的里程碑。以极致性价比著称的 DeepSeek 本轮融资反映了资本、政策、产业产能协同驱动下国产 AI 的加速发展。同期人形机器人、脑机接口等前沿细分领域也出现大额融资项目。</div>
+                <div class="article-commentary">✦ 以低成本打高价格的路线，DeepSeek 正在改写全球 AI 定价权。</div>
+            </div>
+            <div class="article">
+                <div class="article-categories">Industry · 行业动态</div>
+                <div class="article-headline col">TSMC CEO：先进制程产能紧张将持续至 2027 年</div>
+                <div class="article-source">The Tech Marketer · <a href="https://thetechmarketer.com/tsmc-ai-demand-chip-shortage-2026/">原文链接</a></div>
+                <div class="article-body">TSMC CEO 魏哲家在 6 月 4 日股东大会上表示，芯片供应将持续落后于 AI 需求数年，先进制程至少到 2027 年都将处于满载状态。同期 WSTS 大幅上调半导体市场预测至 2026 年 $1.5 万亿，全球芯片 4 月销售额达 $110B，同比增长约 94%。</div>
+                <div class="article-commentary">✦ AI 军备竞赛的瓶颈不在算法，在台积电的产能。</div>
+            </div>
+        </div>
+
+        <div class="lead-divider"></div>
+
+        <!-- Article 7: Full Width -->
+        <div class="article full-width">
+            <div class="article-categories">Research · 前沿研究</div>
+            <div class="article-headline full">Mythos 5 独立完成基因组学研究，药物设计提速十倍</div>
+            <div class="article-source">Anthropic · <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">原文链接</a></div>
+            <div class="article-body">Anthropic 内部团队透露，Mythos 5 在药物设计中将部分流程加速约 10 倍，能独立完成从选择结合位点到运行蛋白质设计工具的全流程，无需人类协助。在基因组学领域，Mythos 5 用一周时间完成了跨 138 个物种的细胞数据分析并训练了定制 ML 模型。这是首个能持续产生新颖科学假设的 AI 模型，科学家在盲测中约 80% 的情况下更偏好 Mythos 5 的假设。一个关于 E. coli 蛋白质的假设已被独立实验室的研究证实。</div>
+            <div class="article-commentary">✦ AI 从「辅助科研」跨入「独立科研」，这才是 Fable 5 真正该上头条的理由。</div>
+        </div>
+
+        <div class="section-separator">— ✦ —</div>
+
+        <!-- Takeaways -->
+        <div class="takeaways">
+            <div class="takeaways-title">Today's Takeaways · 今日要点</div>
+            <ul class="takeaways-list">
+                <li>美国政府首次以国家安全为由强制下架前沿 AI 模型，但理由薄弱，引发行业争议。</li>
+                <li>AI 双巨头 OpenAI 和 Anthropic 同月提交 IPO，合计估值近 $2 万亿。</li>
+                <li>Anthropic Fable 5 能力达到历史新高，但发布三天即遭叫停，凸显「能力越强、监管越紧」的悖论。</li>
+                <li>DeepSeek 70 亿美元融资和中国 AI 资本化加速，全球 AI 竞争格局进一步分化。</li>
+                <li>台积电产能瓶颈持续到 2027，算力供给成为 AI 产业最大硬约束。</li>
+            </ul>
+        </div>
+
+        <!-- Colophon -->
+        <div class="colophon">
+            今日精选 <em>7</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · 2026-06-14
+        </div>
+    </div>
+</body>
+</html>
