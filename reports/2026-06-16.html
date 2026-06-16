@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI TECH DAILY &middot; 2026-06-16</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+SC:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+      background: #f5f0e6; color: #1a1a1a; line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .newspaper {
+      max-width: 860px; margin: 2rem auto 3rem; background: #f5f0e6;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+      padding: 3rem 3.5rem;
+    }
+    .masthead { text-align: center; padding-bottom: 1.5rem; margin-bottom: 2rem; border-bottom: 4px double #2a2a2a; }
+    .topline { font-family: 'EB Garamond', Georgia, serif; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #6b6358; margin-bottom: 10px; }
+    .masthead-title { font-family: 'Playfair Display', Georgia, serif; font-size: 64px; font-weight: 900; letter-spacing: 18px; text-indent: 18px; color: #1a1a1a; line-height: 1.1; }
+    .masthead-subtitle { font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif; font-size: 12px; color: #6b6358; letter-spacing: 6px; text-transform: uppercase; margin-top: 8px; }
+    .info-bar { display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem; padding-top: 0.8rem; border-top: 1px solid #c4b99a; font-family: 'EB Garamond', Georgia, serif; font-size: 10px; color: #6b6358; letter-spacing: 2px; text-transform: uppercase; }
+    .lead-section { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid #2a2a2a; }
+    .lead-label { display: inline-block; background: #8b1a1a; color: #f5f0e6; font-family: 'EB Garamond', Georgia, serif; font-size: 10px; letter-spacing: 4px; padding: 3px 10px; margin-bottom: 12px; }
+    .lead-text { font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif; font-size: 20px; font-style: italic; line-height: 1.6; color: #1a1a1a; }
+    .article-item { margin-bottom: 1.8rem; }
+    .article-category { font-family: 'EB Garamond', Georgia, serif; font-size: 9px; letter-spacing: 3px; color: #8b1a1a; margin-bottom: 4px; text-transform: uppercase; }
+    .feature-headline { font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif; font-size: 30px; font-weight: 900; line-height: 1.25; margin-bottom: 6px; color: #1a1a1a; }
+    .article-headline { font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif; font-size: 19px; font-weight: 700; line-height: 1.35; margin-bottom: 4px; color: #1a1a1a; }
+    .article-source { font-family: 'EB Garamond', Georgia, serif; font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 8px; }
+    .article-source a { color: #6b6358; text-decoration: none; border-bottom: 1px dotted #c4b99a; }
+    .article-source a:hover { color: #8b1a1a; border-bottom-color: #8b1a1a; }
+    .article-body { font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif; font-size: 15px; line-height: 1.75; text-align: justify; margin-bottom: 10px; }
+    .drop-cap { float: left; font-family: 'Playfair Display', Georgia, serif; font-size: 52px; font-weight: 900; line-height: 0.85; color: #8b1a1a; padding-right: 6px; padding-top: 2px; }
+    .article-commentary { font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif; font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.6; padding-top: 8px; border-top: 1px dashed #c4b99a; }
+    .commentary-prefix { color: #8b1a1a; font-style: normal; margin-right: 4px; }
+    .full-width { margin-bottom: 2rem; }
+    .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; position: relative; }
+    .two-column::after { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: #c4b99a; }
+    .col { position: relative; }
+    .section-separator { text-align: center; font-family: 'EB Garamond', Georgia, serif; font-size: 14px; color: #6b6358; letter-spacing: 6px; margin: 2rem 0; }
+    .takeaways { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 3px double #2a2a2a; }
+    .takeaways-title { font-family: 'Playfair Display', Georgia, serif; font-size: 13px; font-weight: 900; letter-spacing: 6px; color: #1a1a1a; margin-bottom: 1rem; text-transform: uppercase; }
+    .takeaways-list { list-style: none; }
+    .takeaways-list li { font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif; font-size: 14px; line-height: 1.8; color: #1a1a1a; padding: 0.4rem 0; border-bottom: 1px solid #c4b99a40; }
+    .takeaways-list li::before { content: '\25A0'; color: #8b1a1a; font-size: 8px; margin-right: 10px; vertical-align: middle; }
+    .colophon { margin-top: 2.5rem; padding: 1.2rem 1.5rem; background: #eae3d4; border-top: 3px double #2a2a2a; text-align: center; font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif; font-size: 10px; color: #6b6358; letter-spacing: 2px; line-height: 1.8; }
+    .colophon em { color: #8b1a1a; font-style: normal; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="newspaper">
+    <header class="masthead">
+      <div class="topline">An Independent Tech Publication &middot; Est. 2026</div>
+      <h1 class="masthead-title">AI TECH DAILY</h1>
+      <div class="masthead-subtitle">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+      <div class="info-bar">
+        <span>Vol. 24</span>
+        <span>June 16, 2026</span>
+        <span>&#20170;&#26085; 8 &#26465;&#31934;&#36873;</span>
+      </div>
+    </header>
+    <section class="lead-section">
+      <span class="lead-label">LEAD</span>
+      <p class="lead-text">AI &#34892;&#19994;&#26412;&#21608;&#21516;&#26102;&#19978;&#28436;&#20004;&#22330;&#22823;&#25103;&#65306;&#21069;&#21488;&#26159;&#27169;&#22411;&#33021;&#21147;&#30340;&#20891;&#22791;&#31454;&#36187;&#65292;&#21518;&#21488;&#26159;&#36164;&#26412;&#24066;&#22330;&#30340;&#21382;&#21490;&#24615;&#21464;&#23616;&#12290;Anthropic &#21644; OpenAI &#21452;&#21452;&#25552;&#20132; IPO&#65292;G7 &#23792;&#20250;&#19978;&#21508;&#22269;&#25919;&#24220;&#24320;&#22987;&#35748;&#30495;&#35752;&#35770; AI &#23545;&#20799;&#31461;&#30340;&#23041;&#32961;&#8212;&#8212;AI &#34892;&#19994;&#27491;&#22312;&#20174;&#12300;&#25216;&#26415;&#38738;&#26149;&#26399;&#12301;&#27493;&#20837;&#12300;&#21046;&#24230;&#25104;&#24180;&#26399;&#12301;&#12290;</p>
+    </section>
+    <div class="full-width">
+        <article class="article-item">
+          <div class="article-category">MAJOR LAUNCH</div>
+          <h2 class="feature-headline">Anthropic Fable 5 遭美国政府限制，工程师赴华盛顿谈判</h2>
+          <div class="article-source"><a href="https://www.timesofai.com/news/how-anthropic-plans-to-lift-fable-5-restrictions/" target="_blank" rel="noopener">Times of AI</a></div>
+          <div class="article-body"><span class="drop-cap">美</span>国政府以国家安全为由，对 Anthropic 最先进的 Fable 5 和 Mythos 5 模型实施访问限制。担忧焦点在于这些模型可能被绕过安全护栏，用于网络攻击。Anthropic 派出高级技术团队赴华盛顿与白宫官员直接谈判，试图通过加强验证系统和审计检查来恢复部署许可。中国因素也被卷入——美方担心前沿 AI 能力落入战略竞争对手之手。</div>
+          <div class="article-commentary"><span class="commentary-prefix">&#10038;</span> 这不是一家公司和监管者的纠纷，而是「AI 模型是否应被视为战略武器」这个根本问题的第一次压力测试。</div>
+        </article>
+    </div>
+    <div class="two-column"><div class="col">
+        <article class="article-item">
+          <div class="article-category">MAJOR LAUNCH</div>
+          <h2 class="article-headline">OpenAI 推出 Partner Network：模型战结束，部署战开始</h2>
+          <div class="article-source"><a href="https://www.timesofai.com/news/how-to-join-openai-partner-network/" target="_blank" rel="noopener">OpenAI / Times of AI</a></div>
+          <div class="article-body">OpenAI 正式推出全球合作伙伴网络，投入 1.5 亿美元，目标在 2026 年底前培训认证 30 万名顾问。该计划联合咨询公司、系统集成商和技术提供商，帮助企业完成 AI 落地——从工作流重构到系统集成再到组织变革管理。合作伙伴分 Select、Advanced、Elite 三级，可专精 AI Agent、网络安全、Codex 等领域。</div>
+          <div class="article-commentary"><span class="commentary-prefix">&#10038;</span> OpenAI 用行动承认了一个事实：模型够聪明了，卡脖子的是部署能力而非模型能力。这是一家 AI 公司向咨询公司转型的信号。</div>
+        </article>
+    </div><div class="col">
+        <article class="article-item">
+          <div class="article-category">INDUSTRY</div>
+          <h2 class="article-headline">Anthropic 与 OpenAI 双双提交 IPO，合计估值超 1.8 万亿美元</h2>
+          <div class="article-source"><a href="https://informedclearly.com/en/ai/54704/anthropic-openai-ipo-june-2026" target="_blank" rel="noopener">Informed Clearly</a></div>
+          <div class="article-body">Anthropic 于 6 月 1 日秘密提交 S-1，估值 9650 亿美元；OpenAI 紧随其后于 6 月 8 日提交，估值 8520 亿美元。Anthropic 年化收入已达 470 亿美元但仍未盈利。OpenAI 预计 2026 年亏损 140 亿美元，但月收入已达 20 亿美元，ChatGPT 周活用户超 9 亿。</div>
+          <div class="article-commentary"><span class="commentary-prefix">&#10038;</span> 两个加起来亏了 150 亿美元的公司，估值却超过地球上几乎所有上市公司——市场赌的不是今天的利润，而是十年后的垄断地位。</div>
+        </article>
+    </div></div>
+    <div class="full-width">
+        <article class="article-item">
+          <div class="article-category">POLICY</div>
+          <h2 class="article-headline">G7 Evian-les-Bains 峰会：AI 儿童安全成为核心议题</h2>
+          <div class="article-source"><a href="https://www.timesofai.com/news/evian-les-bains-for-child-safety/" target="_blank" rel="noopener">Times of AI / Reuters</a></div>
+          <div class="article-body">G7 峰会在法国 Evian-les-Bains 召开，Sam Altman、Dario Amodei、Demis Hassabis 三位 AI 领袖首次同时出席。法国总统马克龙亲自邀请 Altman。峰会核心议题从传统的 AI 治理转向保护青少年免受 AI 生成内容和算法推荐的不良影响。OpenAI 全球事务官表示期待峰会推动科技巨头在青少年安全方面做出重大承诺。</div>
+          <div class="article-commentary"><span class="commentary-prefix">&#10038;</span> 当三个最有权势的 AI 公司 CEO 同时坐在 G7 谈判桌前，讨论的不是算力而是儿童安全——AI 的社会成本已经开始倒逼政治议程。</div>
+        </article>
+    </div>
+    <div class="two-column"><div class="col">
+        <article class="article-item">
+          <div class="article-category">RESEARCH</div>
+          <h2 class="article-headline">Claude Opus 4.8 发布：Dynamic Workflows 与 Fast Mode 三倍降价</h2>
+          <div class="article-source"><a href="https://osasai.com/blog/ai-news-first-week-june-2026" target="_blank" rel="noopener">Osas AI</a></div>
+          <div class="article-body">Anthropic 在 Opus 4.7 发布仅 41 天后即推出 Opus 4.8，在 SWE-Bench Pro（69.2%）、OSWorld-Verified（83.4%）等核心基准上重新夺回领先地位。最大亮点是 Dynamic Workflows 模式——可将复杂问题分发到数百个并行子 Agent 独立求解、互相验证后汇总。Fast Mode 以三倍更低价格、2.5 倍速度运行。</div>
+          <div class="article-commentary"><span class="commentary-prefix">&#10038;</span> 41 天迭代一代模型，同时推出 Agent 并行工作流——Anthropic 在用速度告诉市场：模型竞争不是百米冲刺，是持续加速的马拉松。</div>
+        </article>
+    </div><div class="col">
+        <article class="article-item">
+          <div class="article-category">RESEARCH</div>
+          <h2 class="article-headline">NVIDIA 在 Computex 发布 Nemotron 3 Ultra：5500 亿参数开源模型</h2>
+          <div class="article-source"><a href="https://osasai.com/blog/ai-news-first-week-june-2026" target="_blank" rel="noopener">Osas AI / Computex 2026</a></div>
+          <div class="article-body">黄仁勋在 Computex 2026 发布 Nemotron 3 Ultra，约 5500 亿参数 MoE 架构，每次推理仅激活约 550 亿参数，推理速度比同类前沿模型快 5 倍，成本低 30%。这是目前最强的美国开源模型。同步发布的 Vera CPU 专为 Agent 和强化学习设计，首批客户包括 OpenAI、Anthropic 和 SpaceX。</div>
+          <div class="article-commentary"><span class="commentary-prefix">&#10038;</span> NVIDIA 不再满足于卖铲子——它开始自己挖矿了。最强的美国开源模型来自一家芯片公司，这个事实本身就值得玩味。</div>
+        </article>
+    </div></div>
+    <div class="section-separator">&mdash; &#10042; &mdash;</div>
+    <div class="two-column"><div class="col">
+        <article class="article-item">
+          <div class="article-category">INDUSTRY</div>
+          <h2 class="article-headline">Anthropic 完成 650 亿美元 H 轮融资：史上最大私募</h2>
+          <div class="article-source"><a href="https://aifundingtracker.com/ai-startup-funding-news-today/" target="_blank" rel="noopener">AI Funding Tracker</a></div>
+          <div class="article-body">Anthropic 于 5 月 28 日完成 650 亿美元 H 轮融资，估值 9650 亿美元，超越 OpenAI 成为全球最有价值的私有 AI 公司。由 Altimeter、Dragoneer、Greenoaks、Sequoia 联合领投，Amazon 追加 50 亿美元。年化收入从 2025 年底的 90 亿美元飙升至 5 月的 470 亿美元，五个月内翻了五倍——这是企业软件史上最快的收入增速。</div>
+          <div class="article-commentary"><span class="commentary-prefix">&#10038;</span> 五个月收入翻五倍，单轮融资超过大多数国家的 GDP——Anthropic 的增长曲线已经脱离了正常商业逻辑的范畴。</div>
+        </article>
+    </div><div class="col">
+        <article class="article-item">
+          <div class="article-category">TOOLS</div>
+          <h2 class="article-headline">Microsoft Build 2026：发布 7 款自研 MAI 模型，零蒸馏</h2>
+          <div class="article-source"><a href="https://informedclearly.com/en/ai/54704/anthropic-openai-ipo-june-2026" target="_blank" rel="noopener">Informed Clearly</a></div>
+          <div class="article-body">微软在 Build 2026 大会上一次性发布 7 款 MAI 系列模型，涵盖推理、编程、图像、语音和语音识别，全部从头训练、零蒸馏。旗舰模型 MAI-Thinking-1 为 350 亿活跃参数推理模型，256K 上下文。所有模型运行在微软自研 Maia 200 加速器上，深度集成 GitHub Copilot 和 VS Code。这标志着微软在战略上减少对 OpenAI 的依赖。</div>
+          <div class="article-commentary"><span class="commentary-prefix">&#10038;</span> 微软终于不再满足于做 OpenAI 的分销商。零蒸馏意味着它要建立完全独立的技术栈——这场「合作伙伴」关系的裂痕正在变成鸿沟。</div>
+        </article>
+    </div></div>
+    <section class="takeaways">
+      <h2 class="takeaways-title">TODAY'S TAKEAWAYS</h2>
+      <ul class="takeaways-list">
+          <li>Anthropic 和 OpenAI 同时走向 IPO，AI 行业从私募时代进入公众市场检验阶段</li>
+          <li>Fable 5 限制风波揭示了一个新现实：前沿 AI 模型正在被当作战略武器来监管</li>
+          <li>OpenAI Partner Network 和 Microsoft MAI 从两个方向说明同一件事：模型能力竞赛接近尾声，部署和独立性成为新战场</li>
+          <li>G7 峰会首次将 AI 儿童安全推到最高政治议程——AI 的社会成本正在倒逼治理</li>
+          <li>NVIDIA 从芯片商变成模型商，Claude Opus 4.8 41 天迭代——这个行业的竞争节奏没有上限</li>
+      </ul>
+    </section>
+    <footer class="colophon">
+      今日精选 <em>8</em> 条 &middot; web_search 覆盖中英文来源 &middot; 由 remio agent 生成 &middot; June 16, 2026
+    </footer>
+  </div>
+</body>
+</html>
