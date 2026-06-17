@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI TECH DAILY · 2026-06-17</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif; background: #f5f0e6; color: #1a1a1a; line-height: 1.7; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+.paper { max-width: 860px; margin: 2rem auto; padding: 0 2rem; }
+.masthead { text-align: center; padding-top: 1.5rem; }
+.masthead .topline { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #6b6358; margin-bottom: 0.6rem; }
+.masthead .title { font-family: 'Playfair Display', Georgia, serif; font-size: 64px; font-weight: 900; color: #1a1a1a; letter-spacing: 18px; text-indent: 18px; line-height: 1.1; }
+.masthead .subtitle { font-size: 12px; color: #6b6358; letter-spacing: 6px; text-transform: uppercase; margin-top: 0.6rem; }
+.masthead .double-rule { border-top: 4px double #2a2a2a; margin-top: 1rem; padding-top: 0.8rem; }
+.masthead .info-bar { display: flex; justify-content: space-between; align-items: center; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #1a1a1a; padding-bottom: 0.5rem; border-bottom: 1px solid #c4b99a; }
+.masthead .info-bar span { flex: 1; }
+.masthead .info-bar .center { text-align: center; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; text-transform: none; letter-spacing: 0; font-size: 13px; }
+.masthead .info-bar .right { text-align: right; }
+.lead { margin-top: 1.5rem; padding-bottom: 1.2rem; border-bottom: 2px solid #2a2a2a; }
+.lead-label { display: inline-block; border: 2px solid #8b1a1a; color: #f5f0e6; background: #8b1a1a; font-size: 10px; font-weight: 700; letter-spacing: 4px; padding: 3px 12px; margin-bottom: 0.8rem; text-transform: uppercase; }
+.lead-text { font-family: 'EB Garamond', 'Noto Serif SC', serif; font-style: italic; font-size: 20px; line-height: 1.6; color: #1a1a1a; }
+.divider-fancy { text-align: center; margin: 1.8rem 0; color: #6b6358; font-size: 14px; letter-spacing: 8px; }
+.article { margin-bottom: 0.8rem; }
+.article-categories { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #8b1a1a; font-weight: 700; margin-bottom: 0.4rem; }
+.article-headline { font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif; font-weight: 900; line-height: 1.25; margin-bottom: 0.4rem; color: #1a1a1a; }
+.article-headline.feature { font-size: 30px; }
+.article-headline.col { font-size: 19px; }
+.article-source { font-style: italic; font-size: 11px; color: #6b6358; margin-bottom: 0.6rem; }
+.article-source a { color: #6b6358; text-decoration: none; border-bottom: 1px dotted #6b6358; }
+.article-body { font-size: 15px; text-align: justify; line-height: 1.75; color: #1a1a1a; }
+.article-commentary { border-top: 1px dashed #c4b99a; margin-top: 0.7rem; padding-top: 0.5rem; font-style: italic; font-size: 13.5px; color: #6b6358; line-height: 1.6; }
+.feature-article { margin: 1.5rem 0; }
+.feature-article .article-body { font-size: 16px; line-height: 1.8; }
+.drop-cap { float: left; font-family: 'Playfair Display', Georgia, serif; font-size: 52px; font-weight: 900; color: #8b1a1a; line-height: 0.85; margin-right: 8px; margin-top: 4px; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 1.2rem 0; }
+.two-col .col-item { padding: 0 1.2rem; }
+.two-col .col-item:first-child { padding-left: 0; border-right: 1px solid #c4b99a; }
+.two-col .col-item:last-child { padding-right: 0; }
+.full-width { margin: 1.2rem 0; }
+.full-width .article-body { max-width: 680px; }
+.takeaways { margin-top: 2rem; padding-top: 1.2rem; border-top: 4px double #2a2a2a; }
+.takeaways h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: #8b1a1a; margin-bottom: 0.8rem; text-align: center; }
+.takeaways ul { list-style: none; padding: 0; }
+.takeaways li { font-size: 14.5px; padding: 0.5rem 0; border-bottom: 1px solid #c4b99a50; text-align: justify; padding-left: 1.5rem; position: relative; }
+.takeaways li::before { content: '✦'; position: absolute; left: 0; color: #8b1a1a; font-size: 12px; top: 0.6rem; }
+.colophon { margin-top: 2.5rem; padding: 1.2rem 1.5rem; background: #eae3d4; border-top: 4px double #2a2a2a; text-align: center; font-size: 11px; letter-spacing: 2px; color: #6b6358; line-height: 1.8; }
+.colophon em { color: #8b1a1a; font-style: normal; font-weight: 700; font-family: 'Playfair Display', Georgia, serif; }
+@media (max-width: 768px) {
+    .paper { padding: 0 1rem; margin: 1rem auto; }
+    .masthead .title { font-size: 36px; letter-spacing: 10px; text-indent: 10px; }
+    .article-headline.feature { font-size: 22px; }
+    .article-headline.col { font-size: 17px; }
+    .two-col { grid-template-columns: 1fr; }
+    .two-col .col-item { padding: 0; border-right: none !important; border-bottom: 1px solid #c4b99a; padding-bottom: 1rem; margin-bottom: 0.5rem; }
+    .two-col .col-item:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+    .masthead .info-bar { flex-direction: column; gap: 0.3rem; }
+    .masthead .info-bar span { text-align: center !important; }
+    .lead-text { font-size: 17px; }
+}
+</style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead">
+    <div class="topline">An Independent Tech Publication · Est. 2026</div>
+    <div class="title">AI TECH DAILY</div>
+    <div class="subtitle">AI × 科技 · 每日精选</div>
+    <div class="double-rule">
+        <div class="info-bar">
+            <span class="left">Vol. 26</span>
+            <span class="center">Wednesday, June 17, 2026</span>
+            <span class="right">今日 8 条精选</span>
+        </div>
+    </div>
+</div>
+
+<div class="lead">
+    <span class="lead-label">LEAD</span>
+    <p class="lead-text">美国政府史无前例对 Anthropic 最强模型下达全球禁令，监管的暴力程度让整个行业屏住呼吸。AI 正在进入地缘政治核武器般的管控时代，而巨头们一边被传唤一边继续狂奔。</p>
+</div>
+
+<div class="feature-article">
+    <div class="article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="article-headline feature">OpenAI 收购 Ona，为 Codex 引入持久云端执行环境</h2>
+        <div class="article-source">OpenTools · <a href="https://opentools.ai/news/openai-acquires-ona-codex-cloud-execution">原文链接</a></div>
+        <div class="article-body">
+            <span class="drop-cap">O</span>penAI 收购德国云初创公司 Ona，为 Codex 编程工具引入持久云端执行环境。开发者可以让 AI Agent 在云端连续运行数小时甚至数天的多步骤编程任务，无需保持本地设备开机。Codex 目前已有超过 500 万周活用户。此次收购标志着 AI 编程工具从代码生成进化为项目托管的新阶段。
+        </div>
+        <div class="article-commentary">✦ 编程 Agent 的竞争已从「写代码」升级到「跑项目」，谁先解决持久运行谁就锁定开发者。</div>
+    </div>
+</div>
+
+<div class="divider-fancy">— ✦ —</div>
+
+<div class="two-col">
+    <div class="col-item">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h2 class="article-headline col">OpenAI 投入 1.5 亿美元构建全球合作伙伴生态</h2>
+            <div class="article-source">OpenTools · <a href="https://opentools.ai/news/openai-150m-partner-network-enterprise-ai">原文链接</a></div>
+            <div class="article-body">
+                OpenAI 承诺投入 1.5 亿美元建设全球合作伙伴网络，覆盖系统集成商、咨询公司和技术公司，目标在 2026 年底前认证 30 万名顾问，弥合 AI 能力与企业实际部署之间的差距。
+            </div>
+            <div class="article-commentary">✦ 软件公司都在变成 AI 分销商，渠道战争比模型战争更早见分晓。</div>
+        </div>
+    </div>
+    <div class="col-item">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h2 class="article-headline col">Visa 与 OpenAI 合作，让 AI Agent 自主完成支付</h2>
+            <div class="article-source">OpenTools · <a href="https://opentools.ai/news/visa-openai-agent-payments">原文链接</a></div>
+            <div class="article-body">
+                Visa 与 OpenAI 宣布合作，使 AI Agent 能够通过 ChatGPT 代表用户完成购买，这是自主 AI 驱动商业迄今为止最重大的基础设施布局。
+            </div>
+            <div class="article-commentary">✦ 当 AI 有了钱包，消费决策的入口就从搜索引擎转移到了对话窗口。</div>
+        </div>
+    </div>
+</div>
+
+<div class="divider-fancy">— ✦ —</div>
+
+<div class="full-width">
+    <div class="article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="article-headline feature" style="font-size: 24px;">月之暗面寻求 300 亿美元估值，半年估值翻七倍</h2>
+        <div class="article-source">Bloomberg · <a href="https://www.bloomberg.com/news/articles/2026-06-08/china-s-moonshot-ai-seeks-30-billion-value-in-new-funding-talks">原文链接</a></div>
+        <div class="article-body">
+            月之暗面（Moonshot AI）正在寻求至多 20 亿美元新一轮融资，目标估值 300 亿美元。这是该公司半年内第三轮融资，较去年 12 月约 43 亿美元的估值翻了七倍。其 Kimi 聊天机器人年化收入已达 2 亿美元。与此同时，美团领投的另一轮 20 亿美元融资也即将完成。
+        </div>
+        <div class="article-commentary">✦ 半年估值翻七倍不是泡沫，是中国 AI 企业在用收入增速说服资本市场。</div>
+    </div>
+</div>
+
+<div class="divider-fancy">— ✦ —</div>
+
+<div class="two-col">
+    <div class="col-item">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h2 class="article-headline col">美国命令 Anthropic 全球关闭 Fable 5 和 Mythos 5</h2>
+            <div class="article-source">OpenTools · <a href="https://opentools.ai/news/us-orders-anthropic-shutdown-fable-5-mythos-5-worldwide">原文链接</a></div>
+            <div class="article-body">
+                美国政府命令 Anthropic 封锁所有外国用户访问其最强 AI 模型，迫使公司在全球范围内停用 Claude Fable 5 和 Mythos 5。据报道，这一史无前例的指令由 Amazon CEO Andy Jassy 提出的安全担忧触发，是美国对商业 AI 模型采取的最激进出管制措施。
+            </div>
+            <div class="article-commentary">✦ 首次有 AI 模型像军用技术一样被全球禁运，AI 监管的「核不扩散」时代正式开启。</div>
+        </div>
+    </div>
+    <div class="col-item">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h2 class="article-headline col">G7 峰会：加拿大总理将 Anthropic 禁令比作 2008 金融危机</h2>
+            <div class="article-source">OpenTools · <a href="https://opentools.ai/news/carney-anthropic-ban-2008-crisis-ai-overreliance-g7">原文链接</a></div>
+            <div class="article-body">
+                加拿大总理 Mark Carney 在 G7 峰会上警告，美国对 Anthropic 模型的出口禁令类似 2008 年险些拖垮全球银行体系的系统性关联，呼吁各国警惕对单一 AI 供应商的过度依赖。印度随后提出 50 亿美元主权 AI 基金的计划。
+            </div>
+            <div class="article-commentary">✦ 当 AI 被类比为金融系统性风险，主权 AI 基建就不是选项而是刚需。</div>
+        </div>
+    </div>
+</div>
+
+<div class="divider-fancy">— ✦ —</div>
+
+<div class="two-col">
+    <div class="col-item">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h2 class="article-headline col">42 州总检察长在 IPO 前对 OpenAI 发起联合调查</h2>
+            <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/">原文链接</a></div>
+            <div class="article-body">
+                由纽约州总检察长牵头，42 个州的总检察长组成联盟对 OpenAI 发起正式调查，发出传票要求提供广告实践、数据保留、未成年人保护、用户安全及模型谄媚等方面的文件。此次调查恰逢 OpenAI 递交机密 IPO 申请仅五天之后。
+            </div>
+            <div class="article-commentary">✦ IPO 前夜被 42 州联合传票，资本市场的故事还没开讲监管风险就已经定价。</div>
+        </div>
+    </div>
+    <div class="col-item">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h2 class="article-headline col">NVIDIA 与 SK hynix 签署多年技术合作协议</h2>
+            <div class="article-source">NVIDIA Newsroom · <a href="https://nvidianews.nvidia.com/news/sk-hynix-ai-factory">原文链接</a></div>
+            <div class="article-body">
+                NVIDIA 与 SK hynix 宣布多年技术合作伙伴关系，共同为全球 AI 工厂开发下一代存储器，覆盖 Vera Rubin AI 超级计算机、Vera CPU、RTX Spark PC 和 Jetson Thor 机器人平台。SK hynix 还将使用 NVIDIA 工具加速半导体仿真并构建数字孪生。
+            </div>
+            <div class="article-commentary">✦ AI 工厂的瓶颈不在算力而在内存带宽，黄仁勋提前锁定了供应链咽喉。</div>
+        </div>
+    </div>
+</div>
+
+<div class="takeaways">
+    <h2>TODAY'S TAKEAWAYS</h2>
+    <ul>
+        <li>美国对 Anthropic 最强模型实施全球禁令，AI 出口管制进入「核武器级」阶段</li>
+        <li>OpenAI 双线作战：IPO 前遭遇 42 州联合调查，同时狂投 1.5 亿美元建企业渠道</li>
+        <li>AI Agent 商业化提速：Visa×OpenAI 打通支付，Ona 收购补齐云端持续运行</li>
+        <li>中国 AI 资本继续升温：月之暗面半年估值翻七倍，Kimi 年化收入破 2 亿美元</li>
+        <li>AI 基础设施军备竞赛深化：NVIDIA 锁定 SK hynix 内存供应链</li>
+    </ul>
+</div>
+
+<div class="colophon">
+    今日精选 <em>8</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · 2026-06-17
+</div>
+
+</div>
+</body>
+</html>
