@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI TECH DAILY · 2026-06-19</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+    background: #e8e1d0;
+    color: #1a1a1a;
+    padding: 40px 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.paper {
+    max-width: 860px;
+    margin: 0 auto;
+    background: #f5f0e6;
+    padding: 56px 64px 48px;
+    box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+    position: relative;
+}
+
+/* ===== MASTHEAD ===== */
+.masthead-top {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #6b6358;
+    margin-bottom: 14px;
+}
+
+.masthead-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: 18px;
+    text-indent: 18px;
+    text-align: center;
+    line-height: 1.1;
+    color: #1a1a1a;
+}
+
+.masthead-sub {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #6b6358;
+    margin-top: 10px;
+}
+
+.masthead-double-line {
+    border-top: 4px double #2a2a2a;
+    margin-top: 18px;
+    padding-top: 12px;
+}
+
+.masthead-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6b6358;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c4b99a;
+}
+
+.masthead-info em {
+    font-style: normal;
+    color: #8b1a1a;
+    font-weight: 700;
+}
+
+/* ===== LEAD ===== */
+.lead-section {
+    margin-top: 32px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #2a2a2a;
+}
+
+.lead-tag {
+    display: inline-block;
+    background: #8b1a1a;
+    color: #f5f0e6;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    padding: 4px 12px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.lead-text {
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.55;
+    color: #1a1a1a;
+    font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+}
+
+/* ===== ARTICLE COMMON ===== */
+.article {
+    padding-top: 8px;
+}
+
+.article-categories {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8b1a1a;
+    margin-bottom: 6px;
+}
+
+.feature-headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.article-headline-full {
+    font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.article-headline-col {
+    font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.article-source {
+    font-size: 11px;
+    font-style: italic;
+    color: #6b6358;
+    margin-bottom: 10px;
+}
+
+.article-source a {
+    color: #8b1a1a;
+    text-decoration: none;
+}
+
+.article-source a:hover {
+    text-decoration: underline;
+}
+
+.article-body {
+    font-size: 15px;
+    line-height: 1.65;
+    text-align: justify;
+    color: #1a1a1a;
+}
+
+.article-body .dropcap {
+    float: left;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    color: #8b1a1a;
+    line-height: 0.85;
+    margin: 6px 8px 0 0;
+}
+
+.article-commentary {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed #c4b99a;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #6b6358;
+    line-height: 1.5;
+}
+
+.article-commentary::before {
+    content: "✦ ";
+    color: #8b1a1a;
+    font-style: normal;
+}
+
+/* ===== LAYOUT ===== */
+.full-width {
+    margin-top: 28px;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 28px;
+}
+
+.two-col .article:first-child {
+    padding-right: 28px;
+    border-right: 1px solid #c4b99a;
+}
+
+.two-col .article:last-child {
+    padding-left: 28px;
+}
+
+/* ===== SEPARATOR ===== */
+.separator {
+    text-align: center;
+    font-size: 16px;
+    color: #8b1a1a;
+    letter-spacing: 8px;
+    margin: 32px 0 4px;
+}
+
+/* ===== TAKEAWAYS ===== */
+.takeaways {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 2px solid #2a2a2a;
+}
+
+.takeaways-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #8b1a1a;
+    margin-bottom: 14px;
+}
+
+.takeaways ul {
+    list-style: none;
+}
+
+.takeaways li {
+    font-size: 14.5px;
+    line-height: 1.6;
+    padding: 6px 0 6px 20px;
+    position: relative;
+    border-bottom: 1px dotted #c4b99a;
+}
+
+.takeaways li:last-child {
+    border-bottom: none;
+}
+
+.takeaways li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #8b1a1a;
+    font-weight: 700;
+}
+
+/* ===== COLOPHON ===== */
+.colophon {
+    margin-top: 36px;
+    padding: 16px 0;
+    border-top: 4px double #2a2a2a;
+    background: #eae3d4;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6b6358;
+    line-height: 1.8;
+}
+
+.colophon em {
+    font-style: normal;
+    color: #8b1a1a;
+    font-weight: 700;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+    .paper { padding: 32px 24px; }
+    .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+    .lead-text { font-size: 17px; }
+    .feature-headline { font-size: 24px; }
+    .article-headline-full { font-size: 20px; }
+    .article-headline-col { font-size: 17px; }
+    .two-col { grid-template-columns: 1fr; }
+    .two-col .article:first-child {
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 2px solid #c4b99a;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+    }
+    .two-col .article:last-child {
+        padding-left: 0;
+    }
+    .masthead-info {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+    }
+}
+</style>
+</head>
+<body>
+<div class="paper">
+
+<!-- ===== MASTHEAD ===== -->
+<div class="masthead-top">An Independent Tech Publication · Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI × 科技 · 每日精选</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>28</em></span>
+        <span>Friday, June 19, 2026</span>
+        <span>今日 <em>8</em> 条精选</span>
+    </div>
+</div>
+
+<!-- ===== LEAD ===== -->
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">AI 行业进入「监管与狂奔并行」的新阶段：白宫一纸出口禁令让顶级闭源模型被迫下线，而 600 亿美元并购和 500 亿融资仍在不断刷新天花板。当安全风险成为地缘政治筹码，谁能同时跑赢监管和对手，谁就掌握下一个十年的入场券。</p>
+</div>
+
+<!-- ===== ARTICLE 1: FULL WIDTH (FEATURE) ===== -->
+<div class="full-width article">
+    <div class="article-categories">Major Launch</div>
+    <h2 class="feature-headline">白宫出口禁令迫使 Anthropic 下架 Fable 5 与 Mythos 5</h2>
+    <div class="article-source">OpenTools · <a href="https://opentools.ai/news/white-house-export-ban-anthropic-fable-5-mythos">阅读原文</a></div>
+    <p class="article-body"><span class="dropcap">美</span>国商务部下令要求 Anthropic 屏蔽境外对其最新 Fable 5 和 Mythos 5 模型的访问，导致模型全面下线。该指令由亚马逊一篇安全论文和一个仅三个词的越狱提示词触发，引发英国、法国、加拿大的主权 AI 反弹，并加速了开源模型采纳。这是全球首次将 AI 模型视为战略物资实施出口管控，开创了监管先例。</p>
+    <p class="article-commentary">三个词的越狱击穿了一整代模型防线，AI 安全正式成为国家安全议题。</p>
+</div>
+
+<!-- ===== ARTICLES 2-3: TWO COLUMN ===== -->
+<div class="two-col">
+    <div class="article">
+        <div class="article-categories">Major Launch</div>
+        <h3 class="article-headline-col">GLM-5.2 正式发布并开源，多项评测表现突出</h3>
+        <div class="article-source">大黑AI速报 · <a href="https://news.daheiai.com/realtime.php?file=quick_2026-06-17_0401">阅读原文</a></div>
+        <p class="article-body">智谱 AI 于 6 月 17 日正式发布 GLM-5.2 并开源。该模型在 AI 编程、LMArena 等多项评测中取得亮眼成绩，同时在 Agent Arena 中被评为最强开源模型。社区实测显示其具备惊人的记忆能力，但空间推理仍有短板。</p>
+        <p class="article-commentary">开源模型第一次在多个维度同时逼近闭源前沿，门槛被踩在脚下了。</p>
+    </div>
+    <div class="article">
+        <div class="article-categories">Industry</div>
+        <h3 class="article-headline-col">SpaceX 600 亿美元全股票收购 Cursor</h3>
+        <div class="article-source">OpenTools · <a href="https://opentools.ai/news/spacex-acquires-cursor-60-billion">阅读原文</a></div>
+        <p class="article-body">SpaceX 以 600 亿美元全股票收购 AI 编程创业公司 Cursor（Anysphere），这是其 IPO 后首笔重大收购。该交易让马斯克获得 Cursor 超过 100 万开发者社区和 AI 编程工具市场的立足点。</p>
+        <p class="article-commentary">火箭公司买代码编辑器，马斯克在下一盘从太空到桌面的全栈棋。</p>
+    </div>
+</div>
+
+<!-- ===== ARTICLE 4: FULL WIDTH ===== -->
+<div class="full-width article">
+    <div class="article-categories">Industry</div>
+    <h2 class="article-headline-full">DeepSeek 完成 500 亿融资，估值 450 亿美元</h2>
+    <div class="article-source">36氪 · <a href="https://m.36kr.com/p/3157758791670535">阅读原文</a></div>
+    <p class="article-body">DeepSeek 首轮融资 500 亿元人民币落地，由国家大基金领投，投前估值约 450 亿美元。资金将用于算力采购、人才招募和全行业场景研发，在通用大模型基座赛道锁定头部席位。与此同时，Kimi、智谱 AI、MiniMax 等国内头部企业同步迎来大额融资，中国 AI 产业资本格局正在经历深层变革。</p>
+    <p class="article-commentary">国家资本直接押注开源基座，中国 AI 的「国家队」打法正式成型。</p>
+</div>
+
+<!-- ===== ARTICLES 5-6: TWO COLUMN ===== -->
+<div class="two-col">
+    <div class="article">
+        <div class="article-categories">Major Launch</div>
+        <h3 class="article-headline-col">阿里发布首个具身大模型 Qwen-Robot</h3>
+        <div class="article-source">大黑AI速报 · <a href="https://news.daheiai.com/realtime.php?file=quick_2026-06-16_1601">阅读原文</a></div>
+        <p class="article-body">阿里巴巴发布 Qwen-Robot，这是首个具身智能大模型，标志着通义千问从纯语言/多模态向物理世界交互拓展。同期字节也推出更便宜的 Seedance 2.0 Mini 视频生成模型。</p>
+        <p class="article-commentary">大模型公司集体从「会说」走向「会动手」，具身智能的产业化拐点正在到来。</p>
+    </div>
+    <div class="article">
+        <div class="article-categories">Industry</div>
+        <h3 class="article-headline-col">OpenAI Q1 亏损 250 亿美元财报泄露</h3>
+        <div class="article-source">大黑AI速报 · <a href="https://news.daheiai.com/realtime.php?file=quick_2026-06-18_1601">阅读原文</a></div>
+        <p class="article-body">OpenAI 第一季度亏损 250 亿美元的财报数据泄露，引发行业震动。同期数据显示 OpenAI 年支出已达 340 亿美元，Anthropic 与 DeepMind CEO 呼吁美方主导 AI 联盟。</p>
+        <p class="article-commentary">日烧近 3 亿美元的亏损仍在加速，AGI 的门票价格远比想象中贵。</p>
+    </div>
+</div>
+
+<div class="separator">— ✦ —</div>
+
+<!-- ===== ARTICLES 7-8: TWO COLUMN ===== -->
+<div class="two-col">
+    <div class="article">
+        <div class="article-categories">Research</div>
+        <h3 class="article-headline-col">何恺明团队发布仅 258M 参数的文生图模型</h3>
+        <div class="article-source">大黑AI速报 · <a href="https://news.daheiai.com/realtime.php?file=quick_2026-06-18_2001">阅读原文</a></div>
+        <p class="article-body">何恺明团队发布参数量仅 258M 的文生图模型，在极小参数规模下实现可观的图像生成质量，挑战了「越大越好」的主流共识，为端侧部署提供了新路径。</p>
+        <p class="article-commentary">当 258M 就能画图，万亿参数的护城河可能比看起来浅得多。</p>
+    </div>
+    <div class="article">
+        <div class="article-categories">Tools</div>
+        <h3 class="article-headline-col">Kimi Work 推出 24/7 桌面 Agent Goal Mode</h3>
+        <div class="article-source">大黑AI速报 · <a href="https://news.daheiai.com/realtime.php?file=quick_2026-06-18_2001">阅读原文</a></div>
+        <p class="article-body">Kimi Work 推出 Goal Mode，支持 24/7 桌面 Agent 持续运行，用户可设定长期目标让 Agent 在后台自主完成任务。同期 Claude Code/Design 打通双向同步，Grok Imagine Video 1.5 提升视频生成质量。</p>
+        <p class="article-commentary">Agent 从「问一句答一句」进化到「你睡觉它干活」，自动化终于接上了电源。</p>
+    </div>
+</div>
+
+<!-- ===== TAKEAWAYS ===== -->
+<div class="takeaways">
+    <div class="takeaways-title">Today's Takeaways</div>
+    <ul>
+        <li>开源逼近闭源：GLM-5.2 多维度对标前沿，何恺明团队用 258M 证明小模型也能出活</li>
+        <li>监管成为变量：白宫出口禁令开创先例，AI 模型首次被当作战略物资管控</li>
+        <li>资本加速集中：DeepSeek 500 亿、Cursor 600 亿美元被收购，资金向头部玩家加速集中</li>
+        <li>Agent 走向后台：Kimi Goal Mode 让 Agent 实现 7×24 小时自主运行</li>
+        <li>亏损仍在扩大：OpenAI 单季亏损 250 亿美元，AI 商业模式的盈利拐点依然遥远</li>
+    </ul>
+</div>
+
+<!-- ===== COLOPHON ===== -->
+<div class="colophon">
+    今日精选 <em>8</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · 2026-06-19
+</div>
+
+</div>
+</body>
+</html>
