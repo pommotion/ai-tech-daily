@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-06-18</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>27</em></span>
+        <span>Thursday, June 18, 2026</span>
+        <span>&#20170;&#26085; <em>7</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">G7 峰会变成 AI 峰会，出口管制撕开地缘裂缝，开源模型在非 Agent 榜单上反超闭源——这一天，AI 的政治性与技术性同样浓烈。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">G7 峰会变 AI 峰会：Altman、Amodei、Hassabis 齐聚，出口管制成焦点</h2>
+        <div class="article-source">CNBC · <a href="https://www.cnbc.com/2026/06/17/g7-trump-ai-tech-leaders-openai-anthropic-google.html" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">6</span>月17日法国埃维昂 G7 峰会，OpenAI Sam Altman、Anthropic Dario Amodei、Google DeepMind Demis Hassabis 等十余位 AI 领袖与各国首脑共进午餐，讨论前沿 AI 风险、基础设施和主权。美方对 Anthropic Fable 5/Mythos 5 的出口管制成为核心议题，欧洲国家开始认真考虑建立不依赖美国技术栈的独立 AI 能力。</p>
+        <p class="article-commentary">AI 公司 CEO 坐上了国家元首的餐桌——这不是公关，是权力结构的实质性变化。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">GLM 5.2 开源发布，DesignArena 榜单超越 Claude Fable 5 登顶</h3>
+            <div class="article-source">Times of AI · <a href="https://www.timesofai.com/news/glm-5-2-surpasses-claude-fable-5/" target="_blank">阅读原文</a></div>
+            <p class="article-body">智谱 Z AI 发布 GLM 5.2，开源权重模型，支持 100 万 Token 无损上下文。在 DesignArena 非 Agent 网页开发排行榜上以 Elo 评分超越 Claude Fable 5 登顶，覆盖网站搭建、游戏开发、数据可视化和 UI 组件等任务。模型在长上下文编码基准 SWB 上也接近闭源领先者。</p>
+            <p class="article-commentary">开源模型在真实用户偏好榜上打败闭源——这不是偶然，是长上下文训练红利的兑现。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">美国对 Anthropic Fable 5/Mythos 5 实施出口管制，禁止外国公民访问</h3>
+            <div class="article-source">Anthropic 官方声明 · <a href="https://www.anthropic.com/news/fable-mythos-access" target="_blank">阅读原文</a></div>
+            <p class="article-body">6月12日，美国政府以国家安全为由发布出口管制指令，要求 Anthropic 暂停所有外国公民对 Fable 5 和 Mythos 5 的访问权限，包括 Anthropic 外籍员工。Anthropic 表示反对但已执行。此举引发 G7 盟友强烈不安，被视为 AI 技术主权争夺的转折点。</p>
+            <p class="article-commentary">这是 AI 领域的「核不扩散」时刻——只不过这次扩散的是代码，不是铀。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">美团 LongCat 发布 General 365 推理基准：26 个主流模型仅 Gemini 3 Pro 超 60%</h2>
+        <div class="article-source">美团技术团队 · <a href="https://aitoolly.com/ai-news/2026-06-17" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">美</span>团 LongCat 团队推出 General 365 推理评测基准，评估 26 个主流模型。最强模型 Gemini 3 Pro 仅得 62.8% 准确率，绝大多数模型未过 60% 及格线。该基准覆盖复杂推理场景，揭示当前大模型在高级认知任务上仍有巨大差距。</p>
+        <p class="article-commentary">当最好的模型也只考了 62 分，说明「AGI 快到了」的说法更像营销而非科学。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">美团开源 LongCat-Video-Avatar 1.5：数字人视频生成迈向商用级</h3>
+            <div class="article-source">美团技术团队 · <a href="https://aitoolly.com/ai-news/2026-06-17" target="_blank">阅读原文</a></div>
+            <p class="article-body">美团开源 LongCat-Video-Avatar 1.5，在口型同步、物理合理性、长视频稳定性、多人交互和推理效率五个维度全面升级。该模型从实验性 SOTA 研究转向商用级交付，支持复杂商业场景下的高质量数字人内容生成。</p>
+            <p class="article-commentary">数字人从「排练」走向「实战」，美团的电商场景是最好的练兵场。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Amazon AI SVP 在 VivaTech 断言：AI 最大突破尚未到来</h3>
+            <div class="article-source">Times of AI · <a href="https://www.timesofai.com/news/amazon-svp-peter-desantis-biggest-ai-breakthrough/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Amazon AI 高级副总裁 Peter DeSantis 在巴黎 VivaTech 2026 发表演讲，称当前 Transformer 架构虽强大但不够，未来 AI 系统需要芯片-模型-生态的深度融合才能实现质变。他强调人类将始终处于 AI 最重大创新的核心，并指出芯片与模型的协同迭代（flywheel）被行业严重低估。</p>
+            <p class="article-commentary">27 年亚马逊老兵说「还没开始」——这既是对 hype 的降温，也是对芯片-模型协同路线图的背书。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">美团 6 篇论文入选 ACL 2026，聚焦 LLM 评测与推理优化</h2>
+        <div class="article-source">美团技术团队 · <a href="https://aitoolly.com/ai-news/2026-06-17" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">美</span>团技术团队 6 篇论文被 ACL 2026 接收，涵盖大模型评测、复杂过程推理、竞赛级数学思维优化、强化学习和生成式推荐系统。同时发布 WBench——首个交互式视频世界模型的多轮评测基准，被比作世界模型的「CT 扫描仪」。</p>
+        <p class="article-commentary">美团在 ACL 上的存在感越来越强，这不是「AI 副业」而是深思熟虑的技术布局。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>G7 变 AI 峰会：AI CEO 坐上了国家元首的餐桌，政治与技术边界彻底模糊</li>
+            <li>出口管制开创先例：Fable 5/Mythos 5 被禁，AI 首次成为地缘战略武器</li>
+            <li>开源反超闭源：GLM 5.2 在真实用户偏好榜上击败 Claude Fable 5</li>
+            <li>基准揭示真相：General 365 上最强模型仅 62.8%，AGI 还远</li>
+            <li>数字人走向商用：美团 LongCat-Video-Avatar 1.5 开源，五大维度全面升级</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>7</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-06-18
+</div>
+
+</div>
+</body>
+</html>
