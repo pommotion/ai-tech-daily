@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-06-09</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>18</em></span>
+        <span>Tuesday, June 9, 2026</span>
+        <span>&#20170;&#26085; <em>7</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">WWDC 2026 这一天，苹果用 Gemini 重建了 Siri，OpenAI 秘密提交了 IPO，Anthropic 发布了史上最短命的模型——AI 世界的权力版图在 24 小时内被重写。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">WWDC 2026：Tim Cook 谢幕演讲，Siri 接入 Gemini 重生，iOS 27 开放多模型选择</h2>
+        <div class="article-source">Apple / BuildFastWithAI · <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">6</span>月8日 WWDC 2026，Tim Cook 最后一次以 CEO 身份主持。核心发布：Siri 全面重构，底层接入 Google Gemini 1.2T 参数定制模型（苹果每年支付约 10 亿美元）；iOS 27 首次允许用户在 ChatGPT、Gemini 和 Claude 之间自由选择 AI 引擎；Siri 独立 App 上线，支持多轮对话、屏幕感知、个人上下文理解；隐私计算在苹果私有云上完成。最强端侧 AI 需 iPhone 17 Pro 及以上硬件。</p>
+        <p class="article-commentary">苹果选择了「不造模型」的路线——每年花 10 亿美元买 Gemini，把现金留给硬件和服务。这要么是天才的逆向赌注，要么是未来十年的战略隐患。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Anthropic 发布 Claude Fable 5：史上最短命的顶级模型，72 小时后被出口管制</h3>
+            <div class="article-source">腾讯新闻 / Anthropic · <a href="https://news.qq.com/rain/a/20260614A02HQT00" target="_blank">阅读原文</a></div>
+            <p class="article-body">6月9日 Anthropic 发布 Fable 5，6月10日被越狱，6月12日遭美国政府出口管制禁令——公开生命周期仅 72 小时。同时 Mythos 被证实可在数小时内利用新披露的软件漏洞，引发国家安全担忧。中国被指在规模化蒸馏这些网络攻击能力。这成为 AI 行业首个被政府强制下线的顶级模型。</p>
+            <p class="article-commentary">72 小时从发布到被封——Fable 5 不是技术失败，而是太强了。当 AI 能力触碰到国家安全红线，速度比法律快。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">CAPITAL</div>
+            <h3 class="article-headline-col">OpenAI 秘密提交 IPO 申请，估值约 8520 亿美元</h3>
+            <div class="article-source">OpenAI / CNBC · <a href="https://openai.com/index/openai-submits-confidential-s-1/" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI 于 6月8日向 SEC 提交机密 S-1 文件，主动披露以防止泄露。官方称尚未决定上市时间表，但 CNBC 报道其 tender offer 估值约 8520 亿美元。这将是有史以来最大的科技 IPO 之一。Anthropic 也确认将于 2026 年 10 月 IPO。</p>
+            <p class="article-commentary">AI 行业的两大巨头同时在 IPO 跑道起跑——这不是巧合，是窗口期的争夺。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">阿里巴巴重组 AI 架构：成立 Token Foundry 事业部，吴泳铭亲自挂帅</h2>
+        <div class="article-source">每日经济新闻 · <a href="https://www.nbd.com.cn/articles/2026-06-08/4420298.html" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">6</span>月8日，阿里巴巴宣布合并通义大模型事业部和未来生活实验室，成立 Token Foundry 事业部，由集团 CEO 吴泳铭直接负责。周靖人出任首席科学家，牵头成立 AI 未来研究院。这是阿里继「1+6+N」之后最大的一次 AI 组织调整，信号明确：AI 不再是业务单元，而是集团核心战略。</p>
+        <p class="article-commentary">CEO 亲自挂帅 AI 事业部——阿里的组织语言比任何公关稿都诚实。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">CAPITAL</div>
+            <h3 class="article-headline-col">智谱与 MiniMax 纳入恒生科技指数，中国 AI 大模型首次进入港股核心基准</h3>
+            <div class="article-source">雪球 · <a href="https://xueqiu.com/1077174092/393372721" target="_blank">阅读原文</a></div>
+            <p class="article-body">6月8日，智谱（2513.HK）和 MiniMax（0100.HK）正式纳入恒生科技指数。这是 AI 大模型企业首次进入港股核心科技基准。截至 6月5日，智谱股价较发行价累计涨幅超 10 倍，最高触及 1993 港元；MiniMax 累计涨幅超 2 倍。机构测算合计被动增量资金 12.5-40 亿美元。</p>
+            <p class="article-commentary">中国 AI 公司从「讲故事的创业公司」变成「指数基金必须配置的资产」，这是一次身份跃迁。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">Anthropic 研究揭示：Mythos 可在数小时内利用新披露的软件漏洞</h3>
+            <div class="article-source">Axios / Anthropic Red Team · <a href="https://www.axios.com/2026/06/08/exclusive-anthropics-mythos-can-exploit-new-flaws-in-hours" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic 发布 N-day 漏洞利用研究，证实 Mythos 模型可在数小时内利用新披露的软件漏洞。The Next Web 警告中国正在规模化蒸馏这些网络攻击能力。该研究直接触发了几天后的 Fable 5/Mythos 5 出口管制令。</p>
+            <p class="article-commentary">Anthropic 自己发的研究报告，成了美国政府封禁自家产品的理由——这讽刺程度在科技史上罕见。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INFRA</div>
+        <h2 class="feature-headline">NVIDIA 联手 LG、SK hynix、NAVER 打造韩国 AI 工厂集群</h2>
+        <div class="article-source">NVIDIA Blog · <a href="https://blogs.nvidia.com/blog/nvidia-and-lg-group-ai-factory/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">N</span>VIDIA 在韩国分别与 LG 集团、SK hynix 和 NAVER 签署合作协议，共建 AI 工厂基础设施。韩国正成为 NVIDIA 在亚洲除台积电以外最重要的 AI 算力支点，覆盖半导体制造、云计算和消费电子全链条。</p>
+        <p class="article-commentary">NVIDIA 的亚洲布局从「卖卡」升级为「建厂」——AI 基础设施正在复制半导体产业的国家级分工逻辑。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>苹果选择不造模型：每年 10 亿美元买 Gemini，这可能重新定义「AI 自研」的含义</li>
+            <li>Fable 5 只活了 72 小时：当 AI 能力超越国家安全红线，速度比法律快</li>
+            <li>OpenAI + Anthropic 双双冲刺 IPO：AI 行业进入资本市场收割期</li>
+            <li>阿里 CEO 亲自挂帅 AI：组织架构是最诚实的战略信号</li>
+            <li>智谱 MiniMax 进恒生指数：中国 AI 公司从创业故事变成必须配置的资产</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>7</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-06-09
+</div>
+
+</div>
+</body>
+</html>
