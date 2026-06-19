@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-06-13</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f5f0e6;
+            --bg-deep: #eae3d4;
+            --ink: #1a1a1a;
+            --red: #8b1a1a;
+            --muted: #6b6358;
+            --rule: #2a2a2a;
+            --rule-light: #c4b99a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, 'Times New Roman', serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px;
+            margin: 2rem auto;
+            padding: 2.5rem 3rem 2rem;
+            background: var(--bg);
+            box-shadow: 0 2px 24px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.03);
+        }
+
+        /* ===== Masthead ===== */
+        .masthead { text-align: center; padding-bottom: 1.2rem; }
+        .masthead-topline {
+            font-size: 9px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px;
+            font-weight: 900;
+            letter-spacing: 18px;
+            text-indent: 18px;
+            color: var(--ink);
+            line-height: 1.1;
+        }
+        .masthead-subtitle {
+            font-size: 11px;
+            color: var(--muted);
+            letter-spacing: 6px;
+            margin-top: 4px;
+        }
+        .masthead-rule {
+            border: none;
+            border-top: 4px double var(--rule);
+            margin: 1rem 0 0.6rem;
+        }
+        .masthead-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 2px;
+            padding: 0 0.5rem;
+        }
+
+        /* ===== Lead ===== */
+        .lead-section { margin: 1.5rem 0 1.8rem; }
+        .lead-label {
+            display: inline-block;
+            border: 1.5px solid var(--red);
+            color: var(--red);
+            font-size: 9px;
+            letter-spacing: 4px;
+            padding: 2px 8px;
+            margin-bottom: 0.7rem;
+        }
+        .lead-body {
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.55;
+            color: var(--ink);
+        }
+        .lead-rule {
+            border: none;
+            border-top: 2px solid var(--rule);
+            margin-top: 1.5rem;
+        }
+
+        /* ===== Articles ===== */
+        .articles { margin-top: 1.5rem; }
+        .section-divider {
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+            letter-spacing: 6px;
+            margin: 1.8rem 0;
+            user-select: none;
+        }
+        .full-width { margin-bottom: 1.8rem; }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            margin-bottom: 1.8rem;
+        }
+        .two-col .col {
+            padding: 0 1.2rem;
+        }
+        .two-col .col:first-child {
+            border-right: 1px solid var(--rule-light);
+            padding-left: 0;
+        }
+        .two-col .col:last-child {
+            padding-right: 0;
+        }
+
+        .article-categories {
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+        .article-headline {
+            font-family: 'Playfair Display', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 0.3rem;
+        }
+        .full-width .article-headline { font-size: 30px; }
+        .col .article-headline { font-size: 19px; }
+        .article-source {
+            font-size: 11px;
+            font-style: italic;
+            color: var(--muted);
+            margin-bottom: 0.5rem;
+        }
+        .article-source a {
+            color: var(--muted);
+            text-decoration: none;
+            border-bottom: 1px solid var(--rule-light);
+            transition: color 0.2s;
+        }
+        .article-source a:hover { color: var(--red); }
+        .article-body {
+            font-size: 15px;
+            text-align: justify;
+            line-height: 1.7;
+            margin-bottom: 0.6rem;
+        }
+        .article-body.has-dropcap::first-letter {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px;
+            float: left;
+            line-height: 0.85;
+            color: var(--red);
+            margin: 4px 8px 0 0;
+            font-weight: 900;
+        }
+        .article-commentary {
+            border-top: 1px dashed var(--rule-light);
+            padding-top: 0.5rem;
+            font-size: 13.5px;
+            font-style: italic;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        .article-commentary::before {
+            content: '✦ ';
+            color: var(--red);
+        }
+
+        /* ===== Takeaways ===== */
+        .takeaways {
+            margin: 2rem 0 1.5rem;
+            border-top: 2px solid var(--rule);
+            padding-top: 1.5rem;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .takeaways ul {
+            list-style: none;
+            padding: 0;
+        }
+        .takeaways li {
+            font-size: 14px;
+            line-height: 1.7;
+            padding: 0.3rem 0 0.3rem 1.2rem;
+            position: relative;
+        }
+        .takeaways li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--red);
+        }
+
+        /* ===== Colophon ===== */
+        .colophon {
+            border-top: 4px double var(--rule);
+            background: var(--bg-deep);
+            margin: 1.5rem -3rem -2rem;
+            padding: 1rem 3rem;
+            text-align: center;
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 2px;
+            line-height: 1.8;
+        }
+        .colophon em {
+            color: var(--red);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 640px) {
+            .paper { padding: 1.5rem 1.2rem 1rem; margin: 0; }
+            .masthead-title { font-size: 36px; letter-spacing: 8px; text-indent: 8px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .col { padding: 0; }
+            .two-col .col:first-child { border-right: none; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule-light); margin-bottom: 1.5rem; }
+            .full-width .article-headline { font-size: 24px; }
+            .colophon { margin: 1.5rem -1.2rem -1rem; padding: 1rem 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="paper">
+
+    <!-- Masthead -->
+    <header class="masthead">
+        <div class="masthead-topline">An Independent Tech Publication · Est. 2026</div>
+        <div class="masthead-title">AI TECH DAILY</div>
+        <div class="masthead-subtitle">AI × 科技 · 每日精选</div>
+        <hr class="masthead-rule">
+        <div class="masthead-info">
+            <span>Vol. 22</span>
+            <span>June 13, 2026 · Friday</span>
+            <span>今日 <em>9</em> 条精选</span>
+        </div>
+    </header>
+
+    <!-- Lead -->
+    <section class="lead-section">
+        <div class="lead-label">LEAD</div>
+        <p class="lead-body">AI 行业从「拼智能」正式进入「拼资本与基础设施」的下半场：一周内 OpenAI、Anthropic 双双提交 IPO 申请，贝佐斯携 Prometheus 融资 120 亿美元杀入物理世界 AI，英伟达则在台北宣布 Vera Rubin 全面量产并进军 AI PC 市场。</p>
+        <hr class="lead-rule">
+    </section>
+
+    <!-- Articles -->
+    <div class="articles">
+
+        <!-- #1 Full Width -->
+        <article class="full-width">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h2 class="article-headline">OpenAI 提交机密 IPO 申请，估值超 8500 亿美元</h2>
+            <div class="article-source">CNBC · <a href="https://www.cnbc.com/2026/06/08/openai-confidentially-files-for-ipo-prepping-wall-street-for-ai-debut.html">原文链接</a></div>
+            <p class="article-body has-dropcap">OpenAI 于 6 月 8 日正式向美国证券交易委员会（SEC）提交机密 S-1 文件，估值超过 8500 亿美元。高盛和摩根士丹利担任主承销商。CEO Sam Altman 在博客中将此称为 OpenAI 的「第三阶段」：从研究到产品，再到让 AI 成为经济基础设施。ChatGPT 周活用户已突破 9 亿。OpenAI 同时计划推出员工股份出售计划以缓解流动性压力。</p>
+            <p class="article-commentary">提交时机紧跟 Anthropic，华尔街要同时消化两个千亿美元级 AI IPO，散户接盘窗口可能很窄。</p>
+        </article>
+
+        <!-- #2-3 Two Column -->
+        <div class="two-col">
+            <div class="col">
+                <article>
+                    <div class="article-categories">INDUSTRY</div>
+                    <h2 class="article-headline">Anthropic 提交 IPO 申请，估值 9650 亿美元反超 OpenAI</h2>
+                    <div class="article-source">Stark Insider · <a href="https://www.starkinsider.com/2026/06/anthropic-openai-ipo-filings.html">原文链接</a></div>
+                    <p class="article-body">6 月 1 日，Anthropic 提交机密 IPO 申请，此前刚以 9650 亿美元估值完成新一轮融资。Claude Code 在企业级 AI 编程市场快速渗透，Opus 4.8 模型在多项基准测试中登顶。</p>
+                    <p class="article-commentary">估值反超 OpenAI，但收入体量仍有差距，IPO 将是「信仰 vs 财报」的终极对决。</p>
+                </article>
+            </div>
+            <div class="col">
+                <article>
+                    <div class="article-categories">INDUSTRY</div>
+                    <h2 class="article-headline">贝佐斯 Prometheus 融资 120 亿美元，瞄准「通用物理工程师」</h2>
+                    <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/">原文链接</a></div>
+                    <p class="article-body">Amazon 创始人 Jeff Bezos 联合 Verily 联合创始人 Vik Bajaj 创立的 Prometheus 完成 120 亿美元 B 轮融资，估值 410 亿美元。公司目标是构建「Artificial General Engineer」，将 AI 应用于物理世界的工程设计与工业制造。</p>
+                    <p class="article-commentary">120 亿美元单轮融资创 AI 史纪录，但「物理世界通用工程师」的落地难度远超写代码。</p>
+                </article>
+            </div>
+        </div>
+
+        <!-- #4 Full Width -->
+        <article class="full-width">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h2 class="article-headline">英伟达 GTC 台北：Vera Rubin 全面量产，正式进军 AI PC</h2>
+            <div class="article-source">腾讯新闻 · <a href="https://news.qq.com/rain/a/20260601A05RNV00">原文链接</a></div>
+            <p class="article-body has-dropcap">黄仁勋在 GTC Taipei 2026 主题演讲中宣布 Vera Rubin 架构全面量产，联合微软、Arm 正式进军 Windows AI PC 处理器市场。新一代 AI 工厂平台 DSX、面向 AI Agent 的专用 CPU Vera 同步发布。黄仁勋提出新经济公式：Token 即资产，数据中心即 Token 工厂。英伟达定位从 GPU 供应商升级为 AI 基础设施总包商。</p>
+            <p class="article-commentary">从 GPU 供应商到 AI 时代「新英特尔」，黄仁勋正在重写整条价值链。</p>
+        </article>
+
+        <!-- Divider -->
+        <div class="section-divider">— ✦ —</div>
+
+        <!-- #5-6 Two Column -->
+        <div class="two-col">
+            <div class="col">
+                <article>
+                    <div class="article-categories">MAJOR LAUNCH</div>
+                    <h2 class="article-headline">微软发布 7 款 MAI 自研模型，加速摆脱 OpenAI 依赖</h2>
+                    <div class="article-source">Tech Times · <a href="https://www.techtimes.com/articles/317631/20260602/microsoft-build-2026-mai-thinking-1-first-house-reasoning-model-trained-without-openai-data.htm">原文链接</a></div>
+                    <p class="article-body">Build 2026 大会上，微软发布 MAI-Thinking-1 等 7 款自研模型，覆盖推理、编程、图像、语音。旗舰推理模型完全从零训练，未使用第三方蒸馏数据，性能与 Claude Opus 4.6 同级。MAI-Code-1-Flash 已内置 GitHub Copilot。</p>
+                    <p class="article-commentary">微软终于亮出底牌，从 OpenAI 最大客户变成直接竞争对手。</p>
+                </article>
+            </div>
+            <div class="col">
+                <article>
+                    <div class="article-categories">POLICY</div>
+                    <h2 class="article-headline">Apple WWDC 2026：Siri 基于 Gemini 重建，iOS 27 发布</h2>
+                    <div class="article-source">Human Readable AI · <a href="https://www.humanreadable-ai.com/apple-wwdc-2026-siri-ai-gemini-explained/">原文链接</a></div>
+                    <p class="article-body">Apple 在 WWDC 2026 发布全新 Siri，基于 Google Gemini 模型重建，支持语音定制、屏幕感知、深度个人上下文理解。同时推出独立 AI App、iOS 27、Liquid Glass 设计语言更新。这是 Apple 在 AI 领域最大规模的架构重建。</p>
+                    <p class="article-commentary">Siri 终于能用，代价是完全依赖 Google 的模型——Apple 在 AI 上选择了「借力」而非「自研」。</p>
+                </article>
+            </div>
+        </div>
+
+        <!-- #7-8 Two Column -->
+        <div class="two-col">
+            <div class="col">
+                <article>
+                    <div class="article-categories">INDUSTRY</div>
+                    <h2 class="article-headline">DeepSeek V4 Pro 永久降价 75%，大模型价格战白热化</h2>
+                    <div class="article-source">CodersEra · <a href="https://codersera.com/blog/deepseek-v4-pro-permanent-price-cut-may-2026/">原文链接</a></div>
+                    <p class="article-body">DeepSeek 宣布 V4 Pro 的 75% 降价永久生效，输入 $0.435/M tokens、输出 $0.87/M tokens，仅为 Claude Opus 4.7 和 GPT-5.5 价格的 1/6 到 1/7。大模型 API 市场进入全面价格战。</p>
+                    <p class="article-commentary">当模型能力趋同，价格就是唯一的护城河——DeepSeek 正在用「成本碾压」改写行业规则。</p>
+                </article>
+            </div>
+            <div class="col">
+                <article>
+                    <div class="article-categories">RESEARCH</div>
+                    <h2 class="article-headline">Google 发布 Gemma 4 12B，本地多模态 AI 新标杆</h2>
+                    <div class="article-source">Developer Tech · <a href="https://www.developer-tech.com/news/googles-gemma-4-12b-local-multimodal-ai-laptops/">原文链接</a></div>
+                    <p class="article-body">Google 发布 Gemma 4 12B 统一模型，支持 256K 上下文，可在 16GB 显存笔记本上运行多模态 AI 任务，Apache 2.0 开源许可。这是目前最强的本地运行开源多模态模型。</p>
+                    <p class="article-commentary">开源模型逼近闭源能力，云厂商的推理收费模式开始被「本地优先」蚕食。</p>
+                </article>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="section-divider">— ✦ —</div>
+
+        <!-- #9 Full Width -->
+        <article class="full-width">
+            <div class="article-categories">TOOLS</div>
+            <h2 class="article-headline">DoorDash 推出 Ask DoorDash AI 聊天点餐</h2>
+            <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/06/11/doordashs-new-ai-chatbot-lets-you-order-with-prompts-and-photos/">原文链接</a></div>
+            <p class="article-body">DoorDash 发布 AI 聊天机器人「Ask DoorDash」，用户可通过自然语言描述或拍照来点餐和购物。目前已在部分市场上线，后续将扩展至餐厅预订等场景。这是 AI Agent 在消费级场景的大规模落地案例。</p>
+            <p class="article-commentary">拍张照片就能下单——AI Agent 第一次真正渗透到日常消费场景。</p>
+        </article>
+
+    </div>
+
+    <!-- Takeaways -->
+    <section class="takeaways">
+        <div class="takeaways-title">TODAY'S TAKEAWAYS</div>
+        <ul>
+            <li>OpenAI 与 Anthropic 一周内相继提交 IPO 申请，AI 行业进入资本收割期</li>
+            <li>贝佐斯 Prometheus 120 亿美元融资创纪录，物理世界 AI 成新战场</li>
+            <li>英伟达发布 Vera Rubin 并进军 AI PC，微软发布 7 款自研模型加速独立</li>
+            <li>Apple 放弃自研 AI 选择 Gemini，DeepSeek 永久降价 75% 引爆价格战</li>
+            <li>本地 AI（Gemma 4）和消费级 AI Agent（DoorDash）同步走向成熟</li>
+        </ul>
+    </section>
+
+    <!-- Colophon -->
+    <footer class="colophon">
+        今日精选 <em>9</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · 2026-06-13
+    </footer>
+
+</div>
+</body>
+</html>

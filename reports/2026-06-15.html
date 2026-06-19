@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI TECH DAILY · 2026-06-15</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, serif;
+    background: #d8d2c5;
+    color: #1a1a1a;
+    padding: 2rem 0;
+}
+
+.newspaper {
+    max-width: 860px;
+    margin: 0 auto;
+    background: #f5f0e6;
+    padding: 3rem 3.5rem 2rem;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+/* ===== MASTHEAD ===== */
+.topline {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #6b6358;
+    margin-bottom: 0.6rem;
+    font-style: italic;
+}
+
+.masthead-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 64px;
+    font-weight: 900;
+    text-align: center;
+    color: #1a1a1a;
+    letter-spacing: 18px;
+    text-indent: 18px;
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+}
+
+.masthead-subtitle {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 6px;
+    color: #6b6358;
+    margin-bottom: 0.8rem;
+}
+
+.masthead-divider {
+    border-bottom: 4px double #2a2a2a;
+    margin-bottom: 0.6rem;
+}
+
+.info-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: #6b6358;
+    letter-spacing: 1px;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #c4b99a;
+}
+
+.info-bar span { text-transform: uppercase; }
+
+/* ===== LEAD ===== */
+.lead-section {
+    margin: 1.5rem 0;
+}
+
+.lead-label {
+    display: inline-block;
+    border: 1.5px solid #8b1a1a;
+    color: #8b1a1a;
+    font-size: 10px;
+    letter-spacing: 4px;
+    padding: 3px 12px;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.lead-text {
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.65;
+    color: #2a2a2a;
+}
+
+.lead-divider {
+    border-bottom: 2px solid #2a2a2a;
+    margin: 1.2rem 0;
+}
+
+/* ===== ARTICLES ===== */
+.article {
+    margin-bottom: 1.8rem;
+}
+
+.article-categories {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #8b1a1a;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.article-headline {
+    font-family: 'Playfair Display', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+    font-weight: 900;
+    color: #1a1a1a;
+    line-height: 1.25;
+    margin-bottom: 0.4rem;
+}
+
+.article-source {
+    font-style: italic;
+    font-size: 11px;
+    color: #6b6358;
+    margin-bottom: 0.6rem;
+}
+
+.article-source a {
+    color: #6b6358;
+    text-decoration: none;
+    border-bottom: 1px dotted #6b6358;
+}
+
+.article-body {
+    font-size: 15px;
+    line-height: 1.75;
+    text-align: justify;
+    color: #2a2a2a;
+}
+
+.article-commentary {
+    border-top: 1px dashed #c4b99a;
+    margin-top: 0.8rem;
+    padding-top: 0.6rem;
+    font-style: italic;
+    font-size: 13.5px;
+    color: #6b6358;
+    line-height: 1.6;
+}
+
+.article-commentary::before {
+    content: "✦ ";
+    color: #8b1a1a;
+    font-style: normal;
+}
+
+/* Drop Cap for feature article */
+.feature-article .article-body::first-letter {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    color: #8b1a1a;
+    float: left;
+    line-height: 0.85;
+    margin: 6px 8px 0 0;
+}
+
+.feature-headline {
+    font-size: 30px;
+}
+
+/* ===== LAYOUT ===== */
+.feature-article {
+    border-bottom: 1px solid #c4b99a;
+    padding-bottom: 1.5rem;
+    margin-bottom: 0;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.two-col .col {
+    padding: 1.5rem;
+}
+
+.two-col .col:first-child {
+    border-right: 1px solid #c4b99a;
+}
+
+.two-col .col .article-headline {
+    font-size: 19px;
+}
+
+.full-width {
+    padding: 1.5rem 0;
+    border-top: 1px solid #c4b99a;
+    border-bottom: 1px solid #c4b99a;
+}
+
+.full-width .article-headline {
+    font-size: 22px;
+}
+
+.section-divider {
+    text-align: center;
+    color: #8b1a1a;
+    font-size: 14px;
+    padding: 0.8rem 0;
+    letter-spacing: 8px;
+}
+
+/* ===== TAKEAWAYS ===== */
+.takeaways {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 3px double #2a2a2a;
+}
+
+.takeaways-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.takeaways-list {
+    list-style: none;
+}
+
+.takeaways-list li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #2a2a2a;
+    padding: 0.3rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.takeaways-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #8b1a1a;
+}
+
+/* ===== COLOPHON ===== */
+.colophon {
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-top: 4px double #2a2a2a;
+    background: #eae3d4;
+    text-align: center;
+    font-size: 11px;
+    color: #6b6358;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.colophon em {
+    font-style: normal;
+    color: #8b1a1a;
+    font-weight: 700;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .newspaper { padding: 1.5rem; }
+    .masthead-title { font-size: 36px; letter-spacing: 8px; text-indent: 8px; }
+    .two-col { grid-template-columns: 1fr; }
+    .two-col .col:first-child { border-right: none; border-bottom: 1px solid #c4b99a; }
+    .feature-headline { font-size: 24px; }
+    .lead-text { font-size: 17px; }
+}
+</style>
+</head>
+<body>
+<div class="newspaper">
+
+<!-- ===== MASTHEAD ===== -->
+<div class="topline">An Independent Tech Publication · Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-subtitle">AI × 科技 · 每日精选</div>
+<div class="masthead-divider"></div>
+<div class="info-bar">
+    <span>Vol. 24</span>
+    <span>Sunday, June 15, 2026</span>
+    <span>今日 8 条精选</span>
+</div>
+
+<!-- ===== LEAD ===== -->
+<div class="lead-section">
+    <div class="lead-label">LEAD</div>
+    <div class="lead-text">巨头集体冲向 IPO 大门，最强模型首次面向公众解禁，算力底座争夺战从中美延伸到光芯片。资本、技术、监管三条线同时绷紧，2026 年 AI 竞赛的「中场」比开局更凶猛。</div>
+</div>
+<div class="lead-divider"></div>
+
+<!-- ===== ARTICLE 1: FEATURE (Full Width) ===== -->
+<div class="feature-article">
+    <div class="article article-categories">MAJOR LAUNCH</div>
+    <div class="article article-headline feature-headline">Anthropic 发布 Claude Fable 5：最强 Mythos 模型首次面向公众</div>
+    <div class="article article-source">TechCrunch · <a href="https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/" target="_blank">原文链接</a> · Anthropic · <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank">官方公告</a></div>
+    <div class="article article-body">Anthropic 于 6 月 9 日发布 Claude Fable 5，这是其最强 Mythos 级模型首次面向公众开放。Fable 5 在软件工程、知识工作和视觉任务上超越此前所有公开模型，SWE-Bench Pro 达到 80.3%。在高风险领域（网络安全、生物化学、模型蒸馏），它会自动降级到 Claude Opus 4.8 以确保安全。定价为每百万输入 token $10、输出 $50，是 Opus 4.8 的两倍。截至 6 月 22 日，Fable 5 免费包含在 Pro、Max、Team 计划中。</div>
+    <div class="article article-commentary">安全降级机制等于给猛兽戴上了牵引绳，Anthropic 正在用「可控的最强」定义新一代护城河。</div>
+</div>
+
+<!-- ===== ARTICLES 2-3: TWO COLUMN ===== -->
+<div class="two-col">
+    <div class="col">
+        <div class="article categories">MAJOR LAUNCH</div>
+        <div class="article headline">Apple 发布新一代 Apple Intelligence 与 Siri AI</div>
+        <div class="article source">Apple Newsroom · <a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank">原文</a></div>
+        <div class="article body">Apple 在 WWDC 2026 上发布了全新 Siri AI，具备更强的多模态理解和个性化能力。Siri AI 可以实时识别相机画面中的物体并提供描述和营养信息，还能在 Messages 中主动建议提醒和笔记。iOS 27 全系统带来应用启动提速 30%、照片加载提速 70%、AirDrop 提速 80%。</div>
+        <div class="article commentary">Siri 终于不再是「智障助手」，Apple 用端侧 AI 把实用性做实了，但生态开放度仍是最大悬念。</div>
+    </div>
+    <div class="col">
+        <div class="article categories">MAJOR LAUNCH</div>
+        <div class="article headline">Microsoft Build 2026：发布 7 款自研 MAI 模型</div>
+        <div class="article source">Microsoft AI · <a href="https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/" target="_blank">原文</a> · Mashable · <a href="https://mashable.com/tech/microsoft-launches-new-mai-family-of-models-at-build" target="_blank">报道</a></div>
+        <div class="article body">微软 AI 在 Build 2026 发布 7 款自研 MAI 模型，涵盖推理、编程、图像、语音和转录。旗舰 MAI-Thinking-1 是首个从零训练的推理模型，在 SWE-Bench Pro 编码任务上对标 Claude Opus 4.6。MAI-Code-1-Flash 已内置于 VS Code 和 GitHub Copilot。</div>
+        <div class="article commentary">Seven models, zero OpenAI ——微软正式宣告 AI 自主化，Copilot 的底层引擎从此姓 MAI。</div>
+    </div>
+</div>
+
+<!-- ===== ARTICLE 4: FULL WIDTH ===== -->
+<div class="full-width">
+    <div class="article categories">INDUSTRY</div>
+    <div class="article headline">OpenAI 秘密提交 IPO 申请，与 Anthropic 展开上市赛跑</div>
+    <div class="article source">TechCrunch · <a href="https://techcrunch.com/2026/06/08/following-anthropic-openai-files-confidentially-for-ipo/" target="_blank">原文链接</a></div>
+    <div class="article body">OpenAI 于 6 月 8 日向 SEC 秘密提交 IPO 申请。此前 3 月完成 1220 亿美元融资（估值 8520 亿），但据 WSJ 报道，OpenAI 预计 2028 年在 AI 算力上花费约 850 亿美元，届时仍将亏损。Anthropic 估值在二级市场已突破 1 万亿美元。分析人士指出，谁先上市谁就能抢到更多稀缺的 AI 资本。SpaceX 也预计以 1.75 万亿美元估值上市，三大巨头可能在未来数月内密集登陆公开市场。</div>
+    <div class="article commentary">一家预计四年内无法转正的公司要 IPO，这不是科技叙事，这是把算力军备竞赛的账单甩给了公开市场。</div>
+</div>
+
+<!-- ===== ARTICLES 5-6: TWO COLUMN ===== -->
+<div class="two-col">
+    <div class="col">
+        <div class="article categories">INDUSTRY</div>
+        <div class="article headline">贝索斯 AI 创业公司 Prometheus 完成 120 亿美元 B 轮，估值 410 亿</div>
+        <div class="article source">American Bazaar · <a href="https://americanbazaaronline.com/2026/06/12/jeff-bezos-backed-ai-startup-prometheus-raises-12-billion-482726/" target="_blank">原文</a> · CNBC · <a href="https://www.cnbc.com/video/2026/06/11/watch-cnbcs-full-interview-with-prometheus-co-ceos-jeff-bezos-and-vik-bajaj.html" target="_blank">访谈</a></div>
+        <div class="article body">贝索斯亲自担任联合 CEO 的 AI 公司 Prometheus 完成 120 亿美元 B 轮融资，投资方包括摩根大通、高盛、贝莱德。公司目标是打造「通用人工智能工程师」，将 AI 应用于喷气发动机、航天系统、医疗设备等实体工程设计与制造。累计融资超 180 亿美元。</div>
+        <div class="article commentary">当所有人都在卷聊天机器人，贝索斯押注的是用 AI 重造物理世界——这才是真正的「硬科技」赌局。</div>
+    </div>
+    <div class="col">
+        <div class="article categories">RESEARCH</div>
+        <div class="article headline">斯坦福 2026 AI Index：Grok 4 训练碳排放达 7.2 万吨，中美 AI 差距仅 2.7%</div>
+        <div class="article source">Stanford HAI · <a href="https://aiindex.stanford.edu/" target="_blank">报告</a> · DevFlokers · <a href="https://www.devflokers.com/blog/ai-news-june-2026-models-research-developments" target="_blank">解读</a></div>
+        <div class="article body">斯坦福以人为本 AI 研究所发布 2026 AI Index。核心数据：xAI Grok 4 训练排放 72,816 吨 CO₂，相当于 1.7 万辆汽油车一年的排放；2025 年企业 AI 投资达 5817 亿美元，同比增长 130%；初级软件开发岗位减少近 20%；Anthropic 旗舰模型领先中国最强模型仅 2.7%。</div>
+        <div class="article commentary">模型越大，电费越贵，碳排放越惊人——AI 的环保账单正在变成不能回避的硬约束。</div>
+    </div>
+</div>
+
+<div class="section-divider">— ✦ —</div>
+
+<!-- ===== ARTICLES 7-8: TWO COLUMN ===== -->
+<div class="two-col">
+    <div class="col">
+        <div class="article categories">POLICY</div>
+        <div class="article headline">中国工信部发布《「人工智能+信息通信」创新发展实施意见》</div>
+        <div class="article source">腾讯新闻 · <a href="https://news.qq.com/rain/a/20260610A0ARI400" target="_blank">原文链接</a></div>
+        <div class="article body">工信部印发 2026-2028 年《实施意见》，首次将光电芯片、全光交换（OCS）、光电共封装（CPO）明确界定为「AI 发展底座」。目标到 2028 年城域算力 1ms 时延圈覆盖率不低于 75%，加快建设 400Gbps/800Gbps 骨干传输网络。</div>
+        <div class="article commentary">把光通信提到「AI 底座」级别，说明北京已经看懂了：算力瓶颈不在芯片本身，而在芯片之间的管道。</div>
+    </div>
+    <div class="col">
+        <div class="article categories">TOOLS</div>
+        <div class="article headline">Google 六月 Android Drop：Gemini 深度整合消费应用</div>
+        <div class="article source">DevFlokers · <a href="https://www.devflokers.com/blog/ai-news-june-2026-models-research-developments" target="_blank">原文链接</a></div>
+        <div class="article body">Google 发布六月 Android 功能更新，为 Android 17 预热。Play Books 引入 Gemini 驱动的文本摘要和上下文问答；Google Photos 推出衣橱功能，支持视觉服装分析和虚拟试穿。Alphabet 投资者会议显示消费 AI 需求强劲，Gemini 生产力套件推动云存储业务增长。</div>
+        <div class="article commentary">Google 把 AI 从「实验室演示」搬进看书和换衣服的场景，消费级 AI 的胜负手在于谁先找到「日常刚需」。</div>
+    </div>
+</div>
+
+<!-- ===== TAKEAWAYS ===== -->
+<div class="takeaways">
+    <div class="takeaways-title">Today's Takeaways</div>
+    <ul class="takeaways-list">
+        <li>Anthropic 把最强 Mythos 模型通过 Fable 5 公开发布，安全降级机制成为新模式发布标准</li>
+        <li>OpenAI 与 Anthropic 的 IPO 竞赛正式打响，公开市场将首次定价 AI 巨头的亏损模型</li>
+        <li>贝索斯 Prometheus 120 亿美元融资指向「物理世界 AI」，赛道从对话转向工程</li>
+        <li>微软 7 款 MAI 模型宣告自主 AI 战略，Copilot 与 OpenAI 的绑定关系出现裂痕</li>
+        <li>中美 AI 模型性能差距收窄至 2.7%，但碳排放和算力成本正成为新的竞争维度</li>
+    </ul>
+</div>
+
+<!-- ===== COLOPHON ===== -->
+<div class="colophon">
+    今日精选 <em>8</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · 2026-06-15
+</div>
+
+</div>
+</body>
+</html>

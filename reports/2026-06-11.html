@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-06-11</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-paper: #f5f0e6;
+            --bg-dark: #eae3d4;
+            --ink: #1a1a1a;
+            --red: #8b1a1a;
+            --muted: #6b6358;
+            --rule: #2a2a2a;
+            --rule-light: #c4b99a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: var(--bg-paper);
+            color: var(--ink);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .newspaper {
+            max-width: 860px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ===== Masthead ===== */
+        .masthead { text-align: center; padding: 1.5rem 0 0; }
+
+        .masthead-topline {
+            font-size: 9px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px;
+            font-weight: 900;
+            letter-spacing: 18px;
+            text-indent: 18px;
+            color: var(--ink);
+            line-height: 1.1;
+        }
+
+        .masthead-subtitle {
+            font-size: 11px;
+            letter-spacing: 6px;
+            color: var(--muted);
+            margin-top: 6px;
+            text-transform: uppercase;
+        }
+
+        .masthead-rule {
+            border: none;
+            border-top: 4px double var(--rule);
+            margin: 12px 0 0;
+        }
+
+        .masthead-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 8px 0 6px;
+            font-size: 10.5px;
+            color: var(--muted);
+            letter-spacing: 1px;
+        }
+
+        .masthead-info .vol { font-family: 'EB Garamond', serif; }
+        .masthead-info .date { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 2px; }
+        .masthead-info .count em { font-style: normal; color: var(--red); }
+
+        /* ===== Lead ===== */
+        .lead {
+            margin: 1.2rem 0 0;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--rule);
+        }
+
+        .lead-tag {
+            display: inline-block;
+            font-size: 8.5px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #fff;
+            background: var(--red);
+            padding: 2px 8px;
+            margin-bottom: 8px;
+        }
+
+        .lead-text {
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.55;
+            color: var(--ink);
+        }
+
+        /* ===== Articles ===== */
+        .articles { margin-top: 1.2rem; }
+
+        .article-categories { font-size: 9.5px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 0; }
+        .article-category {
+            display: inline-block;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        .article-headline {
+            font-family: 'Playfair Display', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            font-weight: 900;
+            color: var(--ink);
+            line-height: 1.2;
+            margin-bottom: 6px;
+        }
+
+        .feature-headline { font-size: 30px; }
+        .col-headline { font-size: 19px; }
+
+        .article-source {
+            font-style: italic;
+            font-size: 11px;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+        .article-source a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--rule-light); }
+        .article-source a:hover { color: var(--red); }
+
+        .article-body {
+            font-size: 15px;
+            text-align: justify;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .article-body::first-letter {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px;
+            float: left;
+            line-height: 0.85;
+            margin: 4px 8px 0 0;
+            color: var(--red);
+            font-weight: 900;
+        }
+
+        .article-body.no-dropcap::first-letter {
+            font-size: inherit;
+            float: none;
+            line-height: inherit;
+            margin: 0;
+            color: inherit;
+            font-weight: inherit;
+        }
+
+        .article-commentary {
+            font-size: 13.5px;
+            font-style: italic;
+            color: var(--muted);
+            border-top: 1px dashed var(--rule-light);
+            padding-top: 6px;
+            margin-top: 4px;
+            line-height: 1.55;
+        }
+
+        /* ===== Layouts ===== */
+        .full-width {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--rule-light);
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-bottom: 1px solid var(--rule-light);
+        }
+
+        .two-col .col {
+            padding: 1rem 1.2rem 1rem 0;
+        }
+
+        .two-col .col:last-child {
+            padding-right: 0;
+            padding-left: 1.2rem;
+            border-left: 1px solid var(--rule-light);
+        }
+
+        .separator {
+            text-align: center;
+            font-size: 13px;
+            color: var(--rule-light);
+            letter-spacing: 6px;
+            padding: 0.8rem 0;
+        }
+
+        /* ===== Takeaways ===== */
+        .takeaways {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 3px double var(--rule);
+        }
+
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        .takeaways ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .takeaways li {
+            font-size: 14px;
+            line-height: 1.6;
+            padding: 4px 0;
+            padding-left: 1.2em;
+            position: relative;
+            text-align: justify;
+        }
+
+        .takeaways li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--red);
+            font-size: 12px;
+        }
+
+        /* ===== Colophon ===== */
+        .colophon {
+            margin-top: 1.5rem;
+            padding: 10px 0;
+            border-top: 4px double var(--rule);
+            background: var(--bg-dark);
+            text-align: center;
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 1.5px;
+            line-height: 1.6;
+        }
+
+        .colophon em {
+            font-style: normal;
+            color: var(--red);
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 640px) {
+            .newspaper { margin: 1rem auto; padding: 0 1rem; }
+            .masthead-title { font-size: 36px; letter-spacing: 8px; text-indent: 8px; }
+            .masthead-subtitle { font-size: 9px; letter-spacing: 3px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 22px; }
+            .col-headline { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .col:last-child { padding-left: 0; border-left: none; border-top: 1px solid var(--rule-light); padding-top: 1rem; }
+            .masthead-info { flex-direction: column; text-align: center; gap: 2px; }
+        }
+    </style>
+</head>
+<body>
+<div class="newspaper">
+
+    <!-- Masthead -->
+    <header class="masthead">
+        <div class="masthead-topline">An Independent Tech Publication · Est. 2026</div>
+        <div class="masthead-title">AI TECH DAILY</div>
+        <div class="masthead-subtitle">AI × 科技 · 每日精选</div>
+        <hr class="masthead-rule">
+        <div class="masthead-info">
+            <span class="vol">Vol. 19</span>
+            <span class="date">June 11, 2026</span>
+            <span class="count">今日 <em>7</em> 条精选</span>
+        </div>
+    </header>
+
+    <!-- Lead -->
+    <section class="lead">
+        <div class="lead-tag">Lead</div>
+        <p class="lead-text">Anthropic 把 Mythos 级模型送上公网，SpaceX+xAI 明天挂牌纳市，Suno 顶着版权官司拿到 $5.4B 估值——本周 AI 世界的节奏是「一边造火箭一边在悬崖边跳舞」。</p>
+    </section>
+
+    <!-- Articles -->
+    <div class="articles">
+
+        <!-- #1 Feature Full Width -->
+        <article class="full-width">
+            <div class="article-category">Major Launch</div>
+            <h2 class="article-headline feature-headline">Anthropic 发布 Claude Fable 5：首个公开 Mythos 级模型</h2>
+            <div class="article-source">来源：<a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Anthropic</a> · <a href="https://www.reuters.com/technology/anthropic-rolls-out-public-version-mythos-without-cybersecurity-capability-2026-06-09/">Reuters</a> · <a href="https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/">TechCrunch</a></div>
+            <div class="article-body">Anthropic 于 6 月 9 日发布 Claude Fable 5，首次将 Mythos 级能力面向公众开放。该模型在软件工程和数据分析领域表现突出，但剥离了 Mythos 的网络安全能力以确保安全可控。同步向已获批机构推送了升级版 Mythos 5。Fable 5 面向企业客户和付费订阅用户开放，6 月 23 日起将转为用量积分制。</div>
+            <div class="article-commentary">✦ Anthropic 一边警告 AI 越来越危险，一边把最强模型公开放出来——安全叙事和商业节奏的张力比模型本身更耐人寻味。</div>
+        </article>
+
+        <!-- #2-3 Two Column -->
+        <div class="two-col">
+            <article class="col">
+                <div class="article-category">Industry</div>
+                <h2 class="article-headline col-headline">SpaceX+xAI 6月12日登陆纳斯达克：$1.75 万亿估值史上最大 IPO</h2>
+                <div class="article-source">来源：<a href="https://www.reuters.com/world/spacex-accelerates-ipo-timeline-targets-june-11-pricing-nasdaq-2026-05-15/">Reuters</a> · <a href="https://www.foxbusiness.com/markets/spacex-moves-launch-highly-anticipated-ipo">Fox Business</a></div>
+                <div class="article-body no-dropcap">SpaceX 将于 6 月 12 日在纳斯达克挂牌（代码 SPCX），发行价 $135，目标估值 $1.75 万亿，计划募资最高 $750 亿。xAI 预计 2026 年烧掉 $100 亿，Morningstar 认为合理估值仅为 $7800 亿。</div>
+                <div class="article-commentary">✦ 当分析师说「合理价格不到一半」的时候，市场依然疯抢——这已经不是 IPO，是信仰验证仪式。</div>
+            </article>
+            <article class="col">
+                <div class="article-category">Industry</div>
+                <h2 class="article-headline col-headline">Suno 完成 $4 亿 D 轮融资：$54 亿估值，版权官司照打</h2>
+                <div class="article-source">来源：<a href="https://www.reuters.com/legal/transactional/ai-music-startup-suno-raises-funding-54-billion-valuation-2026-06-03/">Reuters</a> · <a href="https://techcrunch.com/2026/06/03/still-facing-copyright-lawsuits-ai-music-generator-suno-raises-another-400m/">TechCrunch</a></div>
+                <div class="article-body no-dropcap">AI 音乐公司 Suno 完成 $4 亿 D 轮融资，由 Bond Capital 领投，估值达 $54 亿，是上一轮的 2.2 倍。公司 ARR 约 $3 亿，但仍面临多家唱片公司的版权诉讼。同期宣布将推出首个获得授权的模型版本。</div>
+                <div class="article-commentary">✦ 被告着还敢估值翻倍——投资人赌的是「和解金远低于垄断利润」。</div>
+            </article>
+        </div>
+
+        <!-- #4 Full Width -->
+        <article class="full-width">
+            <div class="article-category">Industry</div>
+            <h2 class="article-headline" style="font-size:24px;">Anthropic $650 亿 H 轮：$9650 亿估值超越 OpenAI</h2>
+            <div class="article-source">来源：<a href="https://www.reuters.com/business/anthropic-raises-65-billion-now-valued-965-billion-2026-05-28/">Reuters</a> · <a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/">TechCrunch</a></div>
+            <div class="article-body no-dropcap">5 月 28 日 Anthropic 完成 $650 亿 H 轮融资，由 Altimeter、Dragoneer、Greenoaks、Sequoia 领投，估值 $9650 亿，三个月内从 $3800 亿翻至近万亿。这大概率是其 IPO 前最后一轮私募融资，估值已超越 OpenAI 成为全球最有价值 AI 独角兽。</div>
+            <div class="article-commentary">✦ 三个月估值翻 2.5 倍，不是公司变了，是市场对 AI 独角兽的定价逻辑变了。</div>
+        </article>
+
+        <!-- Separator -->
+        <div class="separator">— ✦ —</div>
+
+        <!-- #5-6 Two Column -->
+        <div class="two-col">
+            <article class="col">
+                <div class="article-category">Research</div>
+                <h2 class="article-headline col-headline">首个野外 LLM Agent 网络攻击被 Sysdig 记录</h2>
+                <div class="article-source">来源：<a href="https://webflow.sysdig.com/blog/ai-agent-at-the-wheel-how-an-attacker-used-llms-to-move-from-a-cve-to-an-internal-database-in-4-pivots">Sysdig</a> · <a href="https://www.securitymagazine.com/articles/102325-ai-agent-conducted-a-cyberattack-on-its-own-it-took-less-than-one-hour">Security Magazine</a></div>
+                <div class="article-body no-dropcap">Sysdig 威胁研究团队记录了首个野外 LLM Agent 攻击事件：攻击者利用 CVE-2026-39987（Marimo RCE 漏洞）获取初始立足点，将窃取的 AWS 凭证喂给 LLM Agent，不到一小时自动完成 4 步横向移动，最终导出 PostgreSQL 数据库。</div>
+                <div class="article-commentary">✦ 从「AI 辅助攻击」到「AI 自主攻击」的分水岭已经跨过，防御方得跟上。</div>
+            </article>
+            <article class="col">
+                <div class="article-category">Policy</div>
+                <h2 class="article-headline col-headline">EU 驳回 Apple 豁免请求：Siri AI 不上线是「自愿选择」</h2>
+                <div class="article-source">来源：<a href="https://www.reuters.com/business/apple-failed-make-its-ai-tool-comply-eu-regulations-eu-commission-says-2026-06-09/">Reuters</a> · <a href="https://www.techtimes.com/articles/318136/20260610/eu-rejects-apple-siri-ai-exemption-commission-says-dma-never-blocked-launch.htm">TechTimes</a></div>
+                <div class="article-body no-dropcap">欧盟委员会公开驳斥 Apple 的说法，称 Apple 以 DMA 合规困难为由不给 4.5 亿欧盟用户推送 Siri AI 是「自愿商业选择」。Apple 此前曾申请 18 个月豁免期被拒。委员会明确表示 DMA 从未阻止 Siri AI 上线。</div>
+                <div class="article-commentary">✦ Apple 把「不想适配规则」包装成「规则不让上」，被欧盟当面拆穿——隐私牌打多了也有反噬。</div>
+            </article>
+        </div>
+
+        <!-- #7 Full Width -->
+        <article class="full-width">
+            <div class="article-category">Tools</div>
+            <h2 class="article-headline" style="font-size:22px;">Snap：AI 生成 65% 代码，裁 1000 人省 $5 亿</h2>
+            <div class="article-source">来源：<a href="https://www.nytimes.com/2026/04/15/business/snap-layoffs-snapchat.html">New York Times</a> · <a href="https://glassalmanac.com/snap-reveals-65-ai-code-use-500m-savings-and-specs-bet-in-2026-heres-why/">Glass Almanac</a></div>
+            <div class="article-body no-dropcap">Snap 宣布 AI 已生成超过 65% 的新代码，同时裁减 16% 员工（约 1000 人），预计年化节省 $5 亿。公司同时押注 Specs 智能眼镜 2026 年发布。这是首家公开将 AI 代码生成率与裁员直接挂钩的大型科技公司。</div>
+            <div class="article-commentary">✦ 65% 这个数字比裁员本身更震动——它给了每一家科技公司的 CFO 一个计算公式。</div>
+        </article>
+
+    </div>
+
+    <!-- Takeaways -->
+    <section class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>Anthropic 将最强 Mythos 级能力开放给公众，安全边界如何划定成为行业焦点</li>
+            <li>SpaceX+xAI 明日挂牌，$1.75 万亿估值刷新美股 IPO 历史，但基本面争议巨大</li>
+            <li>Suno $54 亿估值 vs 版权诉讼：AI 创作的法律灰色地带正在被资本暴力填平</li>
+            <li>LLM Agent 自主攻击已从理论变为现实，网络安全进入 AI vs AI 时代</li>
+            <li>Apple 在欧盟的 AI 策略遭监管拆穿，AI 地缘政治博弈升温</li>
+        </ul>
+    </section>
+
+    <!-- Colophon -->
+    <footer class="colophon">
+        今日精选 <em>7</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · 2026-06-11
+    </footer>
+
+</div>
+</body>
+</html>
