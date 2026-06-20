@@ -225,6 +225,16 @@
             .two-col .col + .col { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid #c4b99a !important; }
             .lead-text { font-size: 17px; }
         }
+    
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
     </style>
 </head>
 <body>
@@ -243,7 +253,14 @@
         </div>
     </div>
 
-    <!-- Lead -->
+    
+<div class="nav-bar">
+    <a href="/reports/2026-06-01.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-06-03.html">后一日 &rarr;</a>
+</div>
+
+<!-- Lead -->
     <div class="lead">
         <div class="lead-tag">LEAD</div>
         <div class="lead-text">AI 史上最大融资日：Anthropic 650 亿美元改写估值天际线，OpenAI 转身扑向机器人，英伟达开源物理 AI 大模型，具身智能一天三连发。</div>

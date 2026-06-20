@@ -225,7 +225,17 @@ body {
   .feature-article .article-headline { font-size: 24px; }
   .info-bar { flex-direction: column; gap: 4px; text-align: center; }
 }
-</style>
+
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+    </style>
 </head>
 <body>
 <div class="newspaper">
@@ -242,7 +252,14 @@ body {
   </div>
 
   <!-- LEAD -->
-  <div class="lead-section">
+  
+<div class="nav-bar">
+    <a href="/reports/2026-06-11.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-06-13.html">后一日 &rarr;</a>
+</div>
+
+<div class="lead-section">
     <div class="lead-tag">LEAD</div>
     <div class="lead-text">AI 产业进入资本军备竞赛与监管赛跑并行阶段：Anthropic 提交 IPO 申请、Alphabet 800 亿美元融资、Florida 起诉 OpenAI，巨头在钱与法之间同时加码。</div>
     <hr class="lead-divider">

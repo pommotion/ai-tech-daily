@@ -278,6 +278,16 @@
             .two-col .col:last-child { padding-left: 0; border-left: none; border-top: 1px solid var(--rule-light); padding-top: 1rem; }
             .masthead-info { flex-direction: column; text-align: center; gap: 2px; }
         }
+    
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
     </style>
 </head>
 <body>
@@ -296,7 +306,14 @@
         </div>
     </header>
 
-    <!-- Lead -->
+    
+<div class="nav-bar">
+    <a href="/reports/2026-06-10.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-06-12.html">后一日 &rarr;</a>
+</div>
+
+<!-- Lead -->
     <section class="lead">
         <div class="lead-tag">Lead</div>
         <p class="lead-text">Anthropic 把 Mythos 级模型送上公网，SpaceX+xAI 明天挂牌纳市，Suno 顶着版权官司拿到 $5.4B 估值——本周 AI 世界的节奏是「一边造火箭一边在悬崖边跳舞」。</p>

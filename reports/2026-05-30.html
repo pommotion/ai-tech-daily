@@ -308,7 +308,17 @@ body {
   .article-feature .article-headline { font-size: 24px; }
   .lead-text { font-size: 17px; }
 }
-</style>
+
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+    </style>
 </head>
 <body>
 <div class="page">
@@ -326,6 +336,13 @@ body {
 </div>
 
 <!-- Lead -->
+
+<div class="nav-bar">
+    <a href="/reports/2026-05-29.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-05-31.html">后一日 &rarr;</a>
+</div>
+
 <div class="lead-section">
   <div class="lead-label">LEAD</div>
   <div class="lead-text">五月将尽，AI 行业迎来「资本+政策+落地」的三重震荡：Anthropic 以 9650 亿美元估值超越 OpenAI 成为全球最有价值的私人 AI 公司，Nvidia 豪掷 65 亿美元押注硅光技术突破算力瓶颈，而全球科技行业近 3 万岗位在五月因 AI 被裁撤——AI 不再只是技术叙事，它正在重塑商业版图和劳动力结构。</div>

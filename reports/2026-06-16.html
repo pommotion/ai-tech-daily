@@ -50,7 +50,17 @@
     .takeaways-list li::before { content: '\25A0'; color: #8b1a1a; font-size: 8px; margin-right: 10px; vertical-align: middle; }
     .colophon { margin-top: 2.5rem; padding: 1.2rem 1.5rem; background: #eae3d4; border-top: 3px double #2a2a2a; text-align: center; font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif; font-size: 10px; color: #6b6358; letter-spacing: 2px; line-height: 1.8; }
     .colophon em { color: #8b1a1a; font-style: normal; font-weight: 600; }
-  </style>
+  
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+    </style>
 </head>
 <body>
   <div class="newspaper">
@@ -64,7 +74,14 @@
         <span>&#20170;&#26085; 8 &#26465;&#31934;&#36873;</span>
       </div>
     </header>
-    <section class="lead-section">
+    
+<div class="nav-bar">
+    <a href="/reports/2026-06-15.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-06-17.html">后一日 &rarr;</a>
+</div>
+
+<section class="lead-section">
       <span class="lead-label">LEAD</span>
       <p class="lead-text">AI &#34892;&#19994;&#26412;&#21608;&#21516;&#26102;&#19978;&#28436;&#20004;&#22330;&#22823;&#25103;&#65306;&#21069;&#21488;&#26159;&#27169;&#22411;&#33021;&#21147;&#30340;&#20891;&#22791;&#31454;&#36187;&#65292;&#21518;&#21488;&#26159;&#36164;&#26412;&#24066;&#22330;&#30340;&#21382;&#21490;&#24615;&#21464;&#23616;&#12290;Anthropic &#21644; OpenAI &#21452;&#21452;&#25552;&#20132; IPO&#65292;G7 &#23792;&#20250;&#19978;&#21508;&#22269;&#25919;&#24220;&#24320;&#22987;&#35748;&#30495;&#35752;&#35770; AI &#23545;&#20799;&#31461;&#30340;&#23041;&#32961;&#8212;&#8212;AI &#34892;&#19994;&#27491;&#22312;&#20174;&#12300;&#25216;&#26415;&#38738;&#26149;&#26399;&#12301;&#27493;&#20837;&#12300;&#21046;&#24230;&#25104;&#24180;&#26399;&#12301;&#12290;</p>
     </section>

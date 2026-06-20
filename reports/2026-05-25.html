@@ -40,7 +40,17 @@ body{font-family:'EB Garamond','Noto Serif SC','Songti SC',Georgia,serif;backgro
 .takeaways li:last-child{border-bottom:none}
 .colophon{border-top:3px double #2a2a2a;background:#eae3d4;padding:.6rem 1rem;text-align:center;font-size:10px;color:#6b6358;letter-spacing:2px;margin-top:1.4rem}
 .colophon em{color:#8b1a1a;font-style:normal;font-weight:700}
-</style>
+
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+    </style>
 </head>
 <body>
 <div class="paper">
@@ -53,7 +63,14 @@ body{font-family:'EB Garamond','Noto Serif SC','Songti SC',Georgia,serif;backgro
     <span>MAY 25, 2026</span>
     <span>今日 12 条精选</span>
   </div>
-  <div class="lead-box">
+  
+<div class="nav-bar">
+    <a href="/reports/2026-05-24.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-05-26.html">后一日 &rarr;</a>
+</div>
+
+<div class="lead-box">
     <div class="lead-label">LEAD</div>
     <div class="lead-text">前沿模型进入「喘息期」，竞争重心下移。OpenAI 选择「减少幻觉」而非「更聪明」作为卖点，DeepSeek 将 API 价格底线再次击穿，而教皇利奥十四世以最高级别通谕将 AI 伦理提升至文明高度。</div>
   </div>

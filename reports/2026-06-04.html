@@ -228,7 +228,17 @@
     .full .article-body::first-letter{font-size:42px}
     .info-bar{flex-direction:column;gap:4px;align-items:center}
   }
-</style>
+
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+    </style>
 </head>
 <body>
 <div class="paper">
@@ -242,7 +252,14 @@
     <span>今日 <em>8</em> 条精选</span>
   </div>
 
-  <section class="lead">
+  
+<div class="nav-bar">
+    <a href="/reports/2026-06-03.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-06-05.html">后一日 &rarr;</a>
+</div>
+
+<section class="lead">
     <span class="lead-tag">LEAD</span>
     <p class="lead-body">今日 AI 圈上演资本与算力的双重盛宴：Anthropic 抢先递交 S-1 草案启动 IPO，Alphabet 创纪录增发 847.5 亿美元；模型端，微软用 MAI 矩阵宣告去 OpenAI 化，DeepSeek V4.1 开源端出 1.6T 多模态。资本与算力同步冲刺，行业从「参数比拼」切到「路线卡位」。</p>
     <div class="lead-rule"></div>

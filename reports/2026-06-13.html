@@ -241,6 +241,16 @@
             .full-width .article-headline { font-size: 24px; }
             .colophon { margin: 1.5rem -1.2rem -1rem; padding: 1rem 1.2rem; }
         }
+    
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
     </style>
 </head>
 <body>
@@ -259,7 +269,14 @@
         </div>
     </header>
 
-    <!-- Lead -->
+    
+<div class="nav-bar">
+    <a href="/reports/2026-06-12.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-06-14.html">后一日 &rarr;</a>
+</div>
+
+<!-- Lead -->
     <section class="lead-section">
         <div class="lead-label">LEAD</div>
         <p class="lead-body">AI 行业从「拼智能」正式进入「拼资本与基础设施」的下半场：一周内 OpenAI、Anthropic 双双提交 IPO 申请，贝佐斯携 Prometheus 融资 120 亿美元杀入物理世界 AI，英伟达则在台北宣布 Vera Rubin 全面量产并进军 AI PC 市场。</p>

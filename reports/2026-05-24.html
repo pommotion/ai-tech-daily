@@ -40,7 +40,17 @@ body{font-family:'EB Garamond','Noto Serif SC','Songti SC',Georgia,serif;backgro
 .takeaways li:last-child{border-bottom:none}
 .colophon{border-top:3px double #2a2a2a;background:#eae3d4;padding:.6rem 1rem;text-align:center;font-size:10px;color:#6b6358;letter-spacing:2px;margin-top:1.4rem}
 .colophon em{color:#8b1a1a;font-style:normal;font-weight:700}
-</style>
+
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+    </style>
 </head>
 <body>
 <div class="paper">
@@ -53,7 +63,14 @@ body{font-family:'EB Garamond','Noto Serif SC','Songti SC',Georgia,serif;backgro
     <span>MAY 24, 2026</span>
     <span>今日 14 条精选</span>
   </div>
-  <div class="lead-box">
+  
+<div class="nav-bar">
+    <a href="/reports/2026-05-23.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-05-25.html">后一日 &rarr;</a>
+</div>
+
+<div class="lead-box">
     <div class="lead-label">LEAD</div>
     <div class="lead-text">Agent 能力跃迁、价格战结构性升级、安全从理论到实战——本周三大趋势交织。DeepSeek 永久降价 75% 将 API 价格底线击穿，OpenAI 提交 IPO 申请，而 Claude Mythos 一个月发现 10000+ 漏洞的速度已超过人类修补能力。</div>
   </div>

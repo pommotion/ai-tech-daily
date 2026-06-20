@@ -131,7 +131,17 @@
     .lead p{font-size:17px}
     .info-bar{flex-wrap:wrap;gap:6px;justify-content:center}
   }
-</style>
+
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+    </style>
 </head>
 <body>
 <div class="paper">
@@ -148,7 +158,14 @@
     </div>
   </header>
 
-  <!-- Lead -->
+  
+<div class="nav-bar">
+    <a href="/reports/2026-06-05.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-06-07.html">后一日 &rarr;</a>
+</div>
+
+<!-- Lead -->
   <section class="lead">
     <span class="tag">Lead</span>
     <p>今日 AI 圈最戏剧性的一幕是：Anthropic 在递表 IPO 四天后呼吁「全球暂停」，而自家 80% 的代码已由 AI 自主生成；同一周内，Qwen3.7-Plus、VAST Project Eden、NVIDIA Cosmos 3 同步落地，监管话语、商业飞轮与 AGI 焦虑在 72 小时内完成了一次罕见的叠加。</p>

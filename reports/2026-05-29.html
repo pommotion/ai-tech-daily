@@ -36,7 +36,17 @@ a.back:hover{text-decoration:underline;}
   .story-body{column-count:1;}
   .masthead{font-size:1.8rem;letter-spacing:6px;text-indent:6px;}
 }
-</style>
+
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+    </style>
 </head>
 <body>
 <div class="page">
@@ -49,7 +59,14 @@ a.back:hover{text-decoration:underline;}
   </div>
   <div class="columns">
     <div class="col col-left">
-            <article class="lead-story">
+            
+<div class="nav-bar">
+    <a href="/reports/2026-05-28.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-05-30.html">后一日 &rarr;</a>
+</div>
+
+<article class="lead-story">
                 <div class="story-tag" style="background:#8b1a1a;color:#fff;">FINANCE</div>
                 <h2 class="headline">Anthropic 完成 650 亿美元 H 轮融资，估值达 9650 亿美元</h2>
                 <p class="story-body">Anthropic 完成 H 轮 650 亿美元融资，投后估值 9650 亿美元，三个月内估值从 3800 亿美元增长超 150%，超越 OpenAI 成为全球估值最高 AI 公司。旗下产品 Claude 年化营收突破 470 亿美元，预计下月年化运营率超 500 亿美元，有望实现首个盈利季度。投资方包括 Altimeter Capital、Dragoneer、Greenoaks、红杉资本等，三星、SK 海力士、美光作为战略基础设施伙伴加入。</p>

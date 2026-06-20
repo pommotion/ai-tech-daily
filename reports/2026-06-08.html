@@ -220,7 +220,17 @@ body {
     .lead-text { font-size: 17px; }
     .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
 }
-</style>
+
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+    </style>
 </head>
 <body>
 <div class="newspaper">
@@ -239,6 +249,13 @@ body {
 </div>
 
 <!-- ===== LEAD ===== -->
+
+<div class="nav-bar">
+    <a href="/reports/2026-06-07.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-06-09.html">后一日 &rarr;</a>
+</div>
+
 <div class="lead-section">
     <div class="lead-tag">Lead</div>
     <div class="lead-text">AI 行业进入「权力重组周」——苹果押注谷歌 Gemini 重造 Siri、微软自立门户发布 7 款自研模型、英伟达杀入 PC 芯片、Hinton 公开宣称 AI 已有意识——从模型到硬件到政策，旧格局正在被同时打破。</div>

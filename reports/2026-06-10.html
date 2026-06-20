@@ -235,7 +235,17 @@ body {
     font-style: normal;
     font-weight: 600;
 }
-</style>
+
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+    </style>
 </head>
 <body>
 <div class="newspaper">
@@ -254,6 +264,13 @@ body {
 </div>
 
 <!-- ===== LEAD ===== -->
+
+<div class="nav-bar">
+    <a href="/reports/2026-06-09.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-06-11.html">后一日 &rarr;</a>
+</div>
+
 <div class="lead-section">
     <div class="lead-tag">Lead</div>
     <div class="lead-text">AI 行业「上市潮」正式拉开帷幕：SpaceX、Anthropic、OpenAI 接连提交 IPO 申请，苹果 WWDC 2026 以 Siri AI 大改版回应竞争压力，微软发布自研 MAI 模型家族加速「去 OpenAI 化」。</div>

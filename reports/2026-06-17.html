@@ -62,7 +62,17 @@ body { font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
     .masthead .info-bar span { text-align: center !important; }
     .lead-text { font-size: 17px; }
 }
-</style>
+
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+    </style>
 </head>
 <body>
 <div class="paper">
@@ -78,6 +88,13 @@ body { font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
             <span class="right">今日 8 条精选</span>
         </div>
     </div>
+</div>
+
+
+<div class="nav-bar">
+    <a href="/reports/2026-06-16.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <a href="/reports/2026-06-18.html">后一日 &rarr;</a>
 </div>
 
 <div class="lead">
