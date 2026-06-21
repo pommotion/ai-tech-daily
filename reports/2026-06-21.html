@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI TECH DAILY · 2026-06-21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper-light: #f5f0e6;
+  --paper-dark: #eae3d4;
+  --ink: #1a1a1a;
+  --press-red: #8b1a1a;
+  --brown-gray: #6b6358;
+  --rule-dark: #2a2a2a;
+  --rule-light: #c4b99a;
+  --serif-display: 'Playfair Display', Georgia, serif;
+  --serif-body: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+  --serif-cn: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: var(--serif-body);
+  background: var(--paper-dark);
+  color: var(--ink);
+  line-height: 1.6;
+  padding: 2rem 1rem;
+}
+
+/* ---- Newspaper Container ---- */
+.newspaper {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--paper-light);
+  padding: 2.5rem 3rem 3rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12), 0 1px 6px rgba(0,0,0,0.08);
+}
+
+/* ---- Masthead ---- */
+.masthead-top {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--brown-gray);
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--rule-light);
+  margin-bottom: 1rem;
+}
+
+.masthead-title {
+  font-family: var(--serif-display);
+  font-size: 64px;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 18px;
+  text-indent: 18px;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.masthead-subtitle {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 6px;
+  color: var(--brown-gray);
+  margin-top: 0.5rem;
+  font-family: var(--serif-cn);
+  font-weight: 600;
+}
+
+.masthead-double-rule {
+  border: none;
+  border-top: 4px double var(--rule-dark);
+  margin: 1rem 0 0;
+}
+
+.masthead-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--brown-gray);
+  padding: 0.6rem 0 1.5rem;
+  border-bottom: 1px solid var(--rule-light);
+  margin-bottom: 1.5rem;
+}
+
+.masthead-info span { font-family: var(--serif-display); font-weight: 400; }
+.masthead-info .center { font-style: italic; }
+
+/* ---- Lead ---- */
+.lead-section { margin-bottom: 1.8rem; }
+
+.lead-label {
+  display: inline-block;
+  background: var(--press-red);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  padding: 3px 10px;
+  margin-bottom: 0.6rem;
+  font-family: var(--serif-display);
+}
+
+.lead-text {
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: var(--serif-cn);
+  color: var(--ink);
+  font-weight: 400;
+}
+
+.lead-rule {
+  border: none;
+  border-top: 2px solid var(--rule-dark);
+  margin: 1.2rem 0 1.8rem;
+}
+
+/* ---- Article Common ---- */
+.article-category {
+  font-family: var(--serif-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--press-red);
+  margin-bottom: 0.3rem;
+}
+
+.article-headline {
+  font-family: var(--serif-cn);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+
+.article-headline.full { font-size: 22px; }
+.article-headline.col { font-size: 19px; }
+.article-headline.feature { font-size: 30px; font-weight: 900; }
+
+.article-source {
+  font-size: 11px;
+  font-style: italic;
+  color: var(--brown-gray);
+  margin-bottom: 0.5rem;
+}
+
+.article-source a {
+  color: var(--brown-gray);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rule-light);
+}
+
+.article-source a:hover { color: var(--press-red); }
+
+.article-body {
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: justify;
+  font-family: var(--serif-cn);
+  margin-bottom: 0.6rem;
+}
+
+.article-commentary {
+  font-size: 13.5px;
+  font-style: italic;
+  font-family: var(--serif-cn);
+  color: var(--brown-gray);
+  line-height: 1.5;
+  border-top: 1px dashed var(--rule-light);
+  padding-top: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.article-commentary::before {
+  content: '✦ ';
+  color: var(--press-red);
+  font-style: normal;
+}
+
+/* ---- Layout: Full Width ---- */
+.article-full { margin-bottom: 1.5rem; }
+
+/* ---- Drop Cap for Feature ---- */
+.feature .article-body::first-letter {
+  font-family: var(--serif-display);
+  font-size: 52px;
+  font-weight: 900;
+  color: var(--press-red);
+  float: left;
+  line-height: 0.9;
+  margin: 0.1rem 0.5rem 0 0;
+}
+
+/* ---- Layout: Two Column ---- */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-bottom: 1.5rem;
+}
+
+.two-col .article-col {
+  padding: 0 1.2rem;
+}
+
+.two-col .article-col:first-child {
+  padding-left: 0;
+  border-right: 1px solid var(--rule-light);
+}
+
+.two-col .article-col:last-child {
+  padding-right: 0;
+}
+
+/* ---- Separator ---- */
+.section-separator {
+  text-align: center;
+  font-size: 14px;
+  color: var(--rule-light);
+  margin: 1.5rem 0;
+  letter-spacing: 8px;
+}
+
+/* ---- Takeaways ---- */
+.takeaways {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 3px double var(--rule-dark);
+}
+
+.takeaways-title {
+  font-family: var(--serif-display);
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+
+.takeaways ul {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.takeaways li {
+  font-size: 14.5px;
+  font-family: var(--serif-cn);
+  line-height: 1.6;
+  padding: 0.4rem 0 0.4rem 1.5rem;
+  position: relative;
+  border-bottom: 1px solid var(--rule-light);
+}
+
+.takeaways li:last-child { border-bottom: none; }
+
+.takeaways li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--press-red);
+  font-size: 14px;
+}
+
+/* ---- Colophon ---- */
+.colophon {
+  margin-top: 2.5rem;
+  padding: 1rem 0;
+  border-top: 4px double var(--rule-dark);
+  background: var(--paper-dark);
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--brown-gray);
+  font-family: var(--serif-body);
+}
+
+.colophon em {
+  font-style: normal;
+  color: var(--press-red);
+  font-weight: 700;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  body { padding: 0; }
+  .newspaper { padding: 1.5rem 1.2rem 2rem; }
+  .masthead-title { font-size: 36px; letter-spacing: 8px; text-indent: 8px; }
+  .two-col { grid-template-columns: 1fr; }
+  .two-col .article-col { padding: 0; border-right: none; }
+  .two-col .article-col:first-child { border-bottom: 1px solid var(--rule-light); margin-bottom: 1rem; padding-bottom: 1rem; }
+  .article-headline.feature { font-size: 24px; }
+  .lead-text { font-size: 17px; }
+}
+</style>
+</head>
+<body>
+<div class="newspaper">
+
+  <!-- Masthead -->
+  <div class="masthead-top">An Independent Tech Publication · Est. 2026</div>
+  <div class="masthead-title">AI TECH DAILY</div>
+  <div class="masthead-subtitle">AI × 科技 · 每日精选</div>
+  <hr class="masthead-double-rule">
+  <div class="masthead-info">
+    <span>Vol. 30</span>
+    <span class="center">Saturday, June 21, 2026</span>
+    <span>今日 <em style="color:var(--press-red);font-style:normal;font-weight:700;">9</em> 条精选</span>
+  </div>
+
+  <!-- Lead -->
+  <div class="lead-section">
+    <div class="lead-label">LEAD</div>
+    <div class="lead-text">今天的 AI 正从「能聊天」走向「能治病、能造物、能管理芯片」，模型能力、资本流向和监管框架三条线同时收紧。</div>
+  </div>
+  <hr class="lead-rule">
+
+  <!-- Article 1: Feature (Full Width) -->
+  <div class="article-full feature">
+    <div class="article-category">MAJOR LAUNCH</div>
+    <h1 class="article-headline feature">Z.ai 发布 GLM-5.2：MIT 许可的开源前沿模型，百万上下文双推理模式</h1>
+    <div class="article-source">来源：Z.ai 官方 · <a href="https://z.ai/blog/glm-5.2">z.ai/blog/glm-5.2</a> · 技术报告：<a href="https://arxiv.org/abs/2602.15763">arxiv.org/abs/2602.15763</a></div>
+    <div class="article-body">Z.ai 发布 GLM-5.2，采用 MIT 开源许可，支持 100 万 token 上下文，提供双推理模式，编程与 Agent 能力显著提升。权重已在 Hugging Face 开放，支持通过 Unsloth 本地部署，同时获得 Agent Arena、Artificial Analysis 等多项基准测试的正面结果。</div>
+    <div class="article-commentary">开源模型不再只是「够用」，而是开始正面竞争闭源前沿。</div>
+  </div>
+
+  <hr class="lead-rule">
+
+  <!-- Article 2 & 3: Two Column -->
+  <div class="two-col">
+    <div class="article-col">
+      <div class="article-category">RESEARCH</div>
+      <h2 class="article-headline col">OpenAI 助力解决 18 例罕见儿科遗传病</h2>
+      <div class="article-source">来源：OpenAI · <a href="https://openai.com/index/diagnose-rare-childhood-diseases/">openai.com</a></div>
+      <div class="article-body">OpenAI 使用 o3 Deep Research 重新分析了 376 例此前无法诊断的罕见儿童遗传病案例，配合波士顿儿童医院和哈佛团队，产出 18 个新诊断，额外诊断率 4.8%。系统负责文献检索、基因与症状关联、变异排序，人类专家负责临床验证。</div>
+      <div class="article-commentary">AI 从跑分竞赛走进真实临床，诊断率每提升一个百分点都是家庭命运。</div>
+    </div>
+    <div class="article-col">
+      <div class="article-category">RESEARCH</div>
+      <h2 class="article-headline col">Google AMIE 从诊断进入疾病管理</h2>
+      <div class="article-source">来源：Google Research · <a href="https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/">blog.google</a></div>
+      <div class="article-body">Google 将 AMIE 系统从一次性诊断扩展到持续疾病管理。研究表明，在复杂持续护理对话中，AMIE 匹配了初级保健医生水平，同时提升了治疗精度和指南依从性。论文发表于 Nature。</div>
+      <div class="article-commentary">对话式 AI 医生要管「长期治疗」了，医疗 AI 的野心比想象的大。</div>
+    </div>
+  </div>
+
+  <div class="section-separator">— ✦ —</div>
+
+  <!-- Article 4: Full Width -->
+  <div class="article-full">
+    <div class="article-category">INDUSTRY</div>
+    <h2 class="article-headline full">SpaceX 以 600 亿美元全股票收购 AI 编程工具 Cursor</h2>
+    <div class="article-source">来源：Crunchbase News · <a href="https://news.crunchbase.com/ma/spcx-acquires-ai-coding-cursor-largest-startup-ma-deal-2026/">news.crunchbase.com</a></div>
+    <div class="article-body">SpaceX 以全股票交易收购 AI 编程工具 Cursor 母公司 Anysphere，作价 600 亿美元，为 2026 年迄今最大初创企业并购。Cursor 年化收入已超 10 亿美元，此前累计融资 34 亿美元。收购后 SpaceX 获得企业级 AI 编程开发市场的战略入口。</div>
+    <div class="article-commentary">编程工具成了战略控制点，谁掌握开发者的工作流谁就掌握软件生产。</div>
+  </div>
+
+  <!-- Article 5 & 6: Two Column -->
+  <div class="two-col">
+    <div class="article-col">
+      <div class="article-category">INDUSTRY</div>
+      <h2 class="article-headline col">Bezos 旗下 Prometheus 融资 120 亿美元，估值 410 亿</h2>
+      <div class="article-source">来源：techstartups.com · <a href="https://techstartups.com/2026/06/11/jeff-bezos-emerges-from-stealth-with-prometheus-a-41-billion-ai-startup-building-ai-for-engineering-and-manufacturing/">techstartups.com</a></div>
+      <div class="article-body">Jeff Bezos 的工业 AI 创业公司 Prometheus 完成 120 亿美元 B 轮融资，估值 410 亿美元，投资方包括 BlackRock、高盛、DST Global。公司定位「通用人工智能工程师」，面向制造和工程优化。</div>
+      <div class="article-commentary">120 亿砸向「工业 AI」，资本判断下一个爆发点在工厂不在聊天框。</div>
+    </div>
+    <div class="article-col">
+      <div class="article-category">MAJOR LAUNCH</div>
+      <h2 class="article-headline col">OpenAI 筹备 GPT-5.6 / GPT-5.6-Pro，最快下周发布</h2>
+      <div class="article-source">来源：TestingCatalog · <a href="https://x.com/testingcatalog/status/2067649489293185267">@TestingCatalog</a></div>
+      <div class="article-body">TestingCatalog 报道 OpenAI 正在准备 GPT-5.6 和 GPT-5.6-Pro，最快下周发布。早期 GPT-5.6 Pro 的 Web 开发输出显示理解力更强，但生成耗时 20 至 40 分钟，前端执行仍粗糙。</div>
+      <div class="article-commentary">六周一代的迭代节奏，「够快」和「够好」之间 OpenAI 还没找到平衡。</div>
+    </div>
+  </div>
+
+  <div class="section-separator">— ✦ —</div>
+
+  <!-- Article 7 & 8: Two Column -->
+  <div class="two-col">
+    <div class="article-col">
+      <div class="article-category">INDUSTRY</div>
+      <h2 class="article-headline col">Transformer 共同发明人 Noam Shazeer 加入 OpenAI</h2>
+      <div class="article-source">来源：The Information · <a href="https://www.theinformation.com/articles/star-google-ai-researcher-shazeer-joins-openai">theinformation.com</a></div>
+      <div class="article-body">Transformer 论文共同作者、曾离开 Google 创办 Character.AI 后以 27 亿美元被 Google 回购的 Noam Shazeer，据报加入 OpenAI，负责新模型架构和 Transformer 架构演进。</div>
+      <div class="article-commentary">顶级人才流向直接决定下一轮架构创新的归属。</div>
+    </div>
+    <div class="article-col">
+      <div class="article-category">POLICY</div>
+      <h2 class="article-headline col">特朗普签署 AI 行政令：自愿 30 天预发布审查</h2>
+      <div class="article-source">来源：White House · <a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/">whitehouse.gov</a></div>
+      <div class="article-body">特朗普签署 AI 行政令，要求前沿模型开发者自愿在公开发布前 30 天提交联邦机构评估，明确排除强制许可。此前草案为 90 天，因行业施压缩减。DOJ 被指示优先起诉 AI 辅助黑客行为。</div>
+      <div class="article-commentary">30 天自愿审查是行业博弈后的妥协，监管给了空间但留了杠杆。</div>
+    </div>
+  </div>
+
+  <!-- Article 9: Full Width -->
+  <div class="article-full">
+    <div class="article-category">TOOLS</div>
+    <h2 class="article-headline full">Amazon 拟对外销售 Trainium3 芯片，正面挑战 Nvidia 加速器市场</h2>
+    <div class="article-source">来源：Bloomberg · <a href="https://www.bloomberg.com/news/articles/2026-06-18/amazon-is-in-talks-to-sell-nvidia-rival-chips-to-other-companies">bloomberg.com</a></div>
+    <div class="article-body">Amazon 正在谈判向其他公司数据中心销售自研 Trainium3 AI 芯片，将内部 Nvidia 替代品转化为直接进入加速器市场的产品。这意味着云厂商自研芯片从「自用」走向「外卖」，Nvidia 的市场地位面临多方蚕食。</div>
+    <div class="article-commentary">云厂商自研芯片从「自用」走向「外卖」，Nvidia 的护城河被多方蚕食。</div>
+  </div>
+
+  <!-- Today's Takeaways -->
+  <div class="takeaways">
+    <div class="takeaways-title">Today's Takeaways</div>
+    <ul>
+      <li>开源前沿模型（GLM-5.2）开始正面叫板闭源，MIT 许可加百万上下文降低部署门槛</li>
+      <li>AI 医疗从诊断走向治疗管理，OpenAI 和 Google 同日公布临床级成果</li>
+      <li>SpaceX 600 亿美元收购 Cursor，编程工具成为 AI 时代战略基础设施</li>
+      <li>特朗普 AI 行政令落地，自愿 30 天审查折射监管与产业的拉锯</li>
+      <li>芯片格局松动，Amazon Trainium3 对外销售意味 Nvidia 多了一个正面竞争者</li>
+    </ul>
+  </div>
+
+  <!-- Colophon -->
+  <div class="colophon">
+    今日精选 <em>9</em> 条 · web_search 覆盖中英文来源 · 由 remio agent 生成 · 2026-06-21
+  </div>
+
+</div>
+</body>
+</html>
