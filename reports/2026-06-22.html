@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-06-22</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>31</em></span>
+        <span>Monday, June 22, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-06-21.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">AI 产业从「谁更强」进入「谁定标准」阶段——Google 联合巨头发布智能体发现协议 ARD，G7 峰会把 AI CEO 们请上了谈判桌，而美国政府强制下架 Anthropic 最强模型，地缘与标准之争同时开火。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">Google 联合 Microsoft、GitHub、NVIDIA 等发布 Agentic Resource Discovery 开放标准</h2>
+        <div class="article-source">Google Developers Blog · <a href="https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">G</span>oogle 牵头发布 ARD（Agentic Resource Discovery）开放规范，允许 AI Agent 自主发现、验证并连接全网工具和服务，不受底层框架或协议限制。Microsoft、GitHub、Hugging Face、NVIDIA、Amazon、Cisco、Salesforce、Snowflake 等均已背书，采用 Apache 2.0 开源协议。</p>
+        <p class="article-commentary">这是 Agent 时代的 DNS——谁掌握发现层，谁就掌握生态入口</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">Anthropic Project Fetch：Claude Opus 4.7 机器人编程速度达人类最快团队 20 倍</h3>
+            <div class="article-source">Anthropic · <a href="https://www.anthropic.com/research/project-fetch-phase-two" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic 公布 Project Fetch 第二阶段结果：Claude Opus 4.7 在无人类协助下完成机器狗编程任务，速度约为去年使用 Opus 4.1 的最快人类团队的 20 倍，代码量减少 10 倍。但物理层面如取球等任务仍有困难。</p>
+            <p class="article-commentary">AI 编代码已经快到离谱，但让它真正「伸手拿东西」依然卡在物理世界</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Qualcomm 洽购 AI 芯片公司 Tenstorrent，估值 80-100 亿美元</h3>
+            <div class="article-source">Reuters / The Information · <a href="https://techgolly.com/qualcomm-in-talks-to-buy-jim-kellers-tenstorrent-for-up-to-10-billion" target="_blank">阅读原文</a></div>
+            <p class="article-body">Qualcomm 正在洽谈以 80-100 亿美元收购 Jim Keller 创办的 AI 芯片公司 Tenstorrent，后者基于 RISC-V 架构设计高能效推理芯片。该估值较此前翻近三倍，交易若达成将大幅扩展 Qualcomm 在定制 AI 处理器领域的版图。</p>
+            <p class="article-commentary">Jim Keller 的芯片设计能力正在被明码标价——这次是 100 亿</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">G7 峰会邀 OpenAI、Anthropic、Google DeepMind CEO 共议 AI 治理</h2>
+        <div class="article-source">CNBC · <a href="https://www.cnbc.com/2026/06/17/g7-trump-ai-tech-leaders-openai-anthropic-google.html" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">法</span>国埃维昂 G7 峰会（6/15-17）首次将三大前沿 AI 公司 CEO 请上谈判桌，与特朗普及各国领导人讨论前沿 AI 风险、基础设施和主权议题。Altman、Amodei、Hassabis 全部出席，标志 AI 治理正式进入地缘政治核心议程。</p>
+        <p class="article-commentary">AI 公司 CEO 坐进 G7 谈判桌——科技巨头已获得准主权地位</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">美国政府强制 Anthropic 下架 Claude Fable 5 和 Mythos 5 模型</h3>
+            <div class="article-source">CNN · <a href="https://www.cnn.com/2026/06/13/business/anthropic-mythos-model-national-security" target="_blank">阅读原文</a></div>
+            <p class="article-body">6 月 12 日美国政府以出口管制令要求 Anthropic 暂停所有外国用户（无论在美国内外）对 Claude Fable 5 和 Mythos 5 的访问。这两款模型仅发布三天，是 Anthropic 最强系统。Anthropic 当晚全球切断访问。</p>
+            <p class="article-commentary">上线三天即遭封杀——AI 模型正在成为出口管制的新标的物</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Google 发布 Android 17，深度集成 Gemini Omni / Lyria 3 / AudioLM</h3>
+            <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/06/16/android-17-launches-with-new-multitasking-tools-as-google-expands-gemini-features/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Android 17 和 Wear OS 7 正式发布，内置 Gemini Omni 视频编辑、Lyria 3 音乐生成、AudioLM 语音翻译，并新增「bubble bar」多任务交互。Google 将 AI 模型作为消费设备的核心差异点全面铺开。</p>
+            <p class="article-commentary">AI 不再是 App，而是操作系统本身——Android 正在变成 Gemini 的皮肤</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">OECD 发布全球中小学 AI 素养框架</h3>
+            <div class="article-source">Digital Watch Observatory · <a href="https://dig.watch/updates/oecd-publishes-ai-literacy-framework-for-schools" target="_blank">阅读原文</a></div>
+            <p class="article-body">OECD 发布《为 AI 时代赋能学习者》框架，定义 AI 素养为理解 AI 系统、批判评估输出、合乎伦理地使用 AI。面向全球中小学教育体系，为政策制定者和教育者提供课程与师资培训指引。</p>
+            <p class="article-commentary">AI 教育终于有了跨国共识框架——但落地还得看各国执行力</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">Ames 实验室用 DuctGPT 发现无稀土磁铁材料</h3>
+            <div class="article-source">BGR · <a href="https://www.bgr.com/2195617/scientific-breakthrough-magnets-without-rare-earth-metals/" target="_blank">阅读原文</a></div>
+            <p class="article-body">美国 Ames 实验室开发物理训练模型 DuctGPT，成功发现不含稀土元素的永磁材料。与传统数据驱动 AI 不同，DuctGPT 理解底层物理并可发明新材料，同时考虑生产成本和供应链。有望减少美国对稀土进口的依赖。</p>
+            <p class="article-commentary">AI 不再只是改写文字——它开始发明这个世界的物理基石</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>Agent 标准之争打响：ARD 协议背靠 Google+Microsoft+NVIDIA 阵营，争夺 AI Agent 的「发现层」入口</li>
+            <li>具身智能提速：Claude Opus 4.7 编程速度超人类 20 倍，但物理操作仍是瓶颈</li>
+            <li>AI 芯片并购升温：Qualcomm 拟百亿收购 Tenstorrent，Jim Keller 成核心资产</li>
+            <li>地缘风险加剧：美国首次以出口管制封杀商用 AI 模型，Fable 5 上线三天即遭下架</li>
+            <li>AI 渗透底层：从 Android 系统到 OECD 教育框架，AI 正在成为基础设施而非工具</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-06-22
+</div>
+
+</div>
+</body>
+</html>
