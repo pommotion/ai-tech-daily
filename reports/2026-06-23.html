@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-06-23</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>32</em></span>
+        <span>Tuesday, June 23, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-06-22.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">AI 基建进入「拼资源」阶段：微软签 20 年天然气供电、Qualcomm 百亿美金买 RISC-V 芯片团队，行业重心从模型竞赛转向电力、芯片、网络等底层基础设施的全面军备。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">微软与雪佛龙签署 20 年天然气供电协议，为 AI 数据中心锁定 2.67GW 电力</h2>
+        <div class="article-source">CNBC · <a href="https://www.cnbc.com/2026/06/22/chevron-cvx-microsoft-msft-natural-gas-data-center.html" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">微</span>软与雪佛龙宣布达成 20 年电力购买协议，在德克萨斯州 Pecos 共建名为 Project Kilby 的专用天然气发电设施，为微软 AI 数据中心供电，总容量达 2.67GW，预计 2028 年首批送电。这是科技巨头为 AI 扩张直接押注化石能源的最激进案例之一。</p>
+        <p class="article-commentary">AI 的「算力瓶颈」本质是能源瓶颈，科技巨头开始自己发电了。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Qualcomm 拟以 80-100 亿美元收购 AI 芯片公司 Tenstorrent，挑战 Nvidia</h3>
+            <div class="article-source">Reuters · <a href="https://www.reuters.com/technology/ai/articles/qualcomm-qcom-reportedly-eyeing-tenstorrent-050918276.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">Qualcomm 正与 Tenstorrent 进行收购谈判，估值约 80-100 亿美元。Tenstorrent 由芯片传奇 Jim Keller 领导，基于开源 RISC-V 架构设计 AI 芯片。若交易达成，Qualcomm 将获得数据中心 AI 芯片的入场券，直接挑战 Nvidia 的统治地位。谈判仍在进行中。</p>
+            <p class="article-commentary">RISC-V 挑战 CUDA 生态的最激进赌注，Jim Keller 值这个价。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">AI 网络基础设施公司 Upscale AI 获 1.9 亿美元融资，估值达 20 亿</h3>
+            <div class="article-source">Reuters · <a href="https://www.reuters.com/business/upscale-ai-valued-2-billion-after-funding-extension-2026-06-22/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Upscale AI 宣布完成 1.9 亿美元 Series A-1 融资，由 Premji Invest 领投，NVIDIA、Salesforce Ventures、淡马锡等跟投，累计融资达 5 亿美元，估值升至 20 亿。该公司专注 AI 芯片互联网络硬件和系统，解决大规模模型训练中的通信瓶颈。</p>
+            <p class="article-commentary">GPU 之外，网络层正在成为 AI 基础设施的下一个价值洼地。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">OpenAI GPT-5.5 生物安全漏洞赏金计划今日截止，最高悬赏 2.5 万美元</h2>
+        <div class="article-source">OpenAI / AIPedia · <a href="https://openai.com/index/gpt-5-5-bio-bug-bounty/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 的 GPT-5.5 Bio Bounty 申请窗口于 6 月 22 日关闭。该项目悬赏 2.5 万美元寻找能够一次性绕过五项生物安全问题的通用越狱提示词，测试环境为 Codex Desktop。同日 OpenAI 还发布了 GPT-5.5-Cyber，面向经过审查的安全防御者开放。</p>
+        <p class="article-commentary">把安全测试做成赏金猎人游戏，思路对了，但方向卡在防止「被用作武器」不是公关秀。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Google 联合微软、NVIDIA 等巨头发布 ARDS 开放标准，让 AI Agent 自主发现网络资源</h3>
+            <div class="article-source">IndianWeb2 · <a href="https://www.indianweb2.com/2026/06/google-and-tech-giants-unite-to-launch.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">Google 联合微软、GitHub、Hugging Face、NVIDIA、亚马逊、思科、Salesforce 等发布 Agentic Resource Discovery Specification（ARDS），这是一套开放标准，让 AI Agent 能自主发现、理解并调用网络上的 API 和服务，无需人工集成。协议采用 Apache 2.0 许可。</p>
+            <p class="article-commentary">Agent 生态的「HTTP 时刻」——标准先行，碎片化才有望终结。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">美团开源 LongCat-Video-Avatar 1.5：数字人视频生成达到商用级</h3>
+            <div class="article-source">美团技术团队 · <a href="https://aitoolly.com/en/ai-news/article/2026-06-22-meituan-open-sources-longcat-video-avatar-15-a-commercial-grade-leap-for-digital-human-video-generat" target="_blank">阅读原文</a></div>
+            <p class="article-body">美团技术团队宣布开源 LongCat-Video-Avatar 1.5，在唇形同步、物理合理性、长视频稳定性等维度全面升级，支持多人交互和推理效率优化，从 SOTA 实验模型跃升至商用级数字人视频生成方案。</p>
+            <p class="article-commentary">开源数字人出商用版，内容生产的「替身」时代又近一步。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">美团发布 General 365 推理基准：26 个主流大模型仅 Gemini 3 Pro 及格</h3>
+            <div class="article-source">美团技术团队 · <a href="https://aitoolly.com/en/ai-news/article/2026-06-22-meituan-longcat-team-launches-general-365-a-new-benchmark-revealing-critical-gaps-in-ai-reasoning-ca" target="_blank">阅读原文</a></div>
+            <p class="article-body">美团 LongCat 团队发布通用推理基准 General 365，对 26 个主流模型进行测试。结果仅 Gemini 3 Pro 达到 62.8% 准确率，其余均未突破 60% 的及格线，揭示当前大模型在复杂推理任务上仍存在系统性短板。</p>
+            <p class="article-commentary">60% 及格线都没摸到，推理能力的「天花板」比想象中低。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Nvidia 宣布新一代 AI 冷却系统：循环液冷可大幅降低数据中心用水量</h3>
+            <div class="article-source">Axios · <a href="https://techstartups.com/2026/06/22/top-tech-news-today-june-22-2026/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Nvidia 称其新一代 AI 基础设施可采用循环热液冷却，减少或消除传统冷却设备需求，显著降低数据中心用水量。此举旨在回应 AI 数据中心因高耗水和耗电引发的社区抵制，将可持续性纳入 AI 基础设施的竞争变量。</p>
+            <p class="article-commentary">AI 越大、水费越贵——冷却效率正从合规成本变成竞争壁垒。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>AI 基建竞赛从「抢 GPU」延伸至「抢电、抢水、抢地」——微软 20 年天然气协议是标志性信号</li>
+            <li>芯片层开启 RISC-V vs CUDA 的暗战：Qualcomm 百亿收购 Tenstorrent 若成，Nvidia 防线首次被撬</li>
+            <li>AI 网络不再是配角：Upscale AI 20 亿估值证明互联层正在成为新瓶颈和价值中心</li>
+            <li>推理能力仍是所有大模型的系统性短板：General 365 基准 26 个模型仅 1 个及格</li>
+            <li>Agent 生态从各自为战走向标准化：ARDS 有望成为 AI Agent 的「HTTP」</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-06-23
+</div>
+
+</div>
+</body>
+</html>
