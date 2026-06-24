@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-06-24</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>32</em></span>
+        <span>Wednesday, June 24, 2026</span>
+        <span>&#20170;&#26085; <em>10</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-06-23.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">AI 从「聊天工具」到「自主执行者」的拐点月：GPT-5.6 即将落地、美团一口气开源 5 款模型、微软首次在 B 端引入 DeepSeek——智能体不再是 demo，而是正在接管真实工作流。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">OpenAI GPT-5.6 即将发布：150 万上下文 + 原生浏览器自动化，6 月 25 日上线</h2>
+        <div class="article-source">Geeky Gadgets / eWeek / 百家号 · <a href="https://www.geeky-gadgets.com/gpt-5-6-pro-leak-features/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">多</span>方泄露信息显示 GPT-5.6 Pro 将于 6 月 25 日发布，上下文窗口从 100 万扩至 150 万 tokens，内置 Playwright 浏览器自动化工具，支持原生 3D 视觉复刻。OpenAI 首席科学家称之为「有意义的飞跃」，定价预计仅为 Claude Fable 5 的三分之一。</p>
+        <p class="article-commentary">不再堆参数，直接押注 Agent 执行力——OpenAI 终于承认：能聊天的 AI 已经不稀罕了，能自己干活的才是下一个战场。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Anthropic Claude Opus 4.8 上线：Dynamic Workflows 支持数百并行子智能体</h3>
+            <div class="article-source">Anthropic / TechCrunch / The Agent Report · <a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank">阅读原文</a></div>
+            <p class="article-body">Claude Opus 4.8 于 5 月 28 日发布，新增 Dynamic Workflows 功能，可在 Claude Code 中同时运行数百个并行子智能体，自动完成代码库级迁移任务。实测中仅用 11 天完成 Bun 运行时从 Zig 到 Rust 的 75 万行代码迁移，测试通过率 99.8%。SWE-Bench Pro 得分 69.2%，大幅领先 GPT-5.5 的 58.6%。</p>
+            <p class="article-commentary">一个 session 里跑几百个 Agent 协同干活——这不是「AI 辅助编程」，这是 AI 开发团队。软件工程的管理方式正在被改写。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">微软 Copilot Cowork 计划接入 DeepSeek V4：美国科技大厂首次在 B 端引入国产大模型</h3>
+            <div class="article-source">百家号 / AITop100 · <a href="https://www.aitop100.cn/ai-daily-2026-06-22" target="_blank">阅读原文</a></div>
+            <p class="article-body">微软企业级智能体 Copilot Cowork 因高频多工具调用导致算力成本飙升，计划引入 DeepSeek V4 作为分层备选模型。简单任务自动调度 DeepSeek，复杂推理再启用高端闭源模型。超半数财富 500 强企业已提前部署 Copilot Cowork。</p>
+            <p class="article-commentary">当「自家模型够用」的神话被成本打破，分层路由 + 多模型混用就成了必然选项。DeepSeek 的海外企业级入场券，就此撕开。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">NVIDIA GTC 2026：Vera Rubin 平台发布，七颗芯片剑指万亿参数推理</h2>
+        <div class="article-source">NVIDIA / The Neuron / Data Center Knowledge · <a href="https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">G</span>TC 2026 上 NVIDIA 发布 Vera Rubin 平台，包含七颗新芯片、五个机架，整合 Groq 3 LPX 低延迟推理加速器。黄仁勋宣布 Agentic AI 时代全面到来，Vera CPU 在智能体工作负载上性能为 Intel x86 的 1.8 倍，整体 Agent 吞吐量提升 10 倍。</p>
+        <p class="article-commentary">硬件不再是配角——Vera Rubin 的设计起点就是「为 Agent 服务」。当芯片架构开始围绕智能体调度优化，算力竞赛的底层逻辑已经变了。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">美团一口气开源 5 款模型：LongCat-Next、数学证明、数字人、评测基准全面开花</h3>
+            <div class="article-source">美团技术博客 / AIToolly / 知乎 · <a href="https://aitoolly.com/zh/ai-news/2026-06-22" target="_blank">阅读原文</a></div>
+            <p class="article-body">美团技术团队在 6 月密集开源：原生多模态模型 LongCat-Next（视觉+语音统一离散分词）、LongCat-Flash-Prover（数学定理证明）、LongCat-Video-Avatar 1.5（数字人视频）、LARYBench（具身动作表征评测）、LongCat-AudioDiT（零样本 TTS 音色克隆）。</p>
+            <p class="article-commentary">美团正在用开源建立「物理世界 AI」的话语权——从语音、视觉到具身智能，全栈布局，而且全部开放。这不是秀肌肉，是在定义赛道。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">微信原生 AI 助手「小微」灰度测试：一句话操控微信全生态</h3>
+            <div class="article-source">百家号 / AITop100 · <a href="https://www.aitop100.cn/ai-daily-2026-06-22" target="_blank">阅读原文</a></div>
+            <p class="article-body">微信悄悄上线原生 AI 助手「小微」限量灰度测试，支持文字或语音直接操控微信原生功能、调起小程序，拥有系统级权限，可帮用户发消息、查朋友圈、预约服务。与公众号或第三方小程序接入的 AI 工具完全不同。</p>
+            <p class="article-commentary">十亿级用户入口 + 系统级 AI 权限 = 超级 App 原生 AI 化的标杆。当社交软件本身变成 AI 助手，独立 AI App 的存在感会被大幅稀释。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">TOOLS</div>
+        <h2 class="feature-headline">Grok 推出 Office 官方插件：Word/Excel/PPT 内置 AI 助手</h2>
+        <div class="article-source">百家号 / AITop100 · <a href="https://www.aitop100.cn/ai-daily-2026-06-22" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">x</span>AI Grok 正式上线微软 Office 三件套专属扩展程序，Word 场景支持自动文稿生成和联网数据补充，Excel 支持自然语言筛选和图表生成，PPT 仅需主题和风格即可自动搭建框架。面向 SuperGrok 及以上付费会员开放。</p>
+        <p class="article-commentary">AI 不再让你「打开另一个工具」，而是直接嵌入你每天都在用的软件。办公 AI 的终局形态：你甚至不知道哪些是 AI 写的。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">阿里 HappyHorse1.1 视频模型发布：五大维度优化，解决 AI 视频人物变脸痛点</h3>
+            <div class="article-source">百家号 / AITop100 · <a href="https://www.aitop100.cn/ai-daily-2026-06-22" target="_blank">阅读原文</a></div>
+            <p class="article-body">阿里巴巴推出 HappyHorse1.1 视频生成大模型，从动作流畅度、主体稳定、指令识别、画面质感、音画同步五大维度全面优化。支持同时上传 9 张角色参考图，解决 AI 视频人物变脸、动作卡顿、声画脱节等痛点。已全量接入官网、阿里云百炼、千问云三大平台。</p>
+            <p class="article-commentary">AI 视频终于开始解决「不像人」的基本问题。当人物一致性和音画同步过关，短视频批量制作的经济模型就真正跑通了。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">中国《人工智能生成合成内容标识办法》全网落地：AI 短视频须开头 3 秒标注</h3>
+            <div class="article-source">知乎 / 技术栈 · <a href="https://jishuzhan.net/article/2066350876205346818" target="_blank">阅读原文</a></div>
+            <p class="article-body">四部门联合发布的《人工智能生成合成内容标识办法》于 6 月 14 日全网统一落地执行，要求 AI 短视频必须在开头 3 秒标注「AI 生成」。同时，中国正加紧筹建「世界人工智能合作组织」，推动全球 AI 治理框架建设。</p>
+            <p class="article-commentary">当 AI 生成内容已经无处不在，监管不再是「要不要管」的问题，而是「怎么管才不扼杀创新」。3 秒标注是底线，真正的挑战在深水区。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">TOOLS</div>
+        <h2 class="feature-headline">OpenAI Codex 新增录制回放功能：演示一次操作，AI 自动生成可复用技能</h2>
+        <div class="article-source">百家号 / AITop100 · <a href="https://www.aitop100.cn/ai-daily-2026-06-22" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 更新 macOS 端 Codex 26.616 版本，上线 Record &amp; Replay 录制回放功能。用户仅需完整演示一遍操作流程，AI 自动转化为可无限复用的自动化技能，支持跨文件、跨网页复杂工作流。依托 Computer Use 桌面操控权限实现，非程序员也能搭建自动化流程。</p>
+        <p class="article-commentary">从「写提示词」到「录一次就学会」——AI 自动化的门槛被拉到几乎为零。桌面端 AI Agent 的杀手级功能，可能就这么朴素。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>GPT-5.6 和 Claude Opus 4.8 同月竞技，AI 旗舰模型竞争从「谁更聪明」转向「谁能自主执行更长的任务链」</li>
+            <li>微软首次在 B 端引入 DeepSeek，多模型分层路由成为企业 AI 降本的通用方案</li>
+            <li>美团密集开源 5 款模型，用开放生态抢占「物理世界 AI」定义权</li>
+            <li>微信小微、Grok Office 插件、Codex 录制回放——AI 正在嵌入现有工作流而非另起炉灶</li>
+            <li>中国 AI 生成内容标识办法落地执行，全球 AI 治理进入实操阶段</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>10</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-06-24
+</div>
+
+</div>
+</body>
+</html>
