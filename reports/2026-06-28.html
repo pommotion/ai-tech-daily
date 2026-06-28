@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-06-28</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>37</em></span>
+        <span>Sunday, June 28, 2026</span>
+        <span>&#20170;&#26085; <em>9</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-06-27.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">白宫要求OpenAI限制GPT-5.6发布，与Anthropic Fable 5同样的命运——AI竞赛的裁判权已从市场转移到政府手中，没有规则手册。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">白宫要求OpenAI限制GPT-5.6发布，仅限政府批准合作伙伴</h2>
+        <div class="article-source">The National News · <a href="https://www.thenationalnews.com/future/technology/2026/06/27/openai-news-gpt-white-house/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI最新模型GPT-5.6 Sol/Terra/Luna在发布前被白宫要求限制为仅向政府批准的信任合作伙伴开放预览，公共发布推迟至“未来数周”。此前商务部已对Anthropic的Fable 5和Mythos 5实施了同样的出口管控。OpenAI称这是“奇怪的时刻”，表示不希望这成为长期模式。</p>
+        <p class="article-commentary">总统说要创新优先，结果比前任管得更严——硅谷第一次尝到“说一套做一套”的苦。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">TechCrunch判词：AI竞赛已不再是OpenAI vs Anthropic，而是行业 vs 政府</h3>
+            <div class="article-source">AIToolsRecap · <a href="https://aitoolsrecap.com/Blog/ai-news-june-28-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">TechCrunch编辑文章指出，OpenAI和Anthropic现在处于完全相同的困境——面对没有正式框架的临时政府审批流程。Mythos 5停滞数月仍无公开发布日期，GPT-5.6在到达公众前就被限制。文章认为，下半年AI行业的核心问题已从“哪个实验室赢”变成“谁来制定游戏规则”。</p>
+            <p class="article-commentary">裁判突然上桌了——没有规则手册的审批比禁令更可怕，因为你不知道边界在哪。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">Anthropic将于6月30日举办AI for Science发布会，诺奖得主John Jumper或首次公开亮相</h3>
+            <div class="article-source">AIToolsRecap · <a href="https://aitoolsrecap.com/Blog/ai-news-june-28-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic将于周一上午10点太平洋时间直播“The Briefing: AI for Science”活动，汇集制药高管、生物技术创始人和研究机构。背景研究VirBench显示，Claude通过确定性数据检索工具后，病毒序列查询准确率从16.9%跃升至92.8%。刚从Google加入的诺奖得主John Jumper有望首次公开亮相。</p>
+            <p class="article-commentary">便宜模型搭对了工具就能碾压贵模型裸跑——科学AI的胜负不在参数量，在基础设施。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">高盛数据：AI每月消除1.1万个美国岗位，Z世代首当其冲</h2>
+        <div class="article-source">AIToolsRecap / Fortune · <a href="https://aitoolsrecap.com/Blog/ai-news-june-28-2026" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">高</span>盛AI就业追踪器显示，2026年6月AI每月净消除约1.1万个美国岗位（4月曾达1.6万/月）。入门级知识型岗位受冲击最大，Z世代承受不成比例的影响。毕业生失业率从2019年的3.6%升至2026年的5.6%，35%的初级岗位要求至少3年经验，45%的公司在招聘早期使用自动淘汰系统。</p>
+        <p class="article-commentary">面试要三年经验但招的是应届生——AI替的不只是工作，是整个职业入口的结构。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Reid Hoffman：xAI是“彻底的灾难”，Cursor可能已经过了巅峰</h3>
+            <div class="article-source">AIToolsRecap / Fortune · <a href="https://aitoolsrecap.com/Blog/ai-news-june-28-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">LinkedIn联合创始人、Anthropic投资人Reid Hoffman在采访中直言，xAI全部11位联合创始人截至5月已全部离职，称xAI是“彻底的灾难”。关于SpaceX以600亿美元收购Cursor，他认为这是“靠并购拼凑”而非有机能力。他也暗示Cursor的巅峰已过，正在“地平线上消退”。Hoffman非中立观察者，身为Anthropic投资人有利益关联。</p>
+            <p class="article-commentary">创始团队走光还能叫创业公司？Hoffman有立场，但11人全走的数字不给反驳空间。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Google一周内流失4位AI高级研究员，Alphabet市值蒸发逾2700亿美元</h3>
+            <div class="article-source">AIToolsRecap · <a href="https://aitoolsrecap.com/Blog/ai-news-june-26-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">截至6月26日的一周内，Google连续流失四位AI高级研究员：AlphaFold创建者John Jumper和Arthur Conmy跳槽Anthropic，Noam Shazeer转投OpenAI，Jonas Adler和Alexander Pritzel也加入Anthropic。Alphabet市值合计蒸发2700亿美元以上，Gemini 3.5 Pro再次延期至7月。数据显示DeepMind工程师跳槽Anthropic的概率是反向流动的11倍。</p>
+            <p class="article-commentary">11比1的人才流向——Google不是在流失人才，是在被抽血。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">TOOLS</div>
+        <h2 class="feature-headline">Anthropic将于7月24日下线Claude Opus 4.7 Fast模式</h2>
+        <div class="article-source">AIToolsRecap · <a href="https://aitoolsrecap.com/Blog/ai-news-june-28-2026" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>nthropic宣布将于7月24日移除Claude Opus 4.7的fast模式，届时speed:“fast”请求将返回错误。迁移路径为切换至Opus 4.8 fast模式，后者在编码、Agent任务和专业工作方面性能更优。使用Claude Code和直接API的开发者需在26天内完成模型字符串审计。</p>
+        <p class="article-commentary">26天迁移倒计时——用Opus 4.7的开发者们，周末加班审代码吧。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">DeepSeek完成500亿首轮融资，V4.1即将发布支持多模态与MCP协议</h3>
+            <div class="article-source">搜狐 · <a href="https://www.sohu.com/a/1037445915_120321309" target="_blank">阅读原文</a></div>
+            <p class="article-body">DeepSeek完成500亿人民币首轮融资，估值从100亿美元飙升至500亿美元，两个月翻五倍。创始人梁文锋个人出资200亿占40%股权，保留绝对控制权。腾讯和宁德时代为主要外部投资者。V4.1版本定档6月发布，新增多模态理解（图像+音频）、MCP协议全量支持，V4-Pro API永久降价75%。</p>
+            <p class="article-commentary">创始人自掏200亿占40%——要么是最疯的赌注，要么是最清醒的定价权思维。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">阿里巴巴成立Token Foundry事业部，CEO吴泳铭直接负责</h3>
+            <div class="article-source">IT之家 · <a href="https://news.qq.com/rain/a/20260608A08KC700" target="_blank">阅读原文</a></div>
+            <p class="article-body">阿里巴巴合并通义大模型事业部与未来生活实验室，成立Token Foundry事业部，由集团CEO吴泳铭直接负责。原通义团队负责人周靖人出任首席科学家并牵头成立AI未来研究院。最新Qwen-3.7模型Coding能力全球前三、国内第一，Q4财报首次披露AI业务已进入商业化回报周期。</p>
+            <p class="article-commentary">CEO亲自管AI事业部，周靖人转首席科学家——打不过就并轨，阿里这步棋很果断。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>美国前沿AI模型发布已从市场驱动变为政府审批驱动，且尚无正式框架，所有美国AI实验室面临同一困境</li>
+            <li>AI人才战白热化：Google一周失四将，DeepMind→Anthropic流动率是反向的11倍，Gemini 3.5被迫延期</li>
+            <li>高盛数据显示AI每月稳定消除1万+美国岗位，入门级知识工作首当其冲，毕业生失业率三年暴涨56%</li>
+            <li>DeepSeek 500亿融资+V4.1多模态+降价75%，中国开源路线正在用免费+基础设施打法吃下企业市场</li>
+            <li>AI for Science成为新战场：确定性工具比模型参数更关键，Anthropic靠基础设施建护城河</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>9</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-06-28
+</div>
+
+</div>
+</body>
+</html>
