@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-07-02</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>40</em></span>
+        <span>Thursday, July 2, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-07-01.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">前沿 AI 模型发布正在被政府审批和出口管制重新定义——Claude Sonnet 5 降价铺量、GPT-5.6 被政府限速、联合国拉响灾难风险警报。这一周，AI 竞争的焦点从模型跑分转向了谁能用、谁被管、谁供电。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">Anthropic 发布 Claude Sonnet 5：1M 上下文、接近 Opus 性能、价格砍半</h2>
+        <div class="article-source">Anthropic / AI Tools Recap · <a href="https://aitoolsrecap.com/Blog/ai-news-july-1-2026" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">6</span> 月 30 日发布，7 月 1 日成为所有 Free 和 Pro 用户默认模型。支持 100 万 token 上下文窗口（Sonnet 4.6 仅 20 万），SWE-bench 编码测试 63.2%（vs Opus 4.8 的 69.2%），在知识工作基准上甚至略超 Opus 4.8。Intro 定价 $2/M input、$10/M output，到 8 月 31 日截止。注意：新分词器可能使相同输入产生多 35% 的 token。</p>
+        <p class="article-commentary">把接近旗舰的能力塞进中端价位——这是在逼所有 API 用户重新算成本表。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">OpenAI GPT-5.6 Sol 被美国政府要求限量预览，前沿模型发布进入「审批制」</h3>
+            <div class="article-source">OpenAI / The Hacker News · <a href="https://thehackernews.com/2026/06/openai-limits-gpt-56-rollout-as-sol.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">6 月 26 日，OpenAI 发布 GPT-5.6 系列（Sol/Terra/Luna），但应美国国家安全要求，仅约 20 个政府批准的组织可使用。Sol 在 Terminal-Bench 2.1 上达 88.8%，Ultra 模式 91.9%。ChatGPT 用户仍用 GPT-5.5，全面开放时间未定。两周内 Fable 5 和 GPT-5.6 两次被政府限速，形成事实上的前沿模型审批层。</p>
+            <p class="article-commentary">没有法律依据、没有公开标准，但两家头号公司都照办了——事实监管已经跑在立法前面。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">加州与 Anthropic 签署全州 AI 合作协议，成美国史上最大政府 AI 部署</h3>
+            <div class="article-source">California Governor&#x27;s Office / POLITICO · <a href="https://techstartups.com/2026/07/01/top-tech-news-today-july-1-2026/" target="_blank">阅读原文</a></div>
+            <p class="article-body">州长 Newsom 宣布所有州机构及市县以 50% 折扣使用 Claude，含免费培训和技术支持。DMV 缩短排队、医疗补助流程优化、网络安全补丁自动化已上线。2800+ 员工在 67 个部门试点州产 AI 助手 Poppy。与此同时联邦政府将 Anthropic 列为「供应链风险」，加州反其道而行——州与联邦的 AI 路线分歧正式公开化。</p>
+            <p class="article-commentary">当华盛顿把 Anthropic 当风险，萨克拉门托把它当供应商——这是 AI 版「州权 vs 联邦」的开局。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">联合国独立科学小组发布初步报告：AI 发展速度超出科学理解和监管能力</h2>
+        <div class="article-source">Reuters / UN · <a href="https://www.reuters.com/business/unchecked-ai-progress-may-pose-catastrophic-risks-un-panel-warns-2026-07-01/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">4</span>0 位科学家指出 AI agent 系统、欺骗性模型行为、网络攻击、虚假信息和生物威胁等风险正在加速。核心警告：现有科学无法保证更强的 AI 不会造成灾难性伤害，监管者过度依赖公司自报数据来评估风险。报告呼吁建立独立 AI 审查机制。</p>
+        <p class="article-commentary">说人话——监管者让公司自己填安全表格，等于让考生自己改卷子。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">AI 算力的下一个瓶颈是电：National Grid 17.5 亿美元、Bloom Energy 250 亿美元押注数据中心供电</h3>
+            <div class="article-source">Reuters · <a href="https://techstartups.com/2026/07/01/top-tech-news-today-july-1-2026/" target="_blank">阅读原文</a></div>
+            <p class="article-body">英国国家电网以 17.5 亿美元收购 Joulent 35% 股份，首个项目是德州 2.67GW 天然气电厂直供微软数据中心。Bloom Energy 与 Brookfield 的燃料电池合作从 50 亿扩至 250 亿美元。电力公司从 AI 算力的「配套」变成了核心参与者，天然气、核能、燃料电池、可再生能源全面竞逐。</p>
+            <p class="article-commentary">GPU 已经不是稀缺品了——电力才是。谁掌握兆瓦，谁就掌握 AI 产能。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">Anthropic VirBench 研究：AI 准确率从 17% 到 93%，靠的不是更强模型而是更好的数据工具</h3>
+            <div class="article-source">Anthropic / arXiv · <a href="https://aitoolsrecap.com/Blog/ai-news-july-1-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">在病毒序列检索任务上，前沿模型重复运行准确率仅 16.9%——不是模型不行，而是数据基础设施有问题。加入确定性检索工具 gget virus 后，Claude Sonnet 4 从 16.9% 飙到 92.8%，GPT-5.5 从 91.3% 到 99.7%。结论：「可靠的数据集构建不应依赖最新或最贵的模型」——便宜模型加对的工具胜过贵模型裸跑。</p>
+            <p class="article-commentary">与其砸钱换大模型，不如先修你的数据管道——这个结论省钱到让人怀疑人生。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">欧盟就 Siri AI 延迟约谈苹果，DMA 法规与 AI 产品发布正面碰撞</h3>
+            <div class="article-source">Reuters · <a href="https://techstartups.com/2026/07/01/top-tech-news-today-july-1-2026/" target="_blank">阅读原文</a></div>
+            <p class="article-body">欧盟技术事务主管 Virkkunen 与库克会面，苹果以 DMA 互操作性要求构成隐私安全风险为由，推迟了升级版 Siri 在欧洲的上线。欧盟坚持苹果必须遵守旨在促进竞争的规则。这场博弈直接关系到数亿用户何时能用上下一代 AI 功能。</p>
+            <p class="article-commentary">苹果说开放会破坏安全，欧盟说封闭会扼杀竞争——用户夹在中间等不到 Siri。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Google Cloud 在首届非洲峰会发布五大 AI 举措，新兴市场成 AI 基础设施新战场</h3>
+            <div class="article-source">Google Cloud · <a href="https://techstartups.com/2026/07/01/top-tech-news-today-july-1-2026/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Google 在非洲首届 Cloud Summit 上宣布涵盖研究、数字技能培训、创业支持和基础设施的五项 AI 举措。南非总统 Ramaphosa 呼吁非洲国家抓住数字化转型机遇。此前 AI 基础设施竞争主要集中在中美欧，非洲成为高增长新兴市场的下一个布局点。</p>
+            <p class="article-commentary">大厂去非洲建云，不只是做善事——下一个十亿用户的 AI 入口没人想错过。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>前沿 AI 模型发布正被政府审批重新定义：GPT-5.6 被限速、Fable 5 被管制，「谁能用」成了比「谁更强」更重要的问题</li>
+            <li>Anthropic 双线操作：Sonnet 5 用降价抢开发者市场，加州全州合同锁定政府客户——IPO 前的估值叙事很清晰</li>
+            <li>AI 算力瓶颈从芯片转移到电力：National Grid 和 Bloom Energy 的巨额投资说明，能源正在成为 AI 产业的硬约束</li>
+            <li>VirBench 研究颠覆「换更强模型」的直觉：数据工具的质量比模型参数更决定准确率</li>
+            <li>全球 AI 治理继续碎片化：联合国拉响风险警报、欧盟追着苹果要开放、加州绕开联邦自己签合同——没有统一规则的时代来了</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-07-02
+</div>
+
+</div>
+</body>
+</html>
