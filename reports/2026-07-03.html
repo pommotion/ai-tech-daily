@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-07-03</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>42</em></span>
+        <span>Friday, July 3, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-07-02.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">前沿模型遭安全审查封锁，开源权重代码助手首次进入 Copilot——AI 赛道正从能力竞赛全面转向治理博弈与基础设施军备竞赛。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">OpenAI GPT-5.6 三档齐发，旗舰 Soul 因网络安全审查被美国政府限制公开</h2>
+        <div class="article-source">Cryptobriefing / imfounder · <a href="https://cryptobriefing.com/openai-releases-gpt-56-models-to-20-partners-public-launch-expected-by-july-2026/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 发布 GPT-5.6 系列，包括旗舰 Soul、均衡型 Terra 和经济型 Luna 三档。Soul 在编码和网络安全基准上超越 Claude 当前最强模型，但美国政府以网络安全风险为由，仅允许约 20 家经过审查的合作伙伴访问，公众版开放时间未定。</p>
+        <p class="article-commentary">最强模型不让公众用——训练数据来源于全人类，成果却只对少数人开放。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Anthropic 发布 Claude Sonnet 5：Opus 级推理能力，价格砍半</h3>
+            <div class="article-source">TechCrunch / Anthropic · <a href="https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic 于 6 月 30 日推出 Claude Sonnet 5，定位为 Agent 自动化的主力模型。定价 $2/百万输入 tokens、$10/百万输出 tokens（推广价至 8 月 31 日），在编码、多步推理和工具调用上接近 Opus 水平，但移除了 temperature/top_p 参数。</p>
+            <p class="article-commentary">Anthropic 的打法越来越清晰：用 Sonnet 吃量，用 Opus 吃口碑，中间不留空档。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Kimi K2.7 Code 成为 GitHub Copilot 首个可选开源权重模型</h3>
+            <div class="article-source">GitHub Blog · <a href="https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/" target="_blank">阅读原文</a></div>
+            <p class="article-body">月之暗面（Moonshot AI）的 Kimi K2.7 Code 于 7 月 1 日正式上架 GitHub Copilot 模型选择器，成为该平台首个开放权重模型选项。企业管理员可开启后供开发者选用，按用量计费，性能接近主流前沿模型但成本更低。</p>
+            <p class="article-commentary">开源模型打进 Copilot 是里程碑——意味着闭源模型的编码助手护城河开始松动。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">Anthropic 推出 Claude Tag：永不离开 Slack 的 AI 同事</h2>
+        <div class="article-source">Anthropic / TechCrunch · <a href="https://www.anthropic.com/news/introducing-claude-tag" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>nthropic 发布 Claude Tag，一款嵌入 Slack 的持久化 AI 智能体。用户在频道中 @Claude 即可委派任务——从拉取 Google Drive 文件到编写代码、更新文档。Anthropic 内部 65% 的产品团队代码已通过此方式编写。Claude Tag 采用频道级权限隔离，每次凭证使用均有审计日志。</p>
+        <p class="article-commentary">模型可以换，但公司记忆一旦锁进 Claude 的生态就难迁移了——这是比 API 收入更深层的锁定。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Reflection AI 激活 SpaceX $63 亿算力租约，每月烧 1.5 亿美元买卡</h3>
+            <div class="article-source">CNBC / TechCrunch · <a href="https://techcrunch.com/2026/06/22/spacex-inks-compute-deal-with-reflection-ai-an-open-source-ai-lab/" target="_blank">阅读原文</a></div>
+            <p class="article-body">开源 AI 创业公司 Reflection AI 于 7 月 1 日启动与 SpaceX 签署的 $63 亿算力租赁协议，每月支付 $1.5 亿获取 Colossus 2 数据中心中 Nvidia GB300 芯片的访问权限，合同持续至 2029 年。这笔交易使算力正式成为顶级战略资产。</p>
+            <p class="article-commentary">还没产品先签 $63 亿算力长约——AI 创业的门槛已经从算法变成谁能拿到卡。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">葡萄牙发布国家 AI 大模型「阿马利娅」，追加 150 万欧元投资</h3>
+            <div class="article-source">新华社 / CCTV · <a href="https://www.news.cn/20260702/4188b810553d461390ad1957eb8fed07/c.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">葡萄牙政府 7 月 1 日正式发布以葡萄牙语为核心的国家大语言模型「阿马利娅」，开发历时 18 个月，总投资增至 700 万欧元。将应用于教育、国防、文化、医疗和政务服务，总理称此举是增强欧洲 AI 技术自主能力的重要举措。</p>
+            <p class="article-commentary">700 万欧元做国家大模型，和动辄百亿美金的头部玩家对比悬殊——但主权 AI 的决心比预算更有信号意义。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">五眼联盟联合警告：前沿 AI 将在数月内根本性改变网络攻防格局</h3>
+            <div class="article-source">Reuters / CISA · <a href="https://www.reuters.com/world/asia-pacific/five-eyes-intelligence-alliance-warns-that-new-ai-models-pose-urgent-cyber-risk-2026-06-22/" target="_blank">阅读原文</a></div>
+            <p class="article-body">五眼联盟（美、英、澳、加、新）网络安全机构发布联合声明，称前沿 AI 模型将超出当前行业预期，根本性改变网络攻防能力，时间线「不是数年，而是数月」。呼吁企业领导者立即行动，应对加速演变的 AI 网络威胁。</p>
+            <p class="article-commentary">五眼从不说废话——「数月不是数年」意味着 AI 驱动的自动化攻击已进入商业化前夜。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">AI 通胀蔓延：苹果 Mac/iPad 因内存芯片短缺全球涨价</h3>
+            <div class="article-source">AP News / Fortune · <a href="https://apnews.com/article/apple-mac-ipad-price-increase-neo-fe95fe57dfa9b4a9917d68df5dcfe0e3" target="_blank">阅读原文</a></div>
+            <p class="article-body">苹果于 6 月 25 日宣布 Mac 和 iPad 全球涨价，官方解释为 AI 数据中心对 DRAM 和存储芯片的需求暴增导致供应短缺，苹果无法继续吸收成本上涨。印度市场 MacBook Pro 涨幅高达 ₹70,000。微软 Xbox 同步调价，戴尔、联想等厂商跟进。</p>
+            <p class="article-commentary">AI 数据中心的囤芯潮终于传导到消费者——你买的每一台 Mac 都在为别人的大模型训练买单。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>GPT-5.6 Soul 因安全审查被封禁，揭示前沿模型「能力越强、门槛越高」的悖论</li>
+            <li>Claude Sonnet 5 以半价推 Opus 级能力，Anthropic 用性价比策略抢占 Agent 市场</li>
+            <li>Kimi K2.7 Code 接入 Copilot，开源模型首次攻入微软开发者生态腹地</li>
+            <li>Reflection AI 的 $63 亿算力长约和韩国 $8800 亿投资表明，AI 竞争已从模型层下沉到基础设施层</li>
+            <li>AI 驱动的 DRAM 短缺导致消费电子涨价，算力军备竞赛的隐性成本正由全行业承担</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-07-03
+</div>
+
+</div>
+</body>
+</html>
