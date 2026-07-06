@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-07-06</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>45</em></span>
+        <span>Monday, July 6, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-07-05.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">白宫与 OpenAI、Google、Anthropic 谈判 frontier model voluntary standards，美国 AI 监管从「事后拦截」走向「事前协议」；OpenAI 以 5% 股权换政府背书，AI 公司与华盛顿的关系正在被重新定义。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">白宫起草自愿 AI 发布标准，与 OpenAI/Google/Anthropic 进入高级谈判</h2>
+        <div class="article-source">Financial Times · aitoolsrecap.com · 2026-07-02 · <a href="https://aitoolsrecap.com/Blog/ai-news-july-3-2026" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">F</span>T 7月2日确认，白宫正与 OpenAI、Google、Anthropic 就 frontier AI 模型发布自愿标准进行高级谈判，最快下周宣布。框架核心是两个问题：政府可持有的审查时长，以及触发审查的能力阈值。这将以正式自愿协议取代当前的「事实上的强制许可制度」——即此前 Fable 5 被下线 20 天、GPT-5.6 被拦截的模糊机制。</p>
+        <p class="article-commentary">IPO 窗口前的关键变量：Anthropic 和 OpenAI 的 S-1 都将监管不确定性列为重大风险，自愿框架落地将直接改善上市叙事。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">OpenAI 提议向美国政府出让 5% 股权，换取监管关系转型</h3>
+            <div class="article-source">djamgatech.com · 2026-07-02 · <a href="https://djamgatech.com/ai-daily-news-rundown-openai-offers-u-s-a-42-6b-stake-anthropic-restores-fable-5-meta-enters-ai-cloud-and-japan-bets-on-10-million-ai-robots-july-2-2026/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Sam Altman 向特朗普政府提议 OpenAI 出让 5% 股权（按当前 3000 亿+ 估值计算价值约 426 亿美元），并游说 Google、Anthropic、Meta 跟进。这是私营科技公司向美国政府最大规模的主动股权让渡。IPO 前将政府从潜在监管者转变为财务合伙人，结构上非常精巧。</p>
+            <p class="article-commentary">426 亿美元的「关系税」——Altman 用股权把政府从对手变成股东， Anthropic 和 Google 会不会跟进仍是最大悬念。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">OpenAI GPT-5.6 系列（Sol/Terra/Luna）受政府指令仅开放约 20 家合作伙伴预览</h3>
+            <div class="article-source">techcrunch.com · 2026-06-26 · <a href="https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI 发布 GPT-5.6 三版本：旗舰 Sol（编码/科学/网络安全显著提升）、平衡 Terra、经济 Luna。但根据国家网络总监办公室指令，仅向约 20 家审核过的合作伙伴开放 API 和 Codex 预览。Sol 在内部 CTF 评估中得分 96.7%，触发 Preparedness Framework「高风险」分类。</p>
+            <p class="article-commentary">GPT-5.6 能力越界，直接触发政府拦截——frontier 模型的发布权正式进入国家安全审查范畴。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Anthropic 年化收入 470 亿美元首超 OpenAI，Claude Code 贡献 80% 内部代码</h2>
+        <div class="article-source">Fortune · aitoolsrecap.com · 2026-07-03 · <a href="https://aitoolsrecap.com/Blog/ai-news-july-3-2026" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">F</span>ortune 500 分析显示，Anthropic 年化收入运行率已达 470 亿美元，超过 OpenAI 的 250-330 亿美元。企业订阅方面，Anthropic 于 5 月首超 OpenAI（Ramp 数据）。ChatGPT 月访问量在 2026 年 5 月首次跌出生成式 AI 市场 majority。Claude Code 年化收入近 63 亿美元，AI 编程 Agent 市占率 54%。</p>
+        <p class="article-commentary">Anthropic 靠企业付费和 Claude Code 弯道超车 OpenAI，ChatGPT 的消费端优势正在被 B2B 场景稀释。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Google Gemini 3.5 Pro 确认 7 月发布，是唯一不受政府访问限制的 frontier 模型</h3>
+            <div class="article-source">aitoolsrecap.com · 2026-07-03 · <a href="https://aitoolsrecap.com/Blog/ai-news-july-3-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">Google Gemini 3.5 Pro 确认 7 月发布。TerminalBench 2.1 得分为 70.7%，比 GPT-5.6 Sol 的 96.7% 低 18 个点以上，因此未触发政府非正式访问限制门槛。在当前 frontier 模型被政府审查的格局下，Gemini 3.5 Pro 成为唯一「无障碍」发布的顶级模型。</p>
+            <p class="article-commentary">70.7% vs 96.7%——18 个百分点的差距让 Gemini 逃过监管，这个数字将成为 frontier 模型安全评级的隐形分水岭。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Meta 宣布「Meta Compute」算力出租服务，股价单日涨 9.3%</h3>
+            <div class="article-source">djamgatech.com · 2026-07-02 · <a href="https://djamgatech.com/ai-daily-news-rundown-openai-offers-u-s-a-42-6b-stake-anthropic-restores-fable-5-meta-enters-ai-cloud-and-japan-bets-on-10-million-ai-robots-july-2-2026/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Meta 推出「Meta Compute」云服务，将其庞大的闲置 AI 数据中心算力出租给外部开发者。这是 Meta 从「大模型闭源研发」转向「基础设施变现」的战略信号。Llama 系列进入维护模式后，Meta 需要在 AI 投入上找到新的收入叙事。</p>
+            <p class="article-commentary">Llama 闭源、Compute 出租——Meta 的 AI 战略从「开源旗手」变成「算力房东」，OpenAI 和 Anthropic 又多了一个潜在的云对手。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">英伟达要求 AI 初创公司未来云/产品收入分成以换取 GPU 集群访问权</h3>
+            <div class="article-source">djamgatech.com · 2026-07-02 · <a href="https://djamgatech.com/ai-daily-news-rundown-openai-offers-u-s-a-42-6b-stake-anthropic-restores-fable-5-meta-enters-ai-cloud-and-japan-bets-on-10-million-ai-robots-july-2-2026/" target="_blank">阅读原文</a></div>
+            <p class="article-body">英伟达推出新合作模式：向 AI 初创公司开放高需求 GPU 集群，条件是对其未来云服务和产品收入抽取直接分成。这标志着算力垄断从「卖芯片」升级为「分 revenue」，初创公司的成本结构将被永久改变。</p>
+            <p class="article-commentary">黄仁勋从「卖铲子」变成「收租子」——当 GPU 成为基础设施，英伟达的议价权从一次性采购变成持续 revenue share。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">日本宣布投资 1000 万台 AI 机器人计划，推动人形机器人规模化落地</h3>
+            <div class="article-source">djamgatech.com · 2026-07-02 · <a href="https://djamgatech.com/ai-daily-news-rundown-openai-offers-u-s-a-42-6b-stake-anthropic-restores-fable-5-meta-enters-ai-cloud-and-japan-bets-on-10-million-ai-robots-july-2-2026/" target="_blank">阅读原文</a></div>
+            <p class="article-body">日本政府宣布大规模 AI 机器人投资计划，目标是部署 1000 万台 AI 机器人。这与英伟达 GTC Taipei 发布的 H2+ 人形机器人参考设计（与宇树科技合作）形成呼应，全球人形机器人竞赛正在从实验室走向规模化部署阶段。</p>
+            <p class="article-commentary">1000 万台是数量级而非品牌名——日本押注机器人作为 AI 实体化的最短路径，但成本和人形实用性仍是最大问号。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>白宫 voluntary standards 谈判标志美国 AI 监管从出口管制转向事前协议框架，IPO 不确定性将显著降低</li>
+            <li>OpenAI 以 5% 股权（约 426 亿美元）换政府背书，开创科技公司与华盛顿深度绑定的先例</li>
+            <li>GPT-5.6 因 CTF 得分 96.7% 被政府拦截，frontier 模型发布权正式纳入国家安全审查</li>
+            <li>Anthropic 年化收入 470 亿美元首超 OpenAI，Claude Code 贡献 80% 内部代码，B2B 赛道弯道超车</li>
+            <li>Gemini 3.5 Pro 因得分比 GPT-5.6 低 18 个百分点而逃过监管，这个差距将成为 frontier 模型的隐形分水岭</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-07-06
+</div>
+
+</div>
+</body>
+</html>
