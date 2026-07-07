@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-07-07</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>46</em></span>
+        <span>Tuesday, July 7, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-07-06.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">AI 本周进入「自主行动」新阶段：Claude Sonnet 5 把 Agent 能力拉满，JadePuffer 则用一场全自主勒索攻击给所有人敲了警钟——工具在变强，攻击者也一样。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">Anthropic 发布 Claude Sonnet 5：100 万 token 上下文，Agent 编码能力跃升</h2>
+        <div class="article-source">AI Tools Recap · <a href="https://aitoolsrecap.com/Blog/ai-news-july-1-2026" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>nthropic 于 6 月 30 日发布 Claude Sonnet 5，上下文窗口从 20 万 token 跃升至 100 万，Agent 编码得分 63.2%（Sonnet 4.6 为 58.1%），逼近 Opus 4.8 但成本低 60%。推广期定价 $2/M 输入，8 月 31 日后调至 $3/M。新版 tokenizer 可能导致相同输入多消耗 35% token，开发者需自行基准测试。</p>
+        <p class="article-commentary">百万 token 窗口是实用分水岭——长文档和大型代码库终于不用切块了。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">首例全自主 AI 勒索软件 JadePuffer 曝光：LLM Agent 独立完成渗透到加密全流程</h3>
+            <div class="article-source">SecurityWeek · <a href="https://www.securityweek.com/agentic-ai-used-to-conduct-ransomware-attack-via-langflow/" target="_blank">阅读原文</a></div>
+            <p class="article-body">安全公司 Sysdig 记录到首例完全由 AI Agent 自主执行的勒索软件攻击 JadePuffer。攻击者利用 Langflow 框架漏洞 CVE-2025-3248 获取初始访问权限后，LLM Agent 自主完成侦察、凭证窃取、横向移动、持久化和数据加密，全程无人类操作。攻击在失败后 31 秒内即调整参数重试，最终加密 1342 条 MySQL 配置项并留下比特币赎金要求。</p>
+            <p class="article-commentary">AI Agent 自主犯罪不再是科幻——这次是实弹，下次可能就是你的生产环境。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">中国 AI 上半年融资破 3076 亿元，占一级市场近半壁江山</h3>
+            <div class="article-source">AI产品汇 · <a href="https://aiproducthub.cn/newsflash/2026-h1-china-ai-financing-307-billion-record/" target="_blank">阅读原文</a></div>
+            <p class="article-body">IT 桔子 7 月 3 日报告显示，2026 年上半年中国 AI 创业公司融资总额达 3076.82 亿元，占同期一级市场总融资 48.6%，仅 6 个月已超 2025 全年。DeepSeek 完成约 70 亿美元融资估值 450 亿，月之暗面（Kimi）D 轮 136 亿元创中国大模型单笔纪录，国家大基金与腾讯、宁德时代等产业资本重注入局。</p>
+            <p class="article-commentary">3076 亿半年就超去年全年——资本市场不是在赌 AI，是在用 AI 重构整个投资版图。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">联合国秘书长警告 AI 发展速度超越全球监管能力</h2>
+        <div class="article-source">Reuters · <a href="https://www.reuters.com/technology/artificial-intelligence/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">联</span>合国秘书长古特雷斯在日内瓦首届 AI 治理全球对话上警告，AI 发展速度已超越政府、企业乃至开发者自身的管理能力。他呼吁建立全球协调规则，并提出 AI 安全承诺，重点关注保护儿童免受操纵、有害内容和不安全 AI 产品侵害。会议虽非条约进程，但标志着 AI 治理从国家议题升级为全球外交议程。</p>
+        <p class="article-commentary">AI 治理从硅谷话题变成联合国议程，窗口期在收窄——要么自建护栏，要么等别人给你建。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Meta 发布 Pocket：AI 驱动的零代码迷你游戏创作工具</h3>
+            <div class="article-source">TechSpot · <a href="https://techstartups.com/2026/07/06/top-tech-news-today-july-6-2026/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Meta 于 7 月 6 日推出 Pocket 应用，用户可通过自然语言或「vibe-coding」方式零代码创建迷你游戏和互动体验。该工具内置 AI 辅助生成，支持快速原型和社交分享，直接对标 Roblox 和 UGC 游戏平台的创作者生态。</p>
+            <p class="article-commentary">Meta 用 AI 降低创作门槛这步棋很聪明——游戏 UGC 的护城河不是技术，是谁先聚起创作者。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Anthropic 开放 Claude Science 公测：多 Agent 协作的 AI 科研工作台</h3>
+            <div class="article-source">Tech Times · <a href="https://www.techtimes.com/articles/319439/20260701/anthropic-launches-claude-science-ai-research-workbench-open-all-paid-subscribers.htm" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic 于 7 月 1 日向所有付费用户开放 Claude Science 公测。该平台采用多 Agent 编排架构，整合 60+ 工具，支持文献检索、实验设计、数据分析和假设验证的自动化科研流程。内部研究 VirBench 表明，配合确定性数据工具后，模型在病毒序列检索任务中准确率从 16.9% 跃升至 92.8%。</p>
+            <p class="article-commentary">VirBench 的发现比产品本身更值得关注：便宜模型+好工具 &gt; 贵模型裸奔。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">诺贝尔奖得主 John Jumper 离开 DeepMind 加入 Anthropic，AI 人才战白热化</h3>
+            <div class="article-source">CyberNews · <a href="https://cybernews.com/ai-news/anthropic-poaches-jumper-from-google-deepmind/" target="_blank">阅读原文</a></div>
+            <p class="article-body">AlphaFold 共同发明人、诺贝尔化学奖得主 John Jumper 于 6 月 19 日宣布离开任职近九年的 Google DeepMind 加入 Anthropic。此前一周，Gemini 联合负责人 Noam Shazeer 也已转投 OpenAI。Google DeepMind 在五个月内流失六名核心研究员至 Meta、OpenAI 和 Anthropic，AI 顶级人才争夺进入「一人一价」时代。</p>
+            <p class="article-commentary">DeepMind 的诺贝尔奖得主被挖走，人才流动的方向就是行业权力转移的方向。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">加州与 Anthropic 签署全州采购协议：50% 折扣覆盖所有政府机构</h3>
+            <div class="article-source">POLITICO · <a href="https://aitoolsrecap.com/Blog/ai-news-july-1-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">加州州长纽森 6 月 29 日宣布与 Anthropic 达成合作，Claude 成为首个面向所有州政府机构的 AI 生产力工具，享 50% 折扣并附赠免费员工培训和开发者支持。自建 AI 助手 Poppy 已在 67 个部门 2800+ 员工中试点。此举与联邦政府将 Anthropic 列为「供应链风险」形成鲜明对比——联邦因 Anthropic 拒绝军事 AI 合同而转向 OpenAI，加州却选择 Anthropic 作为合作伙伴。</p>
+            <p class="article-commentary">联邦说你有风险，州政府说你是我伙伴——AI 公司的政治立场正在变成商业筹码。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>AI Agent 能力与风险同步升级：Sonnet 5 让编码 Agent 更强，JadePuffer 则证明攻击者也在用 Agent</li>
+            <li>中国 AI 融资半年超全年，资本密度达到历史极值——泡沫还是拐点，下半年见分晓</li>
+            <li>AI 治理进入「全球 vs 地方」双层博弈：联合国搭台，加州选边，企业必须在政治光谱中站位</li>
+            <li>AI 人才流动已成行业权力风向标：DeepMind 流失核心团队，Anthropic 和 OpenAI 在抢人战中领先</li>
+            <li>工具链比模型更重要：VirBench 证明 16%→93% 的准确率提升靠的不是换模型，是修数据管道</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-07-07
+</div>
+
+</div>
+</body>
+</html>
