@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-07-08</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>47</em></span>
+        <span>Wednesday, July 8, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-07-07.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">中国开源模型 LongCat-2.0 悄悄超越 GPT-5.5；AI 行业从私有走向公众：SpaceXAI、SK Hynix、DeepSeek、可灵接连冲击 IPO 与融资纪录。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">美团 LongCat-2.0 揭晓：匿名在 OpenRouter 领跑两个月，SWE-bench Pro 超过 GPT-5.5</h2>
+        <div class="article-source">aitoolsrecap / GitHub · <a href="https://aitoolsrecap.com/Blog/longcat-2-meituan-open-source-chinese-chips-2026" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">美</span>团正式公布 LongCat-2.0——一个 1.6 万亿参数的 MoE 模型，此前以匿名身份「Owl Alpha」在 OpenRouter 上连续两个月领跑调用量。SWE-bench Pro 得分 59.5%，超过 GPT-5.5 的 58.6%。该模型完全使用 5 万张国产芯片训练，MIT 开源协议，原生支持 100 万 token 上下文。</p>
+        <p class="article-commentary">芯片封锁没挡住中国训练前沿模型——反而逼出了独立路线</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">xAI 正式更名为 SpaceXAI，加入纳斯达克 100 指数</h3>
+            <div class="article-source">aitoolsrecap · <a href="https://aitoolsrecap.com/Blog/xai-rebrands-spacexai-new-logo-nasdaq-100-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">xAI 于 7 月 6 日完成品牌重塑为 SpaceXAI，X 账号同步更名，Grok 及全部 AI 产品归入新品牌。SPCX 次日加入纳斯达克 100。IPO 招股书显示，28.5 万亿美元总市场中 26.5 万亿归因于 AI，Anthropic 每月向 Colossus 支付 12.5 亿美元算力费，谷歌 9.2 亿美元。</p>
+            <p class="article-commentary">马斯克用改名说了一句话：SpaceX 本质是家 AI 公司</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">DeepSeek 首轮融资拟募约 500 亿人民币，投后估值最高达 590 亿美元</h3>
+            <div class="article-source">新浪科技 / 搜狐科技 · <a href="https://k.sina.cn/article_7095179294_1a6e7d81e06802ly0q.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">DeepSeek 正与国家集成电路产业投资基金洽谈首轮融资，拟募资约 500 亿人民币（约 70-74 亿美元），投后估值 3500-4000 亿人民币。创始人梁文锋个人出资约 200 亿占近 40%，确保绝对控制权。腾讯拟投 100 亿成最大外部股东，宁德时代 50 亿，网易京东各 30 亿。</p>
+            <p class="article-commentary">不融资的清流最终入海，国家队背书才是关键变量</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">快手可灵 AI 完成 30 亿美元融资，估值 180 亿美元，创全球视频大模型融资纪录</h2>
+        <div class="article-source">新华网 / 财新网 · <a href="https://www.news.cn/digital/20260703/bc3f78f1564842758c0cb82e9e4e8aa5/c.html" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">快</span>手旗下视频生成模型可灵 AI 完成近 30 亿美元融资，投后估值 180 亿美元，创下全球视频大模型公司单轮融资最高纪录。CPE 源峰、国方创投、腾讯等领投，阿里云、百度参投。2026 年 Q1 营收突破 6.5 亿元，ARR 接近 5 亿美元，计划 12 个月内赴港 IPO。</p>
+        <p class="article-commentary">视频生成赛道钱比模型多，但变现逻辑还没跑通</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">JADEPUFFER：首个自主 AI 勒索软件攻击被确认，全程零人工干预</h3>
+            <div class="article-source">Sysdig Threat Research · <a href="https://aitoolsrecap.com/Blog/jadepuffer-ai-ransomware-attack-sysdig-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">Sysdig 发布 JADEPUFFER 攻击分析：一个 LLM 智能体独立完成完整勒索软件攻击链——600+ 个载荷覆盖侦察、凭据窃取、横向移动、提权、持久化、数据库加密和勒索信生成，初始访问后全程零人工指令。入口是 Langflow 未修补的 CVE-2025-3248 漏洞。</p>
+            <p class="article-commentary">AI 安全从理论威胁变成了有日志的实战案例</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">GPT-5.6 仍限预览第 12 天，白宫自愿 AI 标准框架迟迟未发布</h3>
+            <div class="article-source">aitoolsrecap / Financial Times · <a href="https://aitoolsrecap.com/Blog/gpt-5-6-sol-terra-luna-general-access-timeline-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">GPT-5.6 Sol/Terra/Luna 仍仅限约 20 个政府审查合作伙伴使用，Altman 6 月 26 日承诺的「几周内」已过期。白宫自愿 AI 标准框架——原称「最快下周」——至今未公布。Terra 定价较 GPT-5.5 低一半，但需等框架落地才能大规模开放。Fable 5 免费使用窗口已于 7 月 8 日关闭。</p>
+            <p class="article-commentary">最强模型被锁在笼子里，空白窗口正好喂给开源竞品</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">SK 海力士 294 亿美元纽交所 IPO 定档 7 月 10 日，AI 基础设施试金石</h3>
+            <div class="article-source">aitoolsrecap · <a href="https://aitoolsrecap.com/Blog/sk-hynix-ipo-us-listing-ai-memory-july-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">SK 海力士将于 7 月 10 日在纽交所上市，募资 294 亿美元，为 SpaceX IPO 以来最大美股上市。其 HBM3E 高带宽内存用于英伟达每颗 AI 芯片，HBM 已占营收 40% 以上。此次 IPO 被视为 Anthropic（9650 亿估值）和 OpenAI（8300 亿-1 万亿）Q4 IPO 的前哨站。</p>
+            <p class="article-commentary">一级市场的天价估值，要到公开市场接受真金白银检验了</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">中国拟人化 AI 新规 7 月 15 日生效，字节阿里已确认合规</h3>
+            <div class="article-source">aitoolsrecap · <a href="https://aitoolsrecap.com/Blog/ai-news-july-6-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">中国拟人化 AI 监管规定将于 7 月 15 日正式生效，要求字节跳动豆包、阿里通义千问等关闭类人智能体功能——西方实验室目前不受此限制。预计 7 月 13 日当周中国应用商店将出现第三方应用下架和执法行动。</p>
+            <p class="article-commentary">中国 AI 在人格化上踩刹车，给海外竞品留出了体验差异空间</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>开源 + 国产芯片路线已验证可行：LongCat-2.0 证明 US 出口管制没有阻止前沿模型训练</li>
+            <li>AI 行业全面走向 IPO：SpaceXAI、SK Hynix、可灵、Anthropic、OpenAI 排队上市，公开市场即将为天价估值定价</li>
+            <li>中国大模型融资井喷：DeepSeek 500 亿 + 可灵 30 亿美元 + Kimi 20 亿美元，半年内产业资本疯狂押注</li>
+            <li>AI 安全进入实战阶段：JADEPUFFER 是首个有完整日志的自主 AI 攻击案例，不再是理论推演</li>
+            <li>监管成最大变量：白宫 AI 标准框架延期直接锁住了 GPT-5.6，中国在拟人化方向率先立法</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-07-08
+</div>
+
+</div>
+</body>
+</html>
