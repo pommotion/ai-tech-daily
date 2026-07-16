@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-07-16</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>55</em></span>
+        <span>Thursday, July 16, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-07-15.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">硬件层持续验证AI投资逻辑--台积电营收创历史新高，Anthropic转向自研芯片，模型价格战背后算力军备竞赛加速。Google以治理优势切入企业AI代理市场，中国AI开放派公开倒逼政策。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">台积电Q2营收创历史新高，AI芯片需求打破季节性规律</h2>
+        <div class="article-source">AIToolsRecap / SemiAnalysis · <a href="https://aitoolsrecap.com/Blog/ai-news-july-15-2026" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">台</span>积电6月营收约138亿美元，同比增长68%，创公司近40年历史最高月度纪录，打破六月环比下降的季节性规律。Q2总营收396亿美元超出指引上限，N3工艺和CoWoS封装均售罄至年底。SemiAnalysis预计全年AI相关芯片收入超400亿美元。完整财报及Q3指引将于7月17日发布。</p>
+        <p class="article-commentary">模型层打价格战，硬件层闷声数钱--算力才是AI真正的卖铲人。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Anthropic与三星洽谈定制AI芯片，月度算力账单达12.5亿美元</h3>
+            <div class="article-source">Bloomberg / AIToolsRecap · <a href="https://aitoolsrecap.com/Blog/anthropic-samsung-custom-ai-chip-talks-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic正与三星进行早期谈判，拟在三星定制芯片上运行Claude推理工作负载，以降低每月12.5亿美元的Colossus算力成本。同时还在与微软洽谈Maia 200推理芯片。自研芯片可减少对SpaceX、Google等竞争对手供应商的依赖，但三星代工良率落后台积电，执行风险显著。</p>
+            <p class="article-commentary">当算力账单超过收入，自研芯片从选择题变成必答题。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Google Cloud Next &#x27;26发布Gemini Enterprise，主打企业AI代理治理</h3>
+            <div class="article-source">AIToolsRecap · <a href="https://aitoolsrecap.com/Blog/google-gemini-enterprise-agents-zai-open-memo-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">Google在Cloud Next &#x27;26上发布扩展版Gemini Enterprise，统一平台用于构建、编排和治理企业AI代理。其代理原生继承Google Workspace访问控制，无需额外安全审查，在采购周期上领先Anthropic和OpenAI六到十二个月。企业不缺AI能力，缺的是可控可管的部署路径。</p>
+            <p class="article-commentary">企业卡在治理而非能力--Google用Workspace存量押对了牌。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">Gemini 3.5 Pro瞄准7月17日发布，2M上下文窗口+Deep Think推理</h2>
+        <div class="article-source">TechTimes / Geeky Gadgets · <a href="https://www.techtimes.com/articles/320308/20260713/gemini-35-pro-targets-july-17-after-full-rebuild-every-spec-remains-unconfirmed.htm" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">G</span>oogle DeepMind的Gemini 3.5 Pro目标7月17日正式发布，配备200万token上下文窗口和Deep Think推理模式，预估定价约15/60美元每百万token。Google此前推翻基础模型重新预训练以提升竞争力。Polymarket给出62%的按期发布概率。这是当前唯一不受政府访问限制的主要前沿模型。</p>
+        <p class="article-commentary">推翻重来需要勇气，但2M上下文若兑现将重排编码基准表。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">Z.ai创始人唐杰公开呼吁前沿AI保持开放，内部反对海外限制讨论</h3>
+            <div class="article-source">Bloomberg / Reuters · <a href="https://www.reuters.com/world/beijing-is-looking-curbing-overseas-access-chinas-top-ai-models-sources-say-2026-07-07/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Z.ai（智谱）创始人唐杰发表备忘录，主张前沿AI应尽可能保持开放和广泛可及。此前Reuters报道中国当局与阿里、字节、Z.ai讨论限制最先进AI模型的海外访问。唐杰的公开表态是迄今为止中国AI实验室内部反对限制的最强信号，实质性降低了近期出台约束性政策的概率。</p>
+            <p class="article-commentary">创始人公开与监管博弈--中国AI开放路线仍有内部博弈空间。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">Nvidia大幅收紧亚洲芯片销售，授权买家名单砍半</h3>
+            <div class="article-source">Financial Times · <a href="https://techstartups.com/2026/07/15/top-tech-news-today-july-15-2026-apple-asml-ibm-anthropic-meta-nvidia-openai-stripe-paypal-more/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Nvidia将亚洲授权买家名单削减逾半，对新加坡、马来西亚和日本客户实施更严格白名单审查和现场审计，因发现疑似转售商将先进芯片转往受限实体。合规审查现包括合同核实和终端用户访谈。受影响客户面临延迟或失去高端GPU访问权，可能加速受限市场开发国产替代方案。</p>
+            <p class="article-commentary">芯片管控从出口禁令延伸到流通环节，灰色通道正在收窄。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">OpenAI推出扩展版AI网络安全计划，GPT-5.5-Cyber瞄准开源漏洞修复</h3>
+            <div class="article-source">WIRED · <a href="https://techstartups.com/2026/07/15/top-tech-news-today-july-15-2026-apple-asml-ibm-anthropic-meta-nvidia-openai-stripe-paypal-more/" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI推出扩展网络安全计划，核心为改进版GPT-5.5-Cyber模型和Patch the Planet项目，旨在识别开源软件安全漏洞并协助维护者修复。同一能力具有双重用途风险：能发现漏洞的模型也可能帮助攻击者利用漏洞。项目成效将取决于报告准确性和负责任披露流程。</p>
+            <p class="article-commentary">AI安全攻防同一把刀--防御方先拿到刀就赢一半。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">IBM预警AI基建支出挤压传统软件预算，Q2营收不及预期</h3>
+            <div class="article-source">Business Insider · <a href="https://techstartups.com/2026/07/15/top-tech-news-today-july-15-2026-apple-asml-ibm-anthropic-meta-nvidia-openai-stripe-paypal-more/" target="_blank">阅读原文</a></div>
+            <p class="article-body">IBM警告AI基础设施热潮正改变企业技术预算分配，导致Q2营收和利润预期低于预期。多笔大额交易未能如期完成，支出转向数据中心、处理器和内存等AI相关基础设施。这揭示AI投资的零和效应：GPU和云容量采购挤压数据库升级、咨询和传统软件采购预算。</p>
+            <p class="article-commentary">AI吸走的不只是算力，还有传统软件的饭碗。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>算力军备竞赛进入自研芯片阶段：Anthropic月付12.5亿算力费，被迫找三星和微软谈定制芯片</li>
+            <li>台积电数据再次验证AI硬件投资逻辑--N3和CoWoS双双售罄，全年AI芯片收入或超400亿美元</li>
+            <li>Google双线出击：Gemini Enterprise以治理优势抢企业市场，Gemini 3.5 Pro以2M上下文抢模型高地</li>
+            <li>中国AI监管出现内部分歧：Z.ai创始人公开反对限制海外访问，削弱了政策收紧预期</li>
+            <li>AI支出正在重塑科技行业格局：基础设施赢家通吃，传统软件厂商首当其冲被挤压</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-07-16
+</div>
+
+</div>
+</body>
+</html>
