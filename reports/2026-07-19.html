@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-07-19</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>58</em></span>
+        <span>Sunday, July 19, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-07-18.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">Kimi K3 把开源模型规模推到 2.8T 并在多项基准上反超 GPT-5.6，欧盟反垄断剑指 Google 的 AI 与搜索入口——开源追赶与监管重塑同时发生。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">月之暗面发布 Kimi K3：2.8T 参数开源模型，多项基准反超 GPT-5.6</h2>
+        <div class="article-source">VentureBeat / CNBC · <a href="https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">M</span>oonshot AI 于 7 月 16 日发布 Kimi K3，采用 2.8 万亿参数 MoE 架构，支持 100 万 token 上下文与可调 reasoning_effort。GPQA Diamond 跑到 93.5%，在 Artificial Analysis 综合指数上位列全球第四，超过 Claude Opus 4.8；官方承诺 7 月 27 日前开放权重。这是目前公开发布的最大开源权重模型。</p>
+        <p class="article-commentary">K3 的意义不在跑分，而是开源权重首次在综合榜上压过闭源旗舰，动摇了&#x27;闭源才有前沿&#x27;的叙事。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">欧盟裁定 Google 必须开放 Android 与搜索数据，Gemini 系统级特权被打破</h3>
+            <div class="article-source">The Verge · <a href="https://www.theverge.com/policy/966438/eu-google-android-ai-interoperability-search-data-dma" target="_blank">阅读原文</a></div>
+            <p class="article-body">欧盟委员会依据《数字市场法》连下两道裁决：Google 须让 ChatGPT、Claude 等第三方 AI 助手获得与 Gemini 同等的 Android 系统级访问（含硬件、语音指令、App 交互），并向竞争对手搜索引擎和 AI 聊天机器人共享 Google Search 数据。Android 改造须在 2027 年 7 月前落地，搜索数据共享须在 2027 年 1 月前启动，违规最高罚全球年营收 10%。</p>
+            <p class="article-commentary">这是首次把&#x27;AI 助手系统级入口&#x27;纳入反垄断执行——平台时代的默认优势在 AI 时代同样会被拆掉。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Suno 源码泄露：YouTube、Deezer、Genius 均为训练数据来源</h3>
+            <div class="article-source">Music Business Worldwide / Variety · <a href="https://www.musicbusinessworldwide.com/suno-scraped-youtube-deezer-and-genius-to-train-its-ai-hacked-code-reveals/" target="_blank">阅读原文</a></div>
+            <p class="article-body">据 404 Media 报道，黑客获取的 Suno 源码显示其训练集包含 YouTube Music、Deezer、Genius 及素材库内容，同时还泄露了数十万客户邮箱。这一披露为 UMG 等唱片公司正在进行的版权诉讼提供了新的直接证据。</p>
+            <p class="article-commentary">源码比官方声明更诚实——训练数据的来源一直是 AI 音乐公司最不愿公开的部分，泄露会重塑整个诉讼走向。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">General Compute 获 4 亿美元贷款，首笔以推理专用芯片作抵押的融资</h2>
+        <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/07/17/why-the-first-gpu-financiers-are-turning-to-inference-chips-in-a-400-million-deal/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>I 推理云初创公司 General Compute 从 Upper90 获得 4 亿美元债务融资，抵押物是 SambaNova SN50 推理 ASIC，而非 Nvidia GPU。这是已知首笔以推理专用芯片作为贷款抵押的交易，反映推理算力正从&#x27;附属于训练&#x27;变成独立资产类别。该公司 5 月刚完成 1500 万美元种子轮。</p>
+        <p class="article-commentary">用推理芯片而非 GPU 抵押，说明资本市场开始把&#x27;推理&#x27;当成可独立估值的基础设施赛道，不只是训练的副产品。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">OpenAI 统一 ChatGPT 与 Codex 桌面应用，推双模式整合</h3>
+            <div class="article-source">ChatGPT AI Hub · <a href="https://chatgptaihub.com/openai-unifies-chatgpt-and-codex-into-a-single-desktop-app-what-changes-for-users-in-july-2026/" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI 将 ChatGPT 与 Codex 合并为单一桌面应用，采用对话助手与生产级编码双模式架构，试图同时覆盖普通用户和开发者。此举被视为对 Anthropic Claude Code 与 Cursor 在编码 Agent 市场挤压的回应。</p>
+            <p class="article-commentary">合并应用是产品策略，不是技术突破——OpenAI 想用单一入口同时吃消费与开发者两块市场。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Patreon 联手 Cloudflare 从技术层封堵 AI 训练爬虫</h3>
+            <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/07/17/patreon-stops-asking-ai-bots-not-to-scrape-and-starts-blocking-them/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Patreon 与 Cloudflare 合作，从&#x27;请求式 robots.txt&#x27;升级为技术性强制拦截 AI 训练爬虫抓取创作者内容。这是平台层面对 AI 公司数据采集行为最激进的抵制动作之一，可能被其他创作者平台效仿。</p>
+            <p class="article-commentary">从&#x27;请你别爬&#x27;到&#x27;技术层挡死&#x27;，数据争夺战进入基础设施对抗阶段——谁控制 CDN 谁就掌握数据阀门。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">Nvidia 发布 Nemotron 3 Embed，8B 模型登顶 MTEB 中文榜</h3>
+            <div class="article-source">MarkTechPost · <a href="https://www.marktechpost.com/2026/07/17/nvidia-ai-releases-nemotron-3-embed-an-open-embedding-collection-whose-8b-checkpoint-ranks-1-on-rteb/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Nvidia 开源 Nemotron 3 Embed 嵌入模型系列，其中 8B 检查点在 MTEB（RTEB）基准上排名第一。该系列面向检索增强生成（RAG）与语义检索场景，进一步推动企业级向量检索能力开源化。</p>
+            <p class="article-commentary">Embedding 模型是 RAG 的地基——Nvidia 在这个不起眼的细分赛道刷榜，是在为自家企业 AI 栈铺底层。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Meta 被指用 AI 针对 8000 人裁员，26 名员工联名指控</h3>
+            <div class="article-source">Reddit / OpenAI 社区 · <a href="https://www.reddit.com/r/OpenAI/comments/1uys8d3/26_meta_employees_accuse_mark_zuckerberg_of_using/" target="_blank">阅读原文</a></div>
+            <p class="article-body">26 名前 Meta 员工联名指控扎克伯格在约 8000 人的裁员中使用 AI 工具筛选和定位员工，引发对&#x27;算法裁员&#x27;合规性与公平性的广泛讨论。该事件折射 AI 在 HR 决策中的争议性应用。</p>
+            <p class="article-commentary">当 AI 决定谁被裁，争议焦点从&#x27;效率&#x27;转向&#x27;可解释性&#x27;——企业迟早要回答算法凭什么开除人。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>开源模型（Kimi K3）首次在综合榜单上压过闭源旗舰，&#x27;闭源即前沿&#x27;的护城河被打开缺口</li>
+            <li>欧盟把 AI 助手系统级入口纳入反垄断，平台型 AI 公司的默认分发优势开始被监管拆解</li>
+            <li>训练数据来源正在从&#x27;行业默契&#x27;变成&#x27;诉讼证据&#x27;，Suno 源码泄露可能成为版权案转折点</li>
+            <li>推理专用芯片成为可独立抵押的资产，资本市场开始把推理当成独立赛道而非训练副产品</li>
+            <li>创作者平台正从&#x27;协商式&#x27;转向&#x27;技术性&#x27;封锁 AI 爬虫，数据阀门正在收紧</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-07-19
+</div>
+
+</div>
+</body>
+</html>
