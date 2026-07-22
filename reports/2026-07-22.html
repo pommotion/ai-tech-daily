@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-07-22</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>61</em></span>
+        <span>Wednesday, July 22, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-07-21.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">模型迭代进入&#x27;瘦身&#x27;阶段——各家不再卷参数量，转而在效率、成本和垂直场景上找差异化；与此同时，商业化与安全合规的矛盾开始浮出水面。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">Google 发布 Gemini 3.6 Flash，旗舰 3.5 Pro 再次延期</h2>
+        <div class="article-source">AIbase / Google DeepMind · <a href="https://www.aibase.com/daily/29800" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">G</span>oogle DeepMind 一次性推出三款模型：Gemini 3.6 Flash 在代码、知识和多模态能力上显著提升，token 消耗降低 17%；3.5 Flash-Lite 主打性价比；3.5 Flash Cyber 专攻网络安全，仅限政府机构和合作伙伴使用。旗舰 3.5 Pro 继续推迟。</p>
+        <p class="article-commentary">旗舰跳票、Flash 扛旗，Google 在用&#x27;够用就行&#x27;策略拖时间。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">小红书大模型 IMO2026 满分夺金，中国 AI 首次登顶数学奥赛</h3>
+            <div class="article-source">AIbase · <a href="https://www.aibase.com/daily/29800" target="_blank">阅读原文</a></div>
+            <p class="article-body">小红书自研大模型 dots-note-3.0 在 IMO2026 中六题全对，获得官方金牌认证，成为全球第二个达成此成绩的大模型。其第三题解法被奥赛冠军评价为&#x27;正确且优雅&#x27;。</p>
+            <p class="article-commentary">小红书做数学模型拿金牌，内容平台的技术野心远超外界想象。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">OpenAI 正式在 ChatGPT 上线广告服务，百思买首批试投</h3>
+            <div class="article-source">AIbase · <a href="https://www.aibase.com/daily/29800" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI 开始在 ChatGPT 中投放广告，Best Buy 成为首批广告主之一。这标志着 OpenAI 在订阅收入之外开辟新的商业化路径，但也引发用户对对话式 AI 中植入广告的体验担忧。</p>
+            <p class="article-commentary">从&#x27;不打广告的承诺&#x27;到广告上线，OpenAI 的商业化焦虑已经藏不住了。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">三星拟向 Mistral 投资 10 亿欧元，估值飙至 200 亿</h2>
+        <div class="article-source">Tech Funding News / FT · <a href="https://techfundingnews.com/samsung-mistral-investment-20bn-valuation/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">三</span>星正在谈判向法国 AI 公司 Mistral 投资约 10 亿欧元，估值达 200 亿欧元，较去年 9 月的 117 亿近乎翻倍。谈判恰逢三星成立新机器人部门 RX，意图获取基础模型能力以摆脱对 Google Gemini 的依赖。</p>
+        <p class="article-commentary">三星不想只当 Gemini 的搬运工，硬件巨头的模型自主权焦虑正在爆发。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">英国 Humanoid 融 1.52 亿美元，成欧洲首个纯人形机器人独角兽</h3>
+            <div class="article-source">Tech Funding News · <a href="https://techfundingnews.com/humanoid-152m-europe-first-humanoid-robotics-unicorn/" target="_blank">阅读原文</a></div>
+            <p class="article-body">伦敦机器人公司 Humanoid 以 13.5 亿美元估值完成 1.52 亿美元融资，累计融资 2.7 亿美元。公司已获 3.4 万台预订单价值 24 亿美元，博世将担任其代工方。但&#x27;欧洲首个&#x27;的说法受到 Neura Robotics（70 亿美元估值）的挑战。</p>
+            <p class="article-commentary">还没出货就手握 24 亿订单，人形机器人的泡沫和希望一样大。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">AI 音乐平台 Suno 遭数据泄露，5530 万用户信息曝光</h3>
+            <div class="article-source">AIbase · <a href="https://www.aibase.com/daily/29800" target="_blank">阅读原文</a></div>
+            <p class="article-body">AI 音乐生成器 Suno 发生严重数据泄露，超过 5530 万用户个人信息被曝光，泄露内容还涉及公司源代码和 AI 训练数据来源。Suno 此前已面临唱片公司诉讼，此次事件可能引发更严格的 AI 合规监管。</p>
+            <p class="article-commentary">版权官司还没完，数据安全又暴雷——Sono 的麻烦远没到头。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">腾讯 Miora AI 创意平台全面上线，多智能体协作重构内容生产</h3>
+            <div class="article-source">AIbase · <a href="https://www.aibase.com/daily/29800" target="_blank">阅读原文</a></div>
+            <p class="article-body">腾讯 AI 创意智能体平台 Miora 全面上线，核心卖点是通过多智能体协作解决 AI 生成内容的&#x27;风格漂移&#x27;问题，确保同一项目内不同素材风格统一。涵盖品牌设计、影视创意等场景，将创意验证周期从天级缩短到分钟级。</p>
+            <p class="article-commentary">风格一致性是 AI 内容生产的真痛点，谁先解决谁就拿住 B 端。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Claude Code 支持 iOS 模拟器，开发者可直接在 AI 中调试 App</h3>
+            <div class="article-source">AIbase / Anthropic · <a href="https://www.aibase.com/daily/29800" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic 为 Claude Code 推出重大更新，首次集成 iOS 模拟器面板，开发者可在 Claude Code 环境内直接运行和检查 iOS 应用，省去传统计算机视觉操作流程，大幅提升移动端开发效率。</p>
+            <p class="article-commentary">AI 编程工具正在从&#x27;写代码&#x27;进化到&#x27;调产品&#x27;，闭环越来越紧。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>模型竞争焦点从参数量转向效率——Gemini 3.6 Flash 降 token、Grok 4.5 省 output，&#x27;够用且便宜&#x27;成为新共识</li>
+            <li>商业化路径分化：OpenAI 卖广告、三星买模型、腾讯做平台，每家都在找各自的变现出口</li>
+            <li>中国大模型在推理能力上持续突破，小红书 IMO 夺金打破了&#x27;内容平台不会做基础模型&#x27;的偏见</li>
+            <li>人形机器人融资热度不减，但&#x27;未出货即独角兽&#x27;的模式正在积累估值风险</li>
+            <li>AI 安全合规压力升级——Suno 数据泄露和 Gemini 网安专属模型，分别从供需两端推动安全基建</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-07-22
+</div>
+
+</div>
+</body>
+</html>
