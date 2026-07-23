@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-07-23</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>62</em></span>
+        <span>Thursday, July 23, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-07-22.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">WAIC 落幕留下满地首发，Anthropic 用 1.2 万亿估值改写硅谷座次——这周的 AI 属于「能干活」的模型和「敢押注」的资本。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">Kimi K3 发布：2.8 万亿参数登顶全球开源模型</h2>
+        <div class="article-source">腾讯新闻 / 中新网 · <a href="https://news.qq.com/rain/a/20260718A0AXJ700" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">7</span> 月 17 日，月之暗面发布 Kimi K3，参数规模达 2.8 万亿，成为当前全球参数最大的开源模型。K3 采用 KDA 混合线性注意力机制，原生支持视觉理解，拥有 100 万 token 上下文窗口。实测中 Coding 能力在 GTA5 复刻任务里表现惊艳，但单任务 token 消耗约为 GPT-5.6 Sol 的两倍，699 元会员跑 4 个任务即烧掉 40% 额度。</p>
+        <p class="article-commentary">参数不再是唯一卖点，但 K3 把「能干活」这件事做到了第一梯队。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Anthropic 估值飙至 1.2 万亿美元，正式反超 OpenAI</h3>
+            <div class="article-source">36 氪 / 新智元 · <a href="https://www.36kr.com/p/3799097984080899" target="_blank">阅读原文</a></div>
+            <p class="article-body">链上 Pre-IPO 市场数据显示，Anthropic 隐含估值飙升至 1.2 万亿美元，已超越 OpenAI 约 20%。CEO Dario Amodei 透露年化收入同比增长 80 倍（远超预期的 10 倍），增长引擎是 Claude Code。Anthropic 与 SpaceX 达成独家合作拿下 22 万块 GPU，同时与谷歌签署五年 2000 亿美元云服务协议。</p>
+            <p class="article-commentary">安全叙事变成最赚钱的叙事，Claude Code 才是真正的增长引擎。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">WAIC 2026 开幕：习近平倡导构建全球 AI 治理体系</h3>
+            <div class="article-source">新华网 / 央视新闻 · <a href="https://news.cctv.com/2026/07/17/ARTIQqXlfT8BMR8W0bsoKhxP260717.shtml" target="_blank">阅读原文</a></div>
+            <p class="article-body">7 月 17 日，2026 世界人工智能大会暨人工智能全球治理高级别会议在上海开幕，习近平出席并发表主旨讲话，倡导构建公正合理的全球 AI 治理体系。大会吸引 1100 余家企业参展，300+ 产品全球首发，达成 162 亿元意向合作。同步发布《人工智能合作发展行动计划》及气象 AI 方案「妈祖」。</p>
+            <p class="article-commentary">治理与合作并行，中国正从 AI 参赛者变成规则制定的参与者。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">GPT-5.6 系列全量开放：三档分层 + 取消月额度限制</h2>
+        <div class="article-source">郭震 AI / tokenfind · <a href="https://zglg.work/ai/today/2026-07-05" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">7</span> 月 10 日 GPT-5.6 全量开放，分 Sol（旗舰）、Terra（均衡）、Luna（轻量）三档。Sol 旗舰版新增 Ultra 多智能体调度，可同时协调多个 AI 完成复杂任务；Terra 性能接近 GPT-5.5 但成本仅一半。同时 GPT 取消了月额度限制，与 Kimi K3 的高额度消耗形成对比。</p>
+        <p class="article-commentary">分层发布是聪明打法，但真正改变格局的是取消月额度限制。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">曙光 8000（登峰）亮相：中国首个全国产十万卡 AI 超集群</h3>
+            <div class="article-source">中新网 · <a href="https://www.chinanews.com.cn/gn/2026/07-20/10662667.shtml" target="_blank">阅读原文</a></div>
+            <p class="article-body">WAIC 2026 上，曙光 8000（登峰）真机首次公开亮相，是中国首个全国产十万卡 AI 超集群。采用独创「超智融合」技术实现全类型计算原生一体化融合，已覆盖 20 余个领域并接入国家超算互联网。同期华为昇腾 Atlas 950 SuperPoD 超节点也完成首秀，搭载 1024 张昇腾算力卡。</p>
+            <p class="article-commentary">从「建得成」到「用得好」，国产算力正跨过最难的一道坎。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">SpaceX IPO 招股书披露 Cursor 收购协议</h3>
+            <div class="article-source">知乎 / 雪球 · <a href="https://zhuanlan.zhihu.com/p/2046296234898481754" target="_blank">阅读原文</a></div>
+            <p class="article-body">SpaceX IPO 招股书披露，公司获得 IPO 后 30 天内以 600 亿美元估值收购 AI 编程工具 Cursor 的排他性权力。SpaceX 将向 Cursor 提供 GPU 算力，共同开发 Vibe Coding 自主 Agent 模型。这标志着马斯克在 AI 领域的布局从模型竞争转向算力+工具的生态整合。</p>
+            <p class="article-commentary">马斯克不跟 OpenAI 打模型战，改打算力加工具的生态战。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">腾讯 WAIC 集中发布具身智能全栈方案与多款智能体产品</h3>
+            <div class="article-source">搜狐 · <a href="https://www.sohu.com/a/1052598342_118792" target="_blank">阅读原文</a></div>
+            <p class="article-body">WAIC 2026 上，腾讯集中发布具身智能全栈解决方案、企业出海智能体平台 ADP 4.0 海外版、个人通用智能体 WorkBuddy 独立 App 等产品。覆盖底层大模型、机器人硬件、企业数字化、个人办公的全链路 AI 布局，推动 AI 从单纯问答交互走向自主执行任务。</p>
+            <p class="article-commentary">腾讯的打法是铺面而非钻点，但全栈路线能否跑通还看落地。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">《全球人工智能创新指数报告 2026》发布：AI 产业化重心转向推理与垂直</h3>
+            <div class="article-source">新华网 · <a href="https://www.news.cn/world/20260717/e0f5e4c5a8164d1b91cec7b85e636fb9/c.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">7 月 17 日 WAIC 上发布《全球人工智能创新指数报告 2026》，对 46 个国家 AI 创新发展进行量化评价。报告指出 AI 基建持续扩张但能源供应成为新变量，大模型产业化重心正从通用转向垂直、从训练转向推理、从单点技术应用转向业务全流程重塑，企业重资产投入特征显著。</p>
+            <p class="article-commentary">训练竞赛让位推理竞赛，谁先把模型变成业务流程谁就赢。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>Kimi K3 以 2.8 万亿参数刷新开源纪录，但真正竞争力在 Coding Agent 的实际任务表现，而非跑分</li>
+            <li>Anthropic 1.2 万亿估值反超 OpenAI，Claude Code 驱动 80 倍营收增长，算力焦虑催生跨界联盟</li>
+            <li>WAIC 2026 成为中国 AI 实力的集中展示窗口，从十万卡国产超集群到 AI 治理方案，产业叙事全面升级</li>
+            <li>GPT-5.6 分层发布 + 取消月额度，OpenAI 在「普惠」和「高端」之间走钢丝，直接挤压竞品定价空间</li>
+            <li>AI 编程工具成为资本博弈核心战场，SpaceX-Cursor 收购协议意味着算力+工具的生态整合正在加速</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-07-23
+</div>
+
+</div>
+</body>
+</html>
