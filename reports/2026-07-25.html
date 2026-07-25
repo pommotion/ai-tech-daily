@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-07-25</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>64</em></span>
+        <span>Saturday, July 25, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-07-24.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">国产开源大模型首次在规模上反超海外，Kimi K3的2.8万亿参数和Arena登顶引发行业估值重定价；阿里千问、谷歌Gemini紧随其后，性能竞赛已从按月压缩到按周。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">月之暗面发布Kimi K3：2.8万亿参数，Arena盲测超越Fable 5登顶全球第一</h2>
+        <div class="article-source">36氪 · <a href="https://www.36kr.com/p/3906135954675077" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">7</span>月17日，月之暗面发布2.8万亿参数的Kimi K3。该模型在Arena前端代码盲测榜单上以1679分超过Anthropic Fable 5，位列全球第一。K3上线后需求迅速超过算力承载能力，月之暗面一度暂停新订阅。受此冲击，智谱次日股价收跌28%，MiniMax收跌16%——这是国产开源模型首次在关键榜单上反超所有海外开源模型。</p>
+        <p class="article-commentary">一次模型发布重写三家公司估值。榜单即市值，参数即融资弹药，这场递归循环没有终点。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">阿里千问Qwen3.8发布：2.4万亿参数，主打企业级全栈开发与Office工作流</h3>
+            <div class="article-source">IT之家 / 新浪科技 · <a href="https://view.inews.qq.com/a/20260720A0AT1900" target="_blank">阅读原文</a></div>
+            <p class="article-body">7月19日，阿里千问宣布Qwen3.8-Max-Preview上线PC端及Web端，参数量达2.4万亿。该模型官方强调在全栈开发、数据分析、Office办公工作流等复杂任务中的表现，同步上线Token Plan、Qoder及QoderWork。阿里声称Qwen3.8-Max性能匹敌世界前沿模型，正式版将于近期发布。</p>
+            <p class="article-commentary">不再刷榜，转向企业落地。阿里的策略是：模型即入口，生态即护城河。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">xAI/SpaceXAI发布Grok 4.5：面向编程与Agent任务，引入Cursor真实开发者数据</h3>
+            <div class="article-source">搜狐 / 澎湃新闻 · <a href="https://www.sohu.com/a/1048279880_122893087" target="_blank">阅读原文</a></div>
+            <p class="article-body">7月8-9日，SpaceXAI正式发布Grok 4.5，这是该公司上市后首款新模型。该模型基于1.5万亿参数V9底座，联合Cursor引入数万亿真实开发者编程交互数据训练，专为编程、智能体任务和知识工作打造。Grok 4.5支持文本与图像输入、500K上下文、函数调用、联网搜索与代码执行。马斯克称计划每月发布一个大模型。</p>
+            <p class="article-commentary">收购Cursor后的第一份答卷：用真实开发者数据喂出来的模型，比参数堆砌更有说服力。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">谷歌Gemini 3.5 Pro发布：前端代码生成能力跨越式跃升，多项测试压制Fable 5</h2>
+        <div class="article-source">36氪 / 网易 · <a href="https://www.36kr.com/p/3884084059123976" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">7</span>月17日，谷歌正式发布Gemini 3.5 Pro。据泄露信息，其前端与视觉代码生成能力出现跨越式跃升，在多项测试中压制Anthropic Fable 5。该模型采用全新训练基座，大幅强化视频理解、3D解析、数学科研能力，原生对接谷歌搜索，适配云端与端侧部署。</p>
+        <p class="article-commentary">前端和视频是开发者最高频的场景，谷歌精准切入Anthropic的软肋。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Anthropic Fable 5订阅策略反复摇摆：2周内4次调整，最终永久保留在Max订阅</h3>
+            <div class="article-source">Build Fast with AI · <a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">Fable 5于7月1日恢复全球访问后，Anthropic原定7月7日结束限时推广，随后两度延期至7月19日。但就在K3引发港股模型公司下挫同日，Anthropic宣布放弃收费调整：从7月20日起，Fable 5永久保留在Max和Team Premium订阅中。不到2周内出现4次策略摇摆。</p>
+            <p class="article-commentary">订阅权益的每一次收紧都是用户流失的风险敞口——AI公司的定价权正在被竞争侵蚀。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">国产大模型6月调用量环比增70.3%，GLM-5.2编程基准全球开源第一</h3>
+            <div class="article-source">新浪新闻 · <a href="https://k.sina.com.cn/article_7879848922_1d5acf3da01901gp94.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">2026年6月国产大模型调用量环比激增70.3%。智谱GLM-5.2在多项编程基准测试中稳居全球开源模型首位，Agent基准测试成绩与Anthropic Opus 4.8相差不足1个百分点，成本仅为后者的1/5。</p>
+            <p class="article-commentary">用量和性能双双逼近，但GLM-5.2的领先地位仅维持了一个月就被K3反超——窗口期正以周为单位缩短。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">白宫推进自愿性AI模型标准，8月1日截止；Anthropic与政府达成预先访问协议</h3>
+            <div class="article-source">Build Fast with AI / Reuters · <a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-3-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">白宫正与AI公司谈判推进自愿性前沿模型标准，预计7月7日当周宣布，8月1日截止。框架包括：分类基准界定“受管辖前沿模型”、30天政府访问窗口机制、国际访问规则。Anthropic在Fable 5恢复访问时作出四项承诺：提供前沿模型预先访问、威胁情报共享、参与越狱风险评分框架。</p>
+            <p class="article-commentary">自愿性标准是监管的试探性一步，但Anthropic的“四换承诺”已为行业定了调：模型发布不再只是商业行为。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">中国模型公司密集融资与IPO：智谱314亿港元、MiniMax160亿、月之暗面筹备递表</h3>
+            <div class="article-source">36氪 · <a href="https://www.36kr.com/p/3906135954675077" target="_blank">阅读原文</a></div>
+            <p class="article-body">7月，智谱以4.2%新增股份配售314亿港元；MiniMax公布160亿港元融资方案并宣布创始人零薪酬至AGI实现。月之暗面在K3发布后向投资人通报赴港上市计划，预计最快6个月完成挂牌。DeepSeek完成超500亿融资、估值约3700亿元，IPO提上日程。五家头部独立模型公司中四家已进入或筹备上市阶段。</p>
+            <p class="article-commentary">IPO不是终点，是下一轮融资的起点。当估值成为生产资料，资本市场给弹药的速度决定谁能活过下一轮迭代。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>国产开源大模型首次在规模和榜单上反超海外，Kimi K3的2.8万亿参数和Arena第一标志着中美AI差距进一步缩小。</li>
+            <li>模型性能领先窗口已从按月压缩到按周——GLM-5.2登顶一个月即被K3反超，K3发布72小时内Qwen3.8和DeepSeek V4接踵而至。</li>
+            <li>API价格战和订阅权益战同步升级：DeepSeek引入峰谷定价，Anthropic Fable 5订阅策略2周内摇摆4次，定价权正在从卖方转向买方。</li>
+            <li>政府介入AI模型发布的深度前所未有：白宫推进自愿标准，Anthropic以“四项承诺”换回Fable 5的全球访问权。</li>
+            <li>独立模型公司的“性能-市值-融资-更高性能”递归循环已形成，但资本市场的供弹速度未必跟得上对手刷新榜单的速度。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-07-25
+</div>
+
+</div>
+</body>
+</html>
