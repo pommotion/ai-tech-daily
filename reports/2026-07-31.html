@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-07-31</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>70</em></span>
+        <span>Friday, July 31, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-07-30.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">开源前沿模型开始扎堆落地，但资本和监管同时收口，AI行业正从“卷模型”进入“卷变现与合规”的新阶段。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">月之暗面开源 Kimi K3：2.8 万亿参数模型权重与关键 Infra 一并放出</h2>
+        <div class="article-source">36氪 / 智东西 · <a href="https://www.36kr.com/p/3914177904661639" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">月</span>之暗面发布 Kimi K3 模型权重、技术报告，并同步开源 MoonEP、FlashKDA、AgentEnv 三项训练基础设施。该模型为 2.8 万亿参数 MoE，原生支持视觉理解与 100 万 token 上下文。Cognition、Nebius、华为昇腾等多家厂商已宣布 Day 0 适配。</p>
+        <p class="article-commentary">开源权重加 Infra 打包开放，说明国内大厂开始用“生态牌”争夺全球开发者心智，而不只是刷榜。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">OpenAI 硬件路线图曝光：先音箱，后手机</h3>
+            <div class="article-source">36氪 · <a href="https://www.36kr.com/p/3916801181019782" target="_blank">阅读原文</a></div>
+            <p class="article-body">据曝光的路线图，OpenAI 的硬件产品将遵循“先音箱、后手机”的推进顺序，手机仍需要更长时间。这标志着 OpenAI 从纯模型公司向消费硬件延伸的野心逐渐清晰。</p>
+            <p class="article-commentary">模型公司做硬件很难绕过供应链和渠道，OpenAI 选音箱而非手机首发，是在用低风险产品验证 AI 入口。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">同样砸钱搞 AI，为什么今天市场只奖励微软？</h3>
+            <div class="article-source">36氪 · <a href="https://www.36kr.com/p/3917407438777729" target="_blank">阅读原文</a></div>
+            <p class="article-body">在 AI 投资普遍高企的背景下，华尔街更愿意为微软买单，核心原因在于其 AI 投入已映射到可识别的收入现金流。文章指出，没有明确商业回报的 AI 支出，市场反应冷淡。</p>
+            <p class="article-commentary">投资者正在从“信仰模型能力”转向“信仰现金流”， AI 叙事要过财报这关。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">Anthropic CEO 带头呼吁 AI 减速，OpenAI 官方点赞</h2>
+        <div class="article-source">36氪 · <a href="https://www.36kr.com/p/3916764446480001" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>nthropic CEO 公开呼吁放缓 AI 发展节奏，OpenAI 官方账号点赞支持。文章分析认为，闭源大厂主动呼吁监管，更像是在用合规姿态抬高后来者的成本。</p>
+        <p class="article-commentary">闭源厂商带头喊刹车，本质是用监管成本筑墙，把后来者挡在更 expensive 的合规门槛外。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Together AI 完成 8 亿美元 C 轮，估值升至 83 亿美元</h3>
+            <div class="article-source">TechStartups · <a href="https://techstartups.com/2026/07/01/venture-capital-startup-funding-roundup-july-1-2026/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Together AI 获得由沙特阿美风投领投的 8 亿美元 C 轮融资，估值达到 83 亿美元。公司主打开源模型的企业级训练与推理平台，年订单额已达 11.5 亿美元。</p>
+            <p class="article-commentary">能源资本下注 AI 基础设施，说明算力层已经成为跨国战略资产，而不只是科技公司的事。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">贾扬清创业：让 GLM-5.2 提速 534%，一句话生成数据库系统</h3>
+            <div class="article-source">36氪 · <a href="https://www.36kr.com/p/3916686051896962" target="_blank">阅读原文</a></div>
+            <p class="article-body">贾扬清再创业，推出面向 AI 开发的基础设施产品，在 GLM-5.2 上实现 534% 的性能提升，并支持通过一句话生成数据库系统，相关测试已通过 600 万项验收。</p>
+            <p class="article-commentary">从框架作者到 infra 创业者，贾扬清押注的是“让模型更快落地”这一最被忽视的效率层。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">杨植麟追上梁文锋：中国开源大模型连环冲击硅谷</h3>
+            <div class="article-source">36氪 · <a href="https://www.36kr.com/p/3916735123117705" target="_blank">阅读原文</a></div>
+            <p class="article-body">月之暗面杨植麟与 DeepSeek 梁文锋所代表的中国开源力量，正在以密集的产品节奏冲击硅谷领先优势。文章指出，中国开源模型的性价比和工程迭代速度已经形成实质性压力。</p>
+            <p class="article-commentary">中国开源模型的竞争力已从“追赶”转向“对等竞争”，下一个变量是海外开发者生态和部署成本。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">航司加速引入 AI 动态定价，廉价机票捡漏窗口收窄</h3>
+            <div class="article-source">IT之家 · <a href="https://www.ithome.com/0/983/394.htm" target="_blank">阅读原文</a></div>
+            <p class="article-body">达美、维珍等航司正加速部署 AI 动态定价系统，实时分析数十项变量调整票价。分析人士认为，热门航线低价票将减少，但淡季和非热门航线票价可能更便宜。</p>
+            <p class="article-commentary">AI 定价把收益管理推向极致，消费者感知将是“票价更聪明”，而不是更便宜。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>Kimi K3 开源权重加 Infra 打包开放，标志着国内大厂竞争进入生态卡位阶段。</li>
+            <li>OpenAI 硬件路线图曝光，模型公司消费化进程加速，但供应链仍是未知数。</li>
+            <li>华尔街奖励有现金流的 AI，市场叙事从“模型崇拜”转向“商业落地”。</li>
+            <li>闭源大厂呼吁监管减速，实质是用合规门槛抬高后来者成本。</li>
+            <li>Together AI 8 亿美元融资说明算力基础设施已成为跨国战略级资产。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-07-31
+</div>
+
+</div>
+</body>
+</html>
