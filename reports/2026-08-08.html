@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-08-08</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>78</em></span>
+        <span>Saturday, August 8, 2026</span>
+        <span>&#20170;&#26085; <em>10</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-08-07.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">OpenAI 因安全风险给旗舰模型踩刹车、谷歌 AI 高层一夜换血，能力竞赛之外，安全审查与组织韧性成了本周真正的头条。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">OpenAI 因网络安全风险延缓旗舰模型 Astra 发布</h2>
+        <div class="article-source">IT之家 · <a href="https://www.ithome.com/0/987/221.htm" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 宣布因网络安全风险推迟下一代旗舰模型 Astra 的公开发布。Astra 是 GPT-4.5 以来训练的最大模型，内部代号 mewfour，此前爆料称原计划最快下周推出。奥尔特曼回应称该模型性能强劲，团队正全力推进上线。</p>
+        <p class="article-commentary">能力越强越不敢发，安全审查成了新旗舰的隐形门槛。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Jeff Dean 离职创业，哈萨比斯卸任谷歌 DeepMind CEO</h3>
+            <div class="article-source">量子位 · <a href="https://www.qbitai.com/2026/08/467196.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">谷歌传奇 Jeff Dean 宣布离职，与 Sanjay Ghemawat、Quoc Le、Oriol Vinyals 共同创办公益性公司 Discovery Loop，谷歌已入股并成为其云合作伙伴。同期哈萨比斯卸任 DeepMind CEO，转任董事长兼 Alphabet 首席科学家，日常业务交棒副手 Koray Kavukcuoglu。消息公布后谷歌股价一度蒸发 1860 亿美元。</p>
+            <p class="article-commentary">Gemini 三大核心集体出走，谷歌的组织账比模型账更难算。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">ChatGPT 免费版取消聊天次数限制，默认模型升级为 GPT-5.6 Luna</h3>
+            <div class="article-source">量子位 · <a href="https://www.qbitai.com/2026/08/467879.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI 宣布免费用户 Chat 模式再无次数限制，默认模型下放为 GPT-5.6 Luna，本周内陆续推送；Plus/Pro 用户的 GPT-5.6 Sol 同步推出 Chat 优化版，事实性错误率较旧版下降约 68%，并新增推理强度滑动调节。图片生成、文件上传等限额仍保留。</p>
+            <p class="article-commentary">用免费额度换日常聊天心智，OpenAI 开始抢 C 端基本盘。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">阿里 Wan 3.0 视频大模型开启公测，文档 PPT 可直接变视频</h2>
+        <div class="article-source">量子位 · <a href="https://www.qbitai.com/2026/08/467877.html" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">8</span> 月 6 日阿里 Wan 3.0 开启公测，单次可生成 30 秒视频，首次支持 doc、xls、ppt、pdf、md 等文档格式输入，上传课件或产品 PPT 加提示词即可生成完整视频；人像刻画、指令遵循与视频编辑能力同步升级。API 定价 480P/720P/1080P 分别为 0.3/0.6/1.2 元/秒。</p>
+        <p class="article-commentary">从生成画面到把文档变成影像，视频模型开始抢办公入口。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">DeepSeek 拟认购 1.4 亿元宇树科技 IPO 战略配售，锁定期 36 个月</h3>
+            <div class="article-source">量子位 · <a href="https://www.qbitai.com/2026/08/467487.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">宇树科技科创板 IPO 战略配售结果公布，DeepSeek 母公司深度求索获配 93.339 万股（约 1.41 亿元），锁定期长达 36 个月。双方将开展「AI 大模型+人形机器人」具身智能联合研发，DeepSeek 将在模型架构、智算集群与数据中心运营上提供支持。公告同时披露梁文锋合计控制深度求索 99.72% 股权。</p>
+            <p class="article-commentary">杭州双雄资本联姻：大模型当大脑，机器人当身体，具身智能开始组队。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">Science 刊发：AI 设计出自然界不存在的噬菌体病毒</h3>
+            <div class="article-source">The Verge / Science · <a href="https://www.science.org/doi/10.1126/science.aec2657" target="_blank">阅读原文</a></div>
+            <p class="article-body">Science 发表研究，基因组语言模型可生成自然界从未出现过的噬菌体，对人类无直接威胁。研究一面为医学与合成生物学带来新可能，一面再次点燃对 AI 制造新型疾病乃至生物武器的担忧。</p>
+            <p class="article-commentary">造毒能力先跑一步，生物安全治理明显没跟上模型进化。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">TOOLS</div>
+        <h2 class="feature-headline">蚂蚁集团开源多智能体协作基础设施 Avernet</h2>
+        <div class="article-source">量子位 · <a href="https://www.qbitai.com/2026/08/467871.html" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">蚂</span>蚁集团以 Apache 2.0 开源 Avernet 社区版，面向异构智能体的发现、共识、跨团队协作与治理，强调以身份、权限和责任边界为前提，不绑定单一模型或引擎。该能力已在蚂蚁内部覆盖 12 个核心业务板块，智能体任务完成率稳定超过 90%。</p>
+        <p class="article-commentary">单个智能体卷不动了，多智能体的「组织学」才是下一站。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">谷歌 DeepMind WeatherNext 可提前 15 天预测热带气旋</h3>
+            <div class="article-source">The Verge / Nature · <a href="https://www.nature.com/articles/s41586-026-10953-2" target="_blank">阅读原文</a></div>
+            <p class="article-body">DeepMind 在 Nature 发表研究，WeatherNext 模型可预测热带气旋的路径、强度与风场结构，最长提前 15 天，为预报员额外赢得约一天的预警精度，有望显著提升极端天气应对的提前量。</p>
+            <p class="article-commentary">天气预报是 AI 科学落地的老牌试验田，这次把预警窗口又推前了一格。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">古尔曼爆料 OpenAI 首款 AI 硬件：甜甜圈造型、冰球大小</h3>
+            <div class="article-source">IT之家 · <a href="https://www.ithome.com/0/986/775.htm" target="_blank">阅读原文</a></div>
+            <p class="article-body">彭博古尔曼爆料，OpenAI 首款 AI 硬件为冰球大小（约 115.8 立方厘米）的甜甜圈造型设备，主打先进语音交互，售价预计 300-400 美元，有望 2027 年发布。此前 Jony Ive 已确认参与该项目，且 OpenAI 正与苹果陷入商业机密诉讼。</p>
+            <p class="article-commentary">大模型公司集体造硬件，语音交互成了下一张入场券。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">Suno 将用 Musixmatch Sentinel 扫描 AI 音乐输出是否侵权</h2>
+        <div class="article-source">The Verge · <a href="https://sentinel.musixmatch.com/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">S</span>uno 宣布成为首个采用 Musixmatch 版权检测服务 Sentinel 的 AI 音乐平台，将扫描生成结果的歌词与旋律是否侵犯版权，数据库覆盖超 20 万版权方（含三大唱片公司）。Sentinel 不只检查提示词输入，也检查生成输出。</p>
+        <p class="article-commentary">AI 音乐开始自查版权，监管压力终于传导到了生成端。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>OpenAI 因安全风险延缓 Astra 发布：最强模型遇上最严审查，旗舰节奏已不只是技术问题。</li>
+            <li>谷歌 AI 权力层大换血：Jeff Dean 四人组创业 + 哈萨比斯转任，Gemini 时代进入过渡期。</li>
+            <li>免费层升级成共识：ChatGPT 免费无限聊，阿里用 Wan3.0 和语音平台抢生产力入口。</li>
+            <li>具身智能开始资本组队：DeepSeek × 宇树锁定期 36 个月，模型与本体深度绑定成趋势。</li>
+            <li>安全与版权两条线同步收紧：AI 造毒研究与 AI 音乐版权扫描同周登场，治理正在落到生成端。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>10</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-08-08
+</div>
+
+</div>
+</body>
+</html>
