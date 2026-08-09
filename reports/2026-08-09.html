@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-08-09</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>79</em></span>
+        <span>Sunday, August 9, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-08-08.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">安全刹车与资本狂奔并行：OpenAI 首次因「关键网络能力」按下旗舰模型暂停键，而 AI 视频、法律 AI 的巨额融资与工业化落地正以前所未有的速度兑现——行业进入「一边踩刹车、一边踩油门」的临界阶段。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">OpenAI 暂停 Astra 开发：首个触发「关键网络能力」阈值的模型</h2>
+        <div class="article-source">OpenAI · <a href="https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 内部评估发现新一代模型 Astra 在智能体编程与网络安全上进展显著，按 Preparedness 框架「无法排除其具备关键网络能力」——即能在无人工干预下自主发现并利用真实系统零日漏洞、端到端执行新型网络攻击。这是首个触发该最高风险等级的模型（GPT-5.6 Sol 仅为 High），OpenAI 已暂停开发，转入隔离沙箱测试，并与政府机构及独立安全组织合作，暂无发布计划。</p>
+        <p class="article-commentary">安全评估第一次真正按下暂停键，「无法排除」从纸面措辞变成了实打实的刹车。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">可灵 AI 落地近 30 亿美元融资，创全球视频大模型融资纪录</h3>
+            <div class="article-source">新华网 · <a href="https://www.news.cn/tech/20260807/1605ef446e5045b7ba0ee55245ce731c/c.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">可灵 AI 完成近 30 亿美元融资，投后估值约 180 亿美元，由 CPE 源峰、国方创投、腾讯、中关村科学城基金等联合领投，阿里云、百度等产业资本参与，创全球视频大模型公司最大融资纪录。近三个月可灵、生数科技、爱诗科技、演语科技四家披露融资合计近 300 亿元；可灵全球用户已破 1 亿，2026 年 Q1 营收超 6.5 亿元、同比增长超 300%。</p>
+            <p class="article-commentary">腾讯阿里百度罕见同台，AI 视频赛道从「概念驱动」切换到「商业化实质定价」。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">字节跳动发布 Seedance 2.5：单次生成视频时长翻倍至 30 秒</h3>
+            <div class="article-source">字节跳动 Seed · <a href="https://seed.bytedance.com/seedance2_5" target="_blank">阅读原文</a></div>
+            <p class="article-body">字节跳动正式发布新一代音视频联合生成模型 Seedance 2.5，单次生成时长较年初 Seedance 2.0 提升至 30 秒，支持最多 30 图/10 视频/10 音频的多模态参考与时间戳级定向编辑，已在豆包、即梦、扣子上线并通过火山引擎开放 API。业内反馈 AI 短剧制作成本已从传统实拍的 30-50 万元压缩至 3-5 万元，质量达到可商用标准。</p>
+            <p class="article-commentary">30 秒 + 万元级成本，AI 视频从 demo 变成了能算账的工业化生产力。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">DeepMind 换帅：Hassabis 转任 Alphabet 首席科学家，Kavukcuoglu 接掌</h2>
+        <div class="article-source">TIME · <a href="https://time.com/article/2026/08/06/google-deepmind-ai-demis-hassabis/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">G</span>oogle 宣布 Demis Hassabis 卸任 DeepMind CEO，转任 DeepMind 主席并出任 Alphabet 首席科学家，原 CTO Koray Kavukcuoglu 以高级副总裁身份接掌 DeepMind。重组正值 Gemini 多次延期、落后于 OpenAI 与 Anthropic 之际；同日谷歌首席科学家 Jeff Dean 也宣布离职创业，诺贝尔奖得主 John Jumper 此前已转投 Anthropic。</p>
+        <p class="article-commentary">创始人退到「大图景」，谷歌追赶 OpenAI 打的已是组织战而非模型战。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">美国 BIS 启动调查：中国 AI 公司如何绕道海外租用英伟达芯片</h3>
+            <div class="article-source">TNW · <a href="https://thenextweb.com/news/us-bis-review-china-remote-offshore-nvidia-chip-access" target="_blank">阅读原文</a></div>
+            <p class="article-body">美国商务部工业与安全局（BIS）执法部门启动系统性审查，调查中国 AI 公司通过第三国租用算力（而非直接进口芯片）获取英伟达硬件的灰色路径。导火索是月之暗面 Kimi K3 发布后，白宫指控其在泰国使用 GB300 服务器。BIS 正建立两份名单：芯片走私黑市国与远程调用算力国。</p>
+            <p class="article-commentary">禁令堵不住算力流动，中美博弈已从芯片本身蔓延到「算力即服务」。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">NVIDIA 开源 NOOA：一个 Python 类即一个 Agent，SWE-Bench 82.2%</h3>
+            <div class="article-source">NVIDIA Labs · <a href="https://github.com/NVIDIA-NeMo/labs-OO-Agents" target="_blank">阅读原文</a></div>
+            <p class="article-body">NVIDIA Labs 开源 NOOA（NVIDIA Object-Oriented Agents），Apache 2.0 协议，把智能体压缩成单个 Python 类——方法是动作、字段是状态、docstring 是提示词。基于 GPT-5.5 在 SWE-Bench Verified 上达 82.2%，仅消耗约 110 万 token，约为此前 SOTA 的一半；CyberGym L1 86.8%，ARC-AGI-3 85.1%，已提供 pip install nooa。</p>
+            <p class="article-commentary">用一半 token 打平 SOTA，Agent 框架开始拼「每一块钱能买到多少分」。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">AI 安全研究系统发现约 700 个真实网站的 HTTP desync 攻击面</h3>
+            <div class="article-source">PortSwigger · <a href="https://portswigger.net/research/http-terminator" target="_blank">阅读原文</a></div>
+            <p class="article-body">PortSwigger 研究员 James Kettle 公布 HTTP Terminator——一个自主 AI 安全研究系统，对数千个授权网站测试了 3 万条 desync 攻击向量，发现约 700 个脆弱目标，覆盖银行、政府基础设施、安全产品与机场，并暴露了 Apache Traffic Server 零日漏洞，同时生成「悬挂字节」等全新攻击类别。被视作 AI 首次产出真正新颖的安全研究，而非复述已知漏洞。</p>
+            <p class="article-commentary">AI 在漏洞挖掘上第一次「发明」而非「搬运」，攻防天平开始挪动。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">法律 AI 独角兽 Harvey 洽谈 5 亿美元融资，估值冲击 155 亿美元</h3>
+            <div class="article-source">SiliconANGLE · <a href="https://siliconangle.com/2026/08/07/legal-ai-startup-harvey-reportedly-raising-500m-15-5b-valuation/" target="_blank">阅读原文</a></div>
+            <p class="article-body">据 The Information，法律 AI 公司 Harvey 正与 Lightspeed 等投资者洽谈至少 5 亿美元融资，估值约 155 亿美元，较 3 月的 110 亿美元上涨 40%。其 ARR 已从 2025 年底的 1.9 亿美元增至约 3 亿美元，总年化收入超 3.5 亿美元；按此估值计算市销率约 44 倍，远超传统软件标准。</p>
+            <p class="article-commentary">18 个月估值翻五倍，法律 AI 是垂直赛道里最先被资本买定的一席。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>OpenAI 暂停 Astra：首个触发 Critical 网络安全阈值的模型转入隔离测试，AI 安全评估从「理论框架」变成真实刹车。</li>
+            <li>可灵 AI 近 30 亿美元融资创全球视频大模型纪录，腾讯/阿里/百度罕见同台，赛道进入商业化实质定价阶段。</li>
+            <li>字节 Seedance 2.5 单次生成 30 秒、AI 短剧成本压至 3-5 万元，视频生成开始工业化交付。</li>
+            <li>DeepMind 换帅叠加 Jeff Dean 出走，谷歌以组织重组追赶 OpenAI/Anthropic，人才争夺进入白热化。</li>
+            <li>BIS 调查海外租用算力灰色路径，芯片管制从「禁售硬件」延伸到「算力即服务」。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-08-09
+</div>
+
+</div>
+</body>
+</html>
