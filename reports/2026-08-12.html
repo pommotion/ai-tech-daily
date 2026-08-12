@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-08-12</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>82</em></span>
+        <span>Wednesday, August 12, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-08-11.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">算力资本化与 AI 攻防双线并进：英伟达把 GPU 变成华尔街的新资产类别，OpenAI 则用 AI 打 AI，资本与安全成为本周两条主线。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">英伟达联手六大资管巨头，撬动 5000 亿美元 AI 算力融资平台</h2>
+        <div class="article-source">CNBC · <a href="https://www.cnbc.com/2026/08/10/nvidia-wall-street-asset-managers-500-billion-ai-push.html" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">英</span>伟达与 Apollo、贝莱德、黑石、Brookfield、高盛、KKR 签署备忘录，设立独立算力融资平台，拟调动超 5000 亿美元第三方资本。平台以算力本身作为抵押品，把 AI 芯片包装成可融资资产，为数据中心客户拓宽融资渠道。</p>
+        <p class="article-commentary">GPU 正在金融化，算力从采购品变成可抵押资产，英伟达借华尔街之手绑定生态。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">OpenAI 发布安全专用模型 GPT-5.6-Cyber，漏洞挖掘完成率 95%</h3>
+            <div class="article-source">The Hacker News · <a href="https://thehackernews.com/2026/08/openai-launches-gpt-56-cyber-with.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI 推出面向授权漏洞研究、渗透测试与应急响应的网络安全模型 GPT-5.6-Cyber，并扩展 Daybreak 网络防御伙伴计划。该模型在高级网络安全测试中完成率达 95%，远超通用旗舰 GPT-5.6 Sol 的 1.5%，已发现 400+ 内核漏洞，包括 Chrome V8 高危漏洞。</p>
+            <p class="article-commentary">安全模型与通用模型的漏洞能力差两个数量级，AI 攻防差距比想象中更大。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Google Gemini 月活突破 10 亿，成公司史上增长最快产品</h3>
+            <div class="article-source">Google 官方博客 · <a href="https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Google 宣布 Gemini 应用月活用户正式超过 10 亿，成为公司第 14 个破亿级产品，也是史上增长最快产品。数据显示 63% 的用户直接与 Gemini 语音对话，语音正在成为与 AI 交互的主流方式。</p>
+            <p class="article-commentary">10 亿月活与 63% 语音占比同时出现，AI 交互大众化的拐点比预期来得更快。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Manus 宣布与 Meta 分拆，恢复独立公司运营</h2>
+        <div class="article-source">每日经济新闻 · <a href="https://www.nbd.com.cn/articles/2026-08-11/4538967.html" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">M</span>anus 发布致用户公开信，宣布恢复独立公司身份运营，作为与 Meta 分拆及满足特定司法辖区监管要求的一部分。为合规需要，2025 年 12 月 29 日后产生的部分用户数据将于 8 月 23 日起删除，受影响用户需提前备份。</p>
+        <p class="article-commentary">监管否决让 20 亿美元收购案退回原点，AI 并购的合规风险被摆上台面。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">蚂蚁百灵开源 Ling-3.0-tiny：7.9B 总参、1.3B 激活，主打本地 Agent</h3>
+            <div class="article-source">IT之家 · <a href="https://www.ithome.com/0/988/431.htm" target="_blank">阅读原文</a></div>
+            <p class="article-body">蚂蚁百灵在 Hugging Face 开源轻量级混合推理 MoE 模型 Ling-3.0-tiny，总参数 7.9B，每 Token 仅激活 1.3B，提供 BF16/FP8/INT4 三个精度版本。模型已在 DGX Spark、MacBook 等设备验证本地推理，Agent 评分超越 Gemma-4-31B，首 Token 响应低于 100 毫秒。</p>
+            <p class="article-commentary">1.3B 激活跑赢 31B 全参，参数效率路线正在重写开源模型性价比。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">原阿里千问技术负责人林俊旸官宣创业：Pragmatik Labs 估值约 20 亿美元</h3>
+            <div class="article-source">新浪科技 · <a href="https://finance.sina.com.cn/tech/roll/2026-08-12/doc-inimzcpz4117680.shtml" target="_blank">阅读原文</a></div>
+            <p class="article-body">林俊旸宣布在上海创办 AI 公司 Pragmatik Labs（语用科技），获高榕创投与红杉中国领投的数亿美元融资，估值约 20 亿美元。公司方向横跨数字世界与物理世界，覆盖数字 Agent、具身智能及长程探索，瞄准下一代 Agent。</p>
+            <p class="article-commentary">千问技术掌舵人转身押注 Agent 终局，数字+物理双线是今年最拥挤也最性感的赛道。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">阿里云公布模块化 AIDC 成果：交付压缩至 100 天，成本降超 10%</h3>
+            <div class="article-source">知乎专栏 · <a href="https://zhuanlan.zhihu.com/p/2070457461945930520" target="_blank">阅读原文</a></div>
+            <p class="article-body">阿里云公布模块化 AIDC 大型算力中心落地成果，将 AI 数据中心整体交付工期压缩至 100 天，综合建设成本降低超 10%。企业计划 2026 年内将模块化算力中心全球产能提升两倍，承接大模型算力部署需求。</p>
+            <p class="article-commentary">算力军备竞赛从拼芯片延伸到拼交付速度，模块化是数据中心的下一个效率杠杆。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">微信 AI 助手「小微」入口扩至 16+，覆盖公众号总结、朋友圈帮写</h3>
+            <div class="article-source">AITNT 快讯 · <a href="https://www.aitntnews.com/ainews/zh-CN" target="_blank">阅读原文</a></div>
+            <p class="article-body">微信近期在多个高频功能中加入 AI 助手「小微」入口，包括公众号消息总结、朋友圈 AI 帮写、扫一扫「拍照给 AI」、聊天输入框语音指令等，已集成超过 16 个 AI 入口，覆盖聊天记录、文档、图片等场景，目前仍处灰度测试阶段。</p>
+            <p class="article-commentary">微信把 AI 塞进信息流的每一步都在挤压独立 AI 助手 App 的生存空间。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>英伟达以算力为抵押撬动 5000 亿美元第三方资本，GPU 正被金融化为可融资资产，AI 基建进入华尔街主导阶段</li>
+            <li>GPT-5.6-Cyber 漏洞挖掘完成率 95% vs 通用模型 1.5%，AI 攻防能力差距呈数量级，安全专用模型成新赛道</li>
+            <li>Gemini 月活破 10 亿且 63% 用户使用语音，对话式 AI 完成大众化关键一跃</li>
+            <li>Manus 因监管要求与 Meta 分拆、删除部分用户数据，监管成为 AI 并购最大不确定变量</li>
+            <li>Ling-3.0-tiny 以 1.3B 激活参数实现本地 Agent 推理，轻量开源模型性价比竞赛白热化</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-08-12
+</div>
+
+</div>
+</body>
+</html>
