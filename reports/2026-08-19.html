@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-08-19</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>89</em></span>
+        <span>Wednesday, August 19, 2026</span>
+        <span>&#20170;&#26085; <em>9</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-08-18.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">AI 竞争的重心正从单点模型能力，转向安全治理、开发基础设施与可持续商业化的三线并进。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">OpenAI 加固前沿模型训练，最大规模 RL 任务继续暂停</h2>
+        <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 宣布一批模型研发期安全措施，包括更细粒度的行为监控和更强的网络隔离，并计划在异常活动出现后 30 分钟内告警。Hugging Face 安全事件后，OpenAI 曾暂停强化学习训练两周，目前最大规模前沿 RL 训练仍未恢复；新监控预计增加约 20% 的计算开销。</p>
+        <p class="article-commentary">安全成本正被正式计入前沿模型研发预算。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Anthropic 年化营收运行率突破 650 亿美元</h3>
+            <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/" target="_blank">阅读原文</a></div>
+            <p class="article-body">据媒体报道，Anthropic 7 月底的年化营收运行率超过 650 亿美元，高于 5 月的 470 亿美元和 2025 年末的 90 亿美元。Anthropic 与 OpenAI 均已秘密提交 IPO 文件，前者被预计可能最早于今年秋季上市；不同公司的营收指标口径仍可能存在差异。</p>
+            <p class="article-commentary">模型竞赛已进入营收增速与资本效率的硬较量。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Cursor 发布 Origin，进军代码托管挑战 GitHub</h3>
+            <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/08/18/cursor-capitalizes-on-github-frustration-launches-rival-hosting-platform/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Cursor 推出代码托管平台 Origin，覆盖代码仓库、协作编辑、浏览和 Pull Request 等 GitHub 核心能力。Origin 可与 GitHub 仓库并行使用并双向同步，Cursor 还计划加入 Agent 原生功能和应用生态；发布时点恰逢 GitHub 再次出现全球性服务中断。</p>
+            <p class="article-commentary">代码托管正成为 AI 编程入口的下一层战场。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">OpenAI 推出 ChatGPT for Teens，默认启用未成年人保护</h2>
+        <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 发布面向青少年的 ChatGPT，默认启用年龄适配保护，并加入学习模式、测验、可视化学习、作业提醒和家长控制。家长可设置安静时段、管理学习模式并接收安全通知，但青少年能否绕过限制仍需真实使用检验。</p>
+        <p class="article-commentary">青少年 AI 安全终于从补丁变成独立产品层。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">AI 视频公司 Higgsfield 获 4 亿美元 B 轮融资</h3>
+            <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/08/17/higgsfield-raises-400m-series-b-quadrupling-its-valuation-in-8-months-to-5-4b/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Higgsfield 完成 4 亿美元 B 轮融资，估值达到 54 亿美元，较八个月前的 13 亿美元增长逾三倍。公司称其年化营收为 7 亿美元，拥有 3000 万用户，并服务 390 家《财富》500 强企业；新资金将用于产品、招聘及高成本的视频生成算力。</p>
+            <p class="article-commentary">视频生成公司的护城河越来越像算力采购能力。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">Current Robotics 发布跨本体交互式世界仿真器 CurrentWorld-0</h3>
+            <div class="article-source">量子位 · <a href="https://www.qbitai.com/2026/08/474838.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">Current Robotics 展示 CurrentWorld-0，将跨机器人本体、多摄像头视角以及力觉和触觉预测纳入同一套世界仿真系统。系统允许保存、回滚中间状态并由人类遥操作接管，用不同动作分支生成纠错轨迹，为机器人策略评测和后训练提供数据。</p>
+            <p class="article-commentary">机器人世界模型正从画面逼真转向物理可信。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">TOOLS</div>
+        <h2 class="feature-headline">Warp Factories 把多 Agent 软件工厂封装成基础设施</h2>
+        <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/08/18/warps-new-system-is-an-out-of-the-box-software-factory-for-ai-development/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">W</span>arp 发布 Factories，为企业提供部署、编排、评测和追踪编码 Agent 的基础设施，覆盖分诊、规格、实现、审查和验证等开发阶段。它兼容 Codex、Claude Code 等模型与工具，并可接入 Linear、Jira、Slack 和 Teams；Warp 称其内部每周约 30% 至 35% 的任务已实现自动化。</p>
+        <p class="article-commentary">Agent 工程化的难点已从写代码转到编排与评测。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">千问办公接入企业微信，打通国内三大协同平台</h3>
+            <div class="article-source">量子位 · <a href="https://www.qbitai.com/2026/08/474803.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">阿里旗下 Agent 产品千问办公接入企业微信，此前已支持钉钉和飞书。用户授权后可通过对话读取智能表格、读写文档、发送通知、查询日程、预约会议和创建待办；网页端已开放，客户端入口将随后上线。</p>
+            <p class="article-commentary">办公 Agent 竞争已转向谁能读懂组织上下文。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">阿里发布端到端 AI 音乐模型 HappyShrimp</h3>
+            <div class="article-source">量子位 · <a href="https://www.qbitai.com/2026/08/474840.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">阿里发布 AI 音乐模型 HappyShrimp，可根据自然语言描述完成作词、作曲、编曲和演唱的端到端整曲生成。模型支持曲风、情绪、年代、人声、调性、BPM 和配器等多维控制，已同步上线国内外网页端，并与太合音乐集团达成合作。</p>
+            <p class="article-commentary">音乐模型的分水岭不是能生成，而是能被控制。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>前沿模型安全开始直接消耗算力并影响训练节奏，安全不再只是发布后的补救。</li>
+            <li>AI 编程正在从编辑器扩张到代码托管和软件工厂，开发平台边界被重新划分。</li>
+            <li>Anthropic 与 Higgsfield 的高速资本化显示，营收规模和算力供给已成为新硬指标。</li>
+            <li>企业 Agent 的竞争焦点从会对话转向能否接入真实组织数据并执行完整工作流。</li>
+            <li>音乐与机器人领域都在抬高可控性门槛：前者要求精确创作，后者要求物理一致。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>9</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-08-19
+</div>
+
+</div>
+</body>
+</html>
