@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-08-25</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>95</em></span>
+        <span>Tuesday, August 25, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-08-24.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">资本与算力持续向中美 AI 双极加速集中：阿里七年首次港股配股 800 亿港元全额押注 AI，Anthropic 冲刺两万亿美元 IPO；模型层则迎来「免费 1M 上下文」变局——Ox-Alpha 匿名推理模型三天内冲上 OpenRouter 第二，挑战 DeepSeek；中国厂商集体进入「周更」模式，纯后训练 + 开源权重的新路径开始跑赢堆参数。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">阿里七年首次港股配股 800 亿港元 净额 100% 砸向全栈 AI</h2>
+        <div class="article-source">证券时报 / 联合早报 · <a href="https://www.zaobao.com.sg/news/china/story20260823-9560754" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">8</span> 月 23 日，阿里巴巴启动 2019 年港股双重主要上市以来首次新股配售，每股 112.70 港元配售 7.1 亿股新股，募资 800 亿港元（约 102 亿美元），净额约 797 亿港元，预计 8 月 26 日完成交割。配售对象限定为美国境外的非美国人士，已获超额认购，主权财富基金等长线机构需求强劲。资金 100% 用于全栈 AI：算力基础设施扩容、大模型迭代、AI 商业化与海外云布局。公告后阿里港股一度急跌约 10%。</p>
+        <p class="article-commentary">从「概念验证」切到「产业兑现」，阿里用真金白银表态——但二级市场用脚投票，警惕短期 EPS 摊薄。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Ox-Alpha 匿名推理模型冲上 OpenRouter 第二 1M 上下文全免费</h3>
+            <div class="article-source">OpenRouter / Business Insider · <a href="https://www.businessinsider.com/ox-alpha-ai-model-mystery-2026-8" target="_blank">阅读原文</a></div>
+            <p class="article-body">8 月 20 日，一个名为 Ox-Alpha 的「stealth/ox-alpha」模型空降 OpenRouter 与 OpenCode，未披露厂商。规格写明 1,048,576 token 上下文、131,072 token 最大输出、原生支持文本 / 图像 / 视频多模态与工具调用，预览期定价 $0/$0 每百万 token。三天内冲上 OpenCode 排行榜第二，DeepSWE 基准 80%（10 任务子集），指纹线索指向智谱 AI，但官方未确认。</p>
+            <p class="article-commentary">免费 + 1M + 编程强，三件套打穿开发者心智；署名战争比模型战争更值得关注。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Anthropic 冲刺 2 万亿美元 IPO 募资或超 1000 亿美元</h3>
+            <div class="article-source">纽约时报 / 知乎商业人工智能快讯 · <a href="https://zhuanlan.zhihu.com/p/2074536138589607575" target="_blank">阅读原文</a></div>
+            <p class="article-body">《纽约时报》报道，Anthropic 承销银行在 8 月下旬投资者推介中透露，公司可能通过 IPO 融资超 1000 亿美元，目标估值约 2 万亿美元，时间窗口指向 10 月底。其 5 月 Series H 估值 9650 亿美元，7 月底年化收入已达 650 亿美元；同期 Blackstone 等机构正将其私有芯片债务推高至 710 亿美元，两个月内连续两笔创纪录债务。</p>
+            <p class="article-commentary">Anthropic 用 ARR 撑估值、用债务买算力，IPO 已经不是融资选项，而是流动性兑现的终局。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">智谱 GLM-5.3 正式发布 不换基座、纯后训练编程涨 50%</h2>
+        <div class="article-source">智谱 AI 官方 / 掘金 · <a href="https://juejin.cn/post/7673522589588783158" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">8</span> 月 14 日，智谱 AI 发布 7530 亿参数旗舰 GLM-5.3，基座与 GLM-5.2 完全相同，仅靠扩大后训练规模实现编程能力跃升：自研 Z.ai Code Bench 较前代 +50%，Terminal-Bench 3.0 从 4.6 飙到 28.3 拿下开源第一，白盒代码审查追平 Anthropic Mythos 5，累计联合安全团队发现 2436 个漏洞（1097 个中高危），并揪出一个潜伏 40 年的 DNS 老 bug。权重计划两周后开放。</p>
+        <p class="article-commentary">在堆参数的军备赛里，智谱选了另一条路——后训练 Scaling 的天花板，可能比 MoE 更高。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">IBM × OpenAI 战略合作 GPT-5.6 / Codex 嵌入 IBM Consulting</h3>
+            <div class="article-source">IBM Newsroom / TechCrunch · <a href="https://newsroom.ibm.com/2026-08-13-ibm-partners-with-openai-to-accelerate-secure-ai-deployment-for-enterprises-across-core-operations" target="_blank">阅读原文</a></div>
+            <p class="article-body">8 月 13 日，IBM 与 OpenAI 宣布联合上市战略：把 GPT-5.6、Codex、ChatGPT Work 嵌入 IBM Consulting Advantage 交付平台，覆盖金融、政府、电信、零售四大行业，并通过 OpenAI Daybreak 等项目加强网络防御与合规。背景是 IBM 上月下调 2026 营收预期、AI 咨询成为增长重心。</p>
+            <p class="article-commentary">OpenAI 终于开始补课「企业落地」——但能不能在 Accenture、TCS 嘴里抢下份额，要看交付能力而不是模型。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">苹果联合阿里训练国行 iPhone 中国专属 AI 模型 弃用第三方方案</h3>
+            <div class="article-source">路透社 / 观察者网 · <a href="https://www.guancha.cn/economy/2026_08_14_827311.shtml" target="_blank">阅读原文</a></div>
+            <p class="article-body">8 月 14 日，路透社援引 3 名知情人士称，苹果专门为中国市场训练了一款自研大语言模型，由阿里提供算力与数据支持，将集成于国行 Apple Intelligence。苹果此前一直倾向用美国国内合作伙伴模型进入中国市场，本次「自研 + 本地合作」双轨策略意味着 iPhone 中美版本将出现功能差异。</p>
+            <p class="article-commentary">苹果认怂还是苹果开窍？本土化定制是合规最优解，也是产品分裂的开始。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Pinecone Nexus 正式 GA 检索层击败 OpenAI / Anthropic / Google Agents</h3>
+            <div class="article-source">Pinecone 官方 / Unite.AI · <a href="https://www.unite.ai/pinecones-nexus-knowledge-engine-for-ai-agents-reaches-general-availability/" target="_blank">阅读原文</a></div>
+            <p class="article-body">8 月 6 日 Pinecone 宣布 Nexus 知识引擎正式 GA，能把企业私有数据和工作流转化为「治理过的、可直接喂给 Agent 的知识」，单次 API 调用即可交付。在 Sierra 开源的 τ-Knowledge 企业知识基准上，Nexus + 主流 Agent 框架击败了基于 OpenAI、Anthropic、Google 前沿模型的纯模型方案，核心结论是「生产级企业 Agent 的瓶颈在知识层，而不在模型」。</p>
+            <p class="article-commentary">六个月模型刷榜大战，输给一个检索层——AGI 故事得加上 RAG 的脚注。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">DeepSeek V4-Pro GA 同步开源 Harness v0.1 API 涨价至 1100%</h3>
+            <div class="article-source">DeepSeek 官方 / Analytics India · <a href="https://analyticsindiamag.com/ai-news/deepseek-releases-v4-pro-and-open-source-harness" target="_blank">阅读原文</a></div>
+            <p class="article-body">8 月 13 日 DeepSeek 把 V4-Pro（0813 build）从预览转入正式 GA，权重 MIT 协议上 Hugging Face，同步开源 DeepSeek-Harness v0.1 Agent 框架，Terminal-Bench 2.1 跑到 87.9 分。8 月 16 日起 V4 Pro / Flash 启用峰谷分时定价：高峰时段输出 token 价格最高涨至原 5 倍以上，整体涨幅区间 50%–1100%，标志着「以补贴换规模」阶段结束。</p>
+            <p class="article-commentary">用开源 Harness 卡住 Agent 生态入口、用涨价兑现商业化——DeepSeek 完成了一次教科书级的「先免费后定价」转身。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>中美 AI 资本流向加速两极化：阿里单笔 800 亿港元、Anthropic 万亿 IPO，资本正在押注「能闭环全栈」的玩家，中小公司要么被收编要么出清。</li>
+            <li>「免费 1M 上下文」成新价格基准：Ox-Alpha 把前沿能力定价打到 $0，对所有按 token 收费的对手都是压力测试，OpenRouter 排行榜已被中国开源 + 匿名模型占据前六。</li>
+            <li>后训练 Scaling 第一次反超基座 Scaling：智谱 GLM-5.3 不换基座、靠后训练让编程涨 50%，说明「参数 × 数据」之外还有第三个变量。</li>
+            <li>Agent 时代真正的护城河不是模型：Pinecone Nexus 在企业知识基准上击败 OpenAI/Anthropic/Google Agent，证明「知识层 + 治理」才是生产部署的胜负手。</li>
+            <li>DeepSeek 的「开源 Harness + 分时定价」组合拳，重新定义了「中国开源」的商业路径——免费是入口，涨价是变现，Agent 框架才是真正的护城河。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-08-25
+</div>
+
+</div>
+</body>
+</html>
