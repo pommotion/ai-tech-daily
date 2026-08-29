@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-08-29</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>99</em></span>
+        <span>Saturday, August 29, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-08-28.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天的 AI 头条是钱的味道：英伟达从卖芯片变成开银行，5000 亿美元融资协议锁死 OpenAI 俄亥俄园区的算力命脉；同期传出 129 亿美元收购 Hugging Face 的消息，剑指开源模型分发话语权。模型层集中度首次被《大空头》Eisman 公开点名——OpenAI 与 Anthropic 撑起四大云厂 AI 收入的 70%，这是泡沫论最容易撕开的口子。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">英伟达洽谈 129 亿美元收购 Hugging Face，剑指开源模型分发枢纽</h2>
+        <div class="article-source">The Information / Yahoo Finance · <a href="https://www.readaitime.com/digests/2026-08-29" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">据</span> The Information 报道，英伟达正与 Hugging Face 就约 129 亿美元收购进行磋商，后者年化收入约 1.5 亿美元，对应市销率约 86 倍。英伟达 2023 年曾参与其 4.5 亿美元估值融资，去年拟以 7 亿美元投资 5000 万美元遭拒。交易尚未官宣，亦可能破裂。</p>
+        <p class="article-commentary">若成真，英伟达将掐住开源模型分发咽喉，顺便对冲前沿厂商自研 TPU 带来的去英伟达化。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">腾讯混元开源旗舰 Hy4 preview：770B 总参，1M 上下文</h3>
+            <div class="article-source">腾讯 / AIBase Daily · <a href="https://www.aibase.com/daily" target="_blank">阅读原文</a></div>
+            <p class="article-body">8 月 28 日，腾讯混元放出 Hy4 预览版，总参 770B、支持 1M token 上下文。模型延续混元系的开源策略，瞄准长上下文与 Agent 场景，正面加入国产开源旗舰与 Kimi K3、智谱 GLM-5.3 的同台竞争。</p>
+            <p class="article-commentary">国产开源旗舰从&#x27;参数对标&#x27;转向&#x27;上下文+Agent 工作流&#x27;的实测维度，Hy4 来得正是窗口期。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">Anthropic 团队展示自动化对齐系统：6 小时击败人类专家</h3>
+            <div class="article-source">Anthropic / TechCrunch · <a href="https://www.readaitime.com/digests/2026-08-29" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic 研究员陈跃翰团队发表论文：自动化系统模拟&#x27;文献搜索—提出方法—训练模型&#x27;的完整研究流程，在 10 个对齐基准上整体性能不退化，平均 6 小时内优于人类研究员，每小时成本约 4 美元，对比人类约 150 美元/小时。</p>
+            <p class="article-commentary">当 AI 自己跑 RLHF 的成本降到 1/37，对齐研究的稀缺性将被重写，下一波安全论文的瓶颈是算力而非人力。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">英伟达与华尔街达成 5000 亿美元融资协议，最高 1050 亿支持 OpenAI 俄亥俄数据中心</h2>
+        <div class="article-source">CNBC / Yahoo Finance · <a href="https://www.readaitime.com/digests/2026-08-29" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">8</span> 月 18 日当周，英伟达敲定 5000 亿美元融资协议，季度自由现金流三年增长 18 倍至 485 亿美元，数据中心营收创纪录 623 亿美元。其中最高 1050 亿美元用于支持 OpenAI 俄亥俄州数据中心建设。第二财季营收翻倍至 962 亿美元，下季度指引约 1080 亿。</p>
+        <p class="article-commentary">从 GPU 厂转身金融厂，英伟达把&#x27;卖铲子&#x27;升级成&#x27;开矿+放贷&#x27;，护城河比 GPU 本身还深。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">博通洽谈 700–800 亿美元债务融资加码 Anthropic 等 AI 公司芯片交易</h3>
+            <div class="article-source">CNBC / Bloomberg · <a href="https://www.readaitime.com/digests/2026-08-29" target="_blank">阅读原文</a></div>
+            <p class="article-body">博通正与黑石、阿波罗等推进 700–800 亿美元债务融资，优先档约 450 亿、次级档约 350 亿，将扩展其与两家伙伴 6 月已宣布的 350 亿美元合作，为 Anthropic 等 AI 公司扩建算力基础设施。市场等待 9 月 2 日财报检验 AI 芯片季度收入能否兑现 160 亿美元。</p>
+            <p class="article-commentary">博通把定制 ASIC 的&#x27;卖合同&#x27;变成&#x27;卖合同+过桥贷款&#x27;，AI 算力融资链条正式证券化。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Google Gemini Omni 1.1 Flash 模型亮相</h3>
+            <div class="article-source">Google / AIBase Daily · <a href="https://www.aibase.com/daily" target="_blank">阅读原文</a></div>
+            <p class="article-body">8 月 28 日，Google 发布 Gemini Omni 1.1 Flash 模型，主打轻量多模态与低延迟推理，补齐 Gemini 系列的实时响应档位。结合 8 月 25 日 Google 测试的新版 Gemini 界面，Omni 系列正成为 Google AI 战略中面向消费场景的主力。</p>
+            <p class="article-commentary">Google 把&#x27;Omni&#x27;做成子品牌路线，比 GPT-5 系的版本号更能讲清多模态-低延迟-工具调用的能力切片。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">智谱开源多模态大模型 GLM-5.3-Flash，办公场景 Qwen3.8-Flash 同日发布</h3>
+            <div class="article-source">智谱 / 阿里 / AIBase Daily · <a href="https://www.aibase.com/daily" target="_blank">阅读原文</a></div>
+            <p class="article-body">8 月 27 日，智谱开源 GLM-5.3-Fash 多模态大模型，主打轻量部署；同日阿里推出面向办公场景的 Qwen3.8-Flash。两条线都把&#x27;小尺寸+垂直场景&#x27;作为差异化卖点，瞄准本地化部署与企业 IT 集成。</p>
+            <p class="article-commentary">国产开源不再卷万亿参数，转向&#x27;够用+便宜+可私有化&#x27;，这是企业 IT 真正买单的形态。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">IBM 发布 Granite-TimeSeries-PatchTST-FM-r2：3.85 亿参数零样本时序模型登顶 GIFT-Eval</h3>
+            <div class="article-source">IBM Research / Hugging Face · <a href="https://www.readaitime.com/digests/2026-08-29" target="_blank">阅读原文</a></div>
+            <p class="article-body">IBM 发布 PatchTST 系列最新零样本时序基础模型 Granite-TimeSeries-PatchTST-FM-r2，参数量仅约 3.85 亿，在 GIFT-Eval 基准的可复现零样本模型中排名第一，超越包括 Chronos-2 在内的多个更大规模对手。采用 Conformer 架构、重叠 patch、Hamming 窗损失，并使用合成数据扩充训练集，OpenMDW 与 Apache 2.0 双许可。</p>
+            <p class="article-commentary">时序基础模型用 1/20 参数量干翻大模型，&#x27;小而专&#x27;路线在工业 AI 的 ROI 表上更有说服力。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>算力层正在金融化：英伟达 5000 亿融资 + 博通 700-800 亿举债，AI 基建开始用资产负债表而非现金流扩张。</li>
+            <li>模型层集中度首次被点名：《大空头》Eisman 警告 OpenAI+Anthropic 撑起四大云厂 AI 收入 70%，中游风险敞口暴露。</li>
+            <li>开源分发话语权争夺战开打：英伟达洽购 Hugging Face 是对前沿厂商自研芯片的反向防御。</li>
+            <li>国产开源进入&#x27;小而专&#x27;阶段：Hy4、GLM-5.3-Flash、Qwen3.8-Flash 都不再堆参数，转向场景化与可私有化。</li>
+            <li>AI 自我改进的成本曲线断崖式下行：Anthropic 自动化对齐 4 美元/小时 vs 人类 150 美元/小时，安全研究范式正在被重写。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-08-29
+</div>
+
+</div>
+</body>
+</html>
