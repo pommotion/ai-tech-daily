@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-09-07</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>108</em></span>
+        <span>Monday, September 7, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-09-06.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">四家前沿实验室在72小时窗口内集体放新模型，NVIDIA 把开源分发枢纽收进版图，市场用一个新词回应这场密度——Model Fatigue。AI 已经进入卖得比买得更快的阶段。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">NVIDIA 129 亿美元收购 Hugging Face，开源分发枢纽并入硬件帝国</h2>
+        <div class="article-source">TechCrunch · 2026-09-03 · <a href="https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">N</span>VIDIA 9月3日正式宣布以 129.3 亿美元收购开源 AI 平台 Hugging Face，这是 NVIDIA 史上最大并购。Hugging Face 托管着约 300 万模型与 100 万应用，是全球开源模型分发的关键基础设施；交易完成后将并入 NVIDIA 现有堆栈，黄仁勋称将扩展开发者与机构获取 AI 的渠道。分析师普遍认为此交易重塑了芯片厂到模型层的关系结构。</p>
+        <p class="article-commentary">算力霸主终于不只卖铲子，开始圈地。开源中立性能撑多久，是真正的悬念。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">OpenAI 公布 GPT-6 Astra 定价：每百万 token 输入 10 美元、输出 50 美元</h3>
+            <div class="article-source">Yotta Labs · 2026-09-04 · <a href="https://www.yottalabs.ai/post/gpt-6-release-date-rumors-what-is-known-2026" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI 9月4日披露 GPT-6 Astra API 定价：输入 10 美元每百万 token、输出 50 美元每百万 token、1M 上下文窗口。Astra 是 OpenAI 旗下首个在 Preparedness 框架下被划入 Critical 网络安全能力等级的模型，相关功能采用 gated access。Greg Brockman 在发布会上称欢迎来到 AGI 时代，但该说法在内部也存在争议。</p>
+            <p class="article-commentary">AGI 标签是营销，网络安全 gated 才是真壁垒。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">CNBC 定调 Model Fatigue：模型发布间隔从 37.5 天压缩至 11 天</h3>
+            <div class="article-source">CNBC · 2026-09-06 · <a href="https://www.cnbc.com/2026/09/06/meta-google-openai-anthropic-ai-model-fatigue.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">CNBC 9月6日报道，Anthropic、OpenAI、Meta、Google 在一周内接连发布新模型与升级版本，前沿模型发布中位间隔已从 2023 年的 37.5 天压缩到 2026 年的 11 天。市场开始出现 Model Fatigue 情绪——企业客户、投资者与开发者难以快速评估每一轮更新，工程师团队则因密集迭代面临倦怠。Gartner 预计 2026 年全球 AI 支出将达 2.59 万亿美元，同比增长 47%。</p>
+            <p class="article-commentary">摩尔定律变天了，但人脑还在用旧节拍，倦怠是必然。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Anthropic 估值 9650 亿美元首度反超 OpenAI，年化营收突破 300 亿美元</h2>
+        <div class="article-source">Tech Insider · 2026-09-01 · <a href="https://tech-insider.org/anthropic-claude-fable-5-1-mythos-5-1-launch-2026/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>nthropic 在发布 Claude Fable 5.1 与 Mythos 5.1 时披露，其年化营收已突破 300 亿美元，较年初的约 90 亿美元实现逾三倍跃升；二级市场估值随之来到 9650 亿美元，首度超过 OpenAI 估值。Mythos 5.1 同步将 cache-read 价格下调 75%，以更激进的定价压缩推理成本。Anthropic 与 OpenAI 的差距从追赶者切换为并列领跑者。</p>
+        <p class="article-commentary">把 cache 价格砍 75% 不是让利，是把推理经济学重新画线。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">DeepSeek 二轮 500 亿元融资于 8 月下旬签约，国家级基金深度入局</h3>
+            <div class="article-source">新浪财经 · 2026-08-05 · <a href="https://finance.sina.com.cn/stock/hkstock/hkzmt/2026-08-05/doc-inimfmyv1588085.shtml" target="_blank">阅读原文</a></div>
+            <p class="article-body">据《财经》披露，DeepSeek 重启第二轮融资，本轮计划募资 500 亿元人民币，投前估值约 5000 亿元（约 740 亿美元），8 月下旬完成签约。本轮参与方包括国家人工智能产业投资基金、腾讯、宁德时代等核心产业资本。DeepSeek 首轮 500 亿元已在 6 月交割，两轮合计逾 1000 亿元，刷新中国大模型公司累计融资纪录。</p>
+            <p class="article-commentary">国家队下场不稀奇，稀奇的是二级估值五个月翻倍还在加仓。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">MBZUAI 旗下 IFM 一次性发布六款完全开源模型 K2 Horizon，参数跨度 0.9B 至 375B</h3>
+            <div class="article-source">IFM Blog · 2026-09-03 · <a href="https://ifm.ai/blog/k2/" target="_blank">阅读原文</a></div>
+            <p class="article-body">阿布扎比 MBZUAI 的基础模型研究所 IFM 9月3日发布 K2 Horizon，包含 0.9B、3.7B、7B、32B、MoVA-36B-A4B 与 375B-A23B 共六款模型，全部采用 Apache 2.0 协议，并同时开源模型权重、训练代码、训练数据、配置文件、中间 checkpoint 与训练日志。旗舰款 375B-A23B 在 Artificial Analysis 智能指数上得分 47，被业内视为首个真正符合开源定义的旗舰级模型家族。</p>
+            <p class="article-commentary">把训练日志也开放这一步，把开源从话术拉回了工程现实。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">OpenAI、Anthropic、Google 三家同日相继宕机，故障窗口高度重叠</h3>
+            <div class="article-source">TechCrunch · 2026-09-05 · <a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank">阅读原文</a></div>
+            <p class="article-body">9月5日，OpenAI、Anthropic 与 Google 三家头部 AI 服务在相近时段内先后出现服务中断，ChatGPT、Claude 与 Gemini 均报告 API 与 Web 端可用率下滑。三家故障窗口高度重叠，引发对上游云、推理芯片或公共依赖（如身份验证、计费、CDN）出现共因故障的猜测。事件再次暴露三家寡头服务高度耦合的隐性风险。</p>
+            <p class="article-commentary">三巨头同框宕机不是巧合，是供应链同构的副作用。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">116 家公司联署公开信，警告 AI 网络攻击即将激增、防御窗口有限</h3>
+            <div class="article-source">The Hacker News · 2026-09-01 · <a href="https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">8月27日 OpenAI 牵头，与 Anthropic、Google、Microsoft、AWS 等共 116 家公司联署公开信，警告 AI 驱动的网络攻击将在未来数月显著升级，呼吁政府、关键基础设施运营商与企业尽快升级防御能力。Anthropic Claude Mythos 5.1 与 Google Gemini 3.8 Flash Cyber 等同期发布的网络安全模型在自主漏洞发现上首次超越人类研究员水平，行业普遍将其视为攻守临界点。</p>
+            <p class="article-commentary">AI 写漏洞比人快的那天，公开信只能算预警，不能算防线。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>前沿模型发布节奏已压缩到 11 天中位间隔，市场出现 Model Fatigue，企业买家评估成本陡升</li>
+            <li>NVIDIA 收购 Hugging Face 改写芯片厂与开源分发层的关系，模型层中性地位承压</li>
+            <li>Anthropic 估值与营收首度反超 OpenAI，cache 降价 75% 是推理经济学的一次主动重置</li>
+            <li>DeepSeek 两轮合计逾千亿融资，国家队与产业资本联动，中美 AI 资本结构进一步分化</li>
+            <li>MBZUAI IFM 把训练数据与日志一起开源，定义了真开源的工程门槛</li>
+            <li>116 家公司联署与 Mythos 自主找漏洞，意味着 AI 网络攻防已进入自动对自动阶段</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-09-07
+</div>
+
+</div>
+</body>
+</html>
