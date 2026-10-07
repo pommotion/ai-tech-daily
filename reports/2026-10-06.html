@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-10-06</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>137</em></span>
+        <span>Tuesday, October 6, 2026</span>
+        <span>&#20170;&#26085; <em>9</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-10-05.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天最值得盯的不是某个模型又涨了几分，而是三件事同时收口：Mistral 和 Reflection 前后脚把万亿级开源权重扔进场，白宫用一份章程把「超级智能」变成行政口号，纽约市议会逼着四家巨头在法庭上承认他们算不出灾难概率。开源在填平算力差距，监管在追赶能力差距，而两者之间的裂缝里，没有一家实验室愿意先停下来。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">白宫公布「超级智能力量」章程，AI 局长 Jay Clayton 走上前台</h2>
+        <div class="article-source">Politico · 2026-10-06 · <a href="https://www.politico.com/news/2026/10/06/white-house-super-intelligence-ai-charter-01109011" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">特</span>朗普政府成立联邦「超级智能力量」（Super Intelligence Force），由国家情报总监 Jay Clayton 领衔担任 AI 局长，统筹联邦政府应对超级智能能力的整体政策。特朗普此前签署行政令，将官方语境中的「人工智能」替换为「超级智能」一词。章程文本于 10 月 6 日公开，明确该机构将协调跨部门 AI 政策并向白宫汇报。讽刺的是，把 AI 改称 SI 直接带动了斯洛文尼亚 .si 域名的注册量异常上涨。</p>
+        <p class="article-commentary">术语替换不是文字游戏：当 AI 变成国家对手级别的词，安全审查的门槛才抬得起来。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">纽约市议会听证：四巨头拒绝为 AI 安全作保证，SpaceXAI 藐视传票</h3>
+            <div class="article-source">CNBC · 2026-10-05 · <a href="https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic、OpenAI、Google、Meta 高管 10 月 5 日在纽约市议会被宣誓作证，回应前沿模型的安全风险。Anthropic 举报人 Jacob Coxon 称按当前路径「人类失去控制的可能性大于不失去，终点可能是人类灭绝」；前 Google DeepMind 研究员 Alex Turner 警告本土失控 AI「某天可能比中国更强」。主席 Julie Menin 追问法律责任时，四家公司均拒绝量化灾难性风险概率，Google 代表 Alice Friend 转而呼吁建立全面联邦框架。唯一被传票却缺席的 SpaceXAI 被指直接违规，议会准备诉诸法院。</p>
+            <p class="article-commentary">宣誓作证却给不出概率，等于承认安全承诺目前没有数据支撑——这是听证会的真实收获。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Mistral 发布万亿参数 Mistral Large 4，开源阵营迎来欧洲主力</h3>
+            <div class="article-source">tech.eu · 2026-10-06 · <a href="https://tech.eu/2026/10/06/mistral-unveils-le-chonk-says-outperforms-any-open-weight-model-developed-in-the-us-or-europe/" target="_blank">阅读原文</a></div>
+            <p class="article-body">法国 Mistral 发布迄今最大模型 Mistral Large 4（昵称「Le Chonk」），总参数 1.05 万亿、激活 520 亿，采用细粒度 MoE 架构并配备 1.6B 视觉编码器，定位通用多模态。官方称其在编码、智能体工作流与多模态理解上表现突出，在网络安全、金融、法律等企业关键负载上位列开源模型第一，视觉定位能力甚至超过部分闭源前沿模型。模型已面向开发者开放预览，本月内全量开放并通过 Mistral API 提供。Mistral 9 月刚完成约 34 亿美元 D 轮融资，估值约 240 亿美元。</p>
+            <p class="article-commentary">欧洲要的不是最强模型，是一条不被中美断供就断电的路，Le Chonk 的政治价值高于分数。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">Reflection 发布 501B 开源模型 Beam，主打四分之一算力对齐 GLM-5.2</h2>
+        <div class="article-source">TechCrunch · 2026-10-05 · <a href="https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">由</span>前 Google DeepMind 团队创立、获英伟达投资的 Reflection AI 发布首个开源权重模型 Beam：稀疏 MoE 架构，总参数 5010 亿、单 token 激活 230 亿，面向编码、推理与智能体负载。公司称 Beam 在推理成绩上追平智谱 GLM-5.2，而推理算力消耗仅为其四分之一到三分之一；训练消耗 23.8 万亿 token，并在 10500 张 GB300 上做了四周强化学习。权重将于本月放出，目前仍在红队测试，第三方独立评测尚未出现。</p>
+        <p class="article-commentary">Beam 的真正赌注不是分数，是「同等智能更便宜」这个叙事能不能压住推理成本曲线。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Meta 联手 Sierra 推 Personal Agent Protocol，沃尔玛、Stripe、Shopify 首批入局</h3>
+            <div class="article-source">Sierra · 2026-10-06 · <a href="https://sierra.ai/blog/introducing-personal-agent-protocol" target="_blank">阅读原文</a></div>
+            <p class="article-body">Sierra 与 Meta 及 Genesys、Instinct、Rocket、Shopify、Stripe、Walmart 等产业方共同发布 Personal Agent Protocol，一套基于 OAuth 的开放标准，规定个人 AI 智能体如何向企业完成身份认证、跨渠道携带上下文并执行操作，支持通过网站、MCP/OpenAPI 接口或企业自有智能体三种路径接入。v0.1 规范将于本月内发布，支付能力与细粒度权限被列为后续扩展。该标准由 Sierra 联合创始人 Bret Taylor 领衔，直接对标 Visa 的 Trusted Agent Protocol，合作方名单高度重叠。</p>
+            <p class="article-commentary">智能体要花钱，先得拿到收银台的钥匙；这场协议之争其实是支付入口之战。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">SAP 收购 TechWolf，把员工技能图谱塞进 SuccessFactors 与 Joule</h3>
+            <div class="article-source">Reuters · 2026-10-06 · <a href="https://www.reuters.com/business/sap-acquire-workforce-data-firm-techwolf-2026-10-06/" target="_blank">阅读原文</a></div>
+            <p class="article-body">德国 SAP 宣布同意收购比利时根特的 TechWolf，交易金额未披露，预计 2026 年第四季度完成并需监管批准。TechWolf 提供 AI 工作智能平台，构建「工作上下文图谱」，将员工技能与任务及外部劳动力市场相映射。收购后其图谱将成为 SuccessFactors 人力套件的智能内核，并接入 Joule 智能体，支撑基于技能的招聘、人才规划与岗位再设计。TechWolf 将保持独立运营，由 CEO Andreas De Neve 继续掌舵并服务非 SAP 客户。</p>
+            <p class="article-commentary">HR 软件的终局不是发薪，而是回答「这个活儿该谁干」，图谱比模型更值钱。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">AI 全自动科研登 Nature：系统生成的论文已过首轮同行评审</h2>
+        <div class="article-source">Sakana AI · 2026-03-25 · <a href="https://sakana.ai/ai-scientist-nature/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">S</span>akana AI 团队在 Nature 发表《The AI Scientist: Towards End-to-End Automation of AI Research》，展示一个能在极少人工介入下产出研究论文的系统，其生成的论文已通过一场机器学习顶会 workshop 的首轮同行评审。系统在「可能性之树」上自主探索以寻找科研突破，论文同期开放代码。该成果把「AI 做科研」从概念演示推进到可被学术共同体初步审稿的阶段，同时引发研究规范归属的持续讨论。</p>
+        <p class="article-commentary">机器写出能过审的论文，学术共同体的第一反应不是兴奋，是该怎么引用一个会自己写论文的同事。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">openTPU 开源：AI 设计的 FPGA 推理加速器跑起 Qwen3</h3>
+            <div class="article-source">GitHub · 2026-10-06 · <a href="https://github.com/FeSens/openTPU" target="_blank">阅读原文</a></div>
+            <p class="article-body">GitHub 用户 FeSens 发布 openTPU，一个自述为「由 AI 开发」的端到端推理加速器项目，RTL、指令集架构、仿真器、编译器与性能分析器全部收在一个仓库里，目标是 Xilinx Kintex-7 FPGA 的 PCIe 板卡，已支持 Qwen3、LFM2.5 与 Qwen3.5 推理。项目明确是一次实验：验证 AI 智能体能否设计出运行自身推理的芯片，是此前自动架构锦标赛实验的延伸。该仓库在 Hacker News 获得 154 分与 161 条评论，目前为仅仿真的原型。</p>
+            <p class="article-commentary">让 AI 设计跑自己推理的芯片，实验价值远大于性能价值，但这条路径没人挡得住。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">OpenAI 因欧盟 AI 法在欧默认开启 ChatGPT 文本水印</h3>
+            <div class="article-source">Ars Technica · 2026-10-06 · <a href="https://arstechnica.com/ai/2026/10/openai-will-watermark-chatgpt-outputs-by-default-but-only-in-the-eu/" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI 宣布对欧盟用户默认启用 ChatGPT 文本水印，其他地区虽然提供该功能但默认关闭。公司自研方案名为 textGrain，通过在用词选择中嵌入人眼不可见、但不明显损害输出质量的模式，持有密钥者可用专用检测器识别，并已发布技术论文。驱动因素是 8 月生效的欧盟《人工智能法》，该法要求 AI 生成内容必须可被检测。OpenAI 表示将向有限数量的研究机构开放检测器，并为其他机构设置申请审批流程。</p>
+            <p class="article-commentary">水印技术可被绕过，但合规压力是真的——先用它占住监管解释权再说。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>开源权重正在填平算力鸿沟：Mistral Large 4（1.05 万亿参数）与 Reflection Beam（501B/激活 23B）同一天把欧洲与美国公司推到同一条起跑线，后者明确以「四分之一算力追平 GLM-5.2」为卖点。</li>
+            <li>监管落后于能力一个身位：白宫用「超级智能力量」把 AI 升格为国家对手级议题，纽约市议会却只逼出一句「算不出概率」，SpaceXAI 甚至直接无视传票。</li>
+            <li>监管第一次产生了强制性产品后果——欧盟 AI 法落地为 OpenAI 的默认水印，法案第一次变成了用户可见的功能开关。</li>
+            <li>智能体的下一个战场是支付与身份：Meta 联手 Sierra 的 Personal Agent Protocol 拿到沃尔玛、Stripe、Shopify 的支持，直接对标 Visa 的 Trusted Agent Protocol。</li>
+            <li>AI 造 AI 的闭环开始成形：Sakana 的全自动科研系统过审顶会 workshop，openTPU 让 AI 设计跑自身推理的芯片——研究本身的自动化已越过「演示」阶段。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>9</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-10-06
+</div>
+
+</div>
+</body>
+</html>
