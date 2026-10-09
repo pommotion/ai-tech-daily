@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-10-08</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>139</em></span>
+        <span>Thursday, October 8, 2026</span>
+        <span>&#20170;&#26085; <em>10</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-10-07.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天真正的主线不是「又发了几款模型」，而是 AI 同时向两端扩张：一端扎进操作系统和本地文件，一端塞满数据中心的债务台账。中间那段靠订阅费过日子的故事，正在变窄。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">OpenAI 全球推送 GPT-6，并上线 Intelligent UI</h2>
+        <div class="article-source">OpenAI · 2026-10-07 · <a href="https://openai.com/index/gpt-6-for-everyone" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 10 月 7 日宣布，面向每周 12 亿以上的 ChatGPT 用户全量推出新一代 GPT-6 模型，同步上线名为 Intelligent UI 的交互层：模型不再只回文字，而是按问题类型自行决定输出图形、可点击按钮、表单、图表等可交互组件。官方演示中，用户问「拆解一台七速自行车」，模型直接生成了可切换部件的交互式页面；问周日烤肉的时间安排，则把时间轴与菜谱并排呈现。OpenAI 称该能力面向免费档开放。</p>
+        <p class="article-commentary">模型厂商终于承认：答对不如答得像回事，纯文本输出正在变成体验瓶颈。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">DeepSeek 新一轮融资或超 800 亿元，创中国 AI 单笔纪录</h3>
+            <div class="article-source">每日经济新闻 · 2026-10-08 · <a href="https://news.qq.com/rain/a/20261008A02GOI00" target="_blank">阅读原文</a></div>
+            <p class="article-body">据媒体 10 月 6 日报道，深度求索（DeepSeek）已接近锁定新一轮至少 800 亿元融资，按已签署条款清单规模可逼近 1000 亿元，远超最初约 500 亿元的募资目标，融资程序接近收官。宁德时代与腾讯控股或成为出资额最高的两家投资方。同期 Kimi（月之暗面）、阶跃星辰融资规模同样可观。注：该消息为媒体报道，DeepSeek 官方尚未确认。</p>
+            <p class="article-commentary">宁德时代进场的信号比金额更值钱：算力、电池、模型开始被当成同一张资产负债表。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Anthropic 发布 Claude Haiku 5.5，主打低价高并发</h3>
+            <div class="article-source">Anthropic Release Notes · 2026-10-07 · <a href="https://support.claude.com/en/articles/12138966-release-notes" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic 于 10 月 7 日上线 Claude Haiku 5.5，官方称其为「迄今发布过最便宜、最快、也最具能力的小模型」，专为高频、成本敏感型任务设计，已同步上架 Claude Platform、AWS、Google Cloud 与 Microsoft Azure。多家报道称其账面调用价格较前代下调约九成，瞄准实时客服、文本摘要、数据分类等场景。</p>
+            <p class="article-commentary">模型分级的逻辑变了：旗舰负责难的，便宜档负责多的，成本结构比跑分更决定采购。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">微软给 Copilot 开本地文件权限，定义「混合智能」</h2>
+        <div class="article-source">The Verge · 2026-10-07 · <a href="https://www.theverge.com/tech/1007113/microsoft-windows-copilot-ai-control-search-hybrid-intelligence" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">微</span>软在 Windows 与 Surface 发布会上演示 Copilot 系统级升级：新版可读取 PC 本地文件，并能在操作系统层面跨应用执行操作。微软将此方向命名为 Hybrid Intelligence（混合智能），主张应用与工具混合调用本地与云端模型完成任务。现场演示中 Copilot 高管 Jacob Andreou 让 Autopilot 跨多个文件夹查找会计所需文档、重命名、打包成压缩文件并起草带附件的邮件。相关能力预计在未来数月内陆续开放。</p>
+        <p class="article-commentary">助手终于从「回答你」变成「替你动手」，权限边界和撤销机制没人愿意细说。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">算力初创 Lambda 拟募资 40 亿美元，冲刺 2027 年 IPO</h3>
+            <div class="article-source">TechCrunch · 2026-10-06 · <a href="https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/" target="_blank">阅读原文</a></div>
+            <p class="article-body">据《华尔街日报》，英伟达参投的云服务商 Lambda 正募集最多 40 亿美元，投前估值 145 亿美元，由 Coatue 与 Blackstone 领投，可能是其 2027 年 IPO 前最后一轮私募。给投资人的信件显示，Lambda 的订单积压从 6 月的 150 亿美元涨到 9 月的 500 亿美元，但其中约 350 亿来自 8 月底与 Anthropic 签下的单一大单。公司上周另刚获得 10 亿美元高级担保固定利率融资。</p>
+            <p class="article-commentary">订单簿翻了三倍，来源却是一个客户——这不是需求爆发，是信用杠杆。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">快手可灵 AI 计划最早明年赴港上市，至少融资 10 亿美元</h3>
+            <div class="article-source">每日经济新闻 · 2026-10-08 · <a href="https://news.qq.com/rain/a/20261008A02GOI00" target="_blank">阅读原文</a></div>
+            <p class="article-body">据 21 世纪经济报道 10 月 6 日消息，快手旗下视频生成大模型可灵 AI 计划最早于 2027 年赴港上市，至少融资 10 亿美元。目前可灵估值约 1200 亿元，已超过母公司快手自身市值；而 2026 年上半年其收入约 15 亿元，海外市场贡献约 70% 收入。注：为媒体报道，公司未正式公告。</p>
+            <p class="article-commentary">估值跑在收入前面七倍，这不是问题，前提是视频付费习惯真能在明年之前长出来。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">IROS 2026 最佳论文颁给机器人长期记忆，中国论文数量腰斩</h2>
+        <div class="article-source">RobotToday · 2026-10 · <a href="https://robottoday.com/article/iros-2026-by-the-numbers" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">I</span>ROS 2026 主会 9 月 30 日至 10 月 1 日在美国匹兹堡结束，本届 Best Paper Award 授予韩国 DGIST 团队的机器人长期记忆系统 LT-Mem；最佳学生论文聚焦无人机编队飞行中的气流干扰。RobotToday 对两届完整论文索引的统计显示：投稿 4348 篇（历史最高）但仅录用 1585 篇，录用率从 46% 降至 36.5%，为至少九年最低；含中国大陆作者的论文从 1469 篇跌至 640 篇，美国从 559 篇升至 727 篇并居首；「视觉-语言-动作」相关论文标题从 4 篇增至 65 篇。</p>
+        <p class="article-commentary">顶会正在收紧，同时题目集体涌向 VLA——筛子变紧，但大家挤向同一个答案。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Google 开源 EmbeddingGemma 2，端侧多模态检索压到 600MB 以内</h3>
+            <div class="article-source">Google DeepMind · <a href="https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Google DeepMind 推出并开源 EmbeddingGemma 2，一款 7.4 亿参数的轻量多模态嵌入模型，基于 Gemma 4 解码器架构，将文本、代码、图像、音频与视频帧原生映射到统一的 768 维向量空间。内存占用不足 600MB，可直接在手机、笔记本等终端运行，无需将本地数据上传云端，支持 8K 上下文与 100 余种语言，采用模块化设计以便按需压缩索引。适用于本地相册语义搜图、长视频片段定位、离线文件与本地代码库检索。</p>
+            <p class="article-commentary">把嵌入模型塞进 600MB，比再训一个更大的模型更能让搜索这件事离开云。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Nous Research 估值 15 亿美元，推出面向企业的 Hermes Agent</h3>
+            <div class="article-source">TechCrunch · 2026-10-07 · <a href="https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/" target="_blank">阅读原文</a></div>
+            <p class="article-body">开源 Hermes Agent 的开发方 Nous Research 完成 9000 万美元 B 轮融资，估值 15 亿美元，由 Robot Ventures 领投，英伟达、Union Square Ventures、Menlo Ventures、三星等跟投，累计融资达 1.58 亿美元。公司称 Hermes Agent 已被克隆超过 2400 万次，约占全球 AI token 用量的 2.5%。新资金将主推「Hermes for Businesses」，让企业在数据留在本地的前提下部署定制化智能体。公司 9 月中旬年化收入约 3600 万美元，预计年底前突破 1 亿美元。</p>
+            <p class="article-commentary">开源模型靠免费分发抢份额、靠企业私有部署收钱，这条路第一次被账目验证。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">决策模型成新赛道：Musubi 开源 PolicyLM-1.7B 做实时内容审核</h2>
+        <div class="article-source">TechCrunch · 2026-10-06 · <a href="https://techcrunch.com/2026/10/06/how-ai-decision-models-could-change-content-moderation/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">M</span>usubi 于 10 月 6 日发布并开放权重 PolicyLM-1.7B，一款专为实时内容审核设计的轻量决策模型：把用普通英文写成的平台政策直接套用到消息上，单次判定控制在 50 毫秒以内，成本与速度接近社交平台现有的分类器系统，但无需为每条新政策重新训练，政策制定者可以自行反复修改规则。决策模型（不输出文本、只输出结论概率）正成为新热点，9 月 TypeSafe AI 发布 Jev 后，OpenAI 与 Amazon 相继推出同类模型。</p>
+        <p class="article-commentary">把审核从训练任务变成配置任务——规则每改一次就重训一次的老办法终于过时了。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>GPT-6 的竞争焦点从「答得对」转向「答得像回事」：可交互 UI 正在成为对话产品的默认形态，前端需要重新适配动态组件注入。</li>
+            <li>AI 助手正在越过沙箱边界。微软 Copilot 拿到本地文件与跨应用操作权限后，沙箱设计、权限最小化与操作回滚这三件事会从加分项变成必答题。</li>
+            <li>中国 AI 融资的出资方结构变了：宁德时代、腾讯这类产业资本坐进 DeepSeek 的股东名单，模型公司开始被当作重资产基建而非软件公司定价。</li>
+            <li>算力生意的杠杆在变高。Lambda 500 亿美元订单中约 350 亿来自 Anthropic 单一大单，neocloud 的估值越来越取决于单一大客户能否持续付款。</li>
+            <li>端侧与专用小模型同时起量：740M 参数的 EmbeddingGemma 2 和 Haiku 5.5 都指向同一个判断——多数场景不需要更大的模型，需要更便宜的。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>10</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-10-08
+</div>
+
+</div>
+</body>
+</html>
