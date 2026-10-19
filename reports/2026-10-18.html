@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-10-18</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>149</em></span>
+        <span>Sunday, October 18, 2026</span>
+        <span>&#20170;&#26085; <em>9</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-10-17.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天的主线不是谁又发了更强的模型，而是算力开始从数据中心流向笔记本、以及智能体开始替人做商业决策——模型能力已进入工程落地和成本清算阶段，牌桌上比的不再是榜单名次。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">DeepSeek 发布 V4.1-Flash-1017 并开放搜索工具链，单任务成本降到 0.2 美元</h2>
+        <div class="article-source">DeepSeek 官方 · <a href="https://www.deepseek.com/news/deepseek-v4-1-flash/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">D</span>eepSeek 于 10 月 17 日上线 V4.1-Flash-1017 检查点，网页端、App 与 API 三处同步切换，MIT 协议权重同步开放。官方称 11 项基准中有 9 项超越 9 月版本，DeepSWE v1.1 达 77.0%，超过 Claude Opus 5。单任务成本从约 0.5 美元降至不足 0.2 美元。同日 Search 与 Fetch 接口向所有开发者开放，定价每千次 0.75 美元。</p>
+        <p class="article-commentary">开源权重不再只是态度，是让你不被下一个 checkpoint 悄悄换掉的保险。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">四个 Gemini 4 Argon 智能体零人工干预通关《我的世界》，耗时 27 小时</h3>
+            <div class="article-source">Google DeepMind 预印本 · <a href="https://aideepthink.cn/news/20261018-gemini-4-argon-minecraft-multi-agent-cache-hit" target="_blank">阅读原文</a></div>
+            <p class="article-body">DeepMind 在 arXiv 提交论文，记录四个 Gemini 4 Argon 编码智能体在随机种子生成的生存世界中，仅靠游戏内聊天和共享记忆自协商分工，用 Mineflayer 编写并调试 2783 段程序、死亡 605 次，27 小时 14 分击败末影龙。全程无预探地图、无人工干预、无定制外挂。13.5 亿输入 token 中 91% 命中缓存，按 API 标价估算成本 520 至 1040 美元。这是一次单次运行，且属纯数字环境而非具身操作。</p>
+            <p class="article-commentary">真正被证明的是长程任务不会中途崩溃，不是智能体已经可靠。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">NVIDIA RTX Spark 笔记本上市，128GB 统一内存的本地 AI 算力下放到 2399 美元档</h3>
+            <div class="article-source">NVIDIA 官方 · <a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-windows-laptops-celebration/" target="_blank">阅读原文</a></div>
+            <p class="article-body">NVIDIA 宣布 RTX Spark 笔记本正式开卖，搭载 Blackwell RTX GPU 与 Grace CPU，最高 1 PFLOPS AI 算力和 128GB 统一内存，起售价 2399 美元，华硕、戴尔、惠普、联想、微星等品牌在售。黄仁勋在柏林灯节活动的发布庆典上意外现身并送出签名机型，全球共六场零售发布活动，北京、上海、首尔、台北、旧金山同步举行。</p>
+            <p class="article-commentary">本地模型能塞进笔记本，第一批被挤掉的是云端小模型 API 的生意。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Replit 把默认模型供应商换成 OpenAI，Anthropic 遭遇大客户流失</h2>
+        <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">R</span>eplit CEO Amjad Masad 在 TechCrunch Disrupt 舞台上表示，OpenAI 将成为 Replit Agent 的默认模型供应商，理由是性能、成本和合作关系三方面。他称 ChatGPT 现在表现更好，公司内部和公开基准显示 Sol 和 Astra 在从零构建 vibe-coded 应用上更强。Masad 补充称用户仍可选择 Claude，Replit 保持模型中立。但熟悉合作的一名前员工否认合作关系已经终止。Masad 同时透露，企业客户已从去年占收入的 2% 升至今年约 15%，B2B 占比超 50%。</p>
+        <p class="article-commentary">当应用层开始按每美元任务量换模型，模型厂商的护城河就薄了。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">欧盟 AI Act 高风险条款延期正式落槌，透明度义务已先行生效</h3>
+            <div class="article-source">Cloud Security Alliance 研究 · <a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-eu-ai-act-omnibus-vii-deadline-delay-20260/" target="_blank">阅读原文</a></div>
+            <p class="article-body">欧盟理事会于 2026 年 6 月 29 日最终批准 Digital Omnibus 简化方案，把 AI Act 附件三独立高风险系统的合规期限从 2026 年 8 月 2 日推迟至 2027 年 12 月 2 日，附件一嵌入式系统推迟至 2028 年 8 月 2 日。但第 50 条透明度义务已于 2026 年 8 月 2 日如期生效，生成式内容标识与交互式 AI 披露要求开始落地。</p>
+            <p class="article-commentary">延期的是罚则，来的是标注义务——合规成本其实已经开始了。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Meta 开源 816B 参数 Muse Spark Open，两台 Mac Studio 可本地跑</h3>
+            <div class="article-source">AI 工具宝箱 · <a href="https://www.aitoollab.cn/news/models/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Meta 发布开源权重模型 Muse Spark Open，总参数 816B、激活参数 42B，支持 100 万 token 上下文，官方称可在两台 Mac Studio 上本地运行。这是 Meta 五个月内发布的第四个版本系列。同期 Meta 的 Muse Wonder 登 Agent Arena 第 12 名，单任务中位成本 1.35 美元，净提升 6.42%。</p>
+            <p class="article-commentary">参数堆到 816B 还要靠 42B 激活才跑得动，说明稀疏化已经是入场券不是优势。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Adobe 与 NVIDIA 扩大合作，面向智能体生成工作流优化</h2>
+        <div class="article-source">NVIDIA 官方新闻室 · <a href="https://nvidianews.nvidia.com/news" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>dobe 与 NVIDIA 于 10 月 15 日宣布扩展合作关系，针对 Adobe 旗舰创意产品做优化，目标直指智能体驱动的创作流程。这意味着生成式图像、视频工具正在从用户主动调用转向由智能体按需调度，创意软件的交互范式面临重写。</p>
+        <p class="article-commentary">创意工具的入口之争，正在从「用户打开哪个 App」变成「谁拿到调度权」。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">NVIDIA 开源 Nemotron 3.5 Super VL，120B 参数主打常驻智能体</h3>
+            <div class="article-source">NVIDIA 官方新闻室 · <a href="https://nvidianews.nvidia.com/news" target="_blank">阅读原文</a></div>
+            <p class="article-body">NVIDIA 发布 Nemotron 3.5 Super VL，这是一款 1200 亿参数的开源模型，定位是全天候常驻（always-on）智能体，官方称在任务完成速度和专用场景准确率上表现最佳。同批发布的还有 Nemotron 3.5 Bolt 74B-A9B。第三方评测数据显示 Super VL 推理速度约 402 tokens/s，定价每百万 token 0.313 美元，在开源阵营中属于速度与成本兼顾的位置。</p>
+            <p class="article-commentary">开源阵营开始卷推理速度，延迟不再是开源模型的原罪。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Grok Voice 3.0 登顶语音榜首，xAI 把语音模型做成了常驻接口</h3>
+            <div class="article-source">Artificial Analysis 评测 · <a href="https://www.aitoollab.cn/news/models/" target="_blank">阅读原文</a></div>
+            <p class="article-body">xAI 发布 Grok Voice 3.0，定价每分钟 0.08 美元。在 Artificial Analysis 语音到语音指数中取得 86.9 分，首次参评即登顶。同期 Cartesia 也把语音栈嵌入智能体执行循环，Sonic-3.6 合成延迟 90 毫秒、Ink-2 识别 100 毫秒，均为同类最快，焦点从音质指标转向端到端循环响应速度。</p>
+            <p class="article-commentary">语音比价的分水岭不是保真度，是你打断它要等多久。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>成本成为主战场：DeepSeek 把单任务成本砍到 0.2 美元以内，开源模型首次在 agentic coding 基准上压过闭源旗舰。</li>
+            <li>智能体从演示走向工程：Minecraft 通关证明了 27 小时长程任务不崩溃，但 91% 缓存命中率说明成本仍靠工程手段而非模型本身压下来。</li>
+            <li>算力下沉到终端：128GB 统一内存的 Windows 笔记本开卖，本地推理的边界从「能跑」变成「够快」，云端小模型 API 承压最大。</li>
+            <li>应用层用脚投票：Replit 把默认模型换给 OpenAI，说明模型厂商在应用平台的地位取决于每美元能完成多少任务。</li>
+            <li>监管进入实操期：欧盟延期的是高风险罚则，透明度标注义务已生效，企业合规的证据链现在就得开始攒。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>9</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-10-18
+</div>
+
+</div>
+</body>
+</html>
