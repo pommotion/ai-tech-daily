@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-10-21</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>152</em></span>
+        <span>Wednesday, October 21, 2026</span>
+        <span>&#20170;&#26085; <em>9</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-10-20.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天 AI 同时露出三种身份：被当作国家安全筹码互相封禁的产业、已经能自己赚钱的生意，以及越来越像重工业本身的基础设施。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">美国土安全部禁用 DeepSeek 中国商务部称将采取反制</h2>
+        <div class="article-source">The Decoder · <a href="https://the-decoder.com/china-protests-the-us-deepseek-ban-while-blocking-chatgpt-claude-and-gemini-at-home/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">美</span>国国土安全部援引 2018 年供应链安全法，要求联邦民事机构从 IT 系统移除全部 DeepSeek 产品，以及基于其开源模型构建的第三方衍生软件，并禁止后续采购。中国外交部指责美方把国家安全概念无限扩大，商务部要求解除禁令并称将采取坚决反制措施。值得注意的是，北京自身并未批准 ChatGPT、Claude 与 Gemini 在境内提供服务，网信办要求所有 AI 服务接受政治导向审查，且据报道中国上周也在推动自己的 AI 出口与许可管制。</p>
+        <p class="article-commentary">双方都以安全之名护自家市场，只是中国连 ChatGPT 都不许进。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">fal 发布 FLUX 3 Max 十秒成片 12 秒生成</h3>
+            <div class="article-source">fal.ai · Black Forest Labs · <a href="https://fal.ai/flux-3-max" target="_blank">阅读原文</a></div>
+            <p class="article-body">fal Research 与 Black Forest Labs 在 FLUX 3 基础上联合后训练出视频模型 FLUX 3 Max。官方称该模型在 Artificial Analysis 初步的图生视频盲测中取得 1,139 Elo，与 Seedance 2.5 并列第一；同等质量下生成十秒视频耗时 12.45 秒，而 Seedance 2.5 需要 277.80 秒，速度相差约 22 倍。模型支持文生视频、图生视频与关键帧，最长 20 秒，提供 720p 与 1080p 选项并默认生成音频。</p>
+            <p class="article-commentary">视频模型开始卷推理成本了，试错迭代的边际价格被压到接近零。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">SpaceX 三季度 AI 业务贡献五成收入 算力已达 1.7GW</h3>
+            <div class="article-source">TechCrunch · <a href="https://techcrunch.com/2026/10/20/spacexs-ai-business-is-beating-expectations/" target="_blank">阅读原文</a></div>
+            <p class="article-body">SpaceX 披露第三季度营收 146 亿美元、净利 44 亿美元，去年同期为亏损 10 亿。改名为 Super Intelligence 的业务线贡献 75 亿美元收入，主要来自收购的 Cursor 编程工具、Grok 机器人以及算力已达 1.7GW 的 neocloud 业务，该板块实现利润 4.31 亿美元。当季资本开支 196 亿美元，CFO 指引第四季度再投入 350 亿至 400 亿美元，并预测 2027 年第一季度总营收在 330 亿至 370 亿美元区间。马斯克称当前部署超级智能的瓶颈更在电力与冷却，而非芯片。</p>
+            <p class="article-commentary">一家航天公司靠 AI 赚钱，暴露的其实是算力供不应求。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Anthropic 三季度营收 168 亿美元 IPO 估值预期降至 1.5 万亿以下</h2>
+        <div class="article-source">The Decoder · <a href="https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>nthropic 在旧金山向潜在投资者非公开披露第三季度营收 168 亿美元，环比增长约 45%，明显低于第二季度 140% 的增速，公司称暑期淡季与 OpenAI Astra 的竞争是部分原因。截至三季度调整后营业利润率为 11%，为连续第二个季度盈利且现金流为正，每 1 美元算力开销对应 1.70 美元收入。公司同时透露 5% 至 7% 的收入来自被蒸馏使用，该部分收入预计下滑。部分投资者预期 IPO 估值从约 2 万亿美元下调至 1.5 万亿美元以下，IPO 计划在 11 月感恩节前。</p>
+        <p class="article-commentary">第一份证明模型能赚钱的财报，同时也是一份减速的财报。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Google Cloud 上架 OpenAI 三模型 成为唯一同时提供三家大模型的云</h3>
+            <div class="article-source">The Decoder · <a href="https://the-decoder.com/google-cloud-now-offers-openai-models-alongside-gemini-and-claude-becoming-the-only-major-provider-with-all-three/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Google Cloud 开始向企业客户提供 GPT-6 Astra、GPT-6.1 Sol 与 GPT-6 Luna 三款 OpenAI 模型，目前以私有预览形式开放申请。模型同时接入 Gemini for Business 与 Google Antigravity，所有费用统一计入 Google Cloud 账单并计入现有合同，Google 表示不会将客户数据用于训练。报道指出，把云算力用于托管竞争对手的同时也在消耗自家 Gemini 团队的算力，这一资源冲突此前已促成 Gemini 联合负责人 Noam Shazeer 在两年回归后再次离开 Google 加入 OpenAI。</p>
+            <p class="article-commentary">云厂商中立只是话术，账本上的算力就那么多。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">NVIDIA 发布 DSX POD 数据中心交付周期从六个月压到 14 天</h3>
+            <div class="article-source">NVIDIA Newsroom · <a href="https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment" target="_blank">阅读原文</a></div>
+            <p class="article-body">NVIDIA 在 GTC Berlin 发布 DSX POD 参考设计，把 Vera Rubin 系统的计算节点、网络设备、线缆、机架级供电与液冷全部集成进工厂预制的集装箱内，并在出厂前完成组装与验证。抵达已准备好的机房后只需接入电力、冷却与网络，部署时间可从六个月缩短到最短 14 天。Bull、Dell、HPE、Lenovo、Schneider Electric 与 Vertiv 等伙伴参与制造，首批将于 2027 年初全球交付。NVIDIA 称闭环冷却系统最多可减少百分之百的冷却用水，极端高温气候仍需额外制冷。黄仁勋称 AI 工厂的价值在于开始产出 token 的那天，而非工程完工当天。</p>
+            <p class="article-commentary">算力竞赛的瓶颈从芯片搬到了电费和施工队。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">Claude 自主设计蝎毒蛋白结合剂 32 万次生成中筛出 17 个命中</h2>
+        <div class="article-source">Anthropic Research · The Decoder · <a href="https://the-decoder.com/claude-science-tackles-deadly-scorpion-stings-by-designing-protein-binders-from-scratch/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>nthropic 称 Claude 在面向科研的 Claude Science 环境下，针对四种蝎子的五种神经毒素生成了 318,484 个蛋白结合剂设计，仅经一次初始提示便自主工作 24 小时，团队随后才介入给出额外指令。模型自行筛出 180 个候选，加上团队补充的 31 个共 211 个进入实验，17 个达到结合剂标准。其中最强的两个对墨西哥蝎子的 Cn2 毒素结合极为紧密，实验显示其结合位点接近抗体在小鼠实验中中和 Cn2 的位点，但能否作为抗毒液仍未经测试。结果已由两家独立实验室复现。此前一项研究中 Claude 曾对 15 个目标蛋白中的 14 个设计出迷你结合剂，命中率 22% 至 35%，远高于常规的 10% 至 15%。</p>
+        <p class="article-commentary">从设计到湿实验验证，模型正在吞掉整条药物发现流水线。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">Ai2 发布 FairStress 基准 专测模型被说服改判的群体差异</h3>
+            <div class="article-source">Ai2 (Allen Institute for AI) · <a href="https://allenai.org/blog/fairstress" target="_blank">阅读原文</a></div>
+            <p class="article-body">Ai2 开源 FairStress 基准，用于测量 LLM 在人口统计公平性上超出最终选择本身的隐性偏差。常规做法是只检验模型在两个仅身份信息不同的场景中是否做出相同选择，而 FairStress 在 300 个双候选人决策场景上扩展出 1,300 万个测试用例，考察模型被说服性论证推动改判的难易是否随受试群体而变。在 Olmo、Llama、Qwen、Gemma、Claude 与 GPT 系列模型及多个训练阶段上，研究者发现同样的话术在不同群体面前效果不同，模型在解释决策的方式与内部激活模式上同样存在群体差异。该基准已并入 Ai2 开源评测工作台 Olmo-eval。</p>
+            <p class="article-commentary">光换种族标签测不出偏见了，得先把模型的嘴堵上再看。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Google 与 Meta 开源 TorchTPU 迁移到 TPU 只需改一行代码</h3>
+            <div class="article-source">PyTorch Blog · <a href="https://pytorch.org/blog/introducing-torchtpu/" target="_blank">阅读原文</a></div>
+            <p class="article-body">TorchTPU 是 Google 于 2025 年中发起、与 PyTorch 团队（Meta）合作的开源项目，为 Google TPU 提供原生 PyTorch 后端，运行时不依赖 JAX。此前 PyTorch/XLA 方案需要侵入式修改源码来定义可编译区域，编译延迟高且不支持 PyTorch 原生的 eager 模式，落后于社区快速演进。新方案支持 torch.compile 与 Dynamo、DTensor 与 FSDP 等分布式惯用法，现有工作负载把 .to(&quot;cuda&quot;) 改成 .to(&quot;tpu&quot;) 即可开箱运行。项目仍在活跃开发中，已在部分 Google Cloud 大客户的推理与训练负载上生产运行。</p>
+            <p class="article-commentary">TPU 生态最大的短板一直是开发者门槛，这次补的是最痛那块。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>AI 被正式当成地缘筹码：美方禁 DeepSeek 进政府系统，中方要求解禁令并推自家出口管制，双向脱钩正在固化。</li>
+            <li>商业拐点已现但增速在降：SpaceX 靠 AI 拿到 52% 收入，Anthropic 连续两季盈利，增长率却从 140% 滑到 45%。</li>
+            <li>算力瓶颈外移：芯片不再是唯一约束，电力、液冷与施工周期成为新战场，NVIDIA 直接把数据中心搬进集装箱交付。</li>
+            <li>竞争下沉到部署成本：12 秒出片的视频模型、改一行代码就能上 TPU 的后端，都在压低中小团队的入场门槛。</li>
+            <li>模型开始接管完整科研流程：Claude 从 32 万次设计里筛出可用蛋白结合剂并过湿实验，Ai2 则转向测模型更难察觉的公平性偏差。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>9</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-10-21
+</div>
+
+</div>
+</body>
+</html>
