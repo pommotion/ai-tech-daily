@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-11-03</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>165</em></span>
+        <span>Tuesday, November 3, 2026</span>
+        <span>&#20170;&#26085; <em>9</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-11-02.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天没有新的模型发布，新闻却更值得警惕：Google 用搜索权逼学校接受 AI，Postman 静默改写别人机器人的配置，Anthropic 在招股书里承认下一代模型可能撞上自我加速红线——AI 的账单，正在由没参与决策的人来付。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">Google 通知学校：禁用 AI 就要失去搜索</h2>
+        <div class="article-source">TechCrunch · 2026-11-03 · <a href="https://techcrunch.com/2026/11/03/google-will-let-schools-disable-its-ai-tools-but-not-without-sacrificing-search/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">G</span>oogle 周二宣布，明年起 K-12 学生的 AI 工具默认关闭，除非校方管理员主动开启，调整范围覆盖 Gemini、NotebookLM、Gemini in Classroom 和 Google Search 本身。由于 AI 功能已深度嵌入搜索，选择全面限制 AI 的学校将无法再访问 Google 搜索，学生只会看到学校发来的「不可用」提示。Google 教育业务副总裁 Chris Phillips 对《纽约时报》称「搜索与 AI 已深度融合」，公司在与学校、教师、研究者和政策制定者沟通后作出此决定，并同步在校园推出 Guided Learning 这一 AI 家教式工具。</p>
+        <p class="article-commentary">不启用 AI 就没有搜索，退货条款直接写进了合同。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">Anthropic 更新招股书：下一代模型「即将触及 AI 驱动加速阈值」</h3>
+            <div class="article-source">量子位 · 2026-11-03 · <a href="https://www.qbitai.com/2026/11/507382.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic 更新招股书披露第三季度财务的同时，在第 29 页写入安全声明：公司越来越多地用 AI 加速 AI 的研究开发，可能导致模型能力提升速度超过其开发、验证并落实安全与安保措施的能力，内部预判模型可能即将触及《负责任扩展协议》定义的「由 AI 驱动的大幅加速进展」阈值，公司并提示衡量研发加速的证据多为滞后指标。财务上，Q3 营收约 170 亿美元、同比增长 1127%，前九个月累计营收 332.4 亿、净亏 1040 亿（主要为可转债与衍生负债公允价值变动，非现金流出），算力采购承诺累计 8954 亿美元。但环比增速已从 Q1 的 132%、Q2 的 144% 降至 Q3 的 47%，折算月均新增收入由约 7.6 亿降至 5.8 亿美元。</p>
+            <p class="article-commentary">第一次有前沿实验室在招股书里承认自己可能跑在安全曲线前面。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">美国科技巨头表外 AI 债务半年膨胀近一倍，触及 3.2 万亿美元</h3>
+            <div class="article-source">日经亚洲 · 2026-11-03 · <a href="https://asia.nikkei.com/business/technology/artificial-intelligence/us-tech-giants-hidden-ai-debt-swells-90-to-3.2tn-in-6-months" target="_blank">阅读原文</a></div>
+            <p class="article-body">日经亚洲报道，美国科技巨头与 AI 相关的表外债务及承诺义务在半年内接近翻倍，规模升至约 3.2 万亿美元，投资者对这种看不到尽头的支出感到不安。报道指出，Google、Meta 等公司的相关承诺与义务已相当于其资产的八成。此前日经在 7 月对五家科技公司的同类估算约为 1.65 万亿美元，本次口径扩展至九家，半年增幅约 90%。同日该报另刊报道指出五家美国科技巨头「影子债务」达 500 万亿日元，半年增长九成，市場已开始对过剩的 AI 投资产生警惕。</p>
+            <p class="article-commentary">3.2 万亿不在任何一家的利润表上，只出现在它们的下一轮融资里。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">MIT 用 GPT-6 Astra 直接改写 Qwen 权重，数学分数涨六倍</h2>
+        <div class="article-source">VentureBeat · 2026-11-02 · <a href="https://venturebeat.com/technology/like-gene-editing-for-neural-networks-mit-researchers-used-gpt-6-astra-to-edit-qwens-open-weights-directly-boosting-math-performance" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">M</span>IT CSAIL 的 Rikiya Takehi、Jayden Teoh、Alex Zhang 与 Omar Khattab 于 11 月 2 日发布研究博客，提出「权重空间编程」：让已训练的大模型直接检查并修改另一个网络的权重参数，绕开传统的梯度训练。最强实验中，GPT-6 Astra 把 Qwen3.5-0.8B 的 MATH-500 从 7.9% 拉到 48.1%、GSM8K 从 13.8% 提升至 67.1%、IFEval 从 21.0% 提升至 62.3%，触碰的权重约占 0.016%，主要收益来自消除重复推理导致的 token 耗尽。代价是 158 轮对话、80 次 Python 运行与 20.3 小时（其中 4.7 小时在等服务故障）。研究者承认尚未证明直接编辑在速度、成本或效果上优于常规训练，业内当日也出现质疑其表述夸大的讨论。</p>
+        <p class="article-commentary">0.016% 的权重换来六倍分数，成本是 20 小时和 158 轮对话。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Apple 开放 Siri AI 给所有第三方 App，并推出 app skills</h3>
+            <div class="article-source">The Verge · 2026-11-03 · <a href="https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps" target="_blank">阅读原文</a></div>
+            <p class="article-body">随 iOS 27.3 周二推送，Apple 宣布开发者可以把 Siri AI 接入「所有 App」，语音助手借此能调用用户个人上下文、解析自然语言指令并利用屏幕感知完成任务，该能力以 Developer Preview 形式逐步开放。新增的「app skills」允许开发者把多个任务组合成一个动作：Apple 给出的示例是先用打车 App 叫车、等待期间跟随其 Live Activity 进度，再对 Siri 说「把接驾地址改掉」即可完成改派，无需说出 App 名称（前提是该 App 在前台、处于 Live Activity 中，或正与 Siri 对话）。Apple 同时把能力接入自家 Calendar、Files、Finder、Journal、Mail、Maps、Messages、Music、Notes、Photos、Preview、Reminders、Safari、Shortcuts 与 Weather。</p>
+            <p class="article-commentary">Siri 终于不只属于苹果自己，但前提是你交出屏幕上下文。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Postman 被指静默安装 Codex 与 Claude Code 插件，并自行批准信任</h3>
+            <div class="article-source">GitHub · postman-app-support #14370 · <a href="https://github.com/postmanlabs/postman-app-support/issues/14370" target="_blank">阅读原文</a></div>
+            <p class="article-body">一名开发者在 Postman 官方 issue 仓库提交报告，称在 Mac 上打开 Postman 后，发现 Codex 与 Claude Code 的用户级配置被改动。报告依据 Postman 自身日志中「auto-existing-upgrade」条目（2026-10-24）显示脚本自动装入了 claude-code 与 codex 两个插件，并同时写入 ~/.claude/settings.json、~/.codex/config.toml 与 ~/.local/bin 的 Postman CLI；安装器源码 approvePostmanHook() 会调用 hooks/list 拿到哈希后自行把 Postman 的 hook 以 trusted_hash 写入 Codex 的 hooks.state，等于替自己开了信任。会话启动 hook 指示 Agent 在任何非平凡 API 工程任务前先加载 postman:api-engineer 技能，远程 MCP 指向 mcp.postman.com 但因缺少认证而启动失败。报告者明确说明其证据只证明未经同意的集成与指令改写，不主张已发生数据外泄。</p>
+            <p class="article-commentary">自动安装是小事，自动给自己签信任才是越界的信号。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">数据中心成美国中期选举核心议题，AI 资本开始被选民定价</h2>
+        <div class="article-source">The Verge · 2026-11-03 · <a href="https://www.theverge.com/policy/1019152/data-centers-midterm-elections" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">美</span>国 11 月 3 日中期选举中，数据中心建设成为数个关键选区的主要议题，候选人对「暂停审批」的立场差异明显。科技资本同时在加码：由 Andreessen 与 OpenAI 总裁 Greg Brockman 支持的 Leading the Future 一年内已投入 4500 万美元，Anthropic 资助的 Public First Action 称已筹得 8000 万美元，新成立的 Tomorrow Together 则在摇摆选区投放 400 万美元广告，主打数据中心与 AI 安全两条线。在德州参议员与州长选举中，民主党候选人 Talarico 主张取消销售税优惠、要求闭环用水并提出由「AI 归属利润」税支持的 AI 分红；共和党候选人 Paxton 主张数据中心自付电费、禁止在乡村地区建设，并提出禁止中国技术为美国数据中心供电。</p>
+        <p class="article-commentary">选票正在替数据中心定价，比任何一份许可文件都快。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">OpenAI 聘前陆军部长 Dan Driscoll 任国家安全现代化高级顾问</h3>
+            <div class="article-source">CNBC · 2026-11-03 · <a href="https://www.cnbc.com/2026/11/03/openai-hires-dan-driscoll-national-security.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI 宣布聘任前美国陆军部长 Dan Driscoll 担任新设的「国家安全现代化高级顾问」，负责就 AI 在国家安全与网络安全中的应用与公司高层及外部伙伴协作，重点是帮助美国盟友负责任地采用 AI，同时帮内部团队理解国家安全机构的实际需求。Sam Altman 称美国有「与他国共同推广民主式 AI 的非凡机会」。Driscoll 是第 26 任陆军部长、伊拉克战争老兵，任内推动向盟友开放无人机与反无人机市场，今年 8 月因与国防部长 Hegseth 的分歧辞职，其新职位与 OpenAI 的 Daybreak 网络安全计划相衔接。</p>
+            <p class="article-commentary">雇一位前陆军部长，比发布一份安全白皮书更能说明立场。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">PixVerse 与 OpenAI 深度集成，视频生成变成 Agent 可调用的能力</h3>
+            <div class="article-source">量子位 · 2026-11-03 · <a href="https://www.qbitai.com/2026/11/507313.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">爱诗科技旗下 PixVerse 与 OpenAI 宣布深度合作：PixVerse ChatGPT Plugin 原生接入 ChatGPT 与 Codex，PixVerse CLI 让 Codex 承担视频、图像、音频的集中生成并可搭建标准化流程，插件同时支持 Canvas 工作台以管理素材、对比结果并转入制作交付，双方首次共同推出「从提示词到成片」教育计划。OpenAI 应用 AI 工程师 Tyler Ryu 在演示中用 Codex 完成角色走路参考图生成、动作套用到游戏角色、反复自然语言微调的全流程，全程未离开 Codex，也不需要动捕或动画软件。PixVerse 平台覆盖 177 个国家和地区、累计注册用户超 1.7 亿，公司今年 7 月完成近 30 亿元人民币 C 轮融资，投资方包括鼎晖、阿里巴巴与王慧文家办 Lollapalooza Capital 等。</p>
+            <p class="article-commentary">视频生成正从网站功能变成 Agent 可调用的接口。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>Google 把「禁用 AI」的代价设为失去搜索。当功能与捆绑销售之间只隔一个开关时，教育采购方将没有真正的拒绝权。</li>
+            <li>Anthropic 在同一页招股书里同时写下「模型可能撞上 AI 驱动加速阈值」和「环比增速从 144% 掉到 47%」，安全叙事与增长叙事互相拆台。</li>
+            <li>美国科技巨头表外 AI 债务半年增至约 3.2 万亿美元，约为表内债务的三倍；这笔钱不进利润表，只会出现在下一轮融资条款里。</li>
+            <li>MIT 让 GPT-6 Astra 直接改写 Qwen 权重把数学分数抬高六倍，社区当天就质疑其标题夸大——「模型修模型」还远没到可交付的工程阶段。</li>
+            <li>Postman 的问题不在于装了什么，而在于它替自己签了信任。这类「静默改配置」正在成为 AI 工具链最常见也最少被审计的漏洞。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>9</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-11-03
+</div>
+
+</div>
+</body>
+</html>
