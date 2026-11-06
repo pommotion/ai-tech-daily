@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-11-05</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>167</em></span>
+        <span>Thursday, November 5, 2026</span>
+        <span>&#20170;&#26085; <em>10</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-11-04.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天 AI 圈的两条主线都不是「模型又变强了」，而是给失控的自动化装刹车：一端用漏洞挖掘和形式化证明把能力锁进可验证的边界，另一端让选举、股市和版权协议来重新定价算力的用电成本与法律责任。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">OpenAI 发布 GPT-6 Cyber：ExploitGym 跑分提升 51%，挖出 Firefox 81 个未知漏洞</h2>
+        <div class="article-source">IT之家 · 2026-11-05 · <a href="https://www.ithome.com/1/023/038.htm" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 推出网络安全专用模型 GPT-6 Cyber，在检验远程漏洞利用能力的 ExploitGym 基准上得分 48.5%，较 GPT-5.6 Cyber 的 32.1% 相对提升约 51%。研究团队用它在 Linux 内核复现 1724 个漏洞，为其中 948 个开发出可用的提权利用程序，并在 Firefox 中发现 81 个此前未知的高危漏洞，已向 Mozilla 提交证据与候选补丁。OpenAI 在准备框架下将其网络安全风险等级定为 Critical，初期仅向经批准的 Daybreak Red 客户开放，配套凭据保护、沙箱与高风险行为拦截。</p>
+        <p class="article-commentary">参数竞赛之外，安全模型第一次用「挖出多少漏洞」来定价</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">美国中期选举后 AI 股重挫：纳指跌超 5.5%，科技巨头单日蒸发约 1 万亿美元</h3>
+            <div class="article-source">BBC · 2026-11-05 · <a href="https://www.bbc.co.uk/news/articles/cmn04705rd8jo" target="_blank">阅读原文</a></div>
+            <p class="article-body">民主党拿下参众两院后，多州选票中出现限制数据中心建设的条款，德州州长候选人承诺暂停新建数据中心，市场随即担忧 AI 扩张节奏。纳斯达克综合指数收跌逾 5.5%，蒸发市值约 2.5 万亿美元，费城半导体指数跌超 12%；英伟达跌超 9%（蒸发 4000 亿美元以上），AMD 与美光跌超 17%，英特尔跌 10.3%，标普 500 跌 4.4%。</p>
+            <p class="article-commentary">定价逻辑已从模型能力切换到用电、就业与监管成本</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Anthropic 首次掏钱买新闻授权，与美联社达成内容协议</h3>
+            <div class="article-source">IT之家 · 2026-11-05 · <a href="https://www.ithome.com/1/023/015.htm" target="_blank">阅读原文</a></div>
+            <p class="article-body">据 Adweek 援引知情人士消息，Anthropic 与美联社达成其首份出版内容授权协议，Claude 可在中期选举之夜实时展示美联社选举结果数据并标注来源，财务条款与期限均未披露。此前 Anthropic 一直坚持爬虫抓取属于合理使用、不愿付费，而部分出版商已主动屏蔽其爬虫以迫使谈判。竞争对手 OpenAI 已与阿克塞尔·施普林格、新闻集团、《大西洋月刊》等十多家机构达成类似协议，美联社也是谷歌与 OpenAI 最早的合作对象。</p>
+            <p class="article-commentary">当免费内容被断供，合理使用这面盾牌第一次挡不住商业压力</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">英伟达破解内存瓶颈：HBM 仅增约 3%，每美元智能体吞吐量最高提升 30 倍</h2>
+        <div class="article-source">IT之家 · 2026-11-05 · <a href="https://www.ithome.com/1/023/025.htm" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">英</span>伟达发布技术解读，提出把 GPU、CPU、网络、存储与软件作为整体设计的「全栈协同」思路：NVFP4 低精度格式压缩模型权重与 KV 缓存，NVL72 中权重可分散至最多 72 颗 GPU，Vera CPU 的大容量 LPDDR 为挂起上下文提供就近缓冲，Dynamo 把不活跃上下文迁到 CMX 上下文存储并在复用前取回。援引 SemiAnalysis AgentX 基准，在每用户每秒 125 token 条件下，Vera Rubin NVL72 相比 GB300 NVL72 每美元智能体吞吐量最高提升 30 倍，而每 GPU 的 HBM 容量只增加约 3%。</p>
+        <p class="article-commentary">真正的瓶颈不是算力不够，是数据在层级间搬得太慢</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">谷歌发布 Gemini Omni 1.2 Flash：原生 15 秒视频生成，720p 降至每秒 0.07 美元</h3>
+            <div class="article-source">Google DeepMind · 2026-11-05 · <a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Gemini Omni 1.2 Flash 在 Gemini API 与 Gemini for business 全面正式可用，原生视频时长从 10 秒延长到 15 秒并支持 3 至 15 秒按秒指定；新增多轮对话式编辑，可在同一条片段上逐轮替换产品、背景、光照与画幅比例，而不必重新生成。模型强化了参考遵循能力，脸部、服装、包装字体与品牌色在多机位间保持一致，并提升口型同步与多说话人控制；720p 价格较 1.1 版下调 30% 至每秒 0.07 美元，生成内容自带 SynthID 水印。</p>
+            <p class="article-commentary">视频模型开始按广告投放位算账，一支十五秒短片已经是白菜价</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">蚂蚁百灵发布 Ling-3.2 Flash：560B 总参 25B 激活，三项基准超过 Claude Opus 5</h3>
+            <div class="article-source">IT之家 · 2026-11-05 · <a href="https://www.ithome.com/1/023/043.htm" target="_blank">阅读原文</a></div>
+            <p class="article-body">蚂蚁百灵推出原生多模态模型 Ling-3.2-flash，560B 总参数、25B 激活参数、1M 上下文窗口，从架构层面融合视觉与语言，重点强化复杂视觉理解、多模态长程 Agent、3D 理解与交互、医疗多模态四项能力。官方评测中它在 OmniDocBench1.5 得 92.21（Opus 5 为 90.56）、ZEROBench（Sub）得 43.71（39.52）、Vision2Web 得 85.86（80.20），DesignArena 图像转前端以 1238 Elo 进入前十。API 输入每百万词元 0.30 美元、输出 0.90 美元，上线前两周限时免费。</p>
+            <p class="article-commentary">国产多模态开始靠低价位段而非单项第一来抢份额</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">月之暗面开放 Kimi K3.1 Pro 权重：2.8 万亿参数，登顶 Agent Arena 开源榜</h2>
+        <div class="article-source">PANews · 2026-11-05 · <a href="https://www.panewslab.com/zh/articles/01a1a756-6484-7325-8f81-acd957cdb56c" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">月</span>之暗面按 10 月承诺在 Hugging Face 开放 Kimi K3.1 Pro 权重，模型为原生多模态智能体架构，总参数 2.8T、激活参数 104B，上下文约 100 万 token，权重以 MXFP4 量化（激活 MXFP8，采用量化感知训练）形式发布，共 96 个分片约 1.56TB，vLLM 基线要求 8 张数据中心 GPU 起步。Agent Arena 数据显示其在超 1.75 万次真实长周期智能体任务会话测评中位列开放权重模型第一、全球所有参评模型第 13，工作、编程、聊天三类均为开放模型第一。</p>
+        <p class="article-commentary">开源第一名的含金量，正在从参数表转移到部署成本</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">DeepSeek Harness 日活达 154 万、日耗 92 万亿 Token，将建官方插件市场</h3>
+            <div class="article-source">IT之家 · 2026-11-05 · <a href="https://www.ithome.com/1/023/011.htm" target="_blank">阅读原文</a></div>
+            <p class="article-body">DeepSeek 官方公布 Harness 产品与社区进展：8 月 13 日 v0.1 上线、9 月 29 日桌面端正式发布，截至 11 月 4 日以官方 API 用户为统计口径，日活跃用户达 154 万，日消耗 Token 约 92 万亿。第三方插件数量已增至约 3.5 万个，约 60% 的活跃用户制作或安装过至少一款第三方插件。官方表示将提升插件 API 的稳定性与兼容性、健全安全机制，并建设官方插件市场，同时筹备面向插件作者的支持计划，以 Token 激励、技术交流与作品推荐扶持开发者。</p>
+            <p class="article-commentary">国产助手真正的护城河，已经从模型变成插件密度</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">微软 PDD Kit：用形式化证明约束 AI 写的代码，把「评审」变成「证明」</h3>
+            <div class="article-source">Microsoft Research · 2026-11-05 · <a href="https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/" target="_blank">阅读原文</a></div>
+            <p class="article-body">微软研究院提出「证明驱动开发」（PDD）范式并开源 PDD Kit：把开发者的自然语言意图转成 Verus 形式化规格，再对编码智能体产出的代码证明其对所有输入都符合该规格，证明覆盖不到的部分回退到测试。团队在 GitHub Next 的 Chopin 环境中用它形式化验证了 Rust 商店 Pet Store 的登录逻辑，Verus 既加固了代码也暴露了既有 bug，并证明了相对规格不存在登录缺陷；全程开发者只审阅意图，没有逐行读生成的代码。</p>
+            <p class="article-commentary">代码写得越多，越不能用「看过了」当作质量保证</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Meta 收购并行编程工具 Conductor，其云服务将于 11 月 20 日关停</h2>
+        <div class="article-source">TechCrunch · 2026-11-04 · <a href="https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">M</span>eta 收购 AI 编程工具公司 Conductor，该产品允许用户把多个编码智能体部署到并行工作区中同时推进多个软件项目，交易条款未披露。消息最早由 Axios 曝出，Conductor 联合创始人兼 CEO Charlie Holtz 在博客中确认，并宣布托管版的 Conductor Cloud 将于 11 月 13 日转为只读、11 月 20 日关停。Meta 此举意味着它开始像 OpenAI 等厂商一样争夺开发者日常使用的编程入口，因为编码已成为 AI 落地与企业付费的关键路径。</p>
+        <p class="article-commentary">买的是开发者工作台入口，模型能力反倒是附赠品</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>安全模型成了新的能力竞赛场：GPT-6 Cyber 把挖漏洞与修漏洞打包，风险评级直接拉满到 Critical。</li>
+            <li>AI 扩张第一次被用选票定价：数据中心用电与就业议题变成纳斯达克单日 2.5 万亿美元的波动源。</li>
+            <li>开源权重的门槛被硬件抬高了：2.8T 的 Kimi K3.1 Pro 意味着本地部署从「有钱」变成「有集群」。</li>
+            <li>多模态与视频进入成本竞争阶段：每秒 0.07 美元、每百万词元 0.30 美元的价格带正在重塑生产预算。</li>
+            <li>约束机制同步补位：形式化证明、内容付费、插件市场，本质都是给越来越能干的自动化加装缰绳。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>10</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-11-05
+</div>
+
+</div>
+</body>
+</html>
