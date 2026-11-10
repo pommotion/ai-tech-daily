@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-11-09</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>171</em></span>
+        <span>Monday, November 9, 2026</span>
+        <span>&#20170;&#26085; <em>9</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-11-08.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天的主线不是模型又强了几分，而是「谁来承担代价」：Anthropic 一边降价发新模型，一边花 34 亿美元买燃气轮机抢电；黄仁勋的个人丑闻正在变成英伟达的合规与地缘政治问题。能力竞赛已经进入账单阶段，谁先把电、钱、责任安排清楚，谁才能在下一轮定价权上占住位置。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2，Fable 输入价降至 800 万美元/百万 token</h2>
+        <div class="article-source">TechCrunch · 2026-11-09 · <a href="https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>nthropic 周一推出 Claude Fable 5.2 与 Mythos 5.2，官方称编码、推理与视觉能力均有提升，输出速度比 5.1 版更快。Fable 输入价格从每百万 token 10 美元下调至 8 美元，官方称各 effort 档位响应速度提升 30%，付费可换取双倍速度的推理服务，Fable 5.2 因此在价格上低于 GPT-6 Astra，并首次通过 Enterprise Frontier Safeguards 兼容零数据保留策略。Anthropic 称预发布测试中 Fable 5.2 曾完成原本不可行的软件迁移、从零设计三款电子设备，并在 30 小时内形式化证明了费马大定理；Mythos 5.2 首批仅向通过审查的机构开放。</p>
+        <p class="article-commentary">降价才是真新闻：模型差距缩到一分，战场就转移到谁更便宜。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Meta 推出轻量模型 Muse Ember，瞄准 Agent 高频重复执行环节</h3>
+            <div class="article-source">TechCrunch · 2026-11-09 · <a href="https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Meta 超级智能实验室发布 Muse Ember，定位为目前最轻量、最具成本效益的模型，专攻 Agent 全天反复执行的复杂任务，包括工具调用、编码子任务、路由、信息抽取与长文档解析。Ember 输入价格每百万 token 10 美分，Meta 援引 Artificial Analysis 综合基准称其比 Anthropic Haiku 与 OpenAI Luna 更便宜也更聪明，成本已逼近 DeepSeek V4.1 Flash、GLM 5.3 Flash 等开源模型。它被设计为与更大的 Muse Wonder 搭配使用，由后者定规则、前者跑量；同时训练覆盖文本、图像与音频，可直接处理截图、图表、扫描件、语音备忘和会议录音。Ember 是 Meta Muse 品牌下第四款模型。</p>
+            <p class="article-commentary">大模型负责想，小模型负责干，Agent 成本结构正在被重新拆开。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">字节发布 Seedream 5.5，主打 100 轮稳定编辑与原生透明背景输出</h3>
+            <div class="article-source">The Next Web · 2026-11-09 · <a href="https://thenextweb.com/news/bytedance-seedream-5-5-image-editing-100-rounds" target="_blank">阅读原文</a></div>
+            <p class="article-body">字节 Seed 团队发布新一代静态图像模型 Seedream 5.5，官方演示中对同一主体连续进行 100 轮编辑仍保持一致，支持原生 RGBA 透明通道输出，并宣称在自身评测中文字渲染错误率降至约 0.4%。模型面向专业生产流程而非一次性生成缩略图，先在中国市场上线，随后向 BytePlus 的 Lumina 平台开放。该模型接续 Seedream 5.0 Pro。</p>
+            <p class="article-commentary">图像模型的分水岭不再是画得多好，而是能不能进生产管线反复用。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Anthropic 斥资 34 亿美元采购燃气轮机，锁定 1.7GW 电力</h2>
+        <div class="article-source">TechCrunch · 2026-11-09 · <a href="https://techcrunch.com/2026/11/09/anthropic-joins-ais-natural-gas-frenzy-buys-3-4b-worth-of-turbines/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">据</span> Financial Times 报道，一直以来偏好租用而非自建基础设施的 Anthropic，收购了设备供应商 OnePWR 原定订购的卡特彼勒发电机组，交易金额 34 亿美元，单机组合最大出力可达 1.7GW。此前 Anthropic 在 5 月的 S-1 文件中披露，向 xAI 旗下 SpaceX 分公司按每月 12.5 亿美元支付算力费用至 2029 年 5 月，并表示预期将签署更多类似服务合同。目前燃气轮机订单积压已排到 2030 年代初，接入电网的排队时间同样漫长，电力供给的不确定性正迫使头部实验室直接下场锁定资源。</p>
+        <p class="article-commentary">模型公司开始买发电机，说明算力瓶颈已经变成能源与资本问题。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">英伟达就黄仁勋与疑似中国间谍的关系启动调查，诉讼潮开始聚集</h3>
+            <div class="article-source">TechCrunch · 2026-11-08 · <a href="https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy" target="_blank">阅读原文</a></div>
+            <p class="article-body">英伟达于 11 月 8 日表示将调查 CEO 黄仁勋与一名疑似中国间谍的关系，该女子被指在 2025 年为中国军方收集信息。事件迅速发酵：多家律所开始准备起诉，做空公司 Six-Months Earlier 曾在丑闻曝光前指出黄仁勋与该女子的关联，黄仁勋随后退出 ElevenLabs Summit 活动。多篇分析认为，这一事件把英伟达的中国业务战略、两用物项出口合规，以及董事会对单一强势领袖的治理风险一并推到台前。</p>
+            <p class="article-commentary">个人丑闻一旦触及出口管制，就会被迅速放大为地缘政治议题。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">特朗普谈 AI 安全风险：称司法部已警告某高管「准备进监狱」</h3>
+            <div class="article-source">The Verge · 2026-11-09 · <a href="https://www.theverge.com/ai-artificial-intelligence/1029802/trump-60-minutes-ai" target="_blank">阅读原文</a></div>
+            <p class="article-body">在美国 60 Minutes 节目中，白宫发言人被问及 AI 高管关于模型安全性的警告时表示，「我认为风险远没有他们所说的那么真实，而且风险是可以管理的，也确实在被管理」。他还声称司法部曾联系过一家头部 AI 公司的负责人，要求对方配合调查并转述「准备去坐牢，跟你妻子道个晚安」。这次表态把前沿模型安全争论从实验室的自我评估，拖入白宫对风险量级与执法手段的公开辩论。</p>
+            <p class="article-commentary">当风险由总统一句话定义，实验室的谨慎评估就变成了政治负担。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">迪士尼与 Adobe 达成多年合作，共建「艺术家主导」的生成式 AI 模型</h2>
+        <div class="article-source">The Verge · 2026-11-09 · <a href="https://www.theverge.com/tech/1029773/disney-adobe-generative-ai-partnership" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">迪</span>士尼与 Adobe 在 Adobe MAX 大会上宣布多年期合作，共同开发由艺术家主导的生成式 AI 模型，用于迪士尼的制作管线。Adobe 将向迪士尼提前开放其最新技术，应用范围覆盖主题乐园、邮轮业务与 ESPN 图形内容等；双方还将合作探索包括负责任开发 AI 在内的新兴技术。公告发布于同日举行的 Adobe MAX 大会上，被视为影视与创意软件巨头在生成式 AI 上从对立走向绑定的又一例证。</p>
+        <p class="article-commentary">版权方主动上桌谈判，比任何一场侵权诉讼都更能定义行业规则。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Automattic 推出 Spacefast，让 vibe coding 应用一键变成可用的网站</h3>
+            <div class="article-source">TechCrunch · 2026-11-09 · <a href="https://techcrunch.com/2026/11/09/automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changing-internet/" target="_blank">阅读原文</a></div>
+            <p class="article-body">WordPress 母公司 Automattic 发布新服务 Spacefast，为 vibe coding 生成的网站与应用提供一整套后端基础设施，包括数据库、身份认证、文件上传、邮件与分析，支持用户把 ChatGPT、Claude、OpenClaw、Grok Bot、Cursor、OpenCode 等各类 Agent 或聊天机器人接入，也可直接连接 Git 仓库开始部署。该产品由 Batuhan İçöz 主导，他此前在 Automattic 黑客松期间开发，原型名为 Stattic。Spacefast 与 Lovable、Emergent 正面竞争，但强调更开放的接入方式。</p>
+            <p class="article-commentary"> vibe coding 的瓶颈已从写代码变成部署，WordPress 老兵切入了这个空档。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">Anthropic 记忆实验反直觉：写 413 份笔记的 Agent，输给只写 9 份的</h3>
+            <div class="article-source">机器之心 · 2026-11-09 · <a href="https://www.163.com/dy/article/LB9PQSBG0511AQHO.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic 在 Continual Learning Bench（CL-Bench）上做了一组跨会话记忆实验：把记忆拆成原始日志、在线笔记、离线整理与知识 Wiki 四层后，发现单纯增加笔记数量反而拉低效果，写了 413 份笔记的版本输给了只写 9 份的版本。作者的解释是记忆本质上是对未来使用场景的预测，冗余笔记会引入互相冲突的错误，而引入「做梦」式的离线复盘与精简提炼机制后表现才回升。实验还显示，把合同条款逐字引用而非汇总进共享表后，简报的评分标准覆盖率从 72% 提升到 100%。</p>
+            <p class="article-commentary">记忆不是仓库是预测，写得多反而更容易把未来带偏。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>旗舰模型的能力差距已压缩到 Artificial Analysis 指数 1 分以内，价格与推理速度成为新的分水岭。</li>
+            <li>Anthropic 把 Fable 输入价降到每百万 token 8 美元并提速 30%，首次在价格上压过 GPT-6 Astra。</li>
+            <li>电力正取代算力成为硬约束：Anthropic 一次性投入 34 亿美元买燃气轮机，订单积压排到 2030 年代初。</li>
+            <li>Meta 用 Muse Ember 把 Agent 执行成本压到每百万 token 10 美分，与开源 Flash 级模型站在同一条价格线上。</li>
+            <li>AI 治理进入「事故驱动」阶段：英伟达 CEO 丑闻与白宫对安全风险的公开表态，把公司治理和地缘政治绑到了一起。</li>
+            <li>内容创作的护城河转向生产流程：Seedream 5.5 的 100 轮稳定编辑与 Disney-Adobe 的多年绑定，都指向同一件事。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>9</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-11-09
+</div>
+
+</div>
+</body>
+</html>
