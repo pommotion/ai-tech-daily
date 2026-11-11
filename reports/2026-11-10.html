@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-11-10</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>172</em></span>
+        <span>Tuesday, November 10, 2026</span>
+        <span>&#20170;&#26085; <em>10</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-11-09.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天最拧巴的一幕：一级市场给 AI 的估值冲到 1.4 万亿美元，同一时刻 AI 基建的实际融资成本涨到 16% 债券收益率。Anthropic 上市前夜的热闹掩盖不了一件事——资本已经开始按「谁来承担代价」重新定价：算力是借来的钱，模型是买来的电力，CEO 的私事正在变成国安问题，而中国实验室把「自我改进」真正压进了推理内核。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Anthropic 敲定 IPO 定价区间 70–78 美元，估值最高 1.4 万亿美元</h2>
+        <div class="article-source">CNBC · 2026-11-10 · <a href="https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>nthropic 周二更新招股文件，拟发行 8.25 亿股，定价区间每股 70 至 78 美元，11 月 18 日定价、19 日在纳斯达克挂牌，股票代码「ANT」。按区间高端计算，公司最高可募资 643.5 亿美元，全稀释估值最高约 1.405 万亿美元，高于其 5 月 Series H 时的 9650 亿美元估值。AMD、Broadcom、Google、Micron、Microsoft、英伟达与台积电已同意以等同 IPO 价认购总额 260 亿美元的 N 类普通股私募配售。公司称零售配售比例约 20%，远高于通常 5%–10% 的水平。知情人士称订单在区间内已被覆盖，但这家公司此前瞄准的 2 万亿估值目前被投资者认为难以支撑，1.5 万亿都有人认为是「勉强」。</p>
+        <p class="article-commentary">买 AI 股票的真正风险不是模型跑分，是利率。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">英伟达董事会聘请 Wachtell 律所调查黄仁勋婚外情，股价蒸发 5000 亿美元</h3>
+            <div class="article-source">BBC · 2026-11-10 · <a href="https://www.bbc.co.uk/news/articles/ck1wvwwl3x0go" target="_blank">阅读原文</a></div>
+            <p class="article-body">英伟达周二宣布聘请纽约 Wachtell, Lipton, Rosen &amp; Katz 律所，由 Joon Kim 领衔对黄仁勋与一名被指为中国间谍的女性的关系展开「彻底且独立」的调查，FBI 也已同步展开调查。涉事女性 Alice Huang（黄黎）曾任英伟达客户新加坡 Megaspeed 的高管，该公司曾被怀疑协助向中国转移芯片，英伟达称此前调查已排除问题。美国国务卿鲁比奥今年早些时候曾致函警告黄仁勋与「中国间谍」关系密切，众议院外交事务委员会已要求黄仁勋下周闭门汇报并握有传唤权。自周五以来英伟达市值蒸发约 5000 亿美元，股价逼近年内低点。英伟达同时拟在 Anthropic IPO 中投入 100 亿美元。</p>
+            <p class="article-commentary">AI 芯片的国家安全地位，撞上一个 CEO 的私生活，董事会连夜请律所。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">百度首次披露 ERNIE Evolve：RSI 从概念走到生产环境，推理速度提升至基线 6.2 倍</h3>
+            <div class="article-source">量子位 · 2026-11-09 · <a href="https://www.qbitai.com/2026/11/508746.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">百度文心 11 月 9 日首次公开自动研究系统 ERNIE Evolve，该系统围绕目标与约束自主提出研究方向、开展实验、验证结果并沉淀经验，在 NanoChat AutoResearch 与 NanoGPT Speedrun 两项任务的三个指标上取得目前公开可验证的 SOTA。系统采用双层循环、多智能体分工：Director 选方向、Selector 定实验目标、Executor 改代码、Evaluator 独立评测、Reviewer 查评测漏洞，只有通过复核的改动才保留。接入文心 5.5 Flash 真实推理优化后，昆仑芯 P800 低时延场景历时约 168 小时、4 轮方向探索，最优版本生成速度提升至基线的 623.6%；确定性推理吞吐提升至 133.7%，每 token 生成时间缩短 26%、首 token 延迟降低 12%；极致解码速度提升 114.9%，精度不变。百度已于 11 月 5 日开源文心 5.5 Flash Base。</p>
+            <p class="article-commentary">别人把自我改进写进 PPT，百度把它写进了昆仑芯的调度器。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">CoreWeave 三季度营收 36.6 亿美元同比增 168%，上调全年指引</h2>
+        <div class="article-source">CNBC · 2026-11-10 · <a href="https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">C</span>oreWeave 周二公布季度营收 36.6 亿美元，高于市场预期的 35.5 亿美元，同比增长 168%（去年同期约 13.6 亿美元）；调整后每股亏损 0.95 美元，优于预期的 1.16 美元亏损，但净亏损扩大至 7.09 亿美元。管理层把 2026 年全年指引上调至营收 130 亿–133 亿美元、调整后经营利润 12.75 亿–13.75 亿美元，全年资本开支目标 370 亿–390 亿美元，2026 年底活跃电力维持 1.85GW。公司称 2027 年主要靠客户预付款与硬件伙伴融资补充资金，母公司层面债务融资控制在 50 亿美元以内，且在当前收益率下不打算发行额外无担保债。但公司过去一个月股价已跌逾 40%，部分债券收益率一度突破 16%。</p>
+        <p class="article-commentary">需求还在涨，但借钱的价格涨得比生意涨得更快。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">蚂蚁灵波开源 LingBot-Touch 触觉基础模型：把机器人成功率从 39% 拉回 59%</h3>
+            <div class="article-source">量子位 · 2026-11-10 · <a href="https://www.qbitai.com/2026/11/508919.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">蚂蚁灵波 11 月 10 日开源触觉预训练基础模型 LingBot-Touch，把磁触觉、视触觉、压阻式触觉三类传感器的原始读数统一编码为触觉 Token，向动作模型输出接触位置、受力大小与力的方向变化，轻量版 LingBot-Touch-Tiny 约 532 万参数，技术报告、代码与权重同步公开。团队发现，直接把原始触觉喂给动作模型反而更糟：Sharpa Wave 灵巧手配 π0.5 拉拉链成功率从 39% 跌到 15%，接入 LingBot-Touch 后回到 59%，比不用触觉还高 20 个百分点。训练采用 JEPA 路线，随机遮住 90% 触点并在特征空间预测，同为 1000 小时数据时接触中心误差 0.90 毫米，VAE 与 MAE 方案均在 3 毫米以上；触觉检索视频的前 5 召回率 32.07%，另两种方法不到 6%。预训练数据 4983 小时、约 13.3 亿帧，三分之二来自触觉手套、其余来自遥操作双臂机器人，真机测试覆盖 Sharpa Wave 20 项与 XHand 6 项任务、四种动作模型。</p>
+            <p class="article-commentary">多给机器人一种感官，它反而变笨——除非先教它怎么翻译。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">联邦法官裁定 Anthropic 必须面对 Claude Max「5 倍或 20 倍用量」误导用户诉讼</h3>
+            <div class="article-source">Reuters · 2026-11-09 · <a href="https://www.reuters.com/legal/government/anthropic-must-face-lawsuit-over-claude-subscription-marketing-2026-11-09/" target="_blank">阅读原文</a></div>
+            <p class="article-body">加州一名联邦法官裁定，Anthropic 必须面对一起集体诉讼，指控其在推广 Claude Max 订阅时使用「相比更低价格方案提供 5 倍或 20 倍更多用量」的表述误导客户。法院认为用户合理可能把该承诺理解为按月计算，而实际用量限制并非如此，这使过失性失实陈述、违约以及一项消费者保护主张得以继续推进。判决发生在 Anthropic 上市前夕，就在公司披露 Fable 5.2 与 Mythos 5.2 模型的第二天。用量倍率是订阅制 AI 产品最核心的定价锚点，一旦广告口径与实际计费逻辑不一致，监管与集体诉讼风险就直接落在收入模型上。</p>
+            <p class="article-commentary">倍率写错一个字，就从营销话术变成法律问题。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">TOOLS</div>
+        <h2 class="feature-headline">千问办公 2.0 发布：首个支持多人与 Agent 协作的「Team Agent」形态</h2>
+        <div class="article-source">量子位 · 2026-11-09 · <a href="https://www.qbitai.com/2026/11/508694.html" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">千</span>问办公 11 月 9 日发布 2.0 版本，是产品上线三个月以来最大的一次升级，首个推出支持多人与 Agent 协作的「协作」功能，同时上线人机共创、资料空间、自动任务与三端互联。协作空间可把数字员工接入多个钉钉群聊、文档、AI 表格与 AI 听记，支持多会话并行与任务指派。官方给出的案例是银泰百货卡券运营团队：此前 5 名运营人员需在 60 多个门店群逐一收集提报信息再回填表格，现在把门店群与一张 AI 表格关联进同一协作空间，Agent 跨群汇总并自动更新表格。自动任务支持订阅事件与配置规则，首批覆盖指定人消息、群内 @ 消息、审批任务等触发方式，任务在云端执行，电脑关机后照常运行。</p>
+        <p class="article-commentary">办公 Agent 的分水岭不是更聪明，是敢进群聊。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Railway 披露 AI 代理攻防战：凭据被盗刷出 74 万美元算力，10 万工作空间受影响</h3>
+            <div class="article-source">BleepingComputer · 2026-11-10 · <a href="https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/" target="_blank">阅读原文</a></div>
+            <p class="article-body">云托管平台 Railway 公布 10 月安全事件复盘报告：攻击者于 10 月 20 日利用构建基础设施中一个此前未知的漏洞逃逸文件系统隔离，获取内部凭证并拿到 Railway 自身源码，据此分析出更多入侵路径，随后利用配置不当的信任关系拿到用于解密客户环境变量的凭据。攻击持续约 26 小时，Railway 称攻防双方都使用 AI 代理并行推进，防守方动用了类似 ARTEX 的 harness 与被「消融」过的模型对抗，攻击方则同时探测多条路线。最多 1.85% 的工作空间、约 10 万个的环境变量可能被解密，攻击者明确在搜索 AI 服务商凭据，并已产生约 74 万美元的未授权 AI 用量，公司正与服务商协调赔付。</p>
+            <p class="article-commentary">攻防两端都换成 AI 代理之后，「社工技巧」变成了工程问题。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Mercor 完成 7.5 亿美元 D 轮，估值 200 亿美元，英伟达与 Salesforce 参投</h3>
+            <div class="article-source">Business Wire · 2026-11-10 · <a href="https://www.businesswire.com/news/home/20261110410031/en/Mercor-Raises-%24750-Million-Series-D-at-%2420-Billion-Valuation-to-Help-Enterprises-Own-Their-Intelligence" target="_blank">阅读原文</a></div>
+            <p class="article-body">AI 训练与评估公司 Mercor 宣布完成 7.5 亿美元 D 轮融资，估值 200 亿美元。这轮包含员工股份出售安排，Benchmark、General Catalyst、英伟达、Salesforce、Zoom、Felicis 与 Apollo 旗下基金等参与。Mercor 的主营业务是把科技公司与各行业领域专家对接起来，为企业模型做后训练、评测与标准设定，钱将主要投向研究、评测与后训练基础设施。公司上一轮 3.5 亿美元 C 轮发生在 2025 年 10 月，当时估值为 18 亿美元——不到一年估值翻十倍，而同期真正以 AI 为单一主题的融资案例数量在上升，Mercor 属于其中估值最激进的一档。</p>
+            <p class="article-commentary">模型侧估值见顶时，钱开始涌向「谁来测模型」这一层。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">TOOLS</div>
+        <h2 class="feature-headline">OpenAI 收购 AI 旅行代理 Odessia，创始人 Francis Davidson 入职</h2>
+        <div class="article-source">TechCrunch · 2026-11-10 · <a href="https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 确认收购 AI 旅行代理 Odessia，创始人 Francis Davidson 将加入公司，负责旅行方向的探索，交易金额未披露。Odessia 成立于约一年前，由红杉领投 600 万美元 pre-seed，五个月前才上线旅行代理产品，Davidson 此前用它帮助早期用户规划了数百万美元的行程，而产品目前已经关停。从 David-son 的履历看，这是典型的 acqui-hire：他 2014 年在大学期间创办高端短租公寓公司 Sonder，后者曾做到独角兽与 1.43 亿美元营收，最终因万豪合作破裂破产清算。OpenAI 发言人表示旅行是 ChatGPT 用户高频咨询的场景，公司每周有 12 亿人使用 ChatGPT 处理日常任务。</p>
+        <p class="article-commentary">买的是团队和场景，不是一个还在烧钱的旅行搜索框。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>AI 的一级市场估值与二级市场融资成本首次正面相撞：Anthropic 最高 1.4 万亿估值的同时，CoreWeave 的部分债券收益率已破 16%，Neocloud 一个月跌超 40%，市场开始按「谁来承担代价」而非「模型有多强」重新定价。</li>
+            <li>递归自我改进（RSI）从口号落到工程细节：百度的 ERNIE Evolve 披露了完整双层循环、多智能体分工与评测防漏洞机制，并在昆仑芯 P800 上把推理速度做到基线 6.2 倍——落地路径是推理优化，不是重新训练自己。</li>
+            <li>机器人多模态不是越多越好：蚂蚁灵波团队自己测出直接喂原始触觉会让 π0.5 拉链成功率从 39% 崩到 15%，加一层统一编码才回到 59%，说明感官信号必须有「翻译层」才能被动作模型消费。</li>
+            <li>定价与合规开始反噬收入模型：Claude Max「5 倍/20 倍用量」被联邦法官认定可能构成误导，Anthropic 上市前夜背上集体诉讼；这类广告口径问题在订阅制 AI 产品里是直接的营收风险。</li>
+            <li>资本开始寻找模型之外的确定性：Mercor 一年估值十倍、英伟达与 Salesforce 亲自下场，说明评测、后训练与企业 Agent 基础设施这类「卖铲子但不在牌桌上」的环节，正在接住从模型层流出的溢价。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>10</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-11-10
+</div>
+
+</div>
+</body>
+</html>
