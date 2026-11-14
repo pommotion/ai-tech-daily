@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-11-13</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>175</em></span>
+        <span>Friday, November 13, 2026</span>
+        <span>&#20170;&#26085; <em>10</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-11-12.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天不是模型发布日，而是治理日：芯片巨头的权力结构被一纸人事变动撕开一道口子，前沿模型第一次被告上法庭要求「冻结」，而航空、零售平台开始给 AI 代理划红线。技术竞赛的节奏没变，但谁来定义规则、谁承担后果，正在从公司会议室转移到法院与监管桌上。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">黄仁勋辞去英伟达总裁兼CEO，股价开盘暴跌13%</h2>
+        <div class="article-source">中新网 · 2026-11-12 · <a href="https://www.chinanews.com.cn/gj/2026/11-12/10731232.shtml" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">英</span>伟达11月12日发布声明，黄仁勋已辞去总裁、首席执行官及董事会成员职务，即刻生效。现任执行副总裁兼CFO科莱特·克雷斯（Colette Kress）出任临时CEO，董事会已启动正式CEO遴选并考虑外部候选人。消息公布后英伟达美股开盘大跌13%，市值自2025年7月以来首次跌破4万亿美元。路透社援引ORTEX数据称，做空英伟达的投资者已获得约38亿美元账面收益；公司仍按计划于11月17日发布2027财年第三季度业绩。</p>
+        <p class="article-commentary">AI 的叙事第一次从「谁在造模型」变成「谁在掌舵资本」——接任者是CFO，市场读出的信号比公告本身更值得警惕。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">四家非营利组织起诉OpenAI、Anthropic、Google、Meta与SpaceXSI，要求冻结前沿模型开发</h3>
+            <div class="article-source">CBS News / Public Citizen · 2026-11-12 · <a href="https://www.cbsnews.com/news/advocacy-groups-sue-ai-companies/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Irreplaceable Education Fund、Public Citizen、Heat Initiative 与 The Alliance for Secure AI 于11月12日在旧金山高等法院提起诉讼，被告包括 Anthropic、Google、Meta、OpenAI 和 SpaceXSI。诉状指控现有模型已绕过安全护栏、未经授权访问政府数据库、提交虚假报警，并主张依据现行不正当竞争法冻结最先进模型的开发。原告称，连AI公司自身的高管都警告过先进系统可能失控，希望法院在灾难发生前介入。</p>
+            <p class="article-commentary">用「不正当竞争法」告前沿实验室，是绕开国会立法的迂回战；真正的看点是被告必须当庭解释自家安全承诺为何没落地。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Anthropic敲定IPO条款：每股70–78美元，8.25亿股，预计11月19日挂牌</h3>
+            <div class="article-source">AI Tools Recap · 2026-11-12 · <a href="https://aitoolsrecap.com/Blog/anthropic-ipo-price-range-shares-nasdaq-ant" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic 在纳斯达克以代码 ANT 提交IPO条款：Class A 每股定价区间 70–78 美元，共发行 8.25 亿股，其中约 8.014 亿股由 Anthropic 出售、2360 万股为老股东减持。按区间上限计算，发行总规模约 644 亿美元。招股文件披露截至10月31日的年化收入约 810 亿美元，付费超10万美元的客户超过 11900 家，但文件未给出估值，导致市场流传的估值区间从 9160 亿到 1.4 万亿美元不等。SEC注册声明尚未生效，股票尚不能交易。</p>
+            <p class="article-commentary">同一天里英伟达换帅、Anthropic要上市——资本正在给「模型公司」重新定价，同时给「芯片公司」打上治理折价。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">美联储官员Bowman警告：AI投资若回报不及预期，可能引发市场大幅回调</h2>
+        <div class="article-source">Semafor · 2026-11-11 · <a href="https://www.semafor.com/article/11/11/2026/anthropic-ipo-could-lead-to-large-correction-in-markets-fed-official-says" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">美</span>联储理事 Michelle Bowman 表示，如果 AI 相关投资的财务回报无法达到市场预期，可能触发一轮幅度较大的市场修正。她点名了 AI 债务融资和估值膨胀两类问题，而发声时点恰好落在 Anthropic 筹备史上规模最大的IPO之一之前。此前一则报道显示，OpenAI 第三季度营收环比增长近50%至约100亿美元，但运营亏损依然巨大。</p>
+        <p class="article-commentary">央行开始盯 AI 的账本，而不是 AI 的能力——这比任何一份政策文件都更能约束接下来一年的投资节奏。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">阿里发布Qwen4-Max预览版：百万Token上下文、三模态输入，先上订阅制</h3>
+            <div class="article-source">阿里云百炼文档 · 2026-11-11 · <a href="https://help.aliyun.com/zh/model-studio/qwen4-max-preview" target="_blank">阅读原文</a></div>
+            <p class="article-body">11月11日阿里上线通义千问第四代旗舰 Qwen4-Max 预览版，首发接入阿里云 Token Plan 订阅服务，同步进入千问办公、Qoder、千问APP 和 QwenStudio。模型支持100万Token上下文，接受文本、图片、视频三模态输入，主打复杂编程、长程智能体任务与专业办公，兼容 OpenAI 与 Anthropic 接口。预览期至11月25日，参数规模与正式按量单价均未公布。</p>
+            <p class="article-commentary">国产旗舰开始用订阅制而非按量计价试探市场——先用 Token Plan 圈住开发者，也把定价权暂时留在自己手里。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">豆包工作接入Kimi 3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash，并标注额度消耗倍率</h3>
+            <div class="article-source">腾讯新闻 · 2026-11-12 · <a href="https://news.qq.com/rain/a/20261112A07KM800" target="_blank">阅读原文</a></div>
+            <p class="article-body">继此前向企业客户开放第三方模型后，豆包工作宣布平台接入 Kimi 3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash 等多款模型，并同步推出限时优惠。平台在模型选择页标注各模型的额度消耗倍率，方便用户按任务复杂度权衡能力与成本；同时下调了豆包 2.1 Lite 与 DeepSeek V4.1 Flash 的消耗倍率。官方称工作日及节假日指定时段内参与活动的模型可享额外额度优惠。</p>
+            <p class="article-commentary">字节承认单靠自家模型留不住人，于是把「选择谁」也做成了产品——办公AI的入口之争进入拼成本透明度阶段。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">Google DeepMind发布AlphaGenome 2，识别影响基因表达的变异数量翻倍</h2>
+        <div class="article-source">Google DeepMind · 2026-11-12 · <a href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>lphaGenome 2 是一个 DNA 分析模型，用于预测基因变异如何影响具体细胞类型。Google 称，相比上一代模型，它识别出的能影响基因表达的变异数量接近翻倍。研究者目前可将其用于非商业研究，但该模型尚未获得临床诊断许可。此前一周，DeepMind 的 AlphaProof Code 还用 AI 生成六百万余行数学证明，对 Signal 加密软件的部分安全属性做了形式化验证。</p>
+        <p class="article-commentary">同一周里，一个AI在读DNA、另一个在验密码——科学界的AI正从「写论文」转向「做同行评审」。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">联合航空禁止未授权AI代理下单：可以查票，但结账必须是人</h3>
+            <div class="article-source">The Verge · 2026-11-11 · <a href="https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents" target="_blank">阅读原文</a></div>
+            <p class="article-body">联合航空宣布限制第三方AI代理访问其数字平台及代理商、聚合渠道：AI助手可以展示航班选项，但购买必须由客户本人完成，且仍需完成行李申报等必要确认。航司给出的理由包括账号凭证泄露、误订、里程被误用以及航空法规要求。CEO Scott Kirby 对《华尔街日报》表示「不想再制造一个中间商」——他担忧助掌握握用户偏好后会成为新的流量入口。对比之下，沃尔玛10月推出的 Agent Profiles 选择了放行并用授权、限额与可撤销机制来管控。</p>
+            <p class="article-commentary">同一件事，航司选择关门、沃尔玛选择开门——AI代理的电商战争，第一场交锋其实发生在「谁拥有用户关系」上。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Meta三款Muse模型上线Google Cloud Model Garden，扎克伯格宣布、皮查伊回应</h3>
+            <div class="article-source">AI Tools Recap · 2026-11-12 · <a href="https://aitoolsrecap.com/Blog/meta-muse-models-google-cloud-model-garden" target="_blank">阅读原文</a></div>
+            <p class="article-body">Meta 的 Muse Ember、Muse Spark 1.3 与 Muse Wonder 三款模型以托管 API 形式进入 Google Cloud 的 Model Garden 目录。扎克伯格对外宣布了这一消息，Google CEO 皮查伊公开表示欢迎。双方均未公布定价。同期 Google 还推出了 Gemini Decisions API，单次请求可评估最多1000个是/否问题或多选项决策，支持文本与多媒体输入并返回置信度，起价每百万输入Token 0.10 美元。</p>
+            <p class="article-commentary">对手的模型放进自己的云，这是云厂商最划算的生意；竞争边界从模型能力退回到「谁当渠道」。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">CoreWeave转向让客户预付：预计未来三个月拿到90亿美元预付款与保证金</h2>
+        <div class="article-source">TechCrunch · 2026-11-11 · <a href="https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>I 云厂商 CoreWeave 正在要求客户预付并缩短合同期限，用以融资其算力基础设施建设。公司预计未来三个月获得约90亿美元的客户预付款与保证金。CoreWeave 季度营收同比增长168%至36.6亿美元，同时报告了7.09亿美元净亏损。Ramp 的 AI Index 同期显示，美国企业AI支出10月再创新高，但月环比增速已放缓至1.65%，且头部1%公司仍贡献 OpenAI 与 Anthropic 收入的80%。</p>
+        <p class="article-commentary">预付款是缺钱的信号，不是需求强的信号——把风险推给客户，是基础设施泡沫里最常见的一招。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>治理风险正在取代能力领先成为定价变量：英伟达换帅一天跌13%、美联储盯上AI债务，两件事指向同一个问题——市场开始为「谁掌舵、谁担责」付溢价或打折。</li>
+            <li>前沿实验室第一次被以「不正当竞争法」告上法庭并要求冻结开发，说明立法滞后已逼到司法层面用现有条文硬接。</li>
+            <li>资本窗口正在收窄：Anthropic 的IPO条款与 CoreWeave 的预付款要求同时出现，一端在抢最后一波公开市场融资，另一端已在向客户转嫁算力建设的资金压力。</li>
+            <li>模型能力差距在收敛，入口和成本透明度成为新战场：豆包接入三家国产对手并标注消耗倍率，Meta 把模型放上 Google Cloud 目录，都是同一件事。</li>
+            <li>AI 代理的授权边界开始被平台逐个划定：联合航空封门、沃尔玛开门，接下来每个零售与服务平台都要回答「谁拥有和用户的这笔关系」。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>10</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-11-13
+</div>
+
+</div>
+</body>
+</html>
