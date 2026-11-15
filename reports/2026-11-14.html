@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-11-14</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>176</em></span>
+        <span>Saturday, November 14, 2026</span>
+        <span>&#20170;&#26085; <em>10</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-11-13.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天没有新的模型刷榜，真正的变化发生在钱和权上：英伟达换帅、Anthropic 把中国买家挡在门外，而 Agent 第一次拿到替人签字付钱的权限。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">黄仁勋辞去英伟达全部职务，CFO 克雷斯接任临时 CEO</h2>
+        <div class="article-source">腾讯新闻 · 2026-11-13 · <a href="https://news.qq.com/rain/a/20261113A0765500" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">当</span>地时间 11 月 12 日，英伟达联合创始人黄仁勋辞去总裁、CEO 及董事职务，CFO Colette Kress 出任临时 CEO，Harvey C. Jones 任首位独立董事会主席。消息公布后英伟达盘前一度跌约 10%，盘中最大跌幅达 14%，公司市值蒸发约 1.4 万亿美元，导火索是婚外情风波与涉嫌间谍活动的调查。同期美国两院民主党首席议员就英伟达芯片出口政策致函问询。</p>
+        <p class="article-commentary">AI 算力的地基是人，不是芯片，人一走资本先跑。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">OpenAI 推出 ChatGPT Wallet，智能体可代办采购</h3>
+            <div class="article-source">OpenAI · 2026-11-13 · <a href="https://openai.com/index/introducing-chatgpt-wallet/" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI 发布 ChatGPT Wallet，让 ChatGPT Work、Codex 和 dots 智能体代用户完成商品购买。用户绑定银行卡后，每笔交易结账前都需通过 Face ID 或指纹生物识别确认，卡号以支付令牌形式保存、不暴露明文。服务初期仅面向符合特定条件的美国 ChatGPT Pro 订阅用户开放。</p>
+            <p class="article-commentary">从会聊天到能花钱，Agent 终于摸到了商业闭环的真入口。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Anthropic IPO 承销行拒接中港投资者认购订单</h3>
+            <div class="article-source">彭博社 / Yahoo 财经 · 2026-11-13 · <a href="https://hk.news.yahoo.com/anthropic-%E4%B8%8A%E5%B8%82%E5%82%B3%E6%8B%92%E4%B8%AD%E6%B8%AF%E6%8A%95%E8%B3%87%E8%80%85%E8%AA%8D%E8%B3%BC-%E6%89%BF%E9%8A%B7%E9%8A%80%E8%A1%8C%E5%BC%95%E7%94%A8%E5%87%BA%E5%8F%A3%E7%AE%A1%E5%88%B6-133626345.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">据彭博社报道，协助 Anthropic IPO 的承销银行正在拒绝来自中国内地及香港的机构认购订单，部分知情人士将限制归因于美国 ITAR 等出口管制合规要求。Anthropic 于 11 月 10 日启动路演，计划发行 8.25 亿股 A 类普通股，定价区间 70 至 78 美元，预计 11 月 19 日在纳斯达克挂牌，代码 ANT，认购倍数已达 6 倍。</p>
+            <p class="article-commentary">技术中立只是叙事，上市那一刻就按国籍发牌了。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">DeepSeek 开放「全家桶」应用 API，联网搜索、OCR、TTS 全部拆成独立接口</h2>
+        <div class="article-source">DeepSeek 官方文档 · 2026-11-13 · <a href="https://api-docs.deepseek.com/zh-cn/news/news261113/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">D</span>eepSeek 宣布把官方 App 内的能力整体 API 化：深度思考搜索、文件输入、链接阅读、语音交互等在原有 API 内以参数形式开启，同时开放网页抓取、OCR、ASR、TTS、Search、Fetch 等独立工具接口并标注调用资费，开发者可自行组合甚至完整复刻官方 App 的交互形态。</p>
+        <p class="article-commentary">模型之外的工具链免费开放，才是这次真正抢的东西。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Google 发布 Gemini 4 Hydrogen，主打低成本高速智能体执行</h3>
+            <div class="article-source">Google Blog · 2026-11-13 · <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Google 推出 Gemini 4 Hydrogen，定位为高频、低成本的日常编码与智能体工作流模型，已同步上线搜索、Gemini 应用和 AI Studio。Artificial Analysis 评测显示其在默认档位下表现优于 Gemini 4 Argon，Intelligence Index 得分最高 54，与主打长程推理的 Carbon、Argon 形成分层。</p>
+            <p class="article-commentary">旗舰模型卷能力，中档模型卷单价，Agent 的钱花在前者。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">澳大利亚推进《AI 标准》立法，前沿模型强制独立审计</h3>
+            <div class="article-source">新华网 / 澳大利亚国防部长办公室 · 2026-11-10 · <a href="https://www.news.cn/world/20261110/c5cd7b8325484add81e97d4b71ffb5d8/c.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">澳大利亚阿尔巴尼斯政府 11 月 10 日宣布，将通过《澳大利亚人工智能标准》立法，把强制性的 AI 安全与安保要求确立为国家法律，并新设专门监管机构，对所有在澳运营的前沿 AI 企业实施强制测试与审计，违规可处重罚。该方案采纳了 18 项审查建议，走在国际多边谈判之前。</p>
+            <p class="article-commentary">小国先立法，等于抢在规则形成前给自己写准入门槛。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">TOOLS</div>
+        <h2 class="feature-headline">Anthropic 推出 Claude Meetings，AI 以参会者身份进入视频会议</h2>
+        <div class="article-source">Claude Blog · 2026-11-12 · <a href="https://claude.com/resources/articles/claude-meetings" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>nthropic 发布 Claude Meetings 测试版，Claude 以可见参与者身份加入 Google Meet 视频通话，可实时回答提问、起草文档与白板，并在会后自动整理纪要与行动项。目前面向 Team 和 Enterprise 计划开放 Beta，会中参会者可直接对它说话，回复默认以文字形式呈现。</p>
+        <p class="article-commentary">会议软件这十年最费的功能，被一个参会者吃掉了。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Anthropic 开放自托管 Claude Managed Agents，智能体可跑在企业防火墙内</h3>
+            <div class="article-source">Claude Blog · 2026-11-12 · <a href="https://claude.com/resources/articles/self-hosted-claude-managed-agents" target="_blank">阅读原文</a></div>
+            <p class="article-body">Anthropic 宣布自托管版 Claude Managed Agents 进入私有测试，开发者可在自有云或本地环境运行智能体，自行决定智能体、凭证与会话历史的存放位置，并自定义请求发往的地址。官方同时更新了沙箱安全模型说明：自托管后沙箱镜像加固、内存存储与异常使用检测的防护责任由企业自行承担。</p>
+            <p class="article-commentary">责任一起转移就没人兜底，合规条款比功能更值钱。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">李飞飞 World Labs 正式开放 Atlas 世界模型与网页工具</h3>
+            <div class="article-source">爱范儿 · 2026-11-13 · <a href="https://www.ifanr.com/1689379" target="_blank">阅读原文</a></div>
+            <p class="article-body">World Labs 向公众开放多模态世界模型 Atlas，同步上线网页应用端与开发者 API。用户用草图或提示词即可生成可探索的三维交互场景，网页端可调整布局、规划镜头、生成视频并导出到 Blender 或游戏引擎继续加工，本次还新增 Viewfinder 与 Chisel 两款网页应用。</p>
+            <p class="article-commentary">世界模型从论文走向工具，具身智能缺的是能上手的场景。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">LangChain 完成 3 亿美元 C 轮融资，估值 30 亿美元</h2>
+        <div class="article-source">LangChain 官方博客 · 2026-11-13 · <a href="https://www.langchain.com/blog/series-c" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">智</span>能体编排平台 LangChain 宣布完成 3 亿美元 C 轮融资，由老股东 CapitalG 领投，新股东 GIC、DFJ Growth 与老股东 IVP、Sapphire Ventures 参与，估值达 30 亿美元，累计融资 4.6 亿美元。公司称已有超过 7000 家机构使用其 LangSmith 智能体平台，业务重心已从开源框架转向企业级智能体治理。</p>
+        <p class="article-commentary">模型厂商吃掉入口，编排层只能靠治理能力守住位置。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>今日主线是权与钱的重新分配：英伟达换帅、Anthropic 关门、LangChain 拿钱，模型榜单反而最安静。</li>
+            <li>ChatGPT Wallet 意味着 Agent 从建议者变成执行者，支付、生物识别和责任归属将成为下一轮竞争焦点。</li>
+            <li>DeepSeek 拆开工具链接口，等于把 App 级能力降价出售，国产模型的生态位从模型层向应用层上移。</li>
+            <li>监管正在分裂成两条线：澳大利亚对小国先立强制审计法，美国用出口管制挡住资金而非技术。</li>
+            <li>智能体要进企业，最先卡住的是部署边界与责任归属，自托管方案本质是把风险连同控制权一起交还客户。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>10</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-11-14
+</div>
+
+</div>
+</body>
+</html>
