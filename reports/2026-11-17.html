@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-11-17</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>179</em></span>
+        <span>Tuesday, November 17, 2026</span>
+        <span>&#20170;&#26085; <em>10</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-11-16.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">Anthropic 即将用 1.4 万亿美元为 AI 定价，而李彦宏同一天提醒泡沫风险——资本与质疑在同一周撞上，说明这轮行情已经进入必须用利润说话的下半场。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Anthropic IPO 定价 70-78 美元，估值 1.4 万亿美元，11 月 19 日纳斯达克挂牌</h2>
+        <div class="article-source">CBS News · 2026-11-17 · <a href="https://www.cbsnews.com/news/anthropic-ipo-ai-boom-nasdaq-debut/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>nthropic 将发行 8.25 亿股，价格区间定为每股 70-78 美元，募资最多 643 亿美元，对应估值约 1.405 万亿美元，11 月 18 日晚定价、19 日开盘交易，代码 ANT，最多 20% 面向散户。公司另计划从 AMD、博通、谷歌、微软、英伟达等处募资 260 亿美元。财报显示第三季度收入近 170 亿美元，环比增 45%，但尚未盈利，已背负 62 亿美元债务，并承诺到 2045 年投入近万亿美元芯片与基础设施。</p>
+        <p class="article-commentary">AI 泡沫的第一次公开定价实验，账面漂亮，现金流还没跟上。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">美国商务部堵住远程算力漏洞：1200 万 TPP 以上数据中心出口需申领许可</h3>
+            <div class="article-source">TechCrunch · 2026-11-16 · <a href="https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/" target="_blank">阅读原文</a></div>
+            <p class="article-body">商务部工业安全局发布临时最终规则，要求向任何可能向中国等 D:5 名单国家提供算力的数据中心出口、转口 AI 芯片与服务器前必须取得许可，覆盖算力超过 1200 万 TPP（约合 750 张 H100 或 H200）的数据中心与网络，并纳入马来西亚、新加坡、印尼、泰国、巴西的转口审查。规则同时废止拜登政府 2025 年 1 月的 AI Diffusion Rule，存量数据中心需在生效后 90 天内补办许可。</p>
+            <p class="article-commentary">管住了芯片没管住机房，东南亚数据中心成了新的绕行通道。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">阿里发布 Qwen4-Max，首登 Agent Arena 即列国产第一</h3>
+            <div class="article-source">AI 工具宝箱 · 2026-11-16 · <a href="https://blog.csdn.net/IT_ORACLE/article/details/170889416" target="_blank">阅读原文</a></div>
+            <p class="article-body">Qwen4-Max 于 11 月 16 日发布，模型 ID 为 qwen4-max-preview，上下文 1M token，最大输出 393,216 token（思考与回答共享），支持图像与视频输入，默认开启思考模式。首登 Agent Arena 排名第 14，在 14.7 万次真实会话中净提升 7.5%，为国产模型最高，按实验室计列全球第 5。</p>
+            <p class="article-commentary">国产模型第一次把战场从跑分挪到真实会话的净收益。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">腾讯混元 Hy4 flash 上线，单任务成本压到 Hy4 的二十分之一</h2>
+        <div class="article-source">科技日报 · 2026-11-16 · <a href="https://www.stdaily.com/web/gdxw/2026-11/16/content_614064.html" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">H</span>y4 flash 总参数 224B（其中 64B 为 Engram 参数），激活参数仅 12B，支持多模态与 1M 上下文，采用混合注意力与 LatentMoE 结构，KV cache 只有 Hy4 的六分之一，解码速度超 150 tps。定价每百万 token 输入 0.5 元、输出 2 元、命中缓存 0.02 元。已在腾讯云 TokenHub、WorkBuddy、元宝、企业微信、QQ、ima 等上线，即将接入 OpenRouter。腾讯内部 85 位用户盲测覆盖 27 类 259 个任务，满意度接近 Claude Haiku 5.5。</p>
+        <p class="article-commentary">12B 激活扛 1M 上下文，单位 token 便宜到能当水电用。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">美团开源 1.6 万亿参数 LongCat-2.5，训练与部署全程未用英伟达 GPU</h3>
+            <div class="article-source">美团技术团队 · 2026-11-15 · <a href="https://tech.meituan.com/2026/11/02/Meituan-LongCat-2.5.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">LongCat-2.5 是面向长程智能体任务的原生多模态 MoE 模型，总参数 1.6 万亿、每 token 激活约 480 亿，在 LongCat-2.0 基础上强化视觉理解与智能体编程能力，采用 MIT 许可开放权重。官方部署基于 194 片华为昇腾完成，训练与部署全程未使用英伟达 GPU，其前代 LongCat-2.0 已在五万卡国产算力集群上完成推理，2.5 沿用同一路线并把训练环节也搬到昇腾上。</p>
+            <p class="article-commentary">国产卡能不能训万亿参数，答案开始从口号变成工程细节。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Gemini 4 Carbon 登顶 MathArena，首个非 OpenAI 拿下数学榜首</h3>
+            <div class="article-source">AI 工具宝箱 · 2026-11-15 · <a href="https://www.aitoollab.cn/news/models/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Gemini 4 Carbon 以 85.4% 的成绩登顶 MathArena，成为首个拿下该榜首的非 OpenAI 模型。此前该模型的 Artificial Analysis 智能指数为 59 分、SEC-bench Pro 达 88.2%，定价为每百万 token 输入 2 美元、输出 10 美元，API 与 AI Studio 已全量开放。代价是单题推理成本约 15.70 美元，约为 GPT-6.1 Sol 的 15 倍。</p>
+            <p class="article-commentary">数学第一名换人了，但账单也是第一名，推理贵得离谱。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">华为云开源昇腾原生具身世界模型 CloudRobo-WM1.2，机器人评测双榜第一</h2>
+        <div class="article-source">凤凰网科技 · 2026-11-17 · <a href="https://original.ifeng.com/c/8y7u9lgEOAT" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">华</span>为云在杭州发布并开源 CloudRobo-WM1.2，基于国产昇腾算力训练，采用共享世界模型骨干网络实现预测增强的世界表征，以及世界模型原生 DualAct 架构完成动作生成，另提出多模态世界表征架构与多粒度监督数据自适应预训练框架等共五项技术。官方评测中 RoboTwin 2.0 平均分 88.98%、LiberoPro 2.0 平均分 81.7%，均列第一；模型之外，训练框架与昇腾算力最佳实践也一并开放。</p>
+        <p class="article-commentary">具身智能的瓶颈正从模型转向数据，国产卡先占住采集端。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">OpenAI 推出 ChatGPT Wallet，让 dots 智能体代替用户完成付款</h3>
+            <div class="article-source">CNBC · 2026-11-13 · <a href="https://www.cnbc.com/2026/11/13/openai-chatgpt-wallet-dot-purchases.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">ChatGPT Wallet 允许 OpenAI 的 dots 智能体代表用户下单并支付，使用支付令牌而非真实卡号，每笔交易需通过一次安全校验与生物识别确认。首发仅面向美国地区的 ChatGPT Pro 订阅用户，支持 American Express、万事达与维萨网络。OpenAI 同时承认，代理支付模式仍处早期，部分网站与支付系统尚未适配，可能无意中拦截这类交易。</p>
+            <p class="article-commentary">代理买咖啡的第一步，是先说清失败订单由谁承担。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">李彦宏警告 AI 泡沫可能成真：重投若转不成利润，估值就撑不住</h3>
+            <div class="article-source">路透社 · 2026-11-17 · <a href="https://www.reuters.com/business/media-telecom/baidu-ceo-says-ai-investment-must-deliver-profits-avoid-bubble-2026-11-17/" target="_blank">阅读原文</a></div>
+            <p class="article-body">百度董事长兼 CEO 李彦宏在深圳举行的 APEC 首席执行官峰会上表示，如果 AI 的巨额投入不能转化为企业更高的利润，市场对泡沫的担忧就可能变成现实。他把 AI 产业拆为芯片、云基础设施、大模型、应用四层，认为价值必须在应用层被捕获，行业需要从堆算力、堆参数转向能带来实际收入的产品。</p>
+            <p class="article-commentary">四层价值论里，应用层是眼下唯一没被讲透的一层。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">法国机器人初创 Genesis AI 完成 5 亿美元 A 轮，估值 35 亿美元</h2>
+        <div class="article-source">新浪财经 · 2026-11-17 · <a href="https://finance.sina.com.cn/stock/usstock/c/2026-11-17/doc-inizaitx2078200.shtml" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">成</span>立于 2024 年、总部位于巴黎和加州的通用机器人公司 Genesis AI 宣布完成 5 亿美元 A 轮融资，投后估值 35 亿美元，由 Khosla Ventures、Premji Invest 与 Eclipse 联合领投，英伟达 NVentures、AMD 创投、法国国家投资基金 Bpifrance、三星 Next、爱立信风投等跟投。资金将用于加速研发与工业部署，扩大 Eno 的生产规模，而客户端部署预计要到 2026 年底才开始。</p>
+        <p class="article-commentary">机器人还没卖出第一台，估值先按量产故事给到 35 亿。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>Anthropic 定价即定价：1.4 万亿美元估值背后是近 170 亿美元季度收入和 62 亿美元债务</li>
+            <li>算力监管转向查使用方：1200 万 TPP 门槛加东南亚转口审查成了新的红线</li>
+            <li>国产模型集体换赛道：Qwen4-Max 拼真实会话净提升，Hy4 flash 拼单任务成本，阿里腾讯同日开火</li>
+            <li>国产算力闭环出现实证样本：1.6 万亿参数 LongCat-2.5 全程昇腾训练与部署</li>
+            <li>应用层叙事被摆上台面：李彦宏把芯片、云、模型、应用四层的价值重新排序</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>10</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-11-17
+</div>
+
+</div>
+</body>
+</html>
