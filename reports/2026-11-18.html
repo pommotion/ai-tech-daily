@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-11-18</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>180</em></span>
+        <span>Wednesday, November 18, 2026</span>
+        <span>&#20170;&#26085; <em>10</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-11-17.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">英伟达交出 1158 亿美元季报的同时，董事会还在满城找 CEO；OpenAI、微软、谷歌三天各发一个前沿模型，单价一降再降。能力和资本仍在加速，但谁来签字、谁来结账，成了这周最贵的问题。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">英伟达 Q3 营收 1158 亿美元同比翻倍，数据中心占 93%，下季指引 1300 亿</h2>
+        <div class="article-source">NVIDIA Newsroom · 2026-11-17 · <a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">英</span>伟达公布截至 2026 年 10 月 25 日的 2027 财年第三季度财报：营收 1158 亿美元，环比增 20%、同比增 103%；数据中心收入 1076 亿美元、同比增 110%，占营收 93%。GAAP 净利 653 亿美元（同比增 105%），非 GAAP 摊薄每股收益 2.68 美元，毛利率 74.9%。公司给出第四财季 1300 亿美元营收指引（±3%），并明确该指引未计入任何来自中国的数据中心计算收入；毛利率指引降至 71%–72%。Vera Rubin NVL72 已开始批量出货，9 月董事会另新增 1500 亿美元回购授权，本季返还股东 281 亿美元。</p>
+        <p class="article-commentary">增速还在三位数，接任者却还没着落。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">OpenAI 发布 GPT-6.2 Astra 与 Sol：Astra 智能指数升至全球第二，API 价格再降 20%</h3>
+            <div class="article-source">OpenAI · 2026-11-17 · <a href="https://openai.com/index/introducing-gpt-6-2-astra-sol/" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI 同时推出面向最难任务的 GPT-6.2 Astra 与面向日常工作的 GPT-6.2 Sol，称两者用更少输出 token 取得更好结果。Astra 在 Agents&#x27; Last Exam 上比 GPT-6 Astra 高 5.2 分、成本不到三分之一，比 Claude Fable 5.2 高 5.5 分而成本仅为 5%；Terminal-Bench-Science 0.1 上领先 GPT-6 Astra 9 个百分点，Vals Science Index 创新高；Harvey LAB-AA v1.1 通过率超过 Fable 5.2 两倍而成本约六分之一。Astra API 定价每百万 token 输入 8 美元、缓存输入 0.40 美元、输出 40 美元，较上代低 20%；Sol 维持 GPT-6.1 Sol 价格，FrontierCode 2.0 上与 Astra 差距 0.5 分而成本约五分之一。Artificial Analysis 智能指数 v5.0.1 中 Astra 得 62.1 分居第二，仅次于 Fable 5.2。</p>
+            <p class="article-commentary">性能涨、单价降，代理的单任务成本正在被压薄。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">微软发布 MAI Code 2 与 Code 2 Flash：2.8 万亿参数 MoE，主打企业日常编码性价比</h3>
+            <div class="article-source">Microsoft · 2026-11-17 · <a href="https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/" target="_blank">阅读原文</a></div>
+            <p class="article-body">微软推出自研编程模型 MAI Code 2 与 Code 2 Flash。Code 2 为 MoE 架构，约 2.8 万亿总参数、770 亿激活参数（另含 30 亿嵌入参数），支持约 105 万 token 上下文、12.8 万 token 输出与图像输入，并在 GitHub Copilot CLI 与 VS Code 智能体环境中做强化学习。官方称在 DeepSWE 1.1、Terminal-Bench 2.1、SWE-Atlas、FrontierCode v1.1 四项基准均值上，达到 GPT-6.1 Sol 的 98% 表现而成本约 40%，达到 Claude Opus 5.5 的 96% 而成本仅约 5%；盲测中前端应用对比有 64% 偏好率胜出。Code 2 Flash 在三项日常编码基准上以 GPT-6 Luna 的 65%、Claude Haiku 5.5 的 20% 成本给出同等表现。Copilot 促销价输入/缓存/输出为 0.50/0.025/2.50 美元每百万 token，2027 年 5 月 17 日起恢复 1.00/0.05/5.00 美元；权重未开放下载。</p>
+            <p class="article-commentary">微软用两成价格打 Claude，前提是别碰长周期活儿。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">谷歌发布 Gemini 4 Neon，一个月内第四个 Gemini 4 模型，定价高于 Carbon 与 Argon</h2>
+        <div class="article-source">The Decoder · 2026-11-17 · <a href="https://the-decoder.com/google-ships-gemini-4-neon-its-fourth-new-gemini-model-in-a-month/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">谷</span>歌上线 Gemini 4 Neon，称其具备前沿级智能与跨复杂软件工程、知识工作、科学工作流的端到端任务完成能力。Neon 通过 API 提供，定价每百万 token 输入 3 美元、输出 15 美元，高于 Carbon 与 Argon 的介绍价 2/10 美元（12 月 1 日起涨至 4/20 美元），也是 Hydrogen 的 1.50/7.50 美元的两倍。Neon 上下文约 100 万 token、最高可输出 100 万 token，支持文本、图像、视频、音频与 PDF 输入，提供 Computer Use、代码执行、文件检索以及 Google 搜索与地图的 grounding，不支持图像与音频生成。谷歌在四周内已推出 Hydrogen、Carbon、Argon、Neon 四个 Gemini 4 版本。</p>
+        <p class="article-commentary">一个月四版 Gemini 4，选型表比模型本身更难维护。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">黄仁勋辞职余波扩大：英伟达一周跌 14%，约 120 亿美元对华芯片流向遭调查</h3>
+            <div class="article-source">The Verge · 2026-11-16 · <a href="https://www.theverge.com/ai-artificial-intelligence/1031740/jensen-huang-nvidia-scandal-isnt-slowing-down" target="_blank">阅读原文</a></div>
+            <p class="article-body">黄仁勋已辞去总裁、CEO 与董事职务并由 CFO Colette Kress 出任临时 CEO，董事会另任命 Synopsys 前 CEO Harvey C. Jones 出任首任董事长并启动内外部遴选。The Verge 统计：辞任后英伟达股价一周下跌 14%，为一年半来最差表现之一；路透社报道其存在第三段婚外情，并被指曾对首席法务高管隐瞒婚外情；另有报道称与 Alice Huang 关联的公司牵涉近 120 亿美元芯片流向中国，关联方向包括向 DeepSeek 承诺先进芯片。员工与股东请愿恢复其职务，获逾 11.5 万签名（含 5965 名现任员工、63063 名股东），《金融时报》报道其拉拢盟友组成「作战室」筹备复出。参议院已启动调查，董事会独立调查仍在进行。</p>
+            <p class="article-commentary">辞的是一个人，暴露的是没有交接机制的依赖。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">美国国会两党推动收紧对华 AI 芯片出口，并拟要求企业披露使用中国模型</h3>
+            <div class="article-source">The Verge · 2026-11-15 · <a href="https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china" target="_blank">阅读原文</a></div>
+            <p class="article-body">在黄仁勋涉华丑闻发酵后，美众参两党均表态支持收紧 AI 芯片出口规则：参议院银行委员会主席 Tim Scott 已致函黄仁勋与商务部长 Lutnick 要求公开作证，众议院议长 Mike Johnson 表示国会正形成限制对华芯片出口的共识，2025 年 4 月提出后搁置的《远程访问安全法案》重新受关注。路透社另引述三人称，特朗普政府正考虑要求美国企业公开披露其使用中国 AI 模型的情况，意在抑制依赖而不新增限制；参议员 Cantwell 与 Rounds 呼吁白宫立即行动。腾讯称美国对先进 AI 芯片远程访问的新限制不会实质冲击其云收入，但可能拖慢下一代 AI 模型的开发。国会委员会年度报告还称中国军方正寻求先进英伟达芯片用于 AI 武器。</p>
+            <p class="article-commentary">管住了卡，模型与应用能不能落地是另一题。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">OpenAI 用模型改芯片代码：与 AMD 合作五个月取得最高 14% 的 PPA 提升</h2>
+        <div class="article-source">OpenAI · 2026-11-17 · <a href="https://openai.com/index/advancing-chip-design-with-our-models/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 公布其模型参与芯片设计的方法与结果：在自家 Jalapeño 推理芯片上，模型对 SystemVerilog RTL 的改写使向量单元标准单元面积减少约 13%、矩阵单元减少约 10%，其中一次乘法器重构面积少约 15% 且延迟从两拍压到一拍、一次加法器重构面积少约 15%，这些改动已在硅片验证中确认。与 AMD 合作中，模型在旗舰 GPU IP 相对高度优化基线取得最高 14% 的功耗、性能与面积综合提升，相当于在不到五个月内完成约一年的工程进度，AMD 已把部分改动并入送厂的下一代设计与量产设计文件。模型还在 PicoRV32 与 OpenTitan（Ibex）两个开源 RISC-V 核上做吞吐优化，每轮约 11.2 万 token 预算下 GPT-6.2 Astra 平均得分最高。公司同时与 Synopsys 合作推出 GPT-Synopsys。</p>
+        <p class="article-commentary">模型开始改 RTL，芯片工程师的角色被重新定义。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Gemini 任务功能在美日韩加澳印六国免费开放：能替你打电话、订位、查账单并付款</h3>
+            <div class="article-source">Google Blog · 2026-11-17 · <a href="https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/" target="_blank">阅读原文</a></div>
+            <p class="article-body">谷歌把 Gemini 的代理任务功能基于新的 Gemini 4 Hydrogen 模型，向美国、日本、韩国、加拿大、澳大利亚和印度的数亿用户免费开放，高级功能先行在美国。官方举例：同时致电两家经销商排队并把保养预约写入日历；接入 Google Password Manager 后分析历史电费账单，定位到热泵在下午 4 点高电价时段启动；用 Shopping Graph 比较充电器型号并通过 Google Pay 结账、顺带找到优惠码省下 10 美元。付费走 Agent Payments Protocol（AP2），正与 American Express（即将）、Mastercard、Visa 合作以数字令牌保护交易，用户可预设消费上限，收据与追踪信息进入 Google Wallet（美国区当天扩展至 iOS），后续将接入 Universal Commerce Protocol。</p>
+            <p class="article-commentary">免费是入口，代理消费才是真正的落点。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">伯克利与微软开源 TokenEconomizer：让编码 Agent 复用历史会话，平均降本 18.4%–30.9%</h3>
+            <div class="article-source">Microsoft Research · 2026-11-17 · <a href="https://www.microsoft.com/en-us/research/blog/tokeneconomizer-learning-from-experience-to-make-ai-coding-agents-more-efficient/" target="_blank">阅读原文</a></div>
+            <p class="article-body">TokenEconomizer 是伯克利、微软研究院与微软安全团队联合开源的插件，不改动 Agent 与底层模型，而是从仓库内已完成会话中学习，为后续会话生成指导。在 277 个真实缺陷修复任务上，跨多个编码 Agent 实现 18.4%–30.9% 的成本下降，所有受测仓库成本均有下降且任务成功率基本持平。其对 Claude Code 在 60 个 SWE-Bench 任务的剖析显示三类浪费：仓库积累至少 5 个已完成任务后，30% 的工具调用重复了同仓库早前动作（跨仓库重复仅 7%）；每轮下发的 23 个工具描述中有 16 个从未被调用；失败任务占 17%，却消耗了 32% 的支出。插件用微技能记录仓库经验、按历史裁剪工具、并由裁判模型判定卡死后注入换路建议。</p>
+            <p class="article-commentary">省钱的杠杆不在模型，在会话记忆。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Databricks 上线 AI Index：开源权重模型占企业 token 份额四个月从 7.3% 升至 30.9%</h2>
+        <div class="article-source">Databricks · 2026-11-17 · <a href="https://www.databricks.com/blog/introducing-databricks-ai-index-state-enterprise-ai-tokenomics" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">D</span>atabricks 公开其内部评测套件并上线每周更新的 AI Index，数据来自一万多家 Unity Gateway 企业的匿名用量与消费，以及其工程师真实编码 Agent 工作流的评测。数据显示：Claude Opus 5.5 上线后六周内在闭源模型 token 中占比从 7.2% 升至 37.9%，把 Anthropic 整体份额从 57.6% 推到 68.8%；只依赖单一模型供应商的企业从 7 月的约 64% 降至 11 月 2 日的 28%；开源权重模型的企业 token 份额从 7 月的 7.3% 升至 11 月的 30.9%。Databricks 内部称 Opus 5.5 单会话质量提升且成本低 29%，据此将其设为 Claude Code 默认模型。报告还统计自 2026 年 5 月起平均约 3.7 天就有一个新的旗舰闭源或开源权重模型发布。</p>
+        <p class="article-commentary">企业 token 半年换了一半供应商，押注风险在上升。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>算力的账和治理的账同时爆表：英伟达单季 1158 亿美元营收里 93% 来自数据中心，而公司自己正处在 CEO 空缺与合规调查期。</li>
+            <li>前沿模型发布节奏压到一周一次，OpenAI、微软、谷歌三天各交一个版本，单价同期下降，竞争焦点已从参数转向每任务成本。</li>
+            <li>价格战打到企业真实用量上：Databricks 数据显示开源权重模型 token 份额四个月从 7.3% 冲到 30.9%，单一供应商依赖度从 64% 塌到 28%。</li>
+            <li>代理开始碰钱和电话：Gemini 任务功能六国免费并接入 AP2 支付，模型能力第一次以「替你下单」的形式进入普通用户的日常。</li>
+            <li>降本的两条新路径都不在模型本身：会话记忆复用（TokenEconomizer）与模型改芯片代码（OpenAI 与 AMD 的 14% PPA），前者省调用费、后者省制造成本。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>10</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-11-18
+</div>
+
+</div>
+</body>
+</html>
