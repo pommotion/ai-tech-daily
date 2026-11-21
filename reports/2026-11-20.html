@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-11-20</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>182</em></span>
+        <span>Friday, November 20, 2026</span>
+        <span>&#20170;&#26085; <em>10</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-11-19.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">Anthropic 首日把 2 万亿的想象和 1.27 万亿的收盘价一次演完，同一天大盘跌逾 2%；而真正的战场已经移到入口——Signal 封杀系统级 AI 读屏，谷歌拿到 Mac 后台操控权，苹果一边自研 Agent 一边给对手加门槛。这轮竞争的关键词不是模型强弱，是谁能碰你的屏幕。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Anthropic 上市首日收涨 17%，市值 1.272 万亿美元，但大盘同日跌逾 2%</h2>
+        <div class="article-source">IT之家 / 澎湃新闻 · 2026-11-20 · <a href="https://www.ithome.com/1/029/748.htm" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>nthropic 11 月 19 日在纳斯达克挂牌，发行价 83 美元，开盘 111.50 美元（涨 34.3%），盘中一度突破 115 美元、市值短暂触及 2 万亿美元，随后回落至 100 美元下方，收盘 97.17 美元、较发行价涨 17.07%，较开盘价跌约 13%，盘后续跌超 5%。CNBC 统计当日成交 8.396 亿股，按已发行股份计收盘市值约 1.272 万亿美元，按完全稀释股本计约 1.8 万亿美元。本次公开发行 9.8 亿股募资约 813 亿美元，另有 260 亿美元私募配售；认购需求接近可发行股份的 7 倍，超过一半参与竞购的机构未获配，散户获约 15%。同日道指跌 2.19%、标普 500 跌 2.02%、纳指跌 2.25%。第三季度营收 169.56 亿美元、环比增 47%，GAAP 净亏 232.91 亿美元；高盛预计其 2030 年才实现全年自由现金流转正。</p>
+        <p class="article-commentary">开盘给的是愿景，收盘给的是现实。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">Signal 反向封杀系统级 AI Agent：iOS 27 禁止截图，安卓屏蔽屏幕读取</h3>
+            <div class="article-source">Signal Blog / Reuters · 2026-11-20 · <a href="https://signal.org/blog/protecting-your-privacy/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Signal 宣布限制 iOS 27 及可检测到 AI 助手读取屏幕的安卓版本上内置智能体获取其数据：在 iOS 27 应用内禁止截图，在安卓上于 AI 助手尝试抓取屏幕时触发保护。Signal 称这些 OS 级 AI 会「扫描」屏幕内容，使 Signal 数据被抓取并交给本地数据库或远端服务器，一旦被抓取即脱离 Signal 控制，破坏其对端到端加密的独立保证，并直言这是「生存级威胁」。用户可在设置中关闭该保护，但会暴露本人与联系人的内容。Signal 承认补救不完整：macOS 上无法可靠拦截截图，文件系统读取与通知访问仍是风险，去年它已用截图拦截封堵 Windows 上的 Microsoft Recall。Signal 呼吁苹果、谷歌、微软提供让应用整体退出 AI 数据访问的明确接口，并公开智能体的数据访问机制文档。</p>
+            <p class="article-commentary">加密软件开始给操作系统打补丁，这本身就说明问题。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Gemini Mac 版上线电脑操控：后台独立窗口执行多步任务，不占光标</h3>
+            <div class="article-source">Google Blog · 2026-11-19 · <a href="https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/" target="_blank">阅读原文</a></div>
+            <p class="article-body">谷歌为 macOS 版 Gemini 应用上线 computer use 功能，用户描述目标后由 Gemini 完成点击、输入、菜单与表单填写，跨本地文件、桌面应用与网页执行多步任务。所有操作在隔离的后台窗口中运行，聊天内提供实时预览，主屏幕与光标保持空闲。安全设计包括：用户自选 Gemini 可访问的应用、全程可观看每一步、随时暂停、关键操作事前确认。官方示例包含在设计软件中批量调色、搭建 3D 场景，从本地 PDF 提取重量尺寸与地址填写多箱运费报价，从多个区域的实时仪表盘抓取指标与截图在 Google Slides 生成演示，以及批量分析本地服装照片并研究定价、在二手平台挂单。该功能以英文在美国先行推出，应用可从 gemini.google/mac 下载。</p>
+            <p class="article-commentary">把鼠标交出去之前，先得说清谁能拿回来。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">OpenAI 披露反蒸馏战果：推理轨迹窃取成功率从 54.0% 降至 0.2%</h2>
+        <div class="article-source">OpenAI · 2026-11-19 · <a href="https://openai.com/index/combatting-adversarial-distillation/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 公布对抗性蒸馏的防御进展：在内部自适应自动化红队测试中（聚合六个攻击模型），从过往请求中提取受保护推理轨迹的平均成功率，从 GPT-6 Astra 原始防护下的 54.0% 降至 GPT-6.2 Astra 更新防护后的 0.2%；针对当前请求的提取从 22.9% 降至 0.9%。防护分两层：请求层用对抗训练、输入与输出分类器（覆盖流式与非流式响应及工具调用参数）、API 控制阻断旧模型读取受保护推理；行动层则每周封禁数千至数万个账号，识别协同提取模式。OpenAI 另引用内部实验称，用精确推理轨迹训练的学生模型在网络安全基准上优于只用推理摘要训练的模型，说明轨迹泄露会外溢到未授权能力转移。部分改进已回补至 GPT-6 Astra。</p>
+        <p class="article-commentary">蒸馏防线从 54% 收到 0.2%，但攻方也在换招。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">谷歌 Genie 4 开放 API：文图生成可交互 720p 世界，约 6 美元/分钟</h3>
+            <div class="article-source">Google DeepMind · 2026-11-20 · <a href="https://deepmind.google/models/genie/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Google DeepMind 宣布 Genie 4 面向开发者开放。Genie 4 融合 Gemini 家族能力：Gemini Omni 负责把模拟锚定在真实世界的外观与行为，其他 Gemini 模型提供维持模拟连贯性与连续性所需的复杂推理。据公开信息，它可由文本或图片生成 720p、24fps 的可交互三维世界，支持 48kHz 立体声与键盘操控，定价约 6.05 美元/分钟，单次会话上限 120 秒。DeepMind 官方博客已将其列入 11 月发布列表，并将生成示例公开，涵盖可自由穿行的彩绘玻璃风格景观、第一人称滑雪视角、以及带游戏化界面元素的第一人称运动场景。</p>
+            <p class="article-commentary">世界模型开始按分钟卖，价格先于场景成熟。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">英伟达接近以至少 5 亿美元收购 Inception，押注扩散式语言模型</h3>
+            <div class="article-source">The Information / The Decoder · 2026-11-20 · <a href="https://www.theinformation.com/articles/nvidias-dealmaking-binge-faces-reckoning-jensen-huangs-exit" target="_blank">阅读原文</a></div>
+            <p class="article-body">据三位知情人士，英伟达正接近以至少 5 亿美元收购 AI 初创 Inception，交易还包含对这家成立两年、位于旧金山湾区的公司 30 余名员工的业绩奖金。Inception 用图像生成中的扩散思路做语言模型：不像 ChatGPT 与 Claude 那样逐 token 生成，而是对整段回复逐步精修，最近发布的 Mercury 3 声称以更短等待时间胜过 GPT-6 Luna 与 Claude Haiku 5.5。收购意在补强英伟达开源 Nemotron 模型与面向机器人的物理模型，帮助其在 OpenAI、Anthropic 各自造推理芯片的背景下保持模型层存在感；Palantir 与美国政府机构已把 Nemotron 作为中国模型的替代品。谈判始于黄仁勋辞任前，此前微软也表达过兴趣。联合创始人 Stefano Ermon、Aditya Grover、Volodymyr Kuleshov 预计全职加入英伟达。</p>
+            <p class="article-commentary">卖铲子的开始买铸剑师，纵向整合又进一层。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">TOOLS</div>
+        <h2 class="feature-headline">Perplexity Brain 开始自写 Agent 技能：8 周随机测试工具调用失败降 11%</h2>
+        <div class="article-source">Perplexity / i10X · 2026-11-19 · <a href="https://i10x.ai/news/perplexity-brain-self-improving-agent-skills-computer" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">P</span>erplexity 扩展其 Computer 智能体中的个性化系统 Brain，使其能从历史会话中自动编写与更新可复用的 Agent 技能。8 月 1 日至 11 月 14 日期间，Brain 为 2 万多名用户写了超过 8 万条个人技能，自 9 月 4 日起对 3 万多条既有技能做了逾 10 万次自动更新。在线生产流量的 8 周随机测试显示：实验组 72.9% 的用户至少获得一条新个人技能（对照组仅 6.5% 手工添加），53% 的会话加载了个人技能（对照组 13%），工具调用失败下降 11%、用户不满意的会话减少 7.6%，成本与响应时间无可测变化。机制为证据、反思、验证、启用四段闭环：新技能需两次独立重复行为，改进代理无联网与连接器权限，个人技能上限 10 条，超出须退役一条并说明理由；所有用户共享的内置技能改动需回放测试与工程师批准。该功能对美国 Max 订阅用户默认开启并可关闭。</p>
+        <p class="article-commentary">不调权重只改提示，这条路比微调更可审计。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">斯坦福用幻觉库校准检测器：2026 年圣克拉拉县 38% 法院投诉见 AI 痕迹</h3>
+            <div class="article-source">Stanford HAI · 2026-11-19 · <a href="https://hai.stanford.edu/news/ai-might-be-flooding-state-court-houses-but-proving-it-is-another-matter" target="_blank">阅读原文</a></div>
+            <p class="article-body">斯坦福研究者构建了一套基于已记录 AI 幻觉案例的新基准，用来校准 AI 文本检测器，并追踪生成式 AI 在美国四个州法院的渗透情况。研究发现 2026 年圣克拉拉县的投诉中有 38% 出现 AI 痕迹，自诉当事人比例从 19% 升至 72%。研究者指出，单纯依靠检测器判定「是否 AI 生成」并不可靠，需以已知幻觉样本反向校准阈值，才能把误判控制在可接受范围，并强调 AI 生成诉讼可能淹没法院、浪费司法资源、延误弱势群体的司法可及性。</p>
+            <p class="article-commentary">判「是不是 AI 写的」比判案子本身还难。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">OpenAI 用 Codex 搭出性能工厂：3 个月 1700 次自动排查、600 个根因</h3>
+            <div class="article-source">OpenAI · 2026-11-19 · <a href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI 公开 Performance Factory：一个在云端运行的自主系统，用 Codex 端到端处理性能回归。其首个工作流 Regression Workflow 在性能告警触发后自动建单，由智能体排查变慢原因、把结论写入任务并提交修复供工程师评审；部署后再由另一个智能体接手同一任务验证性能是否回到基线。三个多月里该工作流跟踪了 1700 多次调查、为 600 多个案例定出根因，相当于每天 17 次自动调查。演进路径被其总结为五级：无 Codex 时人工翻指标日志（曾累积 30 多个性能工具）、Codex 作为伙伴辅助排查、把排查流程写成可复用的 perf-forensics 技能、工程师退化为告警与模型之间的「人肉代理」、最终把调查搬上云端成为工厂；每个任务保留状态与发现，可在智能体与工程师之间流转并在评审或部署后恢复。</p>
+            <p class="article-commentary">把排障做成流水线，工程师改去审结论了。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">苹果被曝自研设备控制 Agent，同时把第三方 Agent 授权步骤从 4 步加到 14 步</h2>
+        <div class="article-source">Bloomberg / The Decoder · 2026-11-20 · <a href="https://www.bloomberg.com/news/articles/2026-11-19/apple-is-working-on-ai-agent-for-device-control-apps-browsing-and-coding" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">据</span>彭博社报道，苹果正自研一款设备控制类 AI Agent，可代用户操作应用、浏览网页与写代码，对标 Meta Muse、Dots、Duet 与 Grok Bots，最早可能于明年年底推出，目前仍处早期阶段。招聘信息显示苹果正招募一名高级工程经理领导该项目，隐私被列为设计核心，强调权限模型与沙盒隔离。报道称新任 CEO John Ternus 正推动软件负责人 Craig Federighi 采取更进取的 AI 策略。与此同时，macOS 27.3 把用户允许 ChatGPT 等第三方 Agent 控制 Mac 所需的步骤从 4 步增加到 14 步；苹果称此举保护用户，部分 AI 公司则认为是在拖慢竞争对手。</p>
+        <p class="article-commentary">自己造 Agent 的同时抬高对手门槛，这才是平台。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>Anthropic 首日把愿景和现实一次演完：开盘涨 34%、盘中触 2 万亿，收盘回落至 1.272 万亿、涨 17%，同日三大指数跌逾 2%。</li>
+            <li>隐私战线反过来了：Signal 主动封杀系统级 AI 的屏幕读取与截图，并直言这是生存级威胁，加密应用开始给操作系统打补丁。</li>
+            <li>Agent 争夺从模型转到入口：Gemini 拿到 Mac 后台操控权，苹果一边自研设备 Agent、一边把第三方授权步骤从 4 步加到 14 步。</li>
+            <li>降本与防守同时工业化：OpenAI 用 Codex 把性能排查做成每天 17 次的流水线，同时把推理轨迹窃取成功率从 54% 压到 0.2%。</li>
+            <li>收购与自进化并行：英伟达拟以至少 5 亿美元买下扩散式语言模型团队，Perplexity 让 Agent 自己写技能且不碰权重。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>10</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-11-20
+</div>
+
+</div>
+</body>
+</html>
