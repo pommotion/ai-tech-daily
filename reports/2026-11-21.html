@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-11-21</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>183</em></span>
+        <span>Saturday, November 21, 2026</span>
+        <span>&#20170;&#26085; <em>10</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-11-20.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">同一天里两件事同时成立：Lean 与 Mathlib 社区认证 Claude 协助的黎曼猜想证明代码正确，1700 万行过了六大检查器；而纳指一周跌 10.4%、约 4 万亿美元市值蒸发。数学往前跨了一步，估值往回退了一步——它们指向同一个问题：这项能力到底能兑现成什么。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">Claude 协助证明黎曼猜想，Lean 与 Mathlib 社区认证代码正确</h2>
+        <div class="article-source">Lean/Mathlib 联合声明 · Nature · 2026-11-21 · <a href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">1</span>1 月 20 日，Anthropic 数学家 Levent Alpöge（哈佛休假的数论学者）在个人网站发布 4 页说明，称与 Claude 在约六周内证明了黎曼猜想，方法还可延伸到广义黎曼猜想。他以 Lean 库形式提交证明，代码达 1700 万行。11 月 21 日下午，Lean FRO 与 Mathlib Initiative 发布联合声明：「我们完全相信 Alpöge 的黎曼猜想证明是正确的。」认证分四项：陈述本身即 Mathlib 中经专家审定的 RiemannHypothesis；库可无误编译，数十人复现了相同的原始证明导出文件；社区用 comparator 与 con-leche 两套独立工具确认所证定理与 Mathlib 陈述完全一致；导出证明通过 Lean 官方内核、con-leche、con-ron 及多个第三方检查器验证，其中 con-leche 与 con-ron 自带相对集合论的「无法接受假证明」形式化证明。需分清两点：这是 Lean 层面的形式化验证，不等于数学界已完成对思路的理解与审阅；牛津 James Maynard 称若完全成立「显然是数学史上的里程碑」，蒙特利尔 Andrew Granville 则批评 4 页说明写得「混乱」，并质疑发布时点。同日另有意大利数学家 Alessandro Masullo 的纯人工证明预印本发布。</p>
+        <p class="article-commentary">代码过了机器审，但数学界还没读懂它。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">纳指一周跌 10.4%、约 4 万亿美元蒸发，英伟达单日跌 14%、Anthropic 次日跌 9%</h3>
+            <div class="article-source">The Guardian / Financial Times · 2026-11-20 · <a href="https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off" target="_blank">阅读原文</a></div>
+            <p class="article-body">11 月 20 日 AI 相关股票全面下跌：纳斯达克综合指数单日跌 5%，抹平 2026 年全部涨幅，道指与标普 500 双双进入回调区间；据《华尔街日报》，本周科技股蒸发约 4 万亿美元市值。个股方面，英伟达单日跌 14%，SanDisk 跌 14%、美光跌 12%；Anthropic 上市次日跌 9% 至 88.30 美元，逼近 83 美元发行价。亚洲同步受挫：台湾加权指数跌 6.7%、台积电跌约 6%，日经跌 5%，韩国 Kospi 跌 5.5%，软银在东京跌 14.5% 为两年多最差单日；欧洲 Stoxx 600 跌 1.9% 创 2025 年 3 月以来最大周跌幅，英国富时 100 本周跌 5.1%。避险资产同样承压：美元升至 19 个月高位，金价走向 3 月以来最差一周，比特币跌破 6 万美元创四个月新低。IG 分析师认为 Anthropic 的 IPO 可能在抽走市场流动性——投资者为认购新股抛售其他科技股。</p>
+            <p class="article-commentary">IPO 没能托住盘，反而抽走了流动性。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">加州总检察长向英伟达发出调查传票，SEC 与司法部同步介入芯片流向调查</h3>
+            <div class="article-source">The Guardian / WSJ · 2026-11-20 · <a href="https://www.theguardian.com/technology/2026/nov/20/california-investigates-nvidia-over-whether-chip-exports-ended-up-in-china" target="_blank">阅读原文</a></div>
+            <p class="article-body">加州总检察长 Rob Bonta 于周四向英伟达发出调查传票，调查其先进半导体出口是否违反美国管制流入中国，以及公司是否因此误导投资者。「英伟达与其前 CEO 的行为举起了鲜红的警示旗，包括公司可能误导投资者的方式，」Bonta 表示，调查还将查明黄仁勋的行为是否导致机密信息流向中国。此前黄仁勋因多段婚外情（其中一段涉被怀疑为中国情报人员的 Alice Huang）辞职；Alice Huang 关联的新加坡 Megaspeed 近年在英伟达芯片与硬件上采购近 50 亿美元，正被调查是否将受限芯片转运中国，公司自称「合法合规经营」。据《华尔街日报》，SEC 已就披露规则展开民事调查，重点为亚洲芯片销售与去年停止单独披露新加坡收入一事；司法部另有多项调查在办，财政部长 Bessent 要求董事会在十天内答复。黄仁勋将于 12 月 1 日到多个国会委员会作证。</p>
+            <p class="article-commentary">监管从出口管制查到证券披露，这是两条不同的刀。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">MiniMax 内部模型自动破解密码学：McEliece 挑战解出 55 个未解实例，最高加速 4.3 万倍</h2>
+        <div class="article-source">MiniMax · 2026-11-20 · <a href="https://www.minimax.io/blog/practical-cryptanalysis-with-minimaxs-latest-internal-model" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">M</span>iniMax 研究团队用内部专用模型 MIM 做自动化密码分析，在三个方向取得结果。一是在 NIST 标准化竞赛候选算法上做出首个实用破解：Waterfall-256（SHA-3 候选）单核 0.045 秒构造出碰撞，Blender-256 单核 0.36–2.3 秒找到全轮碰撞，后量子候选 LOCKER 把求解矩阵从 42 PB 压缩至 58 MB 并在 2 秒内恢复共享密钥，ROLLO-I-128 约 6 秒从公钥恢复等价私钥。二是对近年密码学会议论文与竞赛获奖设计实现密文伪造或密钥恢复。三是在底层数学难题上解出数十个此前未解的高阶实例，相对此前最优求解器实测加速数百至数万倍；McEliece 挑战解出 55 个未解实例，最高加速约 4.3 万倍。研究强调密码分析结果二元且可验证——脚本要么恢复目标秘密要么没有，不给幻觉留空间，因此适合作长程推理的测试场。</p>
+        <p class="article-commentary">答案非对即错，这是最干净的模型能力考卷。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">METR 更新能力评估：任务时间视野翻倍周期 3.61 个月，可验证子集仅 1.65 个月</h3>
+            <div class="article-source">METR · 2026-11-20 · <a href="https://metr.org/blog/2026-11-20-q4-2026-capability-update/" target="_blank">阅读原文</a></div>
+            <p class="article-body">METR 发布 2026 年第四季度能力评估更新，覆盖至 Opus 5.5 与 GPT-6 Astra 共 15 个模型。核心结论：合并 TH1.1 与 TH2 套件后，任务时间视野的翻倍周期为 3.61 个月；而 TH2 的可验证子集仅 1.65 个月，说明改进速度在不同任务类型上并不均匀。在自建人类基线中，招募的专家通常无法超越当前前沿模型；但在已有 10 名以上领域专家尝试的任务上，模型多处于很高分位而非绝对第一。研究还发现，模型在难以转化为 RL 训练环境（以「生命周期成本」衡量）的任务上表现较差——成本翻倍大致相当于时间视野减半的难度惩罚，但高低成本子集的改进速率相近。报告同时指出一处相反结论：在缺乏清晰实证反馈、需要判断力的任务上，AI 智能体判断力弱于人类专家。METR 明确表示：现有公开证据不足以排除未来两年出现剧烈的 AI 研发加速。</p>
+            <p class="article-commentary">考卷上赢、考卷外输，分界线决定能替代谁。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Thinking Machines 开源 Inkling 2 Mini：循环 Transformer，约 20GB 可在笔记本离线跑</h3>
+            <div class="article-source">Thinking Machines Lab · 2026-11-20 · <a href="https://thinkingmachines.ai/news/inkling-2-mini/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Thinking Machines Lab 发布 Inkling 2 Mini，采用循环 Transformer 架构：24 层中中间 12 层对每个 token 连续跑三次，使模型在不写长推理的情况下内部多推理，用更少 token 得到答案。模型为 MoE，总参数 26.4B、激活 3.4B、含循环后每 token 权重激活 5.4B；支持文本与图像输入、100 万 token 上下文、Apache 2.0 许可。在总参数 100B 以下的开放权重模型中，其 DeepSWE v1.1 得 48.2%、Vals Index v2.2 得 46.5%，均列第一。权重多以 NVFP4 训练与部署、最后四层为 MXFP8，总内存占用约 20GB，可在消费级笔记本运行——研究员在航班上用一台 M5 Pro/48GB 的 MacBook Pro 离线几分钟内建出可玩飞行模拟器。研究称更大循环次数可提升无 CoT 的时间视野（1 次 16 秒→3 次 37 秒），思维链变短但保持可读，智能体破坏性测试未随循环数上升。</p>
+            <p class="article-commentary">把推理塞进循环，省的是 token，赌的是可监控性。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">browser-use 1.0 把 24 个动作砍成 1 个 Python REPL：同模型得分升 14–33 分，成本降至 1/5.2</h2>
+        <div class="article-source">Browser Use · 2026-11-10 · <a href="https://browser-use.com/posts/browser-use-1-0" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">b</span>rowser-use 发布 1.0，用一个 python 主工具取代 0.x 的 24 个浏览器动作：这是一个常驻 REPL，预导入 browser-harness 助手与裸 Chrome DevTools Protocol 调用 cdp()，模型直接写代码操作浏览器，另保留两种收尾方式。发布删除了 136,905 行、新增 29,601 行，554 个文件中 178 个 Python 文件合并为 43 个。在 BU Bench v2.1 上，同样三个模型比 0.x 得分高 14–33 分、成本低 2.7–5.2 倍；团队明确说明这是整版发布的整体效果、每模型仅跑一次，不能全归功于工具变更。观察 199 条运行轨迹（12,976 次代码调用、约 47 个不同 CDP 命令）显示，模型会自行调用未被封装的能力，例如用 Page.stopLoading 解卡死页面、用 Network.getResponseBody 读取响应。作者回顾：最初每个 bug 都变成一个动作，峰值 29 个，而每个动作的 schema 都要占提示词，菜单外的需求就卡死。</p>
+        <p class="article-commentary">工具越多越笨，这条教训终于被写成代码。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Runway 的软件工厂：智能体承担 38% 合并 PR，首次批准等待从 2 小时降到 5 分钟</h3>
+            <div class="article-source">Runway · 2026-11-20 · <a href="https://runwayml.com/news/engineering/building-a-software-factory" target="_blank">阅读原文</a></div>
+            <p class="article-body">Runway 公开其「软件工厂」实践：云端智能体 10 月驱动了 38% 的合并 PR，而 6 月仅 0.1%；月合并量从 6 月的 2 个增至 10 月的 3,130 个，11 月按日均推算约 3,200 个。9 月至 11 月中旬，首次批准的中位等待从两小时以上降至约五分钟，每周合并量翻倍以上；由智能体批准的变更被回滚的频率不高于人类批准。11 月上半月抽样的 100 个智能体 PR 中，78 个不含任何人类提交。他们把交付拆成写码并通过 CI、评审、批准、QA、修主干、运行产线七站，逐站交给智能体；关键设计是先定好每一站的验收判据再看结果。作者坦言瓶颈会移动：智能体产出评审就绪 PR 的速度一度快于人类阅读速度，于是评审成为下一站要交出去的工作。</p>
+            <p class="article-commentary">瓶颈没消失，只是从写码挪到了签字。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">OpenHands 把 CVE 修复交给智能体流水线：镜像 critical 从 87 降到 5，high 从 1997 降到 188</h3>
+            <div class="article-source">OpenHands · 2026-11-19 · <a href="https://www.openhands.dev/blog/automating-cve-remediation-with-openhands" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenHands 公开其 CVE 修复自动化流程：10 月新披露 CVE 达 17,050 个（约每天 550 个），接近去年同期的四倍，为有记录以来最高月份。他们把大部分修复交给智能体工作流——由智能体挑选修复、开 PR、合并低风险项并跟踪每个修复直至部署，人类每天读一条 Slack 消息、审几个 PR。效果上，其镜像的可修复 critical 漏洞从 87 个降到 5 个，high 从 1997 个降到 188 个。方法上有两个关键点：一是交付物清单不能手工维护（每次扫描时从 Helm charts 渲染生成，覆盖可能部署的全部镜像）；二是至少用两套扫描器交叉（Trivy 与 Grype 在旧镜像上分别报 630 与 743 个漏洞，仅 462 个重叠）。作者认为至少 80% 的 CVE 修复工作可交给自主智能体，因为「计数下降且没坏」是少数没有争议的验收标准。</p>
+            <p class="article-commentary">漏洞数量涨了四倍，人已经追不上了。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Anthropic 完成 IPO 绿鞋全额行使：共售 11.27 亿股，募资约 935 亿美元</h2>
+        <div class="article-source">Anthropic / dev.to 日报 · 2026-11-20 · <a href="https://dev.to/hiroki-ii-ai/ai-daily-digest-november-21-2026-anthropic-closes-a-935b-ipo-gemini-learns-to-drive-your-mac-5cj9" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">A</span>nthropic 于 11 月 20 日宣布完成首次公开发行：共售出 11.27 亿股 A 类普通股，每股 83.00 美元，其中包含承销商全额行使的 1.47 亿股超额配售权（绿鞋）。按此计算募资总额约 935 亿美元。此前公开报道的首日募资口径为 813.4 亿美元，差额即来自绿鞋部分的 1.47 亿股。这一细节值得与股价表现对照看：绿鞋全额行使意味着承销商在发行阶段看到的需求足以支撑增发，但上市次日股价仍跌 9% 至 88.30 美元。这也解释了本周市场对「IPO 抽水」的抱怨——认购资金需从其他科技持仓中腾挪。注：本条数字来自聚合日报对官方公告的转述，Anthropic 官方新闻页当前可见的最新条目仍为 10 月 26 日递交 S-1，未能直接核对原始公告。</p>
+        <p class="article-commentary">绿鞋卖光了，股价却回到了发行价附近。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>黎曼猜想被 Lean 形式化验证通过：1700 万行代码、六大检查器、两个独立工具比对陈述，这是 AI 参与数学的第一次「机器级定论」。</li>
+            <li>同一天行情反面：纳指一周跌 10.4%、约 4 万亿美元蒸发，英伟达单日跌 14%，Anthropic 次日跌 9% 逼近发行价。</li>
+            <li>监管三线并进：加州总检察长传票查芯片流向，SEC 查披露合规，司法部另有多案，财政部长给出十天期限。</li>
+            <li>能力评估出现分叉：时间视野翻倍周期 3.61 个月、可验证子集 1.65 个月，强反馈任务超人而缺反馈判断力仍弱。</li>
+            <li>工程侧同时在瘦身：browser-use 24 个动作砍成 1 个 REPL 反而更强更便宜，智能体已接住 38% 合并 PR、critical 漏洞从 87 压到 5。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>10</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-11-21
+</div>
+
+</div>
+</body>
+</html>
