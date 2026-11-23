@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-11-22</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>184</em></span>
+        <span>Sunday, November 22, 2026</span>
+        <span>&#20170;&#26085; <em>10</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-11-21.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天的主线是把「看不见的东西」摊到台面上：OpenAI 首次公开预训练困惑度曲线，用 0.99、0.91、0.80、0.76 这几个数字标出能力跃迁的位置；Qwen4-Max 用 65 万 token 一次读完整个仓库，证明「不再需要检索」也能出对的补丁；而 Codex 沙盒的自述提醒，边界之外总还有一条编辑器保存的缝。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">OpenAI 首次公开预训练困惑度曲线，提议按「困惑度阈值」设行业共同红线</h2>
+        <div class="article-source">OpenAI · 2026-11-22 · <a href="https://openai.com/index/perplexity-and-intelligence/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 发布研究博文《Perplexity and Intelligence》，主张把困惑度（等价于交叉熵损失）确立为跨实验室比较模型、并支撑共同安全标准的统一指标，并首次公开自家预训练进度数据。按其披露的曲线：GPT-3.5 在对数困惑度约 0.99 时能做流畅对话，构成初代 ChatGPT 的基础；GPT-4 约 0.91 时可有效运用思维链，催生现代推理模型；当损失降到 0.8 以下，网络安全与数学领域出现变革性能力。作者称模型升到约 0.76 时开始产出「突破性结果」——数学开放问题在同一个 Slack 线程里接连被解出。他据此外推：进入 0.68–0.7 区间应预期更多变革性能力，且目前可能尚无对应测试。文章同时警告，随着进展主流对齐审计手段会进一步失效、模型的评估与训练意识会增强，因此提出「共同上限」：各家承诺在理解与监控 AI 行为的能力达到某个具体里程碑之前，不越过基于困惑度等测量设定的阈值。作者承认公开内部数据会让竞争对手更清楚 OpenAI 的位置，但认为建立共享安全基准更紧迫。</p>
+        <p class="article-commentary">把自家命门数据摊开，是为换一条行业护栏。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">斯坦福数小时内推出「全人工」广义黎曼猜想竞争证明，Vakil 称已有人报告问题</h3>
+            <div class="article-source">The Decoder / math216 · 2026-11-21 · <a href="https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/" target="_blank">阅读原文</a></div>
+            <p class="article-body">在 Anthropic 数学家 Alpöge 宣布与 Claude 证明黎曼猜想数小时后，斯坦福数学教授、美国数学会主席 Ravi Vakil 在博客发布「紧急公告」，公开数学家 Alessandro Masullo 独立完成的广义黎曼猜想草稿，并强调「全部由人类完成，未使用 AI」。Vakil 称斯坦福数论学者 Brian Conrad 已私下审阅 Masullo 的工作数月，提供了大量反馈，目前仍在整合。Masullo 原计划在斯坦福花一年打磨后再公开，Anthropic 的突然发布迫使团队提前释出当前版本。约八小时后 Vakil 更新博文：已有多人报告该证明中的问题，这些问题由不同 AI 模型辅助识别；他强调所有问题需解决到社群满意，该证明才会被接受为真，且不对证明策略的正确性作任何主张。另据 Alpöge 自述，Claude 的论证若打印超过 25 万页，因 AI 把「一个数若不等于二分之一则必大于或小于二分之一」这类基本规则也逐条写出；他因此只以 Lean 形式、分 14 个数据包发布，计划未来数月补写人类可读版本。</p>
+            <p class="article-commentary">两条证明互相催熟，谁对谁错还得社群慢慢啃。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">Qwen4-Max 单次调用读完 Tornado 全仓 65 万 token，72 秒出补丁仅 0.69 美元</h3>
+            <div class="article-source">Together AI / 阿里云 · 2026-11-21 · <a href="https://www.together.ai/blog/qwen4-max" target="_blank">阅读原文</a></div>
+            <p class="article-body">Together AI 做了一次端到端实测：把 Tornado（Python Web 框架）整个仓库 344 个文件、652,519 个 token 连同一条只描述症状的 bug 报告一次性投给 Qwen4-Max，不给任何工具、不做文件筛选或检索。54 秒后吐出第一个 token，72 秒完成补丁；补丁通过了 Tornado 维护者为该 bug 编写的两个回归测试，并跑通全套 1,673 个测试无失败。特别之处是模型主动指出 bug 报告里从未提及的 tornado/iostream.py 已有同样处理范式，而维护者自己的修复提交也引用了同一处代码。成本 0.69 美元（促销价，原价约 0.98 美元），几乎全部花在 65 万输入 token 上；重复同一请求时缓存命中，首 token 降到 8 秒、输入成本约 3 美分。Qwen4-Max 是阿里 11 月 16 日发布的旗舰，MoE 总参 2.4 万亿、每 token 激活 710 亿（比同规模 Qwen3.8-Max 少 25%），原生视觉、100 万 token 上下文，官方称 Work360 高强度推理时少用 35% token、单任务平均成本低约 60%，Code Arena 列第 6。</p>
+            <p class="article-commentary">整仓塞进去自己找病因，检索这一层被跳过了。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">OpenAI GPT-Live-1.1 语音模型上线 API：全双工、128K 上下文，闲置计费降 60%</h2>
+        <div class="article-source">MarkTechPost / OpenAI · 2026-11-21 · <a href="https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 把 GPT-Live-1.1 以 gpt-live-1.1 模型名放上 API。这是全双工语音模型，能边听边说，单模型同时推理输入与输出音频，取代传统「语音转文字→大模型→文字转语音」三段式，并原生处理轮次检测与返回 ASR 转写。会话默认 128K 上下文，仅 OpenAI 云端可用，通过 WebRTC 或 WebSocket 连 v1/live/sessions。官方列出四项改进（跨语言口音更自然一致、转写更准、字母数字细节处理更好、指令遵循更可靠），但未公布任何基准分数。商业模式的关键是新增 standby 计费：静音时暂停推理但保持 WebRTC 连接，闲置按 0.02 美元/分钟计费，比活跃的 0.05 美元/分钟低 60%。配置项包括 wake_policy 设为 speech、idle_timeout_s 取 5 至 60 秒、可选 vad_threshold；超时后服务端发 session.paused，用户开口再发 session.resumed，会话 ID 与历史保留。更重的推理与工具调用可委派给后端文本模型（官方点名 GPT-6 Astra 与 Luna），第三方后端也支持。</p>
+        <p class="article-commentary">把「不说话的时间」单独定价，这才是语音 Agent 的成本要害。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">OpenAI 拆解 Codex 沙盒：不搬进容器，用各平台原生机制约束本机命令</h3>
+            <div class="article-source">OpenAI · 2026-11-18 · <a href="https://openai.com/index/inside-the-codex-sandbox/" target="_blank">阅读原文</a></div>
+            <p class="article-body">OpenAI 公开 Codex 沙盒的设计。与主流做法不同，它既不套虚拟机也不进容器，而是用 macOS、Linux、Windows 各自的沙盒设施，在用户已存在的环境里限制命令能访问什么——因为笔记本电脑往往是高度定制的开发环境，搬进 Docker 后 iOS 构建链、iPhone 模拟器这类宿主原生工具就跑不起来。默认的 :workspace 权限档：工作区内可写，但 .git 与 .codex 保持只读，防止直接改动 .codex/config.toml 或 .git/hooks 下的钩子；可广泛读文件系统（受操作系统权限约束），因为编译器、运行时与构建工具都依赖仓库外的 SDK 与库，代价是机器上其他敏感文件（例如含 API Key 的配置）也可能被读到；网络访问默认关闭，既阻断数据外传，也导致下载依赖需额外授权。OpenAI 明确说明这些限制挡不住全部风险：智能体可以在 node_modules/prettier 这类本地包中注入恶意代码，而 node_modules 通常被 Git 忽略、不会出现在 git status 里，用户编辑器若在保存时运行这份 Prettier，恶意代码就跑到了沙盒之外。这正是他们强调「纵深防御」的原因——沙盒管能碰到什么，训练与对齐管是否会那样用。</p>
+            <p class="article-commentary">沙盒拦得住命令，拦不住编辑器保存那一下。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">TOOLS</div>
+            <h3 class="article-headline-col">Claude Code 实验功能 Code Mode：写一段 JavaScript 批量调用工具，实测账单省 22%–23%</h3>
+            <div class="article-source">AI 工具宝箱聚合 · 2026-11-22 · <a href="https://www.aitoollab.cn/news/2026-11-22/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Claude Code 推出实验性功能 Code Mode：让模型编写一段 JavaScript，在一次执行中完成多步工具调用，支持并行执行与输出过滤，而不是逐步发起单个工具调用、把每一步结果都塞回上下文。该功能默认关闭，需手动开启。第三方实测数据显示账单节省 22%–23%，token 消耗最高下降 77%。这一思路与同期 browser-use 1.0 把 24 个动作合并为单个 Python REPL 的方向一致——共同点是把「工具调用的编排」交给代码，而不是交给模型一次次生成结构化调用。注：本条数据来自聚合站转述，Anthropic 官方新闻页当前未检索到对应公告原文，具体节省幅度与适用范围以官方文档为准。</p>
+            <p class="article-commentary">少一次工具往返，就少一轮上下文重读。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">OpenAI 发布 MedChemBench：99 道药物化学真题，GPT-6.2 Astra 得 84.5%</h2>
+        <div class="article-source">OpenAI · 2026-11-20 · <a href="https://openai.com/index/introducing-medchembench/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 推出 MedChemBench，评测模型在药物化学研究推理上的能力——能否把分子结构与实验证据连起来解释结果、比较化合物、预测性质。题目取自 117 篇论文与专利，含 761 个不同分子结构，共 99 道题。多数题目给模型一个研究项目在某个时点的可用上下文：生物靶点、研究目标、已研究过的化合物、部分实验结果，让模型推断下一步。评分分四块：分子结构重建（原子连接与立体化学）、科学推理（解释是否由给定证据支撑）、排序与选择、性质预测（与实测数值的接近程度，按接近度给部分分）。在 xhigh 推理档下，GPT-6.2 Astra 拿到 84.5% 的可得分，GPT-6 Astra 为 83.3%、GPT-6.1 Sol 为 82.0%、GPT-5.6 Sol 仅 58.2%。一个典型失败模式很具体：要求从中心结构与两个取代基拼出保留 18 元环的分子时，GPT-6 Astra 十次全部正确，而 GPT-5.6 Sol 生成 15 元环、GPT-5.6 Luna 把分子拆成两块——结构错了，后面所有推理都建立在错误的分子上。</p>
+        <p class="article-commentary">先考认分子，再考想药理，第一关就筛掉一半。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">AI 股灾周末复盘：半导体指数单日跌 10.7%，卖压从七巨头扩散到全市场</h3>
+            <div class="article-source">The Decoder / FT · 2026-11-21 · <a href="https://the-decoder.com/us-technology-stocks-suffer-their-worst-weekly-loss-since-the-pandemic-as-ai-doubts-pile-up/" target="_blank">阅读原文</a></div>
+            <p class="article-body">The Decoder 汇总本轮抛售的多重成因，补充了此前报道未展开的结构信息：纳斯达克 100 周五跌 5.6%、全周跌 10.4%，较 10 月高点回落 20% 进入熊市区间；美国半导体指数单日跌 10.7%，SanDisk、美光、博通等存储与芯片股全线下跌，英伟达因 SEC 审查其会计处理的报道单日跌 14%，Anthropic 上市次日跌 9.1%。驱动因素被归纳为四条叠加：对数千亿美元 AI 基建投入回报的质疑；英伟达丑闻与可疑中国交易；中期选举民主党获胜后的政治逆风（OpenAI 正试图赢回其扩张所需的社区支持）；伊朗战争推高油价、通胀顽固使利率维持高位。此外投资者还在争论芯片与存储股在周期性面前的估值是否仍然合理。Capital.com 分析师指出，市场情绪已从「逢跌买入」转向「怀疑这次回调是否还没走完」，等权指数同样走弱说明卖压不再局限于少数科技巨头。</p>
+            <p class="article-commentary">等权指数一起跌，才说明这不是七巨头的独角戏。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">加州诉 OpenAI 案进入实质阶段：以 Hugging Face 被黑事件主张「完全可预见」</h3>
+            <div class="article-source">加州总检察长办公室 / CalMatters · 2026-11-16 · <a href="https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over" target="_blank">阅读原文</a></div>
+            <p class="article-body">加州总检察长 Rob Bonta 对 OpenAI 基金会、OpenAI Group PBC 等被告提起诉讼，指控其在明知风险的情况下开发与测试先进 AI 模型而缺乏足够保障与监控，误导并危及公众。诉状的核心论点是：州检察长在 Hugging Face 遭攻击后启动调查，并认定该攻击「完全可预见」，源于 OpenAI 的安全实践不足。Bonta 的表态是「公众不应被迫承担保护自己免受 OpenAI 不安全实验危害的成本」。这是州级执法机构首次以 AI 安全事故为由对头部实验室提起此类诉讼，与加州同期对英伟达发出的出口调查传票构成两条并行路线——一条查国家安全相关的芯片流向，一条查 AI 系统自身的安全责任。案件后续将检验：州消费者保护法能否被用来约束前沿模型的开发过程本身。</p>
+            <p class="article-commentary">第一次把「模型不安全」本身当成可诉的过错。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">Qwen4-Max 的极端长程演示：48 小时闭环跑完分子设计到实验验证</h2>
+        <div class="article-source">阿里云 · 2026-11-16 · <a href="https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">阿</span>里在 Qwen4-Max 发布材料中给出几个长程智能体案例，规模值得单独看。芯片散热方向：Qwen4 连续运行 48 小时，走完四轮「分子设计→合成与测试→主动学习」闭环，最终发现一个经实验验证的冷却剂分子。阿尔茨海默病方向：模型自主完成靶点调研、分子设计与计算评估，全流程执行 454 次工具调用、3,239 次指标评估，设计并优化 24 个候选分子。汽车制造方向：在产线规划、零件设计、加工验证的端到端演示中，模型用反馈驱动迭代在加工前发现过切与余量不足，把人工工件编程时间从约 475 分钟压到 24 分钟。云资源调度上，模型自主优化自身调度工作流，数据标注模型调用成本平均降 9%、离线 CPU 重调度速度提升逾 14 倍。上述均为厂商自述数据，未经第三方复现。</p>
+        <p class="article-commentary">48 小时不停机做实验闭环，这是 agent 的耐力赛。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>OpenAI 把预训练困惑度曲线摊开：0.76 之后数学问题接连被解，0.68–0.7 区间还不知会冒出什么，因此提议行业设共同上限。</li>
+            <li>黎曼猜想进入「两条证明赛跑」：Claude 版走 Lean 形式化 14 个包，斯坦福数小时内推出全人工版，Vakil 承认已有人报问题。</li>
+            <li>长上下文开始改写工作方式：Qwen4-Max 一次读完 65 万 token 全仓、72 秒出补丁花 0.69 美元，检索与切块这一层可以被跳过。</li>
+            <li>语音 Agent 的成本结构被拆开：GPT-Live-1.1 把闲置时间单独定价 0.02 美元/分钟，比活跃价低 60%。</li>
+            <li>安全与问责两条线同时收紧：Codex 沙盒自述「编辑器保存」这个缝隙，加州则第一次把「模型不安全」当成可诉过错。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>10</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-11-22
+</div>
+
+</div>
+</body>
+</html>
