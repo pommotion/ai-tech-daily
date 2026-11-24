@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-11-23</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>185</em></span>
+        <span>Monday, November 23, 2026</span>
+        <span>&#20170;&#26085; <em>10</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-11-22.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天三条线索指向同一件事——AI 的瓶颈正在从模型能力转向组织与信任：英伟达靠董事会决议和政府背书把创始人请回，不是因为调查有了结论；Dragos 用 200 万条假凭据证明，最便宜的推理路由会把请求交给最不可控的人；xAI 则索性承认打不过，把机房租给了对手。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">INDUSTRY</div>
+        <h2 class="feature-headline">英伟达董事会一致决议恢复黄仁勋 CEO 与董事职务，即刻生效</h2>
+        <div class="article-source">NVIDIA 官方新闻稿 · 2026-11-23 · <a href="https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">英</span>伟达于 11 月 23 日发布新闻稿，宣布董事会一致决议即刻恢复黄仁勋担任总裁、首席执行官及董事会成员。声明称，董事会在与黄仁勋进行一系列讨论与会议后「对其坦诚与领导公司的能力感到满意」，并在决策过程中征询了美国政府高层意见，据此确信其复职不构成国家安全风险。董事长 Harvey Jones 表示「董事会相信 Jensen 是领导英伟达的合适人选」。CFO Colette Kress 将继续担任 CFO，此前她以临时 CEO 身份主持公司。同时，董事会重申由独立董事组成的委员会对外国情报活动的调查将继续进行至结论，黄仁勋表示全力支持并配合；另新设「国家安全与出口管制委员会」由独立董事组成，并启动首席合规官招聘，直接向提名与公司治理委员会汇报。公司将配合各项政府调查。黄仁勋在声明中称「在一个新工业革命的开端回到英伟达是我的荣幸」。</p>
+        <p class="article-commentary">复职靠的是董事会信任加政府背书，不是调查结论。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">Dragos 用 200 万条假凭据钓出黑产：至少 3 家推理服务商被入侵，数百 AWS 密钥失窃</h3>
+            <div class="article-source">The Decoder / Dragos · 2026-11-22 · <a href="https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users/" target="_blank">阅读原文</a></div>
+            <p class="article-body">安全公司 Dragos 在 2026 年 7 月至 11 月间向多家 AI 推理服务商发送约 200 万条含假凭据的请求，发现至少三家服务商已被入侵、攻击者正在实时窃取用户数据，且这三家在 Dragos 通知前都不知道自己被攻破。规模最大的一起事件中，攻击者收集了数百个 AWS 密钥——包括来自服务商已拒绝处理的请求里的密钥；部分情况下攻击者在数小时内就测试了窃取的密钥、检索 S3 存储并试图建立持久访问，其中一名攻击者还使用了 AI 攻击工具 ARTEX。更麻烦的是，市场转售商无需利用漏洞也能读到请求内容：只要把模型挂出最低价并打开日志即可。隐私设置形同虚设——标记为「零数据保留」（ZDR）的请求中，某中国 AI 实验室在超过一半的请求里访问了测试用的秘密 URL，即使这些请求经由美国服务商转发；还有一家美国大型服务商在单次请求两个多月后仍在爬取测试地址，另一例中秘密测试链接在请求 24 天后出现在飞书内部聊天里，两分钟内被北京和上海的 3 台电脑、3 部手机打开。OpenRouter 已移除三家服务商并撤销 125 个端点的 ZDR 资格，并邮件告知用户「第三方可能读过你发给 MiniMax 模型的请求」。Novita、Phala、Together 已发布初步安全报告。Dragos 建议企业控制路由、检查隐私设置，并自行埋设 canary token。</p>
+            <p class="article-commentary">最低价中标的路由，把请求交给了出价最低的人。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">NYT：Anthropic 成为 xAI 最大客户，月付约 31 亿美元租算力，占其营收过半</h3>
+            <div class="article-source">The Decoder / NYT · 2026-11-23 · <a href="https://the-decoder.com/gpt-6-2-sol-rolls-out-in-chatgpt-worldwide/" target="_blank">阅读原文</a></div>
+            <p class="article-body">据《纽约时报》报道，xAI 自 5 月起向竞争对手出租算力，6 月 IPO 后对营收的诉求更急。目前 Anthropic 是 xAI 最大客户，合同价值约每月 31 亿美元；谷歌每月支出 8 亿美元。两份合同均可提前 90 天通知取消。报道称这项业务现占 xAI 总营收一半以上，内部人士称公司必须赶在 10 月前建成新数据中心以满足 Anthropic 的订单，马斯克表示对方还想租更多。今年 8 月马斯克在群聊中向工程师追问「每 GPU 营收」，部分原因是 xAI 自家模型竞争力不足；据称他把一个内部群聊改名为「卖算力，因为我们打不过」。xAI 也在相应收缩自有项目：11 月部门负责人 Mike Nicolls 告知员工，Grok Imagine 图像与视频生成器背后的 60 人团队将被解散，内部备忘录指向「关键业务优先级」；此前 9 月已关停 AI 虚拟形象。另需注意同期 OpenAI 也因容量限制关停了 Sora 视频模型。</p>
+            <p class="article-commentary">自家模型打不过，就把机房租给打得过的对手。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">MAJOR LAUNCH</div>
+        <h2 class="feature-headline">GPT-6.2 聊天版全球上线：图像理解 47.4%→71.7%，难点指令遵循 62.5%→78.1%</h2>
+        <div class="article-source">The Decoder / OpenAI · 2026-11-23 · <a href="https://the-decoder.com/gpt-6-2-sol-rolls-out-in-chatgpt-worldwide/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">O</span>penAI 向全球 Plus、Pro、Business、Enterprise 用户推送 GPT-6.2 的聊天调优版本，Work 与 Codex 模型保持不变，企业管理员可决定是否对内部用户开放。官方称新模型处理复杂请求与网页搜索更好，会追问更相关的后续问题。内部测试数据显示：图像理解从 47.4% 提升到 71.7%，困难指令遵循从 62.5% 提升到 78.1%；专家级任务内部基准上，四个推理档位全部超过 GPT-6，得分约 65% 至略高于 71%（GPT-6 约 52% 至 66%）；内部版 BrowseComp 各档位均领先，最高档领先约 10 个百分点。据系统卡，GPT-6.2 在困难对话中遵循安全策略的比例为 91% 至 94%，GPT-6 为 77% 至 80%，提升最集中在青少年安全，具体涉及情感依赖、饮食失调与危险行为。上述数字仅适用于 ChatGPT 聊天模式。</p>
+        <p class="article-commentary">图像理解一次跳 24 个点，说明上代在这是短板。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">AA 性格评测：GPT-6.2 回答短 34%–40%，但承认不确定性从 96 跌到 24</h3>
+            <div class="article-source">The Decoder / Artificial Analysis · 2026-11-22 · <a href="https://the-decoder.com/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than-claude/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Artificial Analysis 用 AA-PersonalityBench 对比 GPT-6.2 与前代，评测基于 900 道英文问题、无系统提示，由三个 AI 评委对匿名答案两两比较。变化最明显的是表达风格：Astra 平均回答从 352 词降到 210 词（降 40%），Sol 从 337 词降到 223 词（降 34%）；标题数量大幅减少，Astra 从每答 1.99 个降到 0.11 个，Sol 从 1.85 降到 0.25；破折号用量同步下降。组织度指数 Astra 从 70 降到 11、Sol 从 86 降到 27，但同时「先答问题」指标上升（Astra 49→89、Sol 64→87），自然度也提升（Astra 58→100、Sol 54→79）。最大的负面变化是承认不确定性：Astra 从 96 降到 24、Sol 从 98 降到 51。横向对比，Claude Fable 5.2 与 Opus 5.5 的透明度指数为 81 和 90，远高于 Astra 的 41 与 Sol 的 57；Opus 5.5 的信息量指数达 90，明显领先。AA 强调这些是指 1 到 100 的相对排位，衡量表达风格而非答案准确性，透明度低不等于答错更多。</p>
+            <p class="article-commentary">话说短了、条理散了，顺带把「我不确定」也删了。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">FT 调查指 Megaspeed 马来西亚子公司一年进口申报约 46 亿美元，牵出制裁名单人物</h3>
+            <div class="article-source">AI 工具宝箱聚合 / FT · 2026-11-22 · <a href="https://www.aitoollab.cn/news/2026-11-23/" target="_blank">阅读原文</a></div>
+            <p class="article-body">据 FT 调查，新加坡数据中心公司 Megaspeed 的部分英伟达芯片涉嫌转运中国：其马来西亚子公司在一年间从 Aivres 进口申报约 46 亿美元，货源链条牵出遭美英制裁的胡小伟与世纪华通（Century Huatong）。此前公开信息显示，Megaspeed 前身为 7ROAD，2025 年 10 月起先后被新加坡警方与美国商务部调查，美方怀疑其协助中国企业规避管制获取英伟达芯片；2026 年 11 月 9 日 Megaspeed 否认非法转运。该公司两年采购约 323 亿美元 GPU，且在 2025 年 5 月 15 日前六周内完成大部分英伟达处理器采购——正值拜登时代东南亚许可制度即将启动、后被特朗普政府废除的窗口期。Megaspeed 官网声明称「极其严肃对待美国出口管制法下的合规义务」。注：本条为 FT 调查报道的二手转述，未取得 FT 原文核对具体金额与主体关系，数字以 FT 原文为准。</p>
+            <p class="article-commentary">采购窗口卡在管制生效前，这种巧合最难自证。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">RESEARCH</div>
+        <h2 class="feature-headline">Lean 与 Mathlib 社区正式认证黎曼猜想证明：24 小时内完成核验</h2>
+        <div class="article-source">AI 工具宝箱聚合 / Lean 社区 · 2026-11-22 · <a href="https://www.aitoollab.cn/news/2026-11-23/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">L</span>ean 与 Mathlib 社区发布声明，确认数学家 Alpöge 的黎曼猜想证明通过核验：证明以约 1700 万行 Lean 代码形式提交，数十人独立复现了相同的原始证明导出文件，从提交到获得社区认证约 24 小时。核验依据此前报道的四项标准：陈述本身为 Mathlib 中经专家审定的 RiemannHypothesis；库可无误编译；社区用 comparator 与 con-leche 两套独立工具确认所证定理与 Mathlib 陈述完全一致；导出证明通过 Lean 官方内核、con-leche、con-ron 及多个第三方检查器验证。这一条的意义在于时间尺度：常规数学论文的同行评审往往以年计，而形式化证明把「代码是否正确」与「思想是否被理解」拆成了两件事——前者可以在一天内由机器与人共同确认，后者仍需要数学家消化那 1700 万行。</p>
+        <p class="article-commentary">机器审一天，人类读几年，评审从此分成两层。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">智谱 GLM-5.4 据报下周发布：7000 亿参数级，旗舰 GLM-5.5 留待 12 月</h3>
+            <div class="article-source">新浪科技 / 快科技 · 2026-11-22 · <a href="https://finance.sina.com.cn/tech/roll/2026-11-22/doc-inizrhva8881849.shtml" target="_blank">阅读原文</a></div>
+            <p class="article-body">据快科技报道，智谱下周将发布 GLM-5.4，参数量在 7000 多亿，定位是取代当前旗舰 GLM-5.3。GLM-5.3 不支持多模态，而多模态的 GLM-5.3 Flash 性能已显落后，GLM-5.4 正填补这个空档。Preview 预览版已在小范围测试，具体技术细节尚未公布。报道同时提到，传闻中的旗舰 GLM-5.5 参数量在 3 万亿以上，预计 12 月发布。文章给出的背景判断是：上半年国产模型大致每两个月更新一波、与海外前沿咬得很紧，9 月之后节奏明显分化，国产陷入近百日沉寂；即便 GLM-5.4 如期发布，也只是阶段性追赶，与 Opus 5.5 或 Gemini 4 Argon 级别仍有距离。压力被归为两头：一是 AI 产业融资投资环境，二是算力硬性差距。注：本条为媒体转述与传闻，智谱官方尚未发布公告。</p>
+            <p class="article-commentary">百天空窗后先出中杯，大杯押到 12 月。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">NYT：中国军事研究者担忧 AI 压缩核决策时间至 90 秒，双方尚无 AI 核安全谈判</h3>
+            <div class="article-source">The Decoder / NYT · 2026-11-23 · <a href="https://the-decoder.com/gpt-6-2-sol-rolls-out-in-chatgpt-worldwide/" target="_blank">阅读原文</a></div>
+            <p class="article-body">据《纽约时报》分析，中国军事研究人员担忧 AI 进展可能让美军更容易探测并摧毁中国核导弹，从而削弱依赖二次打击能力的威慑战略。北京军事科学院的研究者撰文称，AI 可能把美方决策时间从 15 至 30 分钟压缩到 90 秒。据美国科学家联盟数据，中国目前约有 620 枚作战核弹头，预计 2030 年增至约 1000 枚。同期中国军事院校也在研究如何用 AI 让自身武器更难被拦截，例如为高超音速导弹规划 AI 控制的飞行路径。专家同时警告，有缺陷的 AI 数据可能在危机中触发危险误判——今年早些时候美军就曾因一份 AI 生成的虚假情报报告险些登上中国船只。报道称，习近平曾在与特朗普、普京的峰会上讨论核风险，但 AI 在核武器中的角色未被提及；尽管紧迫性上升，中美在核系统 AI 保障方面的谈判几乎无进展。</p>
+            <p class="article-commentary">90 秒的决策窗口里，没有人来得及怀疑数据。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">TOOLS</div>
+        <h2 class="feature-headline">Novita 承认 MiniMax 请求被转发至第三方：影响期长达五个半月</h2>
+        <div class="article-source">Novita AI 官方公告 · 2026-11-22 · <a href="https://novita.ai/blog/minimax-requests-privacy-notice/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">在</span> Dragos 披露供应链窃密问题后，Novita AI 发布隐私公告承认：一项原本面向特定客户的路由配置问题被过度应用，导致部分 MiniMax 请求被转发至 MiniMax 官方 API，而非在 Novita 自有基础设施上处理。影响窗口为 2026 年 5 月 28 日至 11 月 11 日，涵盖直接通过 Novita 发起的请求与经 OpenRouter 路由至 Novita 的请求。调查发现，研究者观测到对测试请求中内嵌 URL 与主机名的访问，但未观测到 AWS 测试密钥标记被使用，访问模式提示可能涉及自动化内容审核，公司正与 MiniMax 跟进核实。Novita 声明自身不保留客户提示词与生成结果、不用于模型训练，并已暂停受影响模型、正在核验处理路径，同时改进合作方 API 标注与数据保留政策披露。对用户的具体建议是：若请求中含有真实凭据、API Key 或其他密钥，应主动撤销或轮换。</p>
+        <p class="article-commentary">配置写错一次，五个半月的请求都在别人手里。</p>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>黄仁勋即刻复职：董事会一致决议，并称已征询美国政府高层意见、确认无国安风险，但独立委员会的外国情报调查仍将继续。</li>
+            <li>推理供应链被实测攻破：Dragos 用 200 万条假凭据发现至少 3 家服务商被入侵，ZDR 隐私承诺在转售链路里基本失效。</li>
+            <li>xAI 的结构性转向：Anthropic 月付约 31 亿美元租算力、占其营收过半，同时解散 Grok Imagine 团队，它更像机房出租商了。</li>
+            <li>模型性格可测量也可退步：GPT-6.2 更简短直接，但承认不确定性从 96 跌到 24，透明度远低于 Claude 的 81 与 90。</li>
+            <li>评审被拆成两层：黎曼猜想证明 24 小时通过机器与社区核验，而人类读懂那 1700 万行仍需数年。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>10</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-11-23
+</div>
+
+</div>
+</body>
+</html>
