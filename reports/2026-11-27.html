@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TECH DAILY · 2026-11-27</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'EB Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+            background: #e8e1d0; color: #1a1a1a; padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .paper {
+            max-width: 860px; margin: 0 auto; background: #f5f0e6;
+            padding: 56px 64px 48px; box-shadow: 0 6px 40px rgba(0,0,0,0.13);
+        }
+        .masthead-top {
+            text-align: center; font-size: 10px; letter-spacing: 4px;
+            text-transform: uppercase; color: #6b6358; margin-bottom: 14px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 64px; font-weight: 900; letter-spacing: 18px;
+            text-indent: 18px; text-align: center; line-height: 1.1; color: #1a1a1a;
+        }
+        .masthead-sub {
+            text-align: center; font-size: 12px; letter-spacing: 6px;
+            text-transform: uppercase; color: #6b6358; margin-top: 10px;
+        }
+        .masthead-double-line {
+            border-top: 4px double #2a2a2a; margin-top: 18px; padding-top: 12px;
+        }
+        .masthead-info {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+            color: #6b6358; padding-bottom: 10px; border-bottom: 1px solid #c4b99a;
+        }
+        .masthead-info em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        .nav-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.8rem 0; font-size: 11px; letter-spacing: 2px;
+            text-transform: uppercase; color: #6b6358;
+            border-bottom: 1px solid #c4b99a; margin-bottom: 1.5rem;
+        }
+        .nav-bar a { color: #8b1a1a; text-decoration: none; transition: color 0.2s; }
+        .nav-bar a:hover { color: #1a1a1a; }
+        .nav-bar .nav-spacer { visibility: hidden; }
+        .lead-section {
+            margin-top: 32px; padding-bottom: 24px; border-bottom: 2px solid #2a2a2a;
+        }
+        .lead-tag {
+            display: inline-block; background: #8b1a1a; color: #f5f0e6;
+            font-size: 10px; font-weight: 700; letter-spacing: 4px;
+            padding: 4px 12px; text-transform: uppercase; margin-bottom: 14px;
+        }
+        .lead-text {
+            font-size: 20px; font-style: italic; line-height: 1.55; color: #1a1a1a;
+            font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+        }
+        .article { padding-top: 8px; }
+        .article-categories {
+            font-size: 10px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 6px;
+        }
+        .feature-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 30px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .article-headline-full {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 22px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-headline-col {
+            font-family: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+            font-size: 19px; font-weight: 700; line-height: 1.25; color: #1a1a1a; margin-bottom: 6px;
+        }
+        .article-source {
+            font-size: 11px; font-style: italic; color: #6b6358; margin-bottom: 10px;
+        }
+        .article-source a { color: #8b1a1a; text-decoration: none; }
+        .article-source a:hover { text-decoration: underline; }
+        .article-body {
+            font-size: 15px; line-height: 1.65; text-align: justify; color: #1a1a1a;
+        }
+        .article-body .dropcap {
+            float: left; font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px; font-weight: 900; color: #8b1a1a;
+            line-height: 0.85; margin: 6px 8px 0 0;
+        }
+        .article-commentary {
+            margin-top: 12px; padding-top: 10px; border-top: 1px dashed #c4b99a;
+            font-size: 13.5px; font-style: italic; color: #6b6358; line-height: 1.5;
+        }
+        .article-commentary::before { content: "\2726 "; color: #8b1a1a; font-style: normal; }
+        .full-width { margin-top: 28px; }
+        .two-col {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px;
+        }
+        .two-col .article:first-child {
+            padding-right: 28px; border-right: 1px solid #c4b99a;
+        }
+        .two-col .article:last-child { padding-left: 28px; }
+        .separator {
+            text-align: center; font-size: 16px; color: #8b1a1a;
+            letter-spacing: 8px; margin: 32px 0 4px;
+        }
+        .takeaways {
+            margin-top: 36px; padding-top: 24px; border-top: 2px solid #2a2a2a;
+        }
+        .takeaways-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 11px; font-weight: 900; letter-spacing: 4px;
+            text-transform: uppercase; color: #8b1a1a; margin-bottom: 14px;
+        }
+        .takeaways ul { list-style: none; }
+        .takeaways li {
+            font-size: 14.5px; line-height: 1.6; padding: 6px 0 6px 20px;
+            position: relative; border-bottom: 1px dotted #c4b99a;
+        }
+        .takeaways li:last-child { border-bottom: none; }
+        .takeaways li::before {
+            content: "\25B8"; position: absolute; left: 0; color: #8b1a1a; font-weight: 700;
+        }
+        .colophon {
+            margin-top: 36px; padding: 16px 0; border-top: 4px double #2a2a2a;
+            background: #eae3d4; text-align: center; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #6b6358; line-height: 1.8;
+        }
+        .colophon em { font-style: normal; color: #8b1a1a; font-weight: 700; }
+        @media (max-width: 700px) {
+            .paper { padding: 32px 24px; }
+            .masthead-title { font-size: 40px; letter-spacing: 10px; text-indent: 10px; }
+            .lead-text { font-size: 17px; }
+            .feature-headline { font-size: 24px; }
+            .article-headline-full { font-size: 20px; }
+            .article-headline-col { font-size: 17px; }
+            .two-col { grid-template-columns: 1fr; }
+            .two-col .article:first-child {
+                padding-right: 0; border-right: none;
+                border-bottom: 2px solid #c4b99a; padding-bottom: 24px; margin-bottom: 24px;
+            }
+            .two-col .article:last-child { padding-left: 0; }
+            .masthead-info { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    
+    </style>
+</head>
+<body>
+<div class="paper">
+
+<div class="masthead-top">An Independent Tech Publication &middot; Est. 2026</div>
+<div class="masthead-title">AI TECH DAILY</div>
+<div class="masthead-sub">AI &times; &#31185;&#25216; &middot; &#27599;&#26085;&#31934;&#36873;</div>
+
+<div class="masthead-double-line">
+    <div class="masthead-info">
+        <span>Vol. <em>189</em></span>
+        <span>Friday, November 27, 2026</span>
+        <span>&#20170;&#26085; <em>8</em> &#26465;&#31934;&#36873;</span>
+    </div>
+</div>
+
+<div class="nav-bar">
+    <a href="/reports/2026-11-26.html">&larr; 前一日</a>
+    <a href="/">返回首页</a>
+    <span class="nav-spacer">后一日 &rarr;</span>
+</div>
+
+<div class="lead-section">
+    <div class="lead-tag">LEAD</div>
+    <p class="lead-text">今天的 AI 新闻一半在抢算力，一半在降低算力门槛：芯片管制收紧，开源模型与推理优化同时向前推进。</p>
+</div>
+
+    <div class="full-width article">
+        <div class="article-categories">POLICY</div>
+        <h2 class="feature-headline">美国芯片管制升级，中国大模型厂商面临算力与蒸馏双重压力</h2>
+        <div class="article-source">Reuters · 2026-11-26 · <a href="https://www.reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26/" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">路</span>透社援引知情人士称，美国出口管制与模型蒸馏限制正在拖慢中国大模型研发：智谱 GLM-5.5 可能延至 2027 年一季度，月之暗面 Kimi K4 也可能推迟。报道同时指出，两家厂商均在寻找替代算力与模型训练路径；具体进度尚待官方确认。</p>
+        <p class="article-commentary">模型迭代速度开始被算力与数据双重锁住。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">POLICY</div>
+            <h3 class="article-headline-col">英伟达要求停止向马来西亚、新加坡、泰国和印尼出口 AI 服务器</h3>
+            <div class="article-source">Financial Times / DeAI · 2026-11-27 · <a href="https://www.ft.com/content/7838a715-07d4-4605-aa60-21f5af2b2370" target="_blank">阅读原文</a></div>
+            <p class="article-body">据英国《金融时报》报道，英伟达已通知戴尔、超微等合作伙伴暂停向上述四国发货 AI 服务器，背景是美国对先进芯片实施更严格的许可要求。DeAI 补充称，新加坡云服务商 Aolani 约 5 亿美元贷款被暂停，区域数据中心融资也开始承压。</p>
+            <p class="article-commentary">管制正从芯片本身蔓延到整机与项目融资。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">MAJOR LAUNCH</div>
+            <h3 class="article-headline-col">腾讯发布 Hy3D 3.6，强化高模与 PBR 材质生成</h3>
+            <div class="article-source">快科技 / 网易 · 2026-11-27 · <a href="https://www.163.com/dy/article/LCOML8FP0511CPVM.html" target="_blank">阅读原文</a></div>
+            <p class="article-body">腾讯混元推出新一代 3D 大模型 Hy3D 3.6，重点改善高模几何质量、部件边界、细节层次和 PBR 材质贴图生成。模型已接入腾讯云 Token Hub API，并进入 Miora、LAP、WorkRally 等创作与游戏资产平台，普通用户也可通过混元 3D 引擎试用。</p>
+            <p class="article-commentary">3D 生成的竞争点已从出模型转向可精修资产。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="full-width article">
+        <div class="article-categories">TOOLS</div>
+        <h2 class="feature-headline">DeepL 推出 Aure v2，实时语音翻译延迟减半</h2>
+        <div class="article-source">DeepL · 2026-11-26 · <a href="https://www.deepl.com/en/press-release/aure-v2" target="_blank">阅读原文</a></div>
+        <p class="article-body"><span class="dropcap">D</span>eepL 发布语音翻译模型 Aure v2，采用端到端语音到语音架构，并通过强化学习判断何时开始输出。官方内部测试显示，其中位翻译延迟较前代降低 50%；首发支持英语、德语、法语、西班牙语、日语和韩语，已向 DeepL Voice 客户开放。</p>
+        <p class="article-commentary">翻译体验的下一道门槛是对话节奏而非词准。</p>
+    </div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">AI 安全监控器漏检率随攻击优化程度剧烈波动</h3>
+            <div class="article-source">UK AI Security Institute / arXiv · 2026-11-25 · <a href="https://arxiv.org/abs/2611.34934" target="_blank">阅读原文</a></div>
+            <p class="article-body">英国 AI 安全研究所的新 preprint 评估了一款已退出生产的 OpenAI 监控器：同一种强化学习攻击在不同优化强度下，漏检率可从 0.5% 升至 20.8%；跨方法比较时，最佳优化水平下的漏检率为 6.4% 至 23.0%。作者警告，简单攻击测试可能严重高估监控器可靠性。</p>
+            <p class="article-commentary">安全评分必须连同攻击强度一起看才有意义。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">法国机器人软件公司 Korben 完成 1020 万欧元种子轮融资</h3>
+            <div class="article-source">Korben · 2026-11-27 · <a href="https://www.korbenforpeople.com/en/funding/" target="_blank">阅读原文</a></div>
+            <p class="article-body">Korben 宣布完成 1020 万欧元种子轮融资，投资方包括 Tiresias Angels、Bpifrance 及两家私人银行，投后估值 3620 万欧元。资金将用于扩展机器人自主软件、AI 智能体与法国本地云平台，并计划新增 70 个岗位；公司称过去八个月已实现 50 万欧元 EBITDA。</p>
+            <p class="article-commentary">欧洲机器人投资开始押注软件主权而非整机。</p>
+        </div>
+    </div>
+
+    <div class="separator">&#8212; &#10026; &#8212;</div>
+
+    <div class="two-col">
+        <div class="article">
+            <div class="article-categories">INDUSTRY</div>
+            <h3 class="article-headline-col">加拿大算力基金追加 7 亿加元，并提高本地云采购补贴</h3>
+            <div class="article-source">BetaKit · 2026-11-26 · <a href="https://betakit.com/feds-will-now-pay-80-percent-of-costs-under-ai-compute-access-fund-if-purchased-from-a-sovereign-provider/" target="_blank">阅读原文</a></div>
+            <p class="article-body">加拿大宣布向 AI Compute Access Fund 追加 7 亿加元，基金总额增至 10 亿加元。中小企业若购买符合条件的主权云服务，政府最高可覆盖 80% 的算力成本；普通云服务补贴上限仍为 50%，本轮另有 45 家企业获得超过 5200 万加元支持。</p>
+            <p class="article-commentary">补贴正在把企业采购引向本土算力供应商。</p>
+        </div>
+        <div class="article">
+            <div class="article-categories">RESEARCH</div>
+            <h3 class="article-headline-col">OS-Omni 基准显示 AI 电脑操作在 macOS 与 iOS 上仍明显落后人类</h3>
+            <div class="article-source">NeurIPS 2026 / arXiv · 2026-11-25 · <a href="https://arxiv.org/abs/2611.34232" target="_blank">阅读原文</a></div>
+            <p class="article-body">OS-Omni v1 覆盖 Windows、Ubuntu、macOS、iOS、Android 与网页环境，每个平台设 48 项任务及 12 项跨平台工作流。论文报告，最强模型 Claude Opus 5.5 的平均成功率为 68.5%，低于人类 77.3%；在 Linux 上可超过人类，但在 macOS 与 iOS 上落后超过 25 个百分点。</p>
+            <p class="article-commentary">跨平台长流程仍是电脑智能体的真实短板。</p>
+        </div>
+    </div>
+
+    <div class="takeaways">
+        <div class="takeaways-title">Today's Takeaways</div>
+        <ul>
+            <li>芯片管制已从硬件出口延伸至服务器发货与数据中心融资。</li>
+            <li>中国大模型厂商同时面对算力获取和蒸馏训练路径收紧。</li>
+            <li>腾讯 Hy3D 3.6 将 3D 生成推向可精修的生产资产。</li>
+            <li>AI 安全评测必须披露攻击优化强度，单一漏检率不足以证明可靠。</li>
+            <li>机器人融资与加拿大算力补贴都体现更强的本地化、主权化诉求。</li>
+        </ul>
+    </div>
+
+<div class="colophon">
+    &#20170;&#26085;&#31934;&#36873; <em>8</em> &#26465; &middot; web_search &#35206;&#30422;&#20013;&#33521;&#25991;&#26469;&#28304; &middot; &#30001; remio agent &#29983;&#25104; &middot; 2026-11-27
+</div>
+
+</div>
+</body>
+</html>
